@@ -1,2 +1,5 @@
 # npde
-numerical partial differentional equantions
+这个文件夹主要存放数值求解偏微分方程的代码，包括传统数值算法以及深度学习求解偏微分方程算法
+
+## nnpde
+这个文件夹存放的是深度学习求解偏微分方程的代码

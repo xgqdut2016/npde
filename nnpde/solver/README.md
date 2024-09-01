@@ -1,0 +1,1 @@
+这个文件夹存放的是DeepOnet和FNO思想求解偏微分方程的代码，详细说明参考链接https://blog.csdn.net/forrestguang/article/details/127966413
