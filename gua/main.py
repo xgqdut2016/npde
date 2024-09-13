@@ -15,19 +15,15 @@ star11th = "廉贞天相"
 star12th = "巨门"
 starlist =[star1st, star2nd, star3rd, star4th, star5th, star6th, star7th, star8th, star9th, star10th, star11th, star12th]
 
-dizhi1st = "辰"
-dizhi2nd = "卯"
-dizhi3rd = "寅"
-dizhi4th = "丑"
-dizhi5th = "子"
-dizhi6th = "亥"
-dizhi7th = "戌"
-dizhi8th = "酉"
-dizhi9th = "申"
-dizhi10th = "未"
-dizhi11th = "午"
-dizhi12th = "巳"
-dizhilist =[dizhi1st, dizhi2nd, dizhi3rd, dizhi4th, dizhi5th, dizhi6th, dizhi7th, dizhi8th, dizhi9th, dizhi10th, dizhi11th, dizhi12th]
+
+dizhitmp = ['亥', '戌', '酉', '申', '未', '午', '巳', '辰', '卯', '寅', '丑', '子']
+
+pian = 6
+dizhilist = []
+for i in range(12):
+    dizhilist.append(dizhitmp[(i + pian)%12])
+
+
 gongname = ["命宫", "兄弟宫", "夫妻宫", "子女宫", "财帛宫", "疾厄宫", "迁移宫", "交友宫", "官禄宫", "田宅宫", "福德宫", "父母宫"]
 def predict(ind, step):
     print(gongname[ind] + "：", end = " ")
