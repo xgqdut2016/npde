@@ -3,3 +3,9 @@
 
 ## nnpde
 这个文件夹存放的是深度学习求解偏微分方程的代码
+
+## tnpde
+该文件夹存放传统数值算法求解PDE代码
+
+## fire
+该文件夹存放firedrake和fireshape求解PDE代码
