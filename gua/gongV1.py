@@ -1,6 +1,10 @@
-def GongChu1st(star, dizhi):
+def GongChu1st(star, dizhi, smallStarList):
+    print(star, dizhi)
+    for smallStar in smallStarList:
+        print(smallStar, end = ' ')
+    print("\n")
     if(star[:2] == "紫薇"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """ 
 紫微独坐除喜[百官朝拱]外，更喜左辅右弼夹命，文昌文曲夹命；龙池凤阁夹
@@ -256,7 +260,7 @@ def GongChu1st(star, dizhi):
                     """
                     print(tmp)
     elif(star[:2] == "天机"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """
         星曜名称 天机
@@ -501,7 +505,7 @@ def GongChu1st(star, dizhi):
                 """
                 print(tmp)
     elif (star[:2] == "太阳"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """
         星曜名称 太阳
@@ -864,7 +868,7 @@ def GongChu1st(star, dizhi):
                 """
                 print(tmp)
     elif(star[:2] == "武曲"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """
         星曜名称 武曲
@@ -1115,7 +1119,7 @@ def GongChu1st(star, dizhi):
                     """
                     print(tmp)
     elif(star[:2] == "天同"):
-        print(star, dizhi)
+        
         print("\n")
         if(dizhi == "巳" or dizhi == "亥"):
             tmp = """在巳、亥二宫独坐 
@@ -1365,7 +1369,7 @@ def GongChu1st(star, dizhi):
                     print(tmp)
 
     elif(star[:2] == "廉贞"):
-        print(star, dizhi)
+        
         print("\n")
         if(dizhi == "寅" or dizhi == "申"):
             tmp = """在寅、申宫独坐 
@@ -1612,7 +1616,7 @@ def GongChu1st(star, dizhi):
                     """
                     print(tmp)
     elif(star[:2] == "天府"):
-        print(star, dizhi)
+        
         print("\n")
         if(len(star) == 4):
             if(star == "天府武曲"):
@@ -1753,7 +1757,7 @@ def GongChu1st(star, dizhi):
                     """
                     print(tmp)
     if(star[:2] == "太阴"):
-        print(star, dizhi)
+        
         print("\n")
         if(dizhi == "子"):
             tmp = """天姬――太阴在子宫躓度。主人深思熟虑，善谋略，有内才，多权变。一般而
@@ -2006,7 +2010,7 @@ def GongChu1st(star, dizhi):
         print(tmp)
         print("\n")
     if(star[:2] == "贪狼"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """
 凡贪狼在命，则身宫不宜见七杀或破军，否则易沉迷酒色，甚至贪花淫奔。即见吉
@@ -2178,7 +2182,7 @@ def GongChu1st(star, dizhi):
                     print(tmp)
                 
     if(star[:2] == "巨门"):
-        print(star, dizhi)
+        
         print("\n")
         if(dizhi == "子" or dizhi == "午"):
             tmp = """巨门在子、午宫独坐，对宫为天机。名为[石中隐玉]格。 
@@ -2318,7 +2322,7 @@ def GongChu1st(star, dizhi):
                     """
                     print(tmp)
     if(star[:2] == "天相"):
-        print(star, dizhi)
+        
         print("\n")
         if(dizhi == "丑" or dizhi == "未"):
             tmp = """在丑、未二宫独坐 
@@ -2424,7 +2428,7 @@ def GongChu1st(star, dizhi):
         print(tmp)
         if(len(star) == 4):
             if(star == "天相廉贞"):
-                print(star, dizhi)
+                
                 print("\n")
                 if(dizhi == "子" or dizhi == "午"):
                     tmp = """天相廉贞在子、午二宫同度，请参看[廉贞天相]一节。"""
@@ -2434,7 +2438,7 @@ def GongChu1st(star, dizhi):
                     """
                     print(tmp)
             elif(star == "天相武曲"):
-                print(star, dizhi)
+                
                 print("\n")
                 if(dizhi == "寅" or dizhi == "申"):
                     tmp = """天相武曲在寅、申二宫安命，请参看[武曲天相]一节。"""
@@ -2444,7 +2448,7 @@ def GongChu1st(star, dizhi):
                     """
                     print(tmp)
             elif(star == "天相紫微"):
-                print(star, dizhi)
+                
                 print("\n")
                 if(dizhi == "辰" or dizhi == "戌"):
                     tmp = """天相紫微在辰、戌二宫同度，请参看[紫微天相]一节。"""
@@ -2454,7 +2458,7 @@ def GongChu1st(star, dizhi):
                     """
                     print(tmp)
     if(star[:2] == "天梁"):
-        print(star, dizhi)
+        
         print("\n")
         if(dizhi == "子" or dizhi == "午"):
             tmp = """在子、午宫独坐 
@@ -2560,7 +2564,7 @@ def GongChu1st(star, dizhi):
         print(tmp)
         if(len(star) == 4):
             if(star == "天梁天同"):
-                print(star, dizhi)
+                
                 print("\n")
                 if(dizhi == "寅" or dizhi == "申"):
                     tmp = """天梁天同在寅、申二宫同度，请参看[天同天梁]一节。"""
@@ -2570,7 +2574,7 @@ def GongChu1st(star, dizhi):
                     """
                     print(tmp)
             elif(star == "天梁太阳"):
-                print(star, dizhi)
+                
                 print("\n")
                 if(dizhi == "卯" or dizhi == "酉"):
                     tmp = """天梁太阳在卯、酉二宫同度， 请参看[太阳天梁]一节。"""
@@ -2580,7 +2584,7 @@ def GongChu1st(star, dizhi):
                     """
                     print(tmp)
             elif(star == "天梁天机"):
-                print(star, dizhi)
+                
                 print("\n")
                 if(dizhi == "辰" or dizhi == "戌"):
                     tmp = """天梁天机在辰、戌二宫同度，请参看[天机天梁]一节。"""
@@ -2590,7 +2594,7 @@ def GongChu1st(star, dizhi):
                     """
                     print(tmp)
     if(star[:2] == "七杀"):
-        print(star, dizhi)
+        
         print("\n")
         print("\n")
         if(dizhi == "子" or dizhi == "午"):
@@ -2707,7 +2711,7 @@ def GongChu1st(star, dizhi):
         print(tmp)
         if(len(star) == 4):
             if(star == "七杀廉贞"):
-                print(star, dizhi)
+                
                 print("\n")
                 if(dizhi == "丑" or dizhi == "未"):
                     tmp = """七杀廉贞在丑、未二宫同度，请参看[廉贞七杀]一节。"""
@@ -2717,7 +2721,7 @@ def GongChu1st(star, dizhi):
                     """
                     print(tmp)
             elif(star == "七杀武曲"):
-                print(star, dizhi)
+                
                 print("\n")
                 if(dizhi == "卯" or dizhi == "酉"):
                     tmp = """七杀武曲在卯、酉二宫同度， 清参看[武曲七杀]一节"""
@@ -2727,7 +2731,7 @@ def GongChu1st(star, dizhi):
                     """
                     print(tmp)
             elif(star == "[紫微七杀"):
-                print(star, dizhi)
+                
                 print("\n")
                 if(dizhi == "巳" or dizhi == "亥"):
                     tmp = """七杀紫微在巳、亥二宫同度，请参看[紫微七杀]一节。"""
@@ -2738,7 +2742,7 @@ def GongChu1st(star, dizhi):
                     print(tmp)
                 
     if(star[:2] == "破军"):
-        print(star, dizhi)
+        
         print("\n")
         if(dizhi == "子" or dizhi == "午"):
             tmp = """在子、午二宫独坐 
@@ -2843,7 +2847,7 @@ def GongChu1st(star, dizhi):
         
         if(len(star) == 4):
             if(star == "破军紫薇"):
-                print(star, dizhi)
+                
                 print("\n")
                 if(dizhi == "丑" or dizhi == "未"):
                     tmp = """破军紫微在丑、未二宫同度，请参看[紫微破军]一节。"""
@@ -2853,7 +2857,7 @@ def GongChu1st(star, dizhi):
                     """
                     print(tmp)
             elif(star == "破军廉贞"):
-                print(star, dizhi)
+                
                 print("\n")
                 if(dizhi == "卯" or dizhi == "酉"):
                     tmp = """破军廉贞在卯、酉二宫同度，请参看[廉贞破军]一节。"""
@@ -2863,7 +2867,7 @@ def GongChu1st(star, dizhi):
                     """
                     print(tmp)
             elif(star == "破军武曲"):
-                print(star, dizhi)
+                
                 print("\n")
                 if(dizhi == "巳" or dizhi == "亥"):
                     tmp = """破军武曲在巳、亥二宫同度，请参看[武曲破军]一节。"""
@@ -2872,9 +2876,13 @@ def GongChu1st(star, dizhi):
                     tmp = """
                     """
                     print(tmp)
-def GongChu2nd(star, dizhi):
+def GongChu2nd(star, dizhi, smallStarList):
+    print(star, dizhi)
+    for smallStar in smallStarList:
+        print(smallStar, end = ' ')
+    print("\n")
     if(star[:2] == "紫薇"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """有兄长可依靠(或主受同事提拔)。或兄长富裕宽厚。加四煞空劫，则克害或欠
 和，否则兄弟破败衰退落。 
@@ -2913,7 +2921,7 @@ def GongChu2nd(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "天机"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """主兄弟姐妹寡少。唯见辅佐吉曜则可增添数日。 
 人庙二人，会吉有显贵者。 
@@ -2939,7 +2947,7 @@ def GongChu2nd(star, dizhi):
                 print("\n")
             
     elif(star[:2] == "太阳"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """入庙兄弟姐妹三人以上，见吉会，兄弟主贵。 
 落陷及夜生人，兄弟多争不和，乖达无靠。倘见四煞、空劫、天刑，主兄弟有
@@ -2963,7 +2971,7 @@ def GongChu2nd(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "武曲"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """武曲入兄弟宫，主不和睦，无助力。入庙二人。见吉得一人力。 
 落陷一人。 
@@ -2991,7 +2999,7 @@ def GongChu2nd(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "天同"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """入庙，四人以上。和睦但少助力。 
 落陷，二人。兄弟软弱。 
@@ -3012,7 +3020,7 @@ def GongChu2nd(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "廉贞"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """入庙，兄弟姐妹二人。一般主感情和洽。 
 会左辅、右弼、文昌、文曲、天魁、天钺、天贵、天府等吉曜，兄弟姐妹五人
@@ -3043,7 +3051,7 @@ def GongChu2nd(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "天府"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """守兄弟宫主兄弟众多，五人以上。 
 见昌曲、魁钺、辅弼，兄弟多才能，且彼此有助力。 
@@ -3053,7 +3061,7 @@ def GongChu2nd(star, dizhi):
         print(tmp)
         print("\n")
     elif(star[:2] == "太阴"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """入庙兄弟姐妹五人。 
 陷地三人不同心。天机同度二人。 
@@ -3064,7 +3072,7 @@ def GongChu2nd(star, dizhi):
         print(tmp)
         print("\n")
     elif(star[:2] == "贪狼"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """会辅弼、魁钺，兄弟和睦，互相帮助。能保持生活水平上的来往，主有兄弟三人。 
 会照武曲者孤单，或异母所生。 
@@ -3082,7 +3090,7 @@ def GongChu2nd(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "巨门"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """入庙二人。 
 与太阳同度，兄弟姐妹三人。再与辅弼、魁钺、昌曲、恩光、天贵、天福等曜
@@ -3102,7 +3110,7 @@ def GongChu2nd(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "天相"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """入庙有辅弼会照，五人以上。紫微同度，三人以上，且兄弟好强好高。 
 武曲或廉贞同度者，兄弟姐妹二人，而意见不合。 
@@ -3112,7 +3120,7 @@ def GongChu2nd(star, dizhi):
         print(tmp)
         print("\n")
     elif(star[:2] == "天梁"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """入庙临兄弟宫，会辅弼、魁钺者，五人以上，且兄弟姐妹和气。若入庙而无辅
 弼，主有异母兄弟。 
@@ -3125,7 +3133,7 @@ def GongChu2nd(star, dizhi):
         print(tmp)
         print("\n")
     elif(star[:2] == "七杀"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """人庙且会照禄、权、科辅弼者。兄弟众多唯有刑克。 
 七杀守兄弟宫，而会照辅弼，或命宮会照辅弼者，亦主兄弟多而有刑克分离。
@@ -3146,7 +3154,7 @@ def GongChu2nd(star, dizhi):
             print(tmp)
             print("\n")
     elif(star[:2] == "破军"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """主兄弟分居或刑克。 
 凡破军守兄弟宫，自身常居长，或虽排行二三，但在各种情形下，虽非兄长而
@@ -3171,55 +3179,87 @@ def GongChu2nd(star, dizhi):
                 print(tmp)
                 print("\n")
     print("----------------------------------------------")
-    tmp = """(附) 辅佐煞曜对兄弟宫的影响 
- 禄存 
-宜人生旺之宫垣，若不逢四煞空劫，主兄弟姐妹中有贵显者。 
+    for smallStar in smallStarList:
+        if(smallStar == '禄存'):
+            tmp = """禄存:宜人生旺之宫垣，若不逢四煞空劫，主兄弟姐妹中有贵显者。 
 若与长生同度，兄弟姐妹缘份好。 
-与天马会合，兄弟姐妹有人在异地发达。 
- 天马 
-见辅佐吉曜会合，兄弟姐妹虽各散东西，但彼此仍有助力。 
+与天马会合，兄弟姐妹有人在异地发达。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '天马'):
+            tmp = """天马:见辅佐吉曜会合，兄弟姐妹虽各散东西，但彼此仍有助力。 
 如吉凶星曜并会，或主有异胞手足，或兄弟姐妹分成两党。吉曜有力，则仅主
-部分疏远，部分多来往。 
-左辅 
-见吉曜，则主得力；若逢四煞、刑、忌则主受兄弟姐妹拖累。 
-见空劫，又会煞忌，主感情本佳，但突生变化；或兄弟姐妹顿生意外灾遇。 
- 右弼 
-见武曲七杀，见煞，主有刑克。如父母宫见桃花诸曜，则主异胞。 
- 空劫、化忌、煞曜多见，孤单。 
- 文昌 
- 见天府、左辅、右弼，兄弟姐妹得力。 
+部分疏远，部分多来往。 """
+            print(tmp)
+            print("\n")
+        if(smallStar == '左辅'):
+            tmp = """左辅:见吉曜，则主得力；若逢四煞、刑、忌则主受兄弟姐妹拖累。 
+见空劫，又会煞忌，主感情本佳，但突生变化；或兄弟姐妹顿生意外灾遇。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '右弼'):
+            tmp = """右弼:见武曲七杀，见煞，主有刑克。如父母宫见桃花诸曜，则主异胞。 
+ 空劫、化忌、煞曜多见，孤单。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '文昌'):
+            tmp = """文昌:见天府、左辅、右弼，兄弟姐妹得力。 
 逢羊陀，兄弟姐妹有纷争。 
-陷地见空劫、化忌、兄弟姐妹数目应较由兄弟宫失出者为少，且不和。
- 文曲 
-逢七杀，又见煞曜，兄弟姐妹不和。 
-陷地见空劫，稀少，且有口舌。若擎羊，天刑同会，主争讼。 
- 天魁 
-主贵而不主富。会诸吉，主手足提携。 
- 天钺 
-同天魁。唯抵抗诸煞之力，不如天魁。 
-火星、铃星 
-不喜再见廉贞、七杀、破军，主稀少。 
+陷地见空劫、化忌、兄弟姐妹数目应较由兄弟宫失出者为少，且不和。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '文曲'):
+            tmp = """文曲:逢七杀，又见煞曜，兄弟姐妹不和。 
+陷地见空劫，稀少，且有口舌。若擎羊，天刑同会，主争讼。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '天魁'):
+            tmp = """天魁:主贵而不主富。会诸吉，主手足提携。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '天钺'):
+            tmp = """ 天钺:同天魁。唯抵抗诸煞之力，不如天魁。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '天魁'):
+            tmp = """ 主贵而不主富。会诸吉，主手足提携。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '火星' or smallStar == '铃星'):
+            tmp = """ 火星、铃星:不喜再见廉贞、七杀、破军，主稀少。 
 若再见空劫、化忌，有刑克。 
 见贪狼，或主兄弟姐妹有意外财。但亦可能主自卑有意外财。则若再见化忌、
-大耗、煞曜，则不是。 
- 擎羊 
-见化忌、天刑，主争讼。见天梁，更的。 
-遇空劫、大耗、火铃，兄弟姐妹可以倾家。不宜事业合作。 
- 陀罗 
-主兄弟姐妹彼此少来往，但非不和。 
-见天马，主兄弟姐妹背井离乡。 
- 地空 
-主有异胞。或亦主彼此离别。 
-更见煞曜。兄弟姐妹各怀己见。 
- 地劫 
-主异胞或离别。 
+大耗、煞曜，则不是。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '擎羊'):
+            tmp = """ 擎羊:见化忌、天刑，主争讼。见天梁，更的。 
+遇空劫、大耗、火铃，兄弟姐妹可以倾家。不宜事业合作。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '陀罗'):
+            tmp = """ 陀罗:主兄弟姐妹彼此少来往，但非不和。 
+见天马，主兄弟姐妹背井离乡。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '地空'):
+            tmp = """ 地空:主有异胞。或亦主彼此离别。 
+更见煞曜。兄弟姐妹各怀己见。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '地劫'):
+            tmp = """ 地劫:主异胞或离别。 
 空劫夹兄弟宫，不利。夹廉贞化忌，主伤心。"""
-    print(tmp)
+            print(tmp)
+            print("\n")
+    
+def GongChu3rd(star, dizhi, smallStarList):
+    print(star, dizhi)
+    for smallStar in smallStarList:
+        print(smallStar, end = ' ')
     print("\n")
-
-def GongChu3rd(star, dizhi):
     if(star[:2] == "紫薇"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """配偶有统治欲，亦有责任慼，化权，主妻夺夫权。婚姻虽不如意亦不易言离。
 遇吉，女主夫荣，男主妻有丈夫气慨。遇凶，仅内心痛苦，表面仍宽容。  
@@ -3257,7 +3297,7 @@ def GongChu3rd(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "天机"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """配偶易适应环境。感情则起变化，不宜见左右火铃。其变化常由任性仁而来，
 见吉限吉年，可以复合。唯配偶多才，男命宜小配，须相差三岁以上。妻子性情机
@@ -3290,7 +3330,7 @@ def GongChu3rd(star, dizhi):
                 print("\n")
             
     elif(star[:2] == "太阳"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """太阳会羊陀，初热终冷，非正式结婚为宜； 
 女主配贵显。落陷平常，但亦热情。 
@@ -3329,7 +3369,7 @@ def GongChu3rd(star, dizhi):
             print(tmp)
             print("\n")
     elif(star[:2] == "武曲"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """主孤克。遇杀破，三度姻缘。入庙者迟婚可免。 
 见昌曲化科，妻贤能。禄马遇，因妻得财。遇凶曜，则因妻破财。 
@@ -3364,7 +3404,7 @@ def GongChu3rd(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "天同"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """见六吉，配偶秀丽、潇洒。 
 女命夫妻宮天同会四煞化忌，有名无实，宜偏房，或离婚再嫁，或配偶病灾。
@@ -3407,7 +3447,7 @@ def GongChu3rd(star, dizhi):
                 print("\n")
             
     elif(star[:2] == "廉贞"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """主刑克，见煞三克。 
 男命妻美，见忌，离而再娶美妻。见桃花，妻有外遇。见杀破，不和。见四煞
@@ -3452,7 +3492,7 @@ def GongChu3rd(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "天府"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """配偶有工作能力，亦善理财。
 男主妻聪明年少，女主夫贵年长。
@@ -3481,7 +3521,7 @@ def GongChu3rd(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "太阴"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """男主妻年少聪美。加昌曲极美。亦主妻多。女主夫长且早嫁。
 见四煞空劫忌不克，但主生离。 
@@ -3506,7 +3546,7 @@ def GongChu3rd(star, dizhi):
             print(tmp)
             print("\n")
     elif(star[:2] == "贪狼"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """见煞，男主三度新郎。入庙，迟娶免克。 
 女命，夫宜年长婚迟。加四煞，主生离。 
@@ -3540,7 +3580,7 @@ def GongChu3rd(star, dizhi):
             print(tmp)
             print("\n")
     elif(star[:2] == "巨门"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """主常有口舌，妻以长配为宜。 
 见羊陀火铃，男克二妻或生离。又见天刑，女主三嫁，以不举行婚礼为宜。 
@@ -3583,7 +3623,7 @@ def GongChu3rd(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "天相"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """主配偶为人谋而不为家室谋。或聚少离多。 
 男妇皆主亲上加亲，或旧情复燃，或旧相识重逢而恋爱。 
@@ -3621,7 +3661,7 @@ def GongChu3rd(star, dizhi):
             print(tmp)
             print("\n")
     elif(star[:2] == "天梁"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """男命，主妻子美容，但宜比自己年长三岁以上。 
 月梁同拱照，妻美丽生离，但仍藕断丝连。 
@@ -3652,7 +3692,7 @@ def GongChu3rd(star, dizhi):
                 print("\n")
             
     elif(star[:2] == "七杀"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """主异族通婚。见太阳、巨门于命宫者尤为的确。 
 见四煞空劫，克三。无煞，孤而不克。 
@@ -3675,7 +3715,7 @@ def GongChu3rd(star, dizhi):
             print(tmp)
             print("\n")
     elif(star[:2] == "破军"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """男妇俱克，或生离另婚，宜迟婚。 
 波折大，聚少离多，兴趣不合。 
@@ -3693,73 +3733,102 @@ def GongChu3rd(star, dizhi):
         print(tmp)
         print("\n")
     print("--------------------------------------")
-    tmp = """(附)辅佐煞曜对夫妻宫的影响 
- 禄存 
-女加四煞，宜偏房继室。加火铃空劫见截空，孤单。喜三方有化禄，或会同天
+    for smallStar in smallStarList:
+        if(smallStar == '禄存'):
+            tmp = """禄存:女加四煞，宜偏房继室。加火铃空劫见截空，孤单。喜三方有化禄，或会同天
 马，则可解孤，且主进财。 
-夫妻恩爱，但易受人欺。又主配偶善理财。见六煞、左右、破碎、劫煞、空忌，感情不和。 
- 天马 
-男得妻助，主得妻财，或妻有帮夫运。 
+夫妻恩爱，但易受人欺。又主配偶善理财。见六煞、左右、破碎、劫煞、空忌，感情不和。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '天马'):
+            tmp = """天马:男得妻助，主得妻财，或妻有帮夫运。 
 会禄，财气旺，富足。 
-喜紫杀府相贪狼日巨武曲，尤喜府相。 
-左辅 
-主配偶婚姻曾经波折，或婚姻无正式婚礼。然若不见煞，主夫妻恩爱。见三化，
-有成。加日月巨机火铃武杀，生离。右弼亦然。 
- 右弼 
-带桃花，主第三者介入；独坐尤的。 
+喜紫杀府相贪狼日巨武曲，尤喜府相。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '左辅'):
+            tmp = """左辅:主配偶婚姻曾经波折，或婚姻无正式婚礼。然若不见煞，主夫妻恩爱。见三化，
+有成。加日月巨机火铃武杀，生离。右弼亦然。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '右弼'):
+            tmp = """右弼:带桃花，主第三者介入；独坐尤的。 
 主两女共事一夫。见机月尤的。 
-见忌空劫，主离。 
- 文昌 
-主配偶心细如尘。机月同度，美容。 
+见忌空劫，主离。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '文昌'):
+            tmp = """文昌:主配偶心细如尘。机月同度，美容。 
 喜与紫府阴阳相曲左右魁钺同宫。见三化富贵。不喜右弼廉破四煞空劫化忌。 
 见廉贞有外遇。见破军，配偶劳碌。化忌，学识不足。 
-有多次恋爱机会。见煞同，或命宫福德宫不吉，红杏出墙，男则有外宠。 
- 文曲 
-有口才。但带桃花。解同文昌。 
+有多次恋爱机会。见煞同，或命宫福德宫不吉，红杏出墙，男则有外宠。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '文曲'):
+            tmp = """文曲:有口才。但带桃花。解同文昌。 
 文昌文曲同，闺房多情趣。 
 昌曲分居夫妻及迁移宫，配偶于海外扬名，但见煞则主外遇。 
-成宫见昌曲，易离。曲独坐亦易招桃花。 
- 天魁 
-配偶家世不俗。喜府相紫武贪破曰月左右昌曲三化禄马。 
-天钺 
-带桃花，主得异性贵人。 
+成宫见昌曲，易离。曲独坐亦易招桃花。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '天魁'):
+            tmp = """天魁:配偶家世不俗。喜府相紫武贪破曰月左右昌曲三化禄马。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '天钺'):
+            tmp = """天钺:带桃花，主得异性贵人。 
 嫌昌曲桃花阎，易有外遇。 
 解同天魁。 
-魁锻一入夫妻宫。一入福德宫，见桃花，必有第三者介入。 
- 火星 
-最喜见擎苹。配偶命宫见之最吉，夫妻富见次之。 
+魁锻一入夫妻宫。一入福德宫，见桃花，必有第三者介入。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '火星'):
+            tmp = """火星:最喜见擎苹。配偶命宫见之最吉，夫妻富见次之。 
 落陷，配偶辛劳。 
 入庙，聚少离多，或配偶事业有变。最喜见贫狼，主得财。无贪狼亦则必有一
 段光辉。 
 男女皆主配偶暴躁。见煞，易生困扰。 
  铃星最喜见化禄及食狼。 
 火铃分居福德及夫妻富，主仓卒成婚，或与料想不到的人结婚。 
-分坐夫妻寓及迁移宫，夫妇性刚。 
-擎羊 
-男英俊，女冷艳。 
+分坐夫妻寓及迁移宫，夫妇性刚。 """
+            print(tmp)
+            print("\n")
+        if(smallStar == '擎羊'):
+            tmp = """擎羊:男英俊，女冷艳。 
 独坐夫妻宫，配偶宜军警、或技术人员，或与异族通婚。 
 独坐，配偶有一闪外伤，或动手术。 
-见廉月桃花大耗，主离家出走。 
-陀罗 
-主配偶孤独，离乡背井。 
- 主迟婚，拖延。婚后家务是非。 
- 地空 
-主婚后感情日淡。 
+见廉月桃花大耗，主离家出走。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '陀罗'):
+            tmp = """陀罗:主配偶孤独，离乡背井。 
+ 主迟婚，拖延。婚后家务是非。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '地空'):
+            tmp = """地空:主婚后感情日淡。 
 若与杀破同宫，无桃花，结识异性机会少，宜媒约。 
 与旬空、天空会，知音难求。 
 独坐午宫，于意料外成婚。 
-宜与火羊独坐命宫或夫妻宫者配合。 
- 地劫 
-独坐，感情及钱财均不利。 
+宜与火羊独坐命宫或夫妻宫者配合。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '地劫'):
+            tmp = """地劫 :独坐，感情及钱财均不利。 
 见劫，未婚者恋爱中途生意外之变。分离有反复纠缠。婚后仍多难言之隐。 
 宜与陀罗入庙居命宫或夫妻宫者婚配。 
 空劫同坐，对婚姻反少破坏力，唯特殊之处增多。 
 夹夫妻宫不利，唯夹武曲化忌者吉。"""
-    print(tmp)
+            print(tmp)
+            print("\n")
+    
+def GongChu4th(star, dizhi, smallStarList):
+    print(star, dizhi)
+    for smallStar in smallStarList:
+        print(smallStar, end = ' ')
     print("\n")
-def GongChu4th(star, dizhi):
     if(star[:2] == "紫薇"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """得子女必性刚，志高气傲，但多秀发。 
 会化禄、化权、化科必得佳儿。但以迟得为宜，主贵禄。 
@@ -3799,7 +3868,7 @@ def GongChu4th(star, dizhi):
                 print("\n")
             
     elif(star[:2] == "天机"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """天机入庙，主子女聪明机巧。天机入子女宫，主子女少。或迟生。 
 天机落陷，最忌见煞忌空劫，无子，有亦不和，或子女品格不佳，多心机巧诈，
@@ -3826,7 +3895,7 @@ def GongChu4th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "太阳"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """太阳坐子女宫，巨门会照而太阳庙旺，子聪明能创业，见禄杈科或昌曲，有语
 言天才或辩才。 
@@ -3852,7 +3921,7 @@ def GongChu4th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "武曲"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """武曲入子女宫，宜继室偏房产子，结发者多虚花。子女刚耿，但落落寡合。 
 武曲主克，见七杀及化忌，主流产。
@@ -3885,7 +3954,7 @@ def GongChu4th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "天同"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """凡天同坐子女宫，首胎以见女为佳。 
  天同坐巳独守，对宫天梁，得子可能弱智，唯以见煞忌始是。天同主子女软弱怕事，且易安于逸乐，少斗志，难经风浪。为人情绪化。 
@@ -3911,7 +3980,7 @@ def GongChu4th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "廉贞"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """最喜与天府相会，主得贵子三人。
 廉贞化忌，子女多灾病，或破相。 
@@ -3945,7 +4014,7 @@ def GongChu4th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "天府"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """一般情形下主子女多。 
 会昌曲魁钺，得聪明且多才之子。子孝。 
@@ -3960,7 +4029,7 @@ def GongChu4th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "太阴"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """庙旺，一般情形下主子女富有。先女后子为宜，否则女多子少。 
 落陷得子软弱，或刑克。先招祀子为宜。 
@@ -3977,7 +4046,7 @@ def GongChu4th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "贪狼"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """贪狼会咸池天姚，主女多子少。亦主先女后子，否则偏房继室生子。 
 贪狼入庙，会左右、魁钺、天贵，子女二三人，且有贵显者。 
@@ -4001,7 +4070,7 @@ def GongChu4th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "巨门"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """巨门守子女宫，以迟得子为宜，否则长了难养。巨门主孤独，必见太阳始解其
 暗；得化禄、化权、化科或禄存，方有祥和之气。 
@@ -4017,7 +4086,7 @@ def GongChu4th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "天相"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """天相坐子女宫，见武曲破军拱照，主刑克，迟得为宜。首胎有小产流产，或有
 损伤。以先生女为佳。否则主偏房继室生子。 
@@ -4028,7 +4097,7 @@ def GongChu4th(star, dizhi):
         print(tmp)
         print("\n")
     elif(star[:2] == "天梁"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """天梁入庙居子女宫，会照辅弼、三吉化曜、天巫、恩光、昌曲、魁钺者，主子
 女聪明多才，做事有原则，且耿直心慈，能富能贵。 
@@ -4046,7 +4115,7 @@ def GongChu4th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "七杀"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """七杀守子女宫，入庙或乘胜旺，见辅弼、魁钺、昌曲，皆主子女可以兴家。 
 七杀守子女宫主孤。以先女后子为宜。 
@@ -4063,7 +4132,7 @@ def GongChu4th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "破军"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """破军入子女宫，酋胎刑伤，多流产小产。须偏房继室生子，先立祀子亦可。 
 入庙三子，性刚强。见禄则为兴家之才。 
@@ -4074,37 +4143,89 @@ def GongChu4th(star, dizhi):
         print(tmp)
         print("\n")
     print("-------------------------------------")
-    tmp = """(附)辅佐煞曜对子女宫的影响 
- 禄存 
-主庶室继室生子始得力，且可成器。 
-子女性谨慎，善守财。见煞则主吝啬。 
- 天马 
-主子女远离。会化禄、禄存，宜出国发展。再见三化吉曜，子女必秀发。 
-会四煞刑忌，子女不雇父母。再见天刑，多灾病。 
-左辅、右弼 
-主子女得力，可以兴家。 
-亦主子女数目比正曜星系所显示者为多。 
-文昌、文曲 
-主子女聪明秀发。学业成绩佳。 
+    for smallStar in smallStarList:
+        if(smallStar == '禄存'):
+            tmp = """禄存:主庶室继室生子始得力，且可成器。 
+子女性谨慎，善守财。见煞则主吝啬。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '天马'):
+            tmp = """天马:主子女远离。会化禄、禄存，宜出国发展。再见三化吉曜，子女必秀发。 
+会四煞刑忌，子女不雇父母。再见天刑，多灾病。 """
+            print(tmp)
+            print("\n")
+        if(smallStar == '左辅'):
+            tmp = """左辅:主子女得力，可以兴家。 
+亦主子女数目比正曜星系所显示者为多。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '右弼'):
+            tmp = """右弼:主子女得力，可以兴家。 
+亦主子女数目比正曜星系所显示者为多。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '文昌'):
+            tmp = """文昌:主子女聪明秀发。学业成绩佳。 
 会吉曜，化禄化权化科，主贵显。 
-遇四煞，主子女易为虚浮。 
-天魁、天钺 
-主子女可贵。 
- 性格忠厚，老年可靠。若会煞刑，则子女好走偏锋。 
- 火星、铃星 
-主孤独。 
+遇四煞，主子女易为虚浮。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '文曲'):
+            tmp = """文曲:主子女聪明秀发。学业成绩佳。 
+会吉曜，化禄化权化科，主贵显。 
+遇四煞，主子女易为虚浮。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '天魁'):
+            tmp = """天魁:主子女可贵。 
+ 性格忠厚，老年可靠。若会煞刑，则子女好走偏锋。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '天钺'):
+            tmp = """天钺:主子女可贵。 
+ 性格忠厚，老年可靠。若会煞刑，则子女好走偏锋。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '火星'):
+            tmp = """火星:主孤独。 
 性急。但入庙则主忠厚。 
-刑忌重恐伤残身体。 
- 擎羊、陀罗 
-主刑、主孤。与浮荡的星曜会合，主性格易流于虚诈。 
-煞忌重主不孝。地空、地劫 
- 若地空、地劫与化忌同会子女宫，恐绝嗣。有吉解，有子亦恐夭折。偏房或继室
+刑忌重恐伤残身体。  """
+            print(tmp)
+            print("\n")
+        if(smallStar == '铃星'):
+            tmp = """铃星:主孤独。 
+性急。但入庙则主忠厚。 
+刑忌重恐伤残身体。  """
+            print(tmp)
+            print("\n")
+        if(smallStar == '擎羊'):
+            tmp = """擎羊:主刑、主孤。与浮荡的星曜会合，主性格易流于虚诈。 
+煞忌重主不孝。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '陀罗'):
+            tmp = """陀罗:主刑、主孤。与浮荡的星曜会合，主性格易流于虚诈。 
+煞忌重主不孝。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '地空'):
+            tmp = """地空:若地空、地劫与化忌同会子女宫，恐绝嗣。有吉解，有子亦恐夭折。偏房或继室
 生子吉，亦宜先招祀子。"""
-    print(tmp)
+            print(tmp)
+            print("\n")
+        if(smallStar == '地劫'):
+            tmp = """地劫 :若地空、地劫与化忌同会子女宫，恐绝嗣。有吉解，有子亦恐夭折。偏房或继室
+生子吉，亦宜先招祀子。"""
+            print(tmp)
+            print("\n")
+    
+def GongChu5th(star, dizhi, smallStarList):
+    print(star, dizhi)
+    for smallStar in smallStarList:
+        print(smallStar, end = ' ')
     print("\n")
-def GongChu5th(star, dizhi):
     if(star[:2] == "紫薇"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """紫微守财帛宫，一般情形下主富厚。 
 会照破军，须先经波折然后得财，唯得财后仍何波折。会煞则防得后破败。 
@@ -4143,7 +4264,7 @@ def GongChu5th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "天机"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """天机守财帛宫，主有财难储。即使入庙，亦不过财来财去，无缺乏之虞。 
 人庙，与禄存、天马、化禄会合：定富裕，财帛丰足。若天机化禄，则主由旧
@@ -4171,7 +4292,7 @@ def GongChu5th(star, dizhi):
                 print("\n")
             
     elif(star[:2] == "太阳"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """太阳入庙，通常皆主财帛丰盈。但太阳本身有一特性，即是[施而不受]，因为
 阳光普照是施出，太阳从未向任何物体接受过光和热。由于具有这种本质，所以太
@@ -4205,7 +4326,7 @@ def GongChu5th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "武曲"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """武曲为司财帛的主星，人庙主财帛丰足，而且得财顺利。亦主其人有管理财帛
 的能力。 
@@ -4251,7 +4372,7 @@ def GongChu5th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "天同"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """凡天同在财帛宫，必主白手兴家，或以微资发家。所以多主人中年以后安定，
 晚年始有积聚。 
@@ -4276,7 +4397,7 @@ def GongChu5th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "廉贞"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """廉贞入庙居财帛宫，主竞争中生财。 
 若入陷宫，则主于艰难中得财，且财来财去聚散无常。 
@@ -4314,7 +4435,7 @@ def GongChu5th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "天府"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """天府为财库，守财帛宫，主人可积聚，故多一一生富足。 
 若会左辅右弼、禄存、化禄．更见紫微、武曲者，则为巨富之格。 
@@ -4324,7 +4445,7 @@ def GongChu5th(star, dizhi):
         print(tmp)
         print("\n")
     elif(star[:2] == "太阴"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """太阴主富，守财帛宫主富裕。 
 入庙宫，与禄存、化禄、右辅右弼、文昌文曲相会，为富奢之命。 
@@ -4333,7 +4454,7 @@ def GongChu5th(star, dizhi):
         print(tmp)
         print("\n")
     elif(star[:2] == "贪狼"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """贪狼守财帛宫，最喜火星或铃星同度，则主横发，或主得意外之财。 
 亦喜禄存、化禄会照，则主财禄丰盈。 
@@ -4342,7 +4463,7 @@ def GongChu5th(star, dizhi):
         print(tmp)
         print("\n")
     elif(star[:2] == "巨门"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """巨门守财帛宫，主劳心费力，于竞争中生财。或主凭脑力思虑，或主凭口才，
 费尽唇舌而得财。 
@@ -4366,7 +4487,7 @@ def GongChu5th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "天相"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """天相在财帛宫必与天府会照，印星与财库相会，若得禄存、化禄等吉星照会，自
 主财帛丰足，即居陷地，亦主人可以白手成家。一一如与廉贞同度，则可从商，主
@@ -4380,7 +4501,7 @@ def GongChu5th(star, dizhi):
         print(tmp)
         print("\n")
     elif(star[:2] == "天梁"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """天梁最喜与太阴会合。若入腼会照太阴、化禄、禄存，则主可以发达。再见天
 巫。则主可以承受遗产，或垂手而得现成财帛。 
@@ -4397,7 +4518,7 @@ def GongChu5th(star, dizhi):
         print(tmp)
         print("\n")
     elif(star[:2] == "七杀"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """七杀入庙，会照化禄、化权、化科、神通存者，主财源丰厚，能得意外财源。 
 喜居辰、戌二宫，人天罗地网反能发达致富。较居卯、酉二宫之武曲七杀为传，
@@ -4410,7 +4531,7 @@ def GongChu5th(star, dizhi):
         print(tmp)
         print("\n")
     elif(star[:2] == "破军"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """破军在子、午宫独坐，会化禄、化权、化科，主富贵。在辰、戌天罗地网者次
 之。 
@@ -4427,35 +4548,73 @@ def GongChu5th(star, dizhi):
                 print(tmp)
                 print("\n")
     print("-------------------------------------------")
-    tmp = """(附)辅佐煞曜对财帛宫的影响 
- 禄存 
-加众吉，财源丰茂。 
+    for smallStar in smallStarList:
+        if(smallStar == '禄存'):
+            tmp = """禄存:加众吉，财源丰茂。 
 加煞曜，劳中生财，终可积聚。
 遇空劫同度，会煞忌，虽有亦如无。或一生多钱财争讼。天马 
-与禄存或化禄会合，可以增加财帛收益。 
-文昌 
-最喜与巨门同度，主富。 
+与禄存或化禄会合，可以增加财帛收益。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '左辅'):
+            tmp = """左辅:主得人助力，或得人提拔推崇而生财。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '右弼'):
+            tmp = """右弼:主得人助力，或得人提拔推崇而生财。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '文昌'):
+            tmp = """文昌:最喜与巨门同度，主富。 
 入庙见诸吉，可得贵人财。 
-若煞忌刑耗并见，一生寒士。 
- 文曲 
-亦喜与巨门同度，主费口舌可以生财。余如文昌。 
-天魁、天钺 
-主人近贵得财。亦主人因政府条例或公司企业规例原则之改变而得财。 
-左辅、右弼 
-主得人助力，或得人提拔推崇而生财。 
- 擎羊、陀罗 
-一般均主竞争。 
-加天刑、化忌、大耗，主因财耗散，而至一生奇贫。唯擎羊遇火星，反主有得
-有失。 
-火星、铃星 
-一般主是非。 
+若煞忌刑耗并见，一生寒士。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '文曲'):
+            tmp = """文曲:亦喜与巨门同度，主费口舌可以生财。若煞忌刑耗并见，一生寒士。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '天魁'):
+            tmp = """天魁:主人近贵得财。亦主人因政府条例或公司企业规例原则之改变而得财。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '天钺'):
+            tmp = """天钺:主人近贵得财。亦主人因政府条例或公司企业规例原则之改变而得财。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '火星'):
+            tmp = """火星:一般主是非。 
 入庙，亦主横发横破。落陷，则主劳苦求财。 
-再见煞曜会合，更见空劫刑忌，贫无立锥。"""
-    print(tmp)
+再见煞曜会合，更见空劫刑忌，贫无立锥。  """
+            print(tmp)
+            print("\n")
+        if(smallStar == '铃星'):
+            tmp = """铃星:一般主是非。 
+入庙，亦主横发横破。落陷，则主劳苦求财。 
+再见煞曜会合，更见空劫刑忌，贫无立锥。  """
+            print(tmp)
+            print("\n")
+        if(smallStar == '擎羊'):
+            tmp = """擎羊:一般均主竞争。 
+加天刑、化忌、大耗，主因财耗散，而至一生奇贫。唯擎羊遇火星，反主有得
+有失。 """
+            print(tmp)
+            print("\n")
+        if(smallStar == '陀罗'):
+            tmp = """陀罗:一般均主竞争。 
+加天刑、化忌、大耗，主因财耗散，而至一生奇贫。唯擎羊遇火星，反主有得
+有失。 """
+            print(tmp)
+            print("\n")
+        
+    
+def GongChu6th(star, dizhi, smallStarList):
+    print(star, dizhi)
+    for smallStar in smallStarList:
+        print(smallStar, end = ' ')
     print("\n")
-def GongChu6th(star, dizhi):
     if(star[:2] == "紫薇"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """紫微守疾厄宫，一般均主脾胃病。常见的情形，是腹泻、呕吐、气痛、气胀。 
 脾胃有病，有时亦表现为脾土不运化而致吸收不良，或胃纳不佳而致胃寒。 
@@ -4496,7 +4655,7 @@ def GongChu6th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "天机"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """天机守疾厄宫，一般主患肝病、胆病。或主人于婴儿时多灾病，易患惊风。――
 风属木，故天机亦主惊风。 
@@ -4526,7 +4685,7 @@ def GongChu6th(star, dizhi):
                 print("\n")
             
     elif(star[:2] == "太阳"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """太阳守疾厄宫，一般均主血压心脏有病，如血压高、血糖高，或血管栓塞。故亦有
 头痛、头晕、眼花等现象。太阳在午宫守疾厄宫，或落陷遇羊陀，主患目疾，或眼
@@ -4553,7 +4712,7 @@ def GongChu6th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "武曲"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """武曲守疾厄寓，一般均丰肺部及呼吸器官疾病。 
 若见天马及火铃，为属火的星曜，伤克武曲阴金，咳嗽、吐血。为肺结核的现
@@ -4589,7 +4748,7 @@ def GongChu6th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "天同"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """天同入疾厄宫，一般情形下主灾难少。在疾病方面，则表现为肾脏、膀胱、尿
 道、输精管或输卵管的疾病。 
@@ -4618,7 +4777,7 @@ def GongChu6th(star, dizhi):
                 print("\n")
             
     elif(star[:2] == "廉贞"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """廉贞在疾厄宫，多主虚火上升或心火急燥，此乃以廉贞为阴火之故。 
 廉贞在斗数中又为[血星]，故主便血、咯血、心血、亏损、心肾不交而致血份亏少失眠、贫血等疾。女命亦主经血不足，经期不准。化忌者，见煞曜刑主血癌，
@@ -4655,7 +4814,7 @@ def GongChu6th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "天府"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """天府守疾厄宫，一般主胃病，及有脚气浮肿、湿气麻痹，以及鼓胀等疾。 
 若会照华盖、天才，则为土被木伤，主有反胃、怔忡等病。 
@@ -4667,7 +4826,7 @@ def GongChu6th(star, dizhi):
         print(tmp)
         print("\n")
     elif(star[:2] == "太阴"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """太阴守疾厄宫，一般皆主阴虚亏损。表现为泻痢、脚肿、阴瘘、或脾胃及小肠
 湿热。 
@@ -4681,7 +4840,7 @@ def GongChu6th(star, dizhi):
         print(tmp)
         print("\n")
     elif(star[:2] == "贪狼"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """贪狼在疾厄宫，一般均主有肝胆病。主肝旺、脾虚、胆分泌失调。幼年则主肝
 风抽缩。 
@@ -4708,7 +4867,7 @@ def GongChu6th(star, dizhi):
                 print("\n")
             
     elif(star[:2] == "巨门"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """巨门守疾厄宫，主脾胃病及消化杌能病。但由于土能生金，若脾土虚弱，则金
 亦少生助，故亦可能牵连致呼吸器官疾病。
@@ -4735,7 +4894,7 @@ def GongChu6th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "天相"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """天相在疾厄宫，主膀胱、尿道疾病、有时亦主胆病。 
 亦主由肾水失调引起之疾患，如糖尿、肾石、膀胱结石等。 
@@ -4748,7 +4907,7 @@ def GongChu6th(star, dizhi):
         print(tmp)
         print("\n")
     elif(star[:2] == "天梁"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """天梁守疾厄宫，多可使疾病转危为安。但有煞总会照，则必先见重症然后得愈，
 始见天梁消灾解难的能力。 
@@ -4761,7 +4920,7 @@ def GongChu6th(star, dizhi):
         print(tmp)
         print("\n")
     elif(star[:2] == "七杀"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """七杀临疾厄宫，主人幼年多灾病，且易暴怒，伤致肝肺。  
 有紫微或天府拱照，主肠胃不和，胃纳不佳。紫府同时拱会，又见擎羊，亦主
@@ -4782,7 +4941,7 @@ def GongChu6th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "破军"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """破军守疾厄宫，主人幼年多脓血之灾。见天虚、大耗、阴煞，主人不足月生，
 需受特殊照料。 
@@ -4802,9 +4961,13 @@ def GongChu6th(star, dizhi):
 武曲同度而化忌，主癌症，亦发痫于生殖器官。 """
                 print(tmp)
                 print("\n")
-def GongChu7th(star, dizhi):
+def GongChu7th(star, dizhi, smallStarList):
+    print(star, dizhi)
+    for smallStar in smallStarList:
+        print(smallStar, end = ' ')
+    print("\n")
     if(star[:2] == "紫薇"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """紫微守迁移宫，主出外得人敬重。 
 更会照左辅、右弼，出外得人助力。亦主交游广阔，或所交多益友。 
@@ -4844,7 +5007,7 @@ def GongChu7th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "天机"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """天机为浮动的星曜，主活动，主变化。所以凡天机坐迁移宫的人，离开出生地
 发展反而有利。若居于出生地，反主心志动摇不定，见异思迁，且易生是非口舌。 
@@ -4873,7 +5036,7 @@ def GongChu7th(star, dizhi):
                 print("\n")
             
     elif(star[:2] == "太阳"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """太阳亦不是宁静的星曜，虽浮动性不如天机，但亦利动不利静。故凡太阳坐命
 宫的人，不宜静守，宜出外发展。若出门或徒居外地，可以得近贵人以成事业。 
@@ -4904,7 +5067,7 @@ def GongChu7th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "武曲"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """武曲守迁移宫，在一般情况下不利出门或徙移。因武曲为财帛星主，宜静不宜
 动。 
@@ -4944,7 +5107,7 @@ def GongChu7th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "天同"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """天同在迁移宫，主人动静咸宜。若见禄马交驰于迁移宫，主在他乡可以致富。
 否则亦主出门得福。 
@@ -4970,7 +5133,7 @@ def GongChu7th(star, dizhi):
                 print("\n")
             
     elif(star[:2] == "廉贞"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """廉贞坐迁移宫，不宜在出生地留恋，以外走他乡为宜。喜得诸吉会照。最嫌化
 忌，次则嫌见煞。 
@@ -5011,7 +5174,7 @@ def GongChu7th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "天府"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """天府坐迁移宫，主人动静皆宜。 
 若出外或徙居，可以遂心，且得入尊重，有助力，创业或经商，皆可富裕。尤
@@ -5021,7 +5184,7 @@ def GongChu7th(star, dizhi):
         print(tmp)
         print("\n")
     elif(star[:2] == "太阴"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """太阴在迁移宫入庙，主为人人缘极佳，在异乡有贵人扶持。 
 若落陷地，则多招是非口舌阴谋。更见擎羊、陀罗、天刑、阴煞，则更多小人
@@ -5034,7 +5197,7 @@ def GongChu7th(star, dizhi):
         print(tmp)
         print("\n")
     elif(star[:2] == "贪狼"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """贪狼为正桃花，主酒色财气。故凡贪狼在迁移宫，会化禄、化权、化科或禄存，
 主在异乡多酒色的应酬。多赌友、饮友，或花酒风月之友。最佳者则为有宗教信仰
@@ -5056,7 +5219,7 @@ def GongChu7th(star, dizhi):
                 print("\n")
             
     elif(star[:2] == "巨门"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """巨门守迁移宫，最喜有化禄、化权，或禄存同度。若巨门入庙，则主其人以讲
 学、辩论名扬异域。故宜为外交人员。 
@@ -5068,7 +5231,7 @@ def GongChu7th(star, dizhi):
         print(tmp)
         print("\n")
     elif(star[:2] == "天相"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """天相守迁移宫，最喜化禄、化权、化科、禄存、左辅、右弼、天魁、天钺、天马
 等吉星祥曜会照。主人在外有意料不及之机遇，一且得贵人提拔，友人助力，及当地人士摧崇拥护，可以发富或发福。 。  
@@ -5088,7 +5251,7 @@ def GongChu7th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "天梁"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """天梁守迁移宫，在外为人敬畏。   
 """
@@ -5117,7 +5280,7 @@ def GongChu7th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "七杀"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """七杀在迁移富，一般均主人在外乡有权势，可以威福，及令当地人士敬畏。 
  若与天刑同度，则主人在异乡有灾。若七杀落陷，则主受人连累。或在外受人压
@@ -5141,7 +5304,7 @@ def GongChu7th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "破军"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """破军守迁移宫，若离出生地。皆主以技艺谋生，或靠专门知识、专门技能以兴
 家。若会吉星祥曜，则技艺为人敬服景仰。 
@@ -5166,34 +5329,82 @@ def GongChu7th(star, dizhi):
                 print(tmp)
                 print("\n")
     print("---------------------------------------")
-    tmp = """(附) 辅佐煞曜对迁移宫的影响 
- 文昌、文曲 
-遇吉曜则发达，加煞曜则欠安宁。 
-文昌、文曲化忌于迁移宫，有可能失窃，或在外破财。 
-左辅、右弼 
-遇吉曜则主多助力。 
-加煞曜刑忌，则反主小人竞争，是非口舌。 
-天魁、天钺 
- 在外主遇贵人扶助。 
+    for smallStar in smallStarList:
+        if(smallStar == '禄存'):
+            tmp = """禄存:遇吉曜，则在外可以经营致富。若见恶煞凶曜，则少人缘。 """
+            print(tmp)
+            print("\n")
+        if(smallStar == '天马'):
+            tmp = """天马:遇吉曜，则在外可以经营致富。若见恶煞凶曜，则少人缘。  """
+            print(tmp)
+            print("\n")
+        if(smallStar == '左辅'):
+            tmp = """左辅:遇吉曜则主多助力。 
+加煞曜刑忌，则反主小人竞争，是非口舌。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '右弼'):
+            tmp = """右弼:遇吉曜则主多助力。 
+加煞曜刑忌，则反主小人竞争，是非口舌。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '文昌'):
+            tmp = """文昌:遇吉曜则发达，加煞曜则欠安宁。 
+文昌、文曲化忌于迁移宫，有可能失窃，或在外破财。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '文曲'):
+            tmp = """文曲:遇吉曜则发达，加煞曜则欠安宁。 
+文昌、文曲化忌于迁移宫，有可能失窃，或在外破财。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '天魁'):
+            tmp = """天魁:在外主遇贵人扶助。 
  或主因异乡风俗、异乡法例适能投入之宜而致发福。 
- 遇煞忌刑耗诸曜，反主凡事费力。且宜入境问禁。 
- 禄存、天马 
- 遇吉曜，则在外可以经营致富。若见恶煞凶曜，则少人缘。 
-擎羊 
- 主招竞争，主人缘不佳。亦主是非，更见天刑、大耗，注灾病，或主官非词讼。 
- 陀罗 
-主拖延，以致虽有良机出外亦不成行。 
-见恶曜凶星会合，主少人缘，遭人妒忌。 
- 火星、铃星 
-一般主出门是非，见化忌、天刑则主出门有官非口舌。若见诸吉，则反主在异
-乡发迹，唯仍劳心劳力奔波。 
- 地空、地劫 
-一般均主挫折。见擎羊、天刑、化忌，则在异乡倾败。"""
-    print(tmp)
+ 遇煞忌刑耗诸曜，反主凡事费力。且宜入境问禁。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '天钺'):
+            tmp = """天钺:在外主遇贵人扶助。 
+ 或主因异乡风俗、异乡法例适能投入之宜而致发福。 
+ 遇煞忌刑耗诸曜，反主凡事费力。且宜入境问禁。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '火星'):
+            tmp = """火星:一般主出门是非，见化忌、天刑则主出门有官非口舌。若见诸吉，则反主在异
+乡发迹，唯仍劳心劳力奔波。  """
+            print(tmp)
+            print("\n")
+        if(smallStar == '铃星'):
+            tmp = """铃星:一般主出门是非，见化忌、天刑则主出门有官非口舌。若见诸吉，则反主在异
+乡发迹，唯仍劳心劳力奔波。  """
+            print(tmp)
+            print("\n")
+        if(smallStar == '擎羊'):
+            tmp = """擎羊:主招竞争，主人缘不佳。亦主是非，更见天刑、大耗，注灾病，或主官非词讼。 """
+            print(tmp)
+            print("\n")
+        if(smallStar == '陀罗'):
+            tmp = """陀罗:主拖延，以致虽有良机出外亦不成行。 
+见恶曜凶星会合，主少人缘，遭人妒忌。 """
+            print(tmp)
+            print("\n")
+        if(smallStar == '地空'):
+            tmp = """地空:一般均主挫折。见擎羊、天刑、化忌，则在异乡倾败。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '地劫'):
+            tmp = """地劫 :一般均主挫折。见擎羊、天刑、化忌，则在异乡倾败。"""
+            print(tmp)
+            print("\n")
+    
+def GongChu8th(star, dizhi, smallStarList):
+    print(star, dizhi)
+    for smallStar in smallStarList:
+        print(smallStar, end = ' ')
     print("\n")
-def GongChu8th(star, dizhi):
     if(star[:2] == "紫薇"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """紫微守交友宫，星曜太强，一般情形下，主下属难以控制。若入庙，且有左辅、右弼等辅佐诸曜同度或会照，则星曜更强，虽在平辈交游
 中主可得益友，但朋友必胜于己，而下属则必更难控制。但若自己能心胸宽广，提
@@ -5250,7 +5461,7 @@ def GongChu8th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "天机"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """天机守交友宫，会吉曜则主交游广阔，入庙亦然。但下属虽佳，却主时时变换。
 得力助手难以长久。友人亦时更换。所人生虽不孤寂，但却难得下属长期助力。若
@@ -5286,7 +5497,7 @@ def GongChu8th(star, dizhi):
                 print("\n")
             
     elif(star[:2] == "太阳"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """太阳居交友宫，一般情形均主受友人或下属埋怨，若父母宫星曜不吉，更主时
 受上司责成。这是因为太阳将光和热贡献普施，万物因而得益，但万物却不但没有
@@ -5320,7 +5531,7 @@ def GongChu8th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "武曲"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """武曲入交友宫，一般情形下主朋友少，下属亦不多。人缘亦欠佳。 
 但若会左辅右弼、文昌文曲、及化禄、化权、化科者，始主友人及下属众多及
@@ -5368,7 +5579,7 @@ def GongChu8th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "天同"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """天同守交友宫，交游广阔，且不拘于一个阶层。若左辅右弼、文昌文曲、天魁天钺并见者，更主其人广交五湖四海。在下属方面，亦主众多而且得力。 
 唯天问若落陷地，则朋复或下属陷害虽多，但益友或能助己者卸少。 
@@ -5401,7 +5612,7 @@ def GongChu8th(star, dizhi):
                 print("\n")
             
     elif(star[:2] == "廉贞"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """廉贞坐交友宫，主朋友或下属众多，但未必有助力，需详入庙落陷及会照星曜
 而定。 
@@ -5443,7 +5654,7 @@ def GongChu8th(star, dizhi):
                 print("\n")
             
     elif(star[:2] == "天府"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """天府坐交友宫，主交游广阔，但慎于择交。唯此性质与天同之交游广阔不同，
 天同交友，不拘出身地位。亦与廉贞之交游广阔不矧，廉贞易交损友。 
@@ -5459,7 +5670,7 @@ def GongChu8th(star, dizhi):
         print(tmp)
         print("\n")
     elif(star[:2] == "太阴"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """太阴入庙守交友宫，主生平多益友，亦易得何助力之下属。 
 但不宜见天机会照，虽主交游广阔，下属众多，唯易时时改变，难得深交朋友，
@@ -5475,7 +5686,7 @@ def GongChu8th(star, dizhi):
         print(tmp)
         print("\n")
     elif(star[:2] == "贪狼"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """贪狼守交友宫、入庙，见左辅右弼、天魁天钺、天福、恩光、天巫会照者，主
 为人交游广阔，人际荚系活跃，深受友人欢迎，口碑宣传社交圈内。但实际动力则
@@ -5490,7 +5701,7 @@ def GongChu8th(star, dizhi):
         print(tmp)
         print("\n")
     elif(star[:2] == "巨门"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """巨门守交友宫，最喜化禄、化权、化科、禄存、昌曲、魁钺、辅弼会照，主得
 交能言善辩、多智多谋之友，且得友人助力；下属亦有忠谏之士，能助自身兴家创
@@ -5514,7 +5725,7 @@ def GongChu8th(star, dizhi):
                 print("\n")
             
     elif(star[:2] == "天相"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """天相守交友宫，一般情形下可视为最佳之星曜，因天橱具有正义感，且主热心为
 人，所以主得交能助己兴家、为己效劳的真正朋友，同时亦主得下属支持，且忠诚
@@ -5533,7 +5744,7 @@ def GongChu8th(star, dizhi):
         print(tmp)
         print("\n")
     elif(star[:2] == "天梁"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """天梁守交友宫，一般情况下主友人不多，下属不众。唯与天机同度，然后始主
 友人或下属众多，但仍时时哑换下属、换友人。 
@@ -5549,7 +5760,7 @@ def GongChu8th(star, dizhi):
         print(tmp)
         print("\n")
     elif(star[:2] == "七杀"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """七杀入交友宫，所结交者每少敦厚之士，下属亦多竞争是非。故凡值此星曜者，
 宜勿听闲言挑拨，凡事皆应慎重查察。兼听则明，偏听则暗。 
@@ -5570,7 +5781,7 @@ def GongChu8th(star, dizhi):
                 print("\n")
             
     elif(star[:2] == "破军"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """破军守交友宫，一般情况下亦主因友人而招破耗，或因下属之背弃而致事业受
 损、财帛破散。 
@@ -5591,36 +5802,94 @@ def GongChu8th(star, dizhi):
                 print(tmp)
                 print("\n")
     print("-----------------------------------------")
-    tmp = """(附) 辅佐煞曜对交友宫的影响 
-文昌、文曲 
-一般主友人及下属众多。但文昌或文曲化忌，则主下属办事欠才干，友人少助
+    for smallStar in smallStarList:
+        if(smallStar == '禄存'):
+            tmp = """禄存:主出外可以得人助力生财。 
+若仅得禄存同度，且正曜不占，反主受人倾轧。更见煞曜尤凶。 """
+            print(tmp)
+            print("\n")
+        if(smallStar == '天马'):
+            tmp = """天马:主出外可以得人助力生财。 
+若仅得禄存同度，且正曜不占，反主受人倾轧。更见煞曜尤凶。  """
+            print(tmp)
+            print("\n")
+        if(smallStar == '左辅'):
+            tmp = """左辅:一般主友人下属众多，且得力。唯必须遇吉曜会合者始是。若与天虚、阴煞、天月会合，则虽多无益。宜远离小人。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '右弼'):
+            tmp = """右弼:一般主友人下属众多，且得力。唯必须遇吉曜会合者始是。若与天虚、阴煞、天月会合，则虽多无益。宜远离小人。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '文昌'):
+            tmp = """文昌:一般主友人及下属众多。但文昌或文曲化忌，则主下属办事欠才干，友人少助
 力，不宜倚之以创立事业。 
 文昌化忌见煞，主因友人或下属而致文书失误。文曲化忌见煞，则主因受友人
-的影响，而致投资失误。 
-左辅、右弼 
-一般主友人下属众多，且得力。唯必须遇吉曜会合者始是。若与天虚、阴煞、天月会合，则虽多无益。宜远离小人。 
- 天魁、天钺 
-一般主友人助力，又为下属众多之兆。但见煞、忌、刑、耗及空劫同会，反主
-友人及下属寡情。 
- 化禄、化权、化科 
-一般主得交社会地位高尚人士；又主手下人众多得力，能助己兴家创业。若更
-加会吉霍祥曜，则彼此提携之力更大。 
-若见煞星恶曜，则虽交权势，亦防因之招损。或于下人反易凌驾于自己之上。 
- 禄存、天马 
-主出外可以得人助力生财。 
-若仅得禄存同度，且正曜不占，反主受人倾轧。更见煞曜尤凶。 
- 擎羊、陀罗 
- 一般主受拖累。 
+的影响，而致投资失误。 """
+            print(tmp)
+            print("\n")
+        if(smallStar == '文曲'):
+            tmp = """文曲:一般主友人及下属众多。但文昌或文曲化忌，则主下属办事欠才干，友人少助
+力，不宜倚之以创立事业。 
+文昌化忌见煞，主因友人或下属而致文书失误。文曲化忌见煞，则主因受友人
+的影响，而致投资失误。 """
+            print(tmp)
+            print("\n")
+        if(smallStar == '天魁'):
+            tmp = """天魁:一般主友人助力，又为下属众多之兆。但见煞、忌、刑、耗及空劫同会，反主
+友人及下属寡情。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '天钺'):
+            tmp = """天钺:一般主友人助力，又为下属众多之兆。但见煞、忌、刑、耗及空劫同会，反主
+友人及下属寡情。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '火星'):
+            tmp = """火星:一般主受人所误。 
+ 更见阴煞、劫煞、地空、地劫，主受人暗算而招损失。或主遭人偷盗、侵吞。 """
+            print(tmp)
+            print("\n")
+        if(smallStar == '铃星'):
+            tmp = """铃星:一般主受人所误。 
+ 更见阴煞、劫煞、地空、地劫，主受人暗算而招损失。或主遭人偷盗、侵吞。 """
+            print(tmp)
+            print("\n")
+        if(smallStar == '擎羊'):
+            tmp = """擎羊:一般主受拖累。 
  见刑忌，则有官司连累之厄。 
- 再见空劫、大耗，主受累破产。 
-火星、铃星 
- 一般主受人所误。 
- 更见阴煞、劫煞、地空、地劫，主受人暗算而招损失。或主遭人偷盗、侵吞。"""
-    print(tmp)
+ 再见空劫、大耗，主受累破产。 """
+            print(tmp)
+            print("\n")
+        if(smallStar == '陀罗'):
+            tmp = """陀罗:一般主受拖累。 
+ 见刑忌，则有官司连累之厄。 
+ 再见空劫、大耗，主受累破产。 """
+            print(tmp)
+            print("\n")
+        if(smallStar == '地空'):
+            tmp = """地空:一般均主挫折。见擎羊、天刑、化忌，则在异乡倾败。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '地劫'):
+            tmp = """地劫 :一般均主挫折。见擎羊、天刑、化忌，则在异乡倾败。"""
+            print(tmp)
+            print("\n")
+        if(smallStar == '化禄' or smallStar == '化权' or smallStar == '化科'):
+            tmp = """化禄、化权、化科 ：一般主得交社会地位高尚人士；又主手下人众多得力，能助己兴家创业。若更
+加会吉霍祥曜，则彼此提携之力更大。 
+若见煞星恶曜，则虽交权势，亦防因之招损。或于下人反易凌驾于自己之上。"""
+            print(tmp)
+            print("\n")
+    
+   
+def GongChu9th(star, dizhi, smallStarList):
+    print(star, dizhi)
+    for smallStar in smallStarList:
+        print(smallStar, end = ' ')
     print("\n")
-def GongChu9th(star, dizhi):
     if(star[:2] == "紫薇"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """紫徽守事业宫，入庙者，若不见煞曜刑忌会合，而与天府、天相、左辅、右弼、
 天魁、天钺、三台、八座、恩光、天贵同度或会照，则可从事政治，当官高禄厚。
@@ -5672,7 +5941,7 @@ def GongChu9th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "天机"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """天机入守事业宫，一生从事多种行业，不以专守一业发福。 
  若与左辅右弼、天魁天钺、三台入座等吉曜会照，更主事业有多方面的发展，或
@@ -5714,7 +5983,7 @@ def GongChu9th(star, dizhi):
                 print("\n")
            
     elif(star[:2] == "太阳"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """太阳在事业宫人庙，以在午宫者事业最为广大。但必需见左辅右弼、天魁天钺，
 或得文昌文曲，而不逢煞曜空沏者始为上格。若吉曜不见，而见空劫刑耗，则事业
@@ -5755,7 +6024,7 @@ def GongChu9th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "武曲"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """武曲入事业宫，古人认为宜从事[武职荣身]，其实于现代化社会，以武曲为财
 帛宫主星之故，亦可从事财政金融行业，经商亦利，则以带金属性质者为宜。 
@@ -5805,7 +6074,7 @@ def GongChu9th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "天同"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """天同守事业宫，主其人白手兴家。
  一般情形下，天同守事业，--宜从事美观及享受性行业。如旅游业、首饰业、装
@@ -5840,7 +6109,7 @@ def GongChu9th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "廉贞"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """廉贞守事业宫，入庙，一般均宜武职，化忌者尤宜。若从事其他行业，则挫折
 变化甚大。有昌曲、魁钺、辅弼拱照或同度，紫微会照，则由文职而掌武权。若见武曲与文昌文曲同会，均宜从政从军，或纪律部队，主人文事武做，或武
@@ -5885,7 +6154,7 @@ def GongChu9th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "天府"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """天府守事业宫，得吉星祥曜拱照者，入庙主事业发展有成就。若居陷地，会昌
 曲，古人认为不过是[刀笔吏]，即主理文书的政府文员。 
@@ -5910,7 +6179,7 @@ def GongChu9th(star, dizhi):
                 print("\n")
             
     elif(star[:2] == "太阴"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """太阴守事业宫，性质变化多端，须详所会星曜而定。 
 【机月同梁】格者，不宜经商，以从事政府职务，或大企业机构职务为宜。最
@@ -5937,7 +6206,7 @@ def GongChu9th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "贪狼"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """贪狼守事业宫，宜外务工作。如营业、推销、公关等工作。必须以应酬交际为
 工作重点者为宜。 
@@ -5959,7 +6228,7 @@ def GongChu9th(star, dizhi):
         print(tmp)
         print("\n")
     elif(star[:2] == "巨门"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """巨门守事业宫，入庙，主人白手创业，尤宜以专门技能或专门知识兴家。如就
 业医师、法律、演艺、外交、公关、传播界等行业。会天机，则为电脑、会计人才；会文昌文曲，可从事艺术、或星相。 
@@ -5983,7 +6252,7 @@ def GongChu9th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "天相"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """天相守事业宫，喜会照化禄、化权、化科、禄存，及辅、佐诸曜，必为政界要
 人、工商业巨子。 
@@ -6003,7 +6272,7 @@ def GongChu9th(star, dizhi):
                 print("\n")
             
     elif(star[:2] == "天梁"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """天梁守事业宫，以独坐午宫者格局最大，不见煞忌，得天魁天钺、文昌文曲、
 左辅右弼、化禄、化权、化科、禄存拱照或同度，从商从政皆为领袖人物。 
@@ -6021,7 +6290,7 @@ def GongChu9th(star, dizhi):
             print(tmp)
             print("\n")
     elif(star[:2] == "七杀"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """七杀守事业寓，现代社会宜从事工业，且宜以人力资源为主者。唯绝不宜投机。
 因为七杀在事业宫，一生人必有一次重大挫折，若投机则难东山再起。 
@@ -6034,7 +6303,7 @@ def GongChu9th(star, dizhi):
         print(tmp)
         print("\n")
     elif(star[:2] == "破军"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """破军入庙守事业宫，适宜管理或经营工厂，或宜从事武职。 
 若禄、权、科会，则为武职之权威人士。古人称之为[威镇华夷]。 
@@ -6046,9 +6315,13 @@ def GongChu9th(star, dizhi):
 破军亦宜从事交通运输业，见禄马者尤佳。"""
         print(tmp)
         print("\n")
-def GongChu10th(star, dizhi):
+def GongChu10th(star, dizhi, smallStarList):
+    print(star, dizhi)
+    for smallStar in smallStarList:
+        print(smallStar, end = ' ')
+    print("\n")
     if(star[:2] == "紫薇"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """紫微入田宅宫一般主有产业承继，及有自己增置的产业。尤喜见禄存或化禄会
 照，必主增购物业。(所以当大限或流年的田宅宫见紫微坐守，有流禄或流化禄同度
@@ -6099,7 +6372,7 @@ def GongChu10th(star, dizhi):
                 print("\n")
             
     elif(star[:2] == "天机"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """天机守田宅宫，主不能守持祖业，但能自置，化忌者尤确。 
  (将退去祖业，自置物业的性质稍加变换，即等予退去旧业，自置新业，故流年
@@ -6129,7 +6402,7 @@ def GongChu10th(star, dizhi):
                 print("\n")
             
     elif(star[:2] == "太阳"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """太阳为浮动的星曜，不宜守田宅宫，主产业时进时退，且亦主祖业难守。 
  太阳入庙，有辅佐吉曜同度或会照，或得[百官朝拱]，则产业丰厚，但仍主时时
@@ -6162,7 +6435,7 @@ def GongChu10th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "武曲"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """武曲宜守田宅宫，一般情况下，可视为物业增加之兆。 
 武曲最喜与火星同度或会照，主增加产业。与铃星会照次之。 
@@ -6198,7 +6471,7 @@ def GongChu10th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "天同"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """天同为白手兴家的星曜，守田宅宫，主必无祖业之份。天同化禄者，虽有祖业，
 亦因种种原因破耗净尽。天同化忌者，无祖业。   
@@ -6229,7 +6502,7 @@ def GongChu10th(star, dizhi):
                     print("\n")
             
     elif(star[:2] == "廉贞"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """廉贞在田宅宫为恶曜，入守田宅宫，主祖业破荡，或无祖业。 
 廉贞化忌入田宅宫，再见煞曜，一生必有因物业两致招灾祸的情形。应详备大
@@ -6263,7 +6536,7 @@ def GongChu10th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "天府"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """天府守田宅宫，一般均主有父母物业，且能守成，亦能自置。为团宅宫吉曜。 
 见文昌、文曲会照或同度，名为[文星入宅]，再见禄，主经营物业缛利，不见
@@ -6275,7 +6548,7 @@ def GongChu10th(star, dizhi):
         print(tmp)
         print("\n")
     elif(star[:2] == "太阴"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """太阴守田宅宫，入庙者宜乡居。亦主住宅宁静，有花木之胜。
 太阴入庙主有祖业；陷地则稀少，再见煞耗，或无祖业，或祖业有耗损。 
@@ -6304,7 +6577,7 @@ def GongChu10th(star, dizhi):
                 print("\n")
            
     elif(star[:2] == "贪狼"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """贪狼在田宅宫为恶曜，一般主散耗，或主聚散无常。故一般无祖业，或主难守。
 贪狼人庙，与火星或铃星同度会照，则能自蓬物业。唯住宅必有缺陷，或曾经
@@ -6319,7 +6592,7 @@ def GongChu10th(star, dizhi):
         print(tmp)
         print("\n")
     elif(star[:2] == "巨门"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """巨门守田宅宫，不宜有祖业，有则多争。见煞忌刑耗者，且因祖业而生争讼。 
 巨门入庙，见禄、权、科及禄存同度或会照，则能自置产业。
@@ -6340,7 +6613,7 @@ def GongChu10th(star, dizhi):
                 print("\n")
             
     elif(star[:2] == "天相"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """天相守田宅宫，见化禄、化权、化科、禄存会照者，主其人产业丰厚。
 与空劫、大耗会照，则主产业破荡。 
@@ -6352,7 +6625,7 @@ def GongChu10th(star, dizhi):
         print(tmp)
         print("\n")
     elif(star[:2] == "天梁"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """天梁为荫星，所以居田宅宫者主得祖业。更见天巫同度，可得丰厚遗产。 
  天梁与天机同度或会照，皆主住宅多搬迁，或房屋改建。 
@@ -6374,7 +6647,7 @@ def GongChu10th(star, dizhi):
                 print("\n")
             
     elif(star[:2] == "七杀"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """七杀入庙守田宅宫，主有祖业。陷地则虽有亦如无。 
 最喜得紫微拱照，则主一家得贵人荫庇。与廉贞同度，亦能增置产业。 
@@ -6386,7 +6659,7 @@ def GongChu10th(star, dizhi):
         print(tmp)
         print("\n")
     elif(star[:2] == "破军"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """
 破军落陷，则主人所居住宅破旧。 
@@ -6408,9 +6681,13 @@ def GongChu10th(star, dizhi):
                 tmp = """破军与紫微同度，虽产业运势不佳，但却主意外得产业。 """
                 print(tmp)
                 print("\n")
-def GongChu11th(star, dizhi):
+def GongChu11th(star, dizhi, smallStarList):
+    print(star, dizhi)
+    for smallStar in smallStarList:
+        print(smallStar, end = ' ')
+    print("\n")
     if(star[:2] == "紫薇"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """紫微守福德宫，一般均主人的人品敦厚，但主观甚强。因为紫微既为帝星，自
 然喜以自己的意见为意见。 
@@ -6446,7 +6723,7 @@ def GongChu11th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "天机"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """天机坐福德宫，一般主人思想敏锐。唯亦正因此亦令其人心绪不宁。
 若天机化忌，则更主人行事畏首畏尾，遇事喜钻牛角尖，以致进退失据，多虑
@@ -6478,7 +6755,7 @@ def GongChu11th(star, dizhi):
                 print("\n")
             
     elif(star[:2] == "太阳"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """太阳无时不在天空移动，因此当守福德宫时，主人奔忙不息。但身劳而心未必
 劳。 
@@ -6510,7 +6787,7 @@ def GongChu11th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "武曲"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """武曲在福德宫中为善曜，主人能享福。 
 但所谓享福，却可能意味其人缺乏远见，凡事见步行步，所以不伤脑筋。故必
@@ -6546,7 +6823,7 @@ def GongChu11th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "天同"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """夭同化气为福，所以最宜入守福德宫，亦为福德宫最为祥瑞的星曜，主人享福。
  天同所主的享福，与武曲所主的享福不同。武曲为财星，所以其享福偏重于财帛
@@ -6584,7 +6861,7 @@ def GongChu11th(star, dizhi):
                 print("\n")
             
     elif(star[:2] == "廉贞"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """廉贞守福德宫，一般主人忙碌，或虽富裕，但仍多过虑，而且仍喜奔忙。或不
 注意住宅的布置与装饰，有紊乱的感觉。化忌者尤确。
@@ -6620,7 +6897,7 @@ def GongChu11th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "天府"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """天府入福德宫，主人思想稳重、宽厚。人若犯错，常生原谅之心。 
 天府与禄存同度，则多花精神于理财之上。见陀罗同度，则主其人吝啬。 
@@ -6645,7 +6922,7 @@ def GongChu11th(star, dizhi):
                 print("\n")
             
     elif(star[:2] == "太阴"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """太阴守福德宫，入庙，主人倾向于享乐。但所谓享乐，却不纯是物质享受，而
 是利用时代的物质文明，以作精神方面的享受，所以便显得高雅，或令人觉得有格
@@ -6674,7 +6951,7 @@ def GongChu11th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "贪狼"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """贪狼守福德宫，入庙，主为人耽于物质享受，有嗜好，或耽于酒色，或耽于艺
 术，或耽于宗教哲理。 
@@ -6689,7 +6966,7 @@ def GongChu11th(star, dizhi):
         print(tmp)
         print("\n")
     elif(star[:2] == "巨门"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """巨门为暗曜，所以守福德宫时，即使入庙及会照辅佐吉曜，亦主为人好生是非，
 且多疑多忌。所以便难免劳心费力去关照许多事务，事事亲力亲为。
@@ -6713,7 +6990,7 @@ def GongChu11th(star, dizhi):
                 print("\n")
             
     elif(star[:2] == "天相"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """天相守福德宫，入庙者为人正直坦荡，具正义感，富同情心。若落陷地，则易
 流为理想主义。当现实不如理想之时，则心绪不宁，或致偏激，由是多生是非枝节。
@@ -6726,7 +7003,7 @@ def GongChu11th(star, dizhi):
         print(tmp)
         print("\n")
     elif(star[:2] == "天梁"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """天梁为清贵之星，所以守福德宫时，一般均主其人精神生活重于物质生活。而且
 思想脱俗，不易为一般人所理解。
@@ -6760,7 +7037,7 @@ def GongChu11th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "七杀"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """七杀守福德宫，入庙者，品格高尚，但易流为理想太高，故虽会辅佐吉曜，仅
 主其人不易招嫌忌，仍因理想太高之故而少人缘。亦主妻子有刑克，妻宜迟娶、子
@@ -6789,7 +7066,7 @@ def GongChu11th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "破军"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """破军守福德宫，入庙者善于决断，因此也就少了辛劳。若破军落陷，则凡事劳
 心费力，且少决断，尤易生改变之心。亦正由于举棋不定，所以也就增加了人生的
@@ -6812,9 +7089,13 @@ def GongChu11th(star, dizhi):
 时亦易变为器小易盈。"""
                 print(tmp)
                 print("\n")
-def GongChu12th(star, dizhi):
+def GongChu12th(star, dizhi, smallStarList):
+    print(star, dizhi)
+    for smallStar in smallStarList:
+        print(smallStar, end = ' ')
+    print("\n")
     if(star[:2] == "紫薇"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """紫微守父母宫，入庙，且会诸吉，主其人父母富贵，且无刑克。 
 若落陷，则父母主见极强，易与自身发生意见。见煞曜则主不和。于大限流年
@@ -6856,7 +7137,7 @@ def GongChu12th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "天机"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """天机为浮荡星曜，入守父母宫，主人远离父母，否则有刑伤克害。 
 天机守父母宫，天马同度，或在对宫拱照，主人幼年离家；年长则入赘岳家。
@@ -6882,7 +7163,7 @@ def GongChu12th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "太阳"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """太阳守父母宫，入庙，父母无刑克。更见三化、辅佐吉曜会照同度，则主受父
 母爱宠。又主父母富裕，事业掌权。 
@@ -6917,7 +7198,7 @@ def GongChu12th(star, dizhi):
                     print(tmp)
                     print("\n")
     elif(star[:2] == "武曲"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """武曲带孤克刑忌性质，守父母宫，一般主刑克父母。 
 若入庙，且有吉星同会，则宜过继出祀。或远离父母，则可免刑克。由于武曲
@@ -6940,7 +7221,7 @@ def GongChu12th(star, dizhi):
                 print("\n")
         
     elif(star[:2] == "天同"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """天同为福星，但所谓[福]，有时则指其人少年艰辛，白手兴家立业。所以当入
 守父母宫时，仍须注意其是否有刑克伤害的性质。 
@@ -6968,7 +7249,7 @@ def GongChu12th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "廉贞"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """廉贞守父母宫为恶曜，一般均不利父母，有刑伤克害，轻者亦主不受父母荫庇，
 或感情欠佳。 
@@ -6991,7 +7272,7 @@ def GongChu12th(star, dizhi):
                 print("\n")
            
     elif(star[:2] == "天府"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """天府守父母宫一般均主父子感情和洽。亦主人幼年父母双全。 
 但若天府与擎羊同宫，则亦主父子意见不和。喜见诸吉，皆主受父母福荫。但若禄存同度者，则主父母喜掌财权，老年亦不
@@ -7002,7 +7283,7 @@ def GongChu12th(star, dizhi):
         print(tmp)
         print("\n")
     elif(star[:2] == "太阴"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """太阴守父母宫，入庙，有吉曜同会者，主父母双全，无刑克伤害。 
 若太阴落陷，则无母亲福荫，或母亲早亡或母亲离婚再嫁，自身则跟随父亲；
@@ -7027,7 +7308,7 @@ def GongChu12th(star, dizhi):
                     print("\n")
             
     elif(star[:2] == "贪狼"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """贪狼守父母宫，入庙、化禄、化权、或会照吉曜者，父母无刑克。 
 若贪狼化忌，会擎羊、陀罗、火星、铃星、天刑、地空、地劫者，宜早年远离
@@ -7046,7 +7327,7 @@ def GongChu12th(star, dizhi):
                 print("\n")
             
     elif(star[:2] == "巨门"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """巨门为暗曜，守父母宫不利，可视为恶曜。一般情形，均应过继出祀，重拜父
 母，否则主刑伤克害。 
@@ -7071,7 +7352,7 @@ def GongChu12th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "天相"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """天相守父母宫，若逢[财荫夹印]者，主父母富贵长寿。若逢[刑忌夹印]者，则
 主父母有刑克灾伤病祸。 
@@ -7093,7 +7374,7 @@ def GongChu12th(star, dizhi):
                 print("\n")
             
     elif(star[:2] == "天梁"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """天梁化气为荫，入父母宫为祥曜。 
 若化禄、化权、化科同度或会照，均主得父母荫庇，且主有遗产，见天巫同会
@@ -7117,7 +7398,7 @@ def GongChu12th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "七杀"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """七杀守父母宫为恶曜。一般均主早年离家，或父母有刑伤克害。 
 七杀若会照擎羊、陀罗、火星、天刑、地空、地劫、劫杀、孤辰者，刑伤克害
@@ -7136,7 +7417,7 @@ def GongChu12th(star, dizhi):
                 print(tmp)
                 print("\n")
     elif(star[:2] == "破军"):
-        print(star, dizhi)
+        
         print("\n")
         tmp = """破军于父母宫亦为恶曜，性质略同七杀。  
 若破军与辅、弼同度，见煞刑忌者，主有病重父母。破军守父母宫，主不守祖
