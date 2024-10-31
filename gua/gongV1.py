@@ -1,8 +1,21 @@
-def GongChu1st(star, dizhi, smallStarList):
+from fuStar import *
+
+def GongChu1st(star, dizhi,
+                   fuyaoList,zuoyaoList,
+                   shayaoList,kongyaoList,
+                   xinyaoList,jiyaoList,
+                   taohuaList,huayaoList,
+                   tian_goodList,tian_badList,
+                   za_goodList,za_badList,
+                   caiyiList):
     print(star, dizhi)
-    for smallStar in smallStarList:
-        print(smallStar, end = ' ')
-    print("\n")
+    smallStarList = printsmallStar(fuyaoList,zuoyaoList,
+                   shayaoList,kongyaoList,
+                   xinyaoList,jiyaoList,
+                   taohuaList,huayaoList,
+                   tian_goodList,tian_badList,
+                   za_goodList,za_badList,
+                   caiyiList)
     if(star[:2] == "紫薇"):
         
         print("\n")
@@ -2876,11 +2889,21 @@ def GongChu1st(star, dizhi, smallStarList):
                     tmp = """
                     """
                     print(tmp)
-def GongChu2nd(star, dizhi, smallStarList):
+def GongChu2nd(star, dizhi, fuyaoList,zuoyaoList,
+                   shayaoList,kongyaoList,
+                   xinyaoList,jiyaoList,
+                   taohuaList,huayaoList,
+                   tian_goodList,tian_badList,
+                   za_goodList,za_badList,
+                   caiyiList):
     print(star, dizhi)
-    for smallStar in smallStarList:
-        print(smallStar, end = ' ')
-    print("\n")
+    smallStarList = printsmallStar(fuyaoList,zuoyaoList,
+                   shayaoList,kongyaoList,
+                   xinyaoList,jiyaoList,
+                   taohuaList,huayaoList,
+                   tian_goodList,tian_badList,
+                   za_goodList,za_badList,
+                   caiyiList)
     if(star[:2] == "紫薇"):
         
         print("\n")
@@ -3253,11 +3276,21 @@ def GongChu2nd(star, dizhi, smallStarList):
             print(tmp)
             print("\n")
     
-def GongChu3rd(star, dizhi, smallStarList):
+def GongChu3rd(star, dizhi, fuyaoList,zuoyaoList,
+                   shayaoList,kongyaoList,
+                   xinyaoList,jiyaoList,
+                   taohuaList,huayaoList,
+                   tian_goodList,tian_badList,
+                   za_goodList,za_badList,
+                   caiyiList):
     print(star, dizhi)
-    for smallStar in smallStarList:
-        print(smallStar, end = ' ')
-    print("\n")
+    smallStarList = printsmallStar(fuyaoList,zuoyaoList,
+                   shayaoList,kongyaoList,
+                   xinyaoList,jiyaoList,
+                   taohuaList,huayaoList,
+                   tian_goodList,tian_badList,
+                   za_goodList,za_badList,
+                   caiyiList)
     if(star[:2] == "紫薇"):
         
         print("\n")
@@ -3822,11 +3855,21 @@ def GongChu3rd(star, dizhi, smallStarList):
             print(tmp)
             print("\n")
     
-def GongChu4th(star, dizhi, smallStarList):
+def GongChu4th(star, dizhi, fuyaoList,zuoyaoList,
+                   shayaoList,kongyaoList,
+                   xinyaoList,jiyaoList,
+                   taohuaList,huayaoList,
+                   tian_goodList,tian_badList,
+                   za_goodList,za_badList,
+                   caiyiList):
     print(star, dizhi)
-    for smallStar in smallStarList:
-        print(smallStar, end = ' ')
-    print("\n")
+    smallStarList = printsmallStar(fuyaoList,zuoyaoList,
+                   shayaoList,kongyaoList,
+                   xinyaoList,jiyaoList,
+                   taohuaList,huayaoList,
+                   tian_goodList,tian_badList,
+                   za_goodList,za_badList,
+                   caiyiList)
     if(star[:2] == "紫薇"):
         
         print("\n")
@@ -4219,11 +4262,21 @@ def GongChu4th(star, dizhi, smallStarList):
             print(tmp)
             print("\n")
     
-def GongChu5th(star, dizhi, smallStarList):
+def GongChu5th(star, dizhi, fuyaoList,zuoyaoList,
+                   shayaoList,kongyaoList,
+                   xinyaoList,jiyaoList,
+                   taohuaList,huayaoList,
+                   tian_goodList,tian_badList,
+                   za_goodList,za_badList,
+                   caiyiList):
     print(star, dizhi)
-    for smallStar in smallStarList:
-        print(smallStar, end = ' ')
-    print("\n")
+    smallStarList = printsmallStar(fuyaoList,zuoyaoList,
+                   shayaoList,kongyaoList,
+                   xinyaoList,jiyaoList,
+                   taohuaList,huayaoList,
+                   tian_goodList,tian_badList,
+                   za_goodList,za_badList,
+                   caiyiList)
     if(star[:2] == "紫薇"):
         
         print("\n")
@@ -4608,11 +4661,21 @@ def GongChu5th(star, dizhi, smallStarList):
             print("\n")
         
     
-def GongChu6th(star, dizhi, smallStarList):
+def GongChu6th(star, dizhi, fuyaoList,zuoyaoList,
+                   shayaoList,kongyaoList,
+                   xinyaoList,jiyaoList,
+                   taohuaList,huayaoList,
+                   tian_goodList,tian_badList,
+                   za_goodList,za_badList,
+                   caiyiList):
     print(star, dizhi)
-    for smallStar in smallStarList:
-        print(smallStar, end = ' ')
-    print("\n")
+    smallStarList = printsmallStar(fuyaoList,zuoyaoList,
+                   shayaoList,kongyaoList,
+                   xinyaoList,jiyaoList,
+                   taohuaList,huayaoList,
+                   tian_goodList,tian_badList,
+                   za_goodList,za_badList,
+                   caiyiList)
     if(star[:2] == "紫薇"):
         
         print("\n")
@@ -4961,11 +5024,21 @@ def GongChu6th(star, dizhi, smallStarList):
 武曲同度而化忌，主癌症，亦发痫于生殖器官。 """
                 print(tmp)
                 print("\n")
-def GongChu7th(star, dizhi, smallStarList):
+def GongChu7th(star, dizhi, fuyaoList,zuoyaoList,
+                   shayaoList,kongyaoList,
+                   xinyaoList,jiyaoList,
+                   taohuaList,huayaoList,
+                   tian_goodList,tian_badList,
+                   za_goodList,za_badList,
+                   caiyiList):
     print(star, dizhi)
-    for smallStar in smallStarList:
-        print(smallStar, end = ' ')
-    print("\n")
+    smallStarList = printsmallStar(fuyaoList,zuoyaoList,
+                   shayaoList,kongyaoList,
+                   xinyaoList,jiyaoList,
+                   taohuaList,huayaoList,
+                   tian_goodList,tian_badList,
+                   za_goodList,za_badList,
+                   caiyiList)
     if(star[:2] == "紫薇"):
         
         print("\n")
@@ -5398,11 +5471,21 @@ def GongChu7th(star, dizhi, smallStarList):
             print(tmp)
             print("\n")
     
-def GongChu8th(star, dizhi, smallStarList):
+def GongChu8th(star, dizhi, fuyaoList,zuoyaoList,
+                   shayaoList,kongyaoList,
+                   xinyaoList,jiyaoList,
+                   taohuaList,huayaoList,
+                   tian_goodList,tian_badList,
+                   za_goodList,za_badList,
+                   caiyiList):
     print(star, dizhi)
-    for smallStar in smallStarList:
-        print(smallStar, end = ' ')
-    print("\n")
+    smallStarList = printsmallStar(fuyaoList,zuoyaoList,
+                   shayaoList,kongyaoList,
+                   xinyaoList,jiyaoList,
+                   taohuaList,huayaoList,
+                   tian_goodList,tian_badList,
+                   za_goodList,za_badList,
+                   caiyiList)
     if(star[:2] == "紫薇"):
         
         print("\n")
@@ -5883,11 +5966,21 @@ def GongChu8th(star, dizhi, smallStarList):
             print("\n")
     
    
-def GongChu9th(star, dizhi, smallStarList):
+def GongChu9th(star, dizhi, fuyaoList,zuoyaoList,
+                   shayaoList,kongyaoList,
+                   xinyaoList,jiyaoList,
+                   taohuaList,huayaoList,
+                   tian_goodList,tian_badList,
+                   za_goodList,za_badList,
+                   caiyiList):
     print(star, dizhi)
-    for smallStar in smallStarList:
-        print(smallStar, end = ' ')
-    print("\n")
+    smallStarList = printsmallStar(fuyaoList,zuoyaoList,
+                   shayaoList,kongyaoList,
+                   xinyaoList,jiyaoList,
+                   taohuaList,huayaoList,
+                   tian_goodList,tian_badList,
+                   za_goodList,za_badList,
+                   caiyiList)
     if(star[:2] == "紫薇"):
         
         print("\n")
@@ -6315,11 +6408,21 @@ def GongChu9th(star, dizhi, smallStarList):
 破军亦宜从事交通运输业，见禄马者尤佳。"""
         print(tmp)
         print("\n")
-def GongChu10th(star, dizhi, smallStarList):
+def GongChu10th(star, dizhi, fuyaoList,zuoyaoList,
+                   shayaoList,kongyaoList,
+                   xinyaoList,jiyaoList,
+                   taohuaList,huayaoList,
+                   tian_goodList,tian_badList,
+                   za_goodList,za_badList,
+                   caiyiList):
     print(star, dizhi)
-    for smallStar in smallStarList:
-        print(smallStar, end = ' ')
-    print("\n")
+    smallStarList = printsmallStar(fuyaoList,zuoyaoList,
+                   shayaoList,kongyaoList,
+                   xinyaoList,jiyaoList,
+                   taohuaList,huayaoList,
+                   tian_goodList,tian_badList,
+                   za_goodList,za_badList,
+                   caiyiList)
     if(star[:2] == "紫薇"):
         
         print("\n")
@@ -6681,11 +6784,21 @@ def GongChu10th(star, dizhi, smallStarList):
                 tmp = """破军与紫微同度，虽产业运势不佳，但却主意外得产业。 """
                 print(tmp)
                 print("\n")
-def GongChu11th(star, dizhi, smallStarList):
+def GongChu11th(star, dizhi, fuyaoList,zuoyaoList,
+                   shayaoList,kongyaoList,
+                   xinyaoList,jiyaoList,
+                   taohuaList,huayaoList,
+                   tian_goodList,tian_badList,
+                   za_goodList,za_badList,
+                   caiyiList):
     print(star, dizhi)
-    for smallStar in smallStarList:
-        print(smallStar, end = ' ')
-    print("\n")
+    smallStarList = printsmallStar(fuyaoList,zuoyaoList,
+                   shayaoList,kongyaoList,
+                   xinyaoList,jiyaoList,
+                   taohuaList,huayaoList,
+                   tian_goodList,tian_badList,
+                   za_goodList,za_badList,
+                   caiyiList)
     if(star[:2] == "紫薇"):
         
         print("\n")
@@ -7089,11 +7202,21 @@ def GongChu11th(star, dizhi, smallStarList):
 时亦易变为器小易盈。"""
                 print(tmp)
                 print("\n")
-def GongChu12th(star, dizhi, smallStarList):
+def GongChu12th(star, dizhi, fuyaoList,zuoyaoList,
+                   shayaoList,kongyaoList,
+                   xinyaoList,jiyaoList,
+                   taohuaList,huayaoList,
+                   tian_goodList,tian_badList,
+                   za_goodList,za_badList,
+                   caiyiList):
     print(star, dizhi)
-    for smallStar in smallStarList:
-        print(smallStar, end = ' ')
-    print("\n")
+    smallStarList = printsmallStar(fuyaoList,zuoyaoList,
+                   shayaoList,kongyaoList,
+                   xinyaoList,jiyaoList,
+                   taohuaList,huayaoList,
+                   tian_goodList,tian_badList,
+                   za_goodList,za_badList,
+                   caiyiList)
     if(star[:2] == "紫薇"):
         
         print("\n")
