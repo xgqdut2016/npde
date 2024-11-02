@@ -15,7 +15,7 @@ def GongXia1st(star, dizhi,
                    tian_goodList,tian_badList,
                    za_goodList,za_badList,
                    caiyiList)
-    if(star[:2] == "紫薇"):
+    if(star[:2] == "紫微"):
         
         print("\n")
         tmp = """ 
@@ -23,7 +23,7 @@ def GongXia1st(star, dizhi,
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
-        if(dizhi == "子" or dizhi == "午"):
+        if(dizhi == "子" or dizhi == "午") and len(star) == 2:
             tmp = """在子午宫独坐的紫微 ，若为 [ 百官朝拱] 喜行至见 化禄  化权或化科的大限 、 流 
 年 。 若原局紫微化权或化科而无 [ 百官朝拱] ， 则喜见昌曲 、 魁钺 、 辅弼诸曜同会的 
 运 限流年 。 
@@ -36,7 +36,7 @@ def GongXia1st(star, dizhi,
 煞克应 。 """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        if(star == "紫薇破军"):
+        if(star == "紫微破军"):
             tmp = """[ 紫破 ] 守命 ， 最忌为 【 在野 】 的格局 ， 行至机梁巨门 的运限 ， 常为一生运程的关 
 键 ， 若见煞忌刑照 ， 其所发生的事端 ， 每每可以影响一生 。 亦不宣见太阳化忌的年 
 限 ， 每每招惹是非尤怨 。 
@@ -48,7 +48,7 @@ def GongXia1st(star, dizhi,
 则机心计较愈多 ， 破败愈大 。"""
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        if(star == "紫薇天府"):
+        if(star == "紫微天府"):
             tmp = """ 
 [ 紫府 ] 守命 ，最 喜见禄 。 见禄存同度， 廉贞化禄来 会者 ， 主巨富 。 以见化禄 、 
 禄存的年限为克应 。如 [ 紫 府 ] 在寅 ， 甲年生人 ， 行至丁卯主得财或得替身发达 
@@ -63,7 +63,7 @@ def GongXia1st(star, dizhi,
 影响一生甚大 。 """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        if(star == "紫薇贪狼"):
+        if(star == "紫微贪狼"):
             tmp = """[紫贪 ] 在命宫 ， 喜见火铃 ， 亦喜见贪狼化禄 ， 主骤然而兴 ， 而且持久 。 若贪狼 
 化忌 ， 则一生多劳累 ， 且不如意 。 若更煞重 ， 则往往功败垂威 。 
 女命 [ 紫贪 ] ， 不喜行至太阳在夫妻宫的年运 ， 主遇人不淑 。 男命 [ 紫贪 ] ， 不喜夫妻宫见天同 ( 或巨门 ) 的年运 ， 主陷入感情罗网 ， 难以 自脱 。 
@@ -75,7 +75,7 @@ def GongXia1st(star, dizhi,
 生命运的枢纽 。 """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        if(star == "紫薇天相"):
+        if(star == "紫微天相"):
             tmp = """[ 紫相 ] 守命 ， 逢 [ 杀破狼 ] 流年 ， 皆主变动 ， 吉凶视 星曜组合性质而定 。 
 [ 紫相 ] 守命 ， 行至 [ 紫相 ] 为 [ 疾厄宫] 的大 运 ， 防心脏病 。 
 『 紫相 』 守命 ， 行至 [ 紫相 ] 为 『 夫妻宫 』 的大运 ， 防婚 姻破裂 。 
@@ -90,7 +90,7 @@ def GongXia1st(star, dizhi,
 七 杀 、 廉贞守限的宫度 ， 为命运 的枢纽 。 """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        if(star == "紫薇七杀"):
+        if(star == "紫微七杀"):
             tmp = """[ 紫杀 ] 守命 ， 财帛宫 【 武贪 】， 若见火铃 ， 主横发横 破 ， 暴发暴败 。 发后必须善 
 于自保 ， 然后始可持盈保泰 。 
 [ 紫杀 ] 而紫微化权 ， 则一生财力不足以济其事业 。 
@@ -107,7 +107,7 @@ def GongXia1st(star, dizhi,
         
         print("\n")
         
-        if(dizhi == "子" or dizhi == "午"):
+        if(dizhi == "子" or dizhi == "午") and len(star) == 2:
             tmp = """子午宫天机独坐 ， 最喜化权 。 天 机化权又优于巨门 化权 。 化权则稳重 ， 所以较 
 化禄之多浮躁不定者为佳 。 
 子午宫天机 ， 若对宫巨门化权 ， 在现代可能仅为财 经界之销售人才 ， 不主策划 
@@ -259,7 +259,7 @@ def GongXia1st(star, dizhi,
 辰戌二宫太阳 ， 以太阴 、 天机 、 [ 同梁] 宫垣 ， 为大 限流年之枢纽 。 """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        if(dizhi == "巳" or dizhi == "亥"):
+        if(dizhi == "巳" or dizhi == "亥") and len(star) == 2:
             tmp = """巳亥二宫太阳独坐 ， 巳宫者远胜亥宫。 巳宫可得异 族助力 ， 亥宫仅主口舌困扰 。 
 亥宫太阳守命 ， 若 『 福德宫 』 天机吉者尚可补救 ， 若 天机化忌 ， 或会恶煞刑忌 ， 
 则心志插弱 ， 且一生多功成垂败 ， 又招是非尤怨 。 必须以毅力作后天补救 。 
@@ -364,7 +364,7 @@ def GongXia1st(star, dizhi,
 以流煞流忌冲会之年为克应 。 """
                     tmp.replace(" ", ""); print(tmp)
                     print("\n")
-        if(dizhi == "辰" or dizhi == "戌"):
+        if(dizhi == "辰" or dizhi == "戌") and len(star) == 2:
             tmp = """辰戌二宫武曲独坐 ， 见吉亦主财权 ； 见煞 ， 则为商 贩 ， 绝不宜从事武职 。 
 辰戌武曲必与贪狼相对 ， 其性质与丑未宫 [ 武贪 ] 同 意 。 大运流年之枢纽亦同 。 
 辰戌武曲守命 ， [ 迁移宫 ] 贪狼与火铃同度 ， 不主离 乡 ， 背井 ．， 仅主突发 。 若命 
@@ -452,7 +452,7 @@ def GongXia1st(star, dizhi,
     寅申 [ 同梁 ] 以 [ 武 杀 ] 、 巨门 、 太阴 、 太阳宫垣为流 年大运的枢纽 。  """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
-        if(dizhi == "卯" or dizhi == "酉"):
+        if(dizhi == "卯" or dizhi == "酉") and len(star) == 2:
             tmp = """卯酉宫天同独坐 ， 与太阴相对 ， 以太阴在酉为佳 。 若丁年生人 ， 四化齐会 ， 因 
 巨门在财帛宫犯忌 ， 故不主激发 ， 仅主口舌求财 ， 否则便成是非口舌 。 
 酉宫天同 ， 若对宫太阴化忌 ， 易丧志 ， 或多自卑 。 卯宫天同 ， 对宫太阴化习 ， 
@@ -538,7 +538,7 @@ def GongXia1st(star, dizhi,
     丑未 [ 廉杀 ] ， 以天梁 、 [ 武曲破军 ] 、 天同等宫垣为 流年大限的枢纽 。 """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
-        if(dizhi == "寅" or dizhi == "申"):
+        if(dizhi == "寅" or dizhi == "申") and len(star) == 2:
             tmp = """寅申宫廉贞独坐 。 申宫者 ， 亦成 [ 雄宿乾元格 ] ， 可 参考前述 。 不成格者与寅宫 
 同断 。 
 寅申廉贞 ， 最不喜文曲 躔 迁移宫 ， 命宫再会文昌 ， 及再会阴耗虚刑诸杂曜 ， 复见 
@@ -604,7 +604,7 @@ def GongXia1st(star, dizhi,
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
-        if(star == "天府紫薇"):
+        if(star == "天府紫微"):
             tmp = """若 [ 紫微天府 ] 同度 ， 则以紫微为主 ， 天府为辅 。 故 亦喜左右魁钺 。 无辅佐 ， 则 
 此星系有缺憾 ， 主进退不决 ； 若禄存同度 ， 则天府反为主星 ， 其吉凶亦重天府本质 
 之推断 。 
@@ -620,7 +620,7 @@ def GongXia1st(star, dizhi,
     """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
-        if(dizhi == "丑" or dizhi == "未"):
+        if(dizhi == "丑" or dizhi == "未") and len(star) == 2:
             tmp = """丑未宫天府独坐 ， 昌曲夹则利求名 ， 即财帛视其社 会地位而定 ； 左右夹则利示 
 财 ； 即地位由财帛多寡 而定 。 由此可定天生努力目标 。 
 丑未天府 ， 以未宫较佳 ： 因丑宫者 ， 所会的天相在 巳 ， 夹天相的天梁在午 ， 刑 
@@ -629,7 +629,7 @@ def GongXia1st(star, dizhi,
 大运之枢纽 。  """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        if(dizhi == "寅" or dizhi == "申"):
+        if(dizhi == "寅" or dizhi == "申") and len(star) == 2:
             tmp = """寅申宫廉贞独坐 。 申宫者 ， 亦成 [ 雄宿乾元格 ] ， 可 参考前述 。 不成格者与寅宫 
 同断 。 
 寅申廉贞 ， 最不喜文曲 躔 迁移宫 ， 命宫再会文昌 ， 及再会阴耗虚刑诸杂曜 ， 复见 
@@ -642,7 +642,7 @@ def GongXia1st(star, dizhi,
 及自身廉贞宫埂 ， 为流年枢纽 ； 以七刹 、 天梁 、 [ 机巨 ] 、 [ 武府 ] 为大运枢纽 。  """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        if(dizhi == "卯" or dizhi == "酉"):
+        if(dizhi == "卯" or dizhi == "酉") and len(star) == 2:
             tmp = """卯酉天府独坐 ， 所坐宫垣为弱地 ， 若空劫二曜 ， 一 躔命宫 ， 一躔事业宫 ， 则府库 
 空露 ， 更见煞曜 ， 主机谋百 出亦总成空 。 
 卯酉天府喜左辅同宫 ， 会右弼 ， 则主人地位崇高 ， 或有现成事业发展 。 唯极畏太 
@@ -656,7 +656,7 @@ def GongXia1st(star, dizhi,
     等减轻 。 唯不利早婚 ， 常易藕断丝连 ， 或有一段时期有名无实 。  """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
-        if(dizhi == "巳" or dizhi == "亥"):
+        if(dizhi == "巳" or dizhi == "亥") and len(star) == 2:
             tmp = """巳亥天府独坐 ， 对宫 『 紫杀 』 为权力之星系 ， 故主女命驾凌丈夫 ， 在现代 ， 亦主 
 女子有独立事业 。 
 巳亥天府见辅佐诸曜 ， 只不过增加助力 ， 因有 [ 紫 杀 ] 相对 ， 并非必要 ； 不如见 
@@ -707,7 +707,7 @@ def GongXia1st(star, dizhi,
         tmp.replace(" ", ""); print(tmp)
         print("\n")
 
-        if(dizhi == "卯" or dizhi == "酉"):
+        if(dizhi == "卯" or dizhi == "酉") and len(star) == 2:
             tmp = """卯酉太阴独坐 ， 酉优于卯甚多 。 唯卯宫见辅佐诸吉 而不见煞 ， 又见吉化 ， 则为 [ 反 
 背 ] ， 主大富 。 
 卯酉太阴以巨门 、 [ 廉相 ] 、 七杀 、 天机宫垣 ， 为大 运流年之枢纽 。 [ 反背 ] 者则不 
@@ -765,7 +765,7 @@ def GongXia1st(star, dizhi,
         tmp.replace(" ", ""); print(tmp)
         print("\n")
         
-        if(dizhi == "子" or dizhi == "午"):
+        if(dizhi == "子" or dizhi == "午") and len(star) == 2:
             tmp = """贪狼在子独坐 ， 若不入 [ 泛水桃花 ] 之格 ， 有吉星祥 曜 ， 或有天刑相制 ， 亦是富 
 局 ， 主中年后发迹 。 
 贪狼在午 ， 名为 [ 木火通明 ] ， 无煞忌而见吉曜 ， 则 为巨富之格 ， 或任财经要职 。 
@@ -778,25 +778,30 @@ def GongXia1st(star, dizhi,
                 tmp = """丑未宫武曲贪狼同度 ， 均 为上格 。丑未宫 [ 武曲贪狼 ] 同度不同 ， 『 武贪 』 主少年享受 ( 详见武曲一节 ) 。  """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
-        if(dizhi == "寅" or dizhi == "申"):
+        if(dizhi == "申") and len(star) == 2:
             tmp = """贪狼在申宫独坐 ， 临受制之乡 ， 见煞忌及辅佐诸曜 齐集 ， 则主先贫困 ， 且经危 
 难 ， 而后突发 唯发后又恐因 不良嗜好而破败 。 只见煞 ， 则易入偏门人生亦因此多颠 
 沛 ； 只见吉曜 ， 则可取富贵 ， 唯仍须注意持盈保泰 。 在申宫之 [ 火贪 ] 、 [ 铃贪 ] ， 横 
 发横破之性质更重 。 
+"""
+            tmp.replace(" ", ""); print(tmp)
+            print("\n")
+        if(dizhi == "寅") and len(star) == 2:
+            tmp = """
 贪狼在寅宫独坐 ， 无擎羊 、 天刑照会 ( 有则主遭刑 杖 ) ， 又不成 [ 风流彩杖 ] 之格 ， 
 而有吉星祥曜 ， 则亦可成贵 局 ， 但一生风波不少 ， 有煞曜 ， 则事业鼎盛 ， 官讼随临 。 
 唯贪狼化忌 、 一则仅主工程工 艺谋生 。  """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
         if(dizhi == "卯" or dizhi == "酉"):
-            if(star == "贪狼紫薇"):
+            if(star == "贪狼紫微"):
                 tmp = """ 亥卯未年生人 ， [ 紫微贪狼 ] 在卯宫坐命 ， 主人贪小 ， 有不 
     良嗜 好 ， 古人认为乃 [ 鼠窝 ] 之命 。 其实乃物欲过深之故 。 若躔 桃花诸曜 ， 则情欲亦 
     深 。 喜见吉曜则不良性质减轻 ， 亦喜 见天刑及空曜 ， 见天刑则能自律 ， 见空曜主清 
     白 。    """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
-        if(dizhi == "辰" or dizhi == "戌"):
+        if(dizhi == "辰" or dizhi == "戌") and len(star) == 2:
             tmp = """ 辰戌宫贪狼独坐对 
 武曲 ，贪狼在辰戌独坐 ， 中年后始能发迹 。 倘煞忌并临 ， 则主少年多灾难病患 。  """
             tmp.replace(" ", ""); print(tmp)
@@ -865,8 +870,6 @@ def GongXia1st(star, dizhi,
             tmp.replace(" ", ""); print(tmp)
             print("\n")
     elif(star[:2] == "天相"):
-        
-        print("\n")
         tmp = """前人论天相 ， 过份强调其祥和的一面 ， 容易误导后 学 。 天相逢善则善 ， 遇恶则 
 恶 。 例如 [ 紫微天相 ] 同度 ， 若 见 [ 百官朝拱 ] ， 则此天相便主发挥相助之力 ； 但若紫
 微为 『 在野孤君 』， 此天相便亦能助纣为虐 。 举此一例 ， 余例可 
@@ -891,16 +894,24 @@ def GongXia1st(star, dizhi,
 遇天相主聪敏 ， 又有服务之意 ， 故见吉则宜从政 ； 若遇羊陀 则不宜从政 ， 其聪敏及 
 服务本质 ， 便转为替人服务的工艺与技艺 。 一一唯卯 酉宫天相有 此格局 。 
 凡天相所在的流年命宫或小限 ， 亦对吉凶星曜敏 感 ， 故不宜见丧门 、 吊客 、 白 
-虎 、 大耗 、 贯索 、 官符诸流曜 ； 喜见青龙 、 奏书 、 龙德 、 天德等诸吉曜 。 
-女命天相独坐 ， 配夫宜年长 ； 否则比自己小一两年 亦可适应 。 
-女命天相 ， 亦名 [ 夫唱妇随 ] ， 宜助夫创业 。 
-凡天相独坐 ， 皆以见化禄 、 化权 、 化科 、 化忌之宫 垣为大运流年之枢纽 。 行至 
-刑忌夹 、 羊陀夹 、 火铃夹 、 空劫夹 、 伤使夹 ， 或昌曲夹 、 魁钺夹 、 禄权科恶化之宫 
-垣 ， 吉凶应验皆十分敏感 。 
+虎 、 大耗 、 贯索 、 官符诸流曜 ； 喜见青龙 、 奏书 、 龙德 、 天德等诸吉曜 。  
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
-        if(dizhi == "巳" or dizhi == "亥"):
+        if(len(star) == 2):
+            tmp = """女命天相独坐 ， 配夫宜年长 ； 否则比自己小一两年 亦可适应 。 
+女命天相 ， 亦名 [ 夫唱妇随 ] ， 宜助夫创业 。 
+凡天相独坐 ， 皆以见化禄 、 化权 、 化科 、 化忌之宫 垣为大运流年之枢纽 。 行至 
+刑忌夹 、 羊陀夹 、 火铃夹 、 空劫夹 、 伤使夹 ， 或昌曲夹 、 魁钺夹 、 禄权科恶化之宫 
+垣 ， 吉凶应验皆十分敏感 。"""
+            print(tmp)
+        if(dizhi == "巳" ) and len(star) == 2:
+            tmp = """ 
+巳亥天相独坐 ， 对宫 [ 武破 ] 必须见禄或化禄始吉 ， 否则动荡 、 消极 。 最喜武曲
+化 禄拱照 。  """
+            tmp.replace(" ", ""); print(tmp)
+            print("\n")
+        if(dizhi == "亥") and len(star) == 2:
             tmp = """ 
 巳亥天相独坐 ， 对宫 [ 武破 ] 必须见禄或化禄始吉 ， 否则动荡 、 消极 。 最喜武曲
 化 禄拱照 。 
@@ -908,7 +919,7 @@ def GongXia1st(star, dizhi,
 陀夹 ， 在此情形下却大为不利 ， 主往往功败垂成 ， 财力不足以济其后急 。   """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        if(dizhi == "卯" or dizhi == "酉"):
+        if(dizhi == "卯" or dizhi == "酉") and len(star) == 2:
             tmp = """ 
 卯酉宫天相独坐 ， 见煞忌则只宜工程技术谋生 ( 或 参考前论 ) 。 见吉化吉曜 ， 则 
 为以专门技能起家 。 
@@ -918,7 +929,7 @@ def GongXia1st(star, dizhi,
 掣肘或驾驭 。    """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        if(dizhi == "丑" or dizhi == "未"):
+        if(dizhi == "丑" or dizhi == "未") and len(star) == 2:
             tmp = """ 
 丑未宫天相独坐 ， 最喜左辅右弼同度 ； 若邻宫天同 化忌 ， 虽不成 [ 刑忌夹印 ] ， 
 亦不为美 ， 主虽有靠山后援 ， 但 往往于重要关头不得助力 ， 亦为怀才不遇炎徵 。 唯 
@@ -1188,11 +1199,8 @@ def GongXia2nd(star, dizhi,
                    tian_goodList,tian_badList,
                    za_goodList,za_badList,
                    caiyiList)
-    if(star[:2] == "紫薇"):
-        
-        print("\n")
-        
-        if(dizhi == "子" or dizhi == "午"):
+    if(star[:2] == "紫微"):       
+        if(dizhi == "子" or dizhi == "午") and len(star) == 2:
             tmp = """ 子午宫紫微独坐 ， 躔桃花诸曜 ， 兄弟行中以长女为先 。 或与长兄不和 。 
 子午紫微见 [ 百官朝拱 ] ， 则长兄长姐得力 。 唯必须 甘心处于 [ 佐贰 ] 之副手地位 。 
 始可与人合作共事 ， 否则于大限流年之 [ 兄弟宫 ] ， 行至 [ 武曲天相 ] 同度宫垣 ， 或破 
@@ -1201,7 +1209,7 @@ def GongXia2nd(star, dizhi,
             tmp.replace(" ", ""); print(tmp)
             print("\n")
         elif(dizhi == "丑" or dizhi == "未"):
-            if(star == "紫薇破军"):
+            if(star == "紫微破军"):
                 tmp = """丑未 [ 紫破 ] 同度 ， 见煞 ， 兄弟各结成党 。 或刑克不 和 ， 或有异胞兄弟 。 将此意 
     义推广 ， 自己与共事的同事关系 ， 亦易成党派 ， 且主政治 、 权力斗争 。 见煞曜尤确 ， 
     见辅佐吉曜则较平和 。 
@@ -1211,7 +1219,7 @@ def GongXia2nd(star, dizhi,
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
         elif(dizhi == "寅" or dizhi == "申"):
-            if(star == "紫薇天府"):
+            if(star == "紫微天府"):
                 tmp = """ 寅申宫 [ 紫府 ] 同度 ， 亦主长兄长姐得力 ； 见煞忌刑 曜则反受剥削 、 拖累 。 亦可 
     将此性质推广至合作伙伴或同事间关系 。 
     寅申 [ 紫府 ] 同度 ， 吉者 ， 每于兄弟宫行至武曲 『 太 阳 、 巨门 』 太阴等宫垣克应 ； 
@@ -1219,7 +1227,7 @@ def GongXia2nd(star, dizhi,
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
         elif(dizhi == "卯" or dizhi == "酉"):
-            if(star == "紫薇贪狼"):
+            if(star == "紫微贪狼"):
                 tmp = """ 卯酉宫 [ 紫贪 ] 守兄弟宫 ， 见桃花诸曜主兄弟行中先 见长女 ； 见空曜则主兄弟行 
     中赞凶长兄 。 
     卯酉宫 [ 紫贪 ] 多吉曜 ， 亦主兄长得力 ； 倘见火贪则 富裕 ， 唯反与自身无益 。 若 
@@ -1229,7 +1237,7 @@ def GongXia2nd(star, dizhi,
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
         elif(dizhi == "辰" or dizhi == "戌"):
-            if(star == "紫薇天相"):
+            if(star == "紫微天相"):
                 tmp = """  
     辰戌宫 [ 紫微天相 ] ， 亦主有异母兄弟 ； 倘见魁钺 、 辅弼 、 昌曲 ， 则往往有双胞 。 
     辰戌 [ 紫相 ] ， 见吉曜则主和好合作 ， 见凶曜则各怀 异见 。 皆每于流年兄弟宫行 
@@ -1237,7 +1245,7 @@ def GongXia2nd(star, dizhi,
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
         elif(dizhi == "巳" or dizhi == "亥"):
-            if(star == "紫薇七杀"):
+            if(star == "紫微七杀"):
                 tmp = """巳亥宫 [ 紫杀 ] ， 见吉则兄弟有权贵 ， 亦主可依附权 贵之友人 。 若见煞 ， 则受欺 
     负 。 
     巳亥宫 [ 紫杀 ] ， 会 [ 武贪 ] 与火铃同度 ， 更有 吉 曜 ， 主兄弟或友人提携自身发迹 。 
@@ -1246,10 +1254,7 @@ def GongXia2nd(star, dizhi,
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
     elif(star[:2] == "天机"):
-        
-        print("\n")
-        
-        if(dizhi == "子" or dizhi == "午"):
+        if(dizhi == "子" or dizhi == "午") and len(star) == 2:
             tmp = """天机独坐子午见辅佐吉曜多者 ， 亦主兄弟姐妹众多 。 但一生交友虽多 ， 却难得有 
 知交 ， 或与知交半路分张 。 若 见煞忌刑曜 ， 则易受兄弟或朋友拖累 ， 凡束可妄自出 
 头 。 
@@ -1441,7 +1446,7 @@ def GongXia2nd(star, dizhi,
     寅申 『 同梁 』 ， 倾轧离散克应之期 ， 为天相 、 巨门躔 守兄弟宫的年限 。 """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
-        elif(dizhi == "卯" or dizhi == "酉"):
+        elif(dizhi == "卯" or dizhi == "酉") and len(star) == 2:
             tmp = """ 卯本天同独坐守兄弟宫 ， 卯宫兄弟五人 ， 酉宫仅二 三人 。 亦以先姊后弟为宜 ， 
 否则长兄难养 。 
 卯酉天同 ， 亦主交友广阔 ， 唯实际助力不大 。 略见 煞曜 ， 则多征歌逐色游乐之 
@@ -1456,7 +1461,7 @@ def GongXia2nd(star, dizhi,
 仍必须事事亲力亲为 。  """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        elif(dizhi == "巳" or dizhi == "亥"):
+        elif(dizhi == "巳" or dizhi == "亥") and len(star) == 2:
             tmp = """
 巳亥天同独坐守兄弟宫 ， 亦主兄弟众多 ， 唯一般情 形下姊妹多于兄弟 。 同时亦 
 主交友面广 ， 尤擅结交地位不如己者 。 
@@ -1491,7 +1496,7 @@ def GongXia2nd(star, dizhi,
     丑未 [ 廉杀 ] 见辅佐吉曜及吉化 ， 可得友人合作之 力 ， 因而带挈自身 。  """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
-        elif(dizhi == "寅" or dizhi == "申"):
+        elif(dizhi == "寅" or dizhi == "申") and len(star) == 2:
             tmp = """ 寅申廉贞独坐兄弟宫 ， 亦主兄弟感情和美 ， 但无实 际助力 。 与人交往 ， 交深则 
 反易招怨 。 故以不与人合作事业为宜 。 
 寅申廉贞 ， 每易于破军或 [ 紫相 ] 守兄弟宫的年份 ， 与友合作事业 ， 如见煞曜 ， 
@@ -1754,7 +1759,7 @@ def GongXia3rd(star, dizhi,
                    tian_goodList,tian_badList,
                    za_goodList,za_badList,
                    caiyiList)
-    if(star[:2] == "紫薇"):
+    if(star[:2] == "紫微"):
         
         print("\n")
         tmp = """ 
@@ -1765,23 +1770,23 @@ def GongXia3rd(star, dizhi,
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
-        if(star == "紫薇破军"):
+        if(star == "紫微破军"):
             tmp = """[ 紫破 ] 必须见 [ 百官朝拱 ] ， 又不见辅佐单 星 ， 然后始主婚姻吉利 。『 紫 
 破 』 且主夫妻可以合作创业 ， 白 手兴家 。 唯 『 紫相 』 始终有缺点 ， 夫妻 年龄有大差 
 距 ， 然后始可适应忍让 。[ 紫破 ] 宜配偶年龄有大差距 。 唯男命配年 长二三年之妻 ； 女命配年 
 少二三年之夫 ， 亦作大差距看 。  """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        elif(star == "紫薇七杀"):
+        elif(star == "紫微七杀"):
             tmp = """ [ 紫杀 ] 必须见 [ 百官朝拱 ] ， 又不见辅佐单 星。 """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        elif(star == "紫薇天相"):
+        elif(star == "紫微天相"):
             tmp = """ 紫相宜配偶年龄有大差距 。 唯男命配年 长二三年之妻 ； 女命配年 
 少二三年之夫 ， 亦作大差距看 。 """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        if(dizhi == "子" or dizhi == "午"):
+        if(dizhi == "子" or dizhi == "午") and len(star) == 2:
             tmp = """ 子午宫紫微独坐 ， 百官朝拱 ， 则配偶得力 ， 地位高 ， 主观亦强 。 若为 『 在野 』 
 或 [ 无道 ] 之格局 ， 则主配偶性格横 蛮 。 
 子午紫微而偏于精神者 ， 主配偶有支配自己的倾 向 ； 偏于物质者 ， 主配偶时进 
@@ -1797,7 +1802,7 @@ def GongXia3rd(star, dizhi,
             tmp.replace(" ", ""); print(tmp)
             print("\n")
         elif(dizhi == "丑" or dizhi == "未"):
-            if(star == "紫薇破军"):
+            if(star == "紫微破军"):
                 tmp = """ 丑未 [ 紫破 ] ， 一般不利居夫妻宫 。 虽本持安定 ， 亦 主婚前有波折 ； 若动荡昔 ， 
     则每易异离 。 
     丑未 『 紫破 』 ， 最不宜见辅佐 『 单星 』 ， 每主有第三者 介入 。 
@@ -1809,7 +1814,7 @@ def GongXia3rd(star, dizhi,
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
         elif(dizhi == "寅" or dizhi == "申"):
-            if(star == "紫薇天府"):
+            if(star == "紫微天府"):
                 tmp = """ 寅申宫 [ 紫府 ] 同度 ， 若无辅佐诸曜 ( 或有 ， 而所见 者多 [ 单星 ]) ， 或府库 『 空露 ] ， 
     则防于贪狼 、 破军 、 巨门大 运 ， 婚姻发生变化 。 此等宫垣 ， 见煞忌空劫即为生变之 
     兆 。 
@@ -1821,7 +1826,7 @@ def GongXia3rd(star, dizhi,
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
         elif(dizhi == "卯" or dizhi == "酉"):
-            if(star == "紫薇贪狼"):
+            if(star == "紫微贪狼"):
                 tmp = """ 卯酉宫 [ 紫贪 ] 须分别 物欲或情欲的本质 。 物欲 『 紫 贪 ] 主配偶进取 ； 情欲者则婚 
     前因多波折 ， 婚后亦每易 生外心 。 
     卯酉 { 紫贪 } 又见昌曲 ， 每生非礼成婚 ( 『 紫破 』 则见 辅弼 ) 。 但可免生离死别之克 。 
@@ -1833,7 +1838,7 @@ def GongXia3rd(star, dizhi,
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
         elif(dizhi == "辰" or dizhi == "戌"):
-            if(star == "紫薇天相"):
+            if(star == "紫微天相"):
                 tmp = """ 辰成 『 紫相 』 ， 男命配妻宜年小 ( 可小十二年以上 ) ， 女命配夫宜年长 ( 八年至十 
     二年 ) 。 若 『 紫相 』 无情者 ， 尤须 夫妻年龄有差距始可弥补 ， 否则主生离 。 
     辰戌 『 紫相 』， 以与曾结婚或同居的人结合为宜 。 见 辅佐 『 单星 』 者尤然 。 
@@ -1846,7 +1851,7 @@ def GongXia3rd(star, dizhi,
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
         elif(dizhi == "巳" or dizhi == "亥"):
-            if(star == "紫薇七杀"):
+            if(star == "紫微七杀"):
                 tmp = """ 巳亥 [ 紫杀 ] 一般均主配偶弄权 。 若见辅佐吉曜 ， 则 配偶事业广大 。 唯易与自 身 
     会少离多 ， 或同居一宅但关系 却疏远 。 
     巳亥 『 紫杀 』 ， 见 『 火贪 』 、 『 铃贪 』 ， 不躔桃花 ， 主配 偶突然发迹 ； 躔桃花 ， 主 
@@ -1866,7 +1871,7 @@ def GongXia3rd(star, dizhi,
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
-        if(dizhi == "子" or dizhi == "午"):
+        if(dizhi == "子" or dizhi == "午") and len(star) == 2:
             if(star == "天机"):
                 tmp = """子午天机独坐 ， 对宫巨门 ， 稍带煞曜即己主夫妻貌 合神离 。 若天机化忌或巨门 
 化忌 ， 则夫妻因性格不合或不满客观环境 ， 时生改变之心 。 若巨门 化忌者 ， 虽离异 
@@ -1881,7 +1886,7 @@ def GongXia3rd(star, dizhi,
 我克制 。  """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
-        elif(dizhi == "丑" or dizhi == "未"):
+        elif(dizhi == "丑" or dizhi == "未") and len(star) == 2:
             if(star == "天机"):
                 tmp = """丑未天机独坐 ， 对宫为天梁 ， 于夫妻宫有所不宜 。 多主早婚而离异 ， 或虽迟婚 ， 
 但婚前却经多次恋爱挫折 ， 见空劫者尤然 。 
@@ -2117,7 +2122,7 @@ def GongXia3rd(star, dizhi,
 礼成亲 。 煞重 ， 武曲化忌 ， 丈 夫有隐疾 ， 或有肺病 。"""
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
-        elif(dizhi == "辰" or dizhi == "戌"):
+        elif(dizhi == "辰" or dizhi == "戌") and len(star) == 2:
             if(star == "武曲"):
                 tmp = """ 辰戌宫武曲独坐 ， 宜迟婚 。 火铃同度 ， 主仓卒成婚 。 见吉化吉曜 ， 则配偶精明 
 能干 。 见煞忌刑曜 ， 主夫妻生离死别 ； 煞轻者 ， 主因配偶破财 。 
@@ -2186,7 +2191,7 @@ def GongXia3rd(star, dizhi,
 化忌的宫垣 ， 克应配偶生离 。"""
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
-        elif(dizhi == "卯" or dizhi == "酉"):
+        elif(dizhi == "卯" or dizhi == "酉") and len(star) == 2:
             if(star == "天同"):
                 tmp = """ 卯酉天同独坐 ， 对太阴 ， 亦主配偶俊美 。 见吉化 、 吉曜 ， 可卜 婚姻和美 。 尤以 
 曾同居然后正式举行婚嫔者 为然 。 若煞忌刑凑会 ， 则主两度或三度婚姻 。 女命以偏 
@@ -2199,7 +2204,7 @@ def GongXia3rd(star, dizhi,
 卯 酉天同 ， 以巨门 、 天梁 、 破军 、 『 廉贞天相 』 为枢纽 。"""
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
-        elif(dizhi == "辰" or dizhi == "戌"):
+        elif(dizhi == "辰" or dizhi == "戌") and len(star) == 2:
             if(star == "天同"):
                 tmp = """ 辰戌宫天同独坐 ， 与巨门相对 ， 情形大致与 [ 天同 巨门 ] 相同 。 以天同 、 巨门宫 
 垣 ， 及天相 、 『 廉杀 』 诸垣 ， 为 吉凶克应的枢纽 。 
@@ -2207,7 +2212,7 @@ def GongXia3rd(star, dizhi,
 姻 。 男命且主得妻财 ， 或受岳家提拔而致事业有成 。 """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
-        elif(dizhi == "巳" or dizhi == "亥"):
+        elif(dizhi == "巳" or dizhi == "亥") and len(star) == 2:
             if(star == "天同"):
                 tmp = """ 巳亥宫天同独坐 ， 与天梁相对 ， 性质大致与 [ 天同 天梁 ] 同 。 以 [ 武曲天府 ] 、 『 太 
 阴太阳 』 、 廉贞备垣 ， 为吉凶 克应的枢纽 。
@@ -2315,8 +2320,8 @@ def GongXia3rd(star, dizhi,
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
-        if(dizhi == "丑" or dizhi == "未"):
-            tmp = """ 丑未天府独坐 ， 见辅佐 [ 单星 J ， 主自身常有外遇 。 见煞 ， 则主会少离多 ； 若对 
+        if(dizhi == "丑" or dizhi == "未") and len(star) == 2:
+            tmp = """ 丑未天府独坐 。 见煞 ， 则主会少离多 ； 若对 
 宫廉贞化忌 ， 则主停妻再娶 。 府库空露 ， 则主因配偶破耗 。 唯空露而见桃花 ， 却 主 
 自身因色而致破败 。 
 丑未天府 ， 因借会 『 紫贪 ] 而致叠见红鸾天喜 、 咸池 大耗者 ， 亦主有外宠 ( 古代 
@@ -2324,7 +2329,7 @@ def GongXia3rd(star, dizhi,
 丑未天府 ， 以 『 武破 』 、 天同 、 巨门 、 太阳 、 天梁备 垣 ， 为吉凶克应之期 。 """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        elif(dizhi == "卯" or dizhi == "酉"):
+        elif(dizhi == "卯" or dizhi == "酉") and len(star) == 2:
             tmp = """ 卯酉宫天府独坐 ， 只需府库不空露 ， 所会的天相不 为刑忌所夹 ， 不会廉贞化忌 
 或贪狼化忌 ， 婚姻即完美 。 否则男命主有外遇 ， 或因配偶破财 ； 女命则主为偏房继 
 室 。 
@@ -2427,7 +2432,7 @@ def GongXia3rd(star, dizhi,
 贪狼与昌曲化忌同寓 ， 主婚姻无一正式婚礼 ， 或婚礼 有阻滞 。 
 女命贪狼在夫妻宫 ， 见铃星同度 ， 又见辅佐诸曜 ， 及桃花诸曜 ， 主自身作人外 
 遇 。 
-女命贪狼守夫妻宫 ， 除 『 紫微贪狼 』 在卯酉宫及辰戌 宫独坐之外 ， 均易为何妇 
+女命贪狼守夫妻宫 ， 除 『 紫微贪狼 』 在卯酉宫及辰戌 宫独坐之外 ， 均易为有妇 
 之夫追求 。 是否因此引 起婚姻波 折 ， 须视所踺星暇而定 。 本质情欲霞者 ， 必起风波 。
 夫妻寓星 性质变化甚大 ， 应参考 『 六十星系 』 所述加 以推断 。 
 子午 宫贪狼 ， 与紫微相对 ， 最喜天刑 、 空曜同度 ， 否则婚姻必有波澜 。 见辅佐 
@@ -2726,7 +2731,7 @@ def GongXia3rd(star, dizhi,
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
-        if(star == "破军紫薇"):
+        if(star == "破军紫微"):
             tmp = """『 紫微破军 ] 以年龄有差距的婚姻为佳 ， 亦主妇夺夫 权 ；"""
             tmp.replace(" ", ""); print(tmp)
             print("\n")
@@ -2790,7 +2795,7 @@ def GongXia4th(star, dizhi,
                    tian_goodList,tian_badList,
                    za_goodList,za_badList,
                    caiyiList)
-    if(star[:2] == "紫薇"):
+    if(star[:2] == "紫微"):
         
         print("\n")
         tmp = """ 
@@ -2804,7 +2809,7 @@ def GongXia4th(star, dizhi,
         tmp.replace(" ", ""); print(tmp)
         print("\n")
         if(dizhi == "子" or dizhi == "午"):
-            if(star == "紫薇"):
+            if(star == "紫微"):
                 tmp = """紫微在子午宫 ， 主子女性格倔强 ， 爱恶随心 。 因为贪狼对拱 ， 故多主头胎生女 ； 
 在古代 ， 定子女数目为三男二女 。 若为 『 在野 』 ， 则子女孤独 ， 且性格与自己不合 ； 
 若为 『 百官朝拱 ] ， 则子女地位崇高 ， 且子女数目增加 。 
@@ -2819,7 +2824,7 @@ def GongXia4th(star, dizhi,
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
         elif(dizhi == "丑" or dizhi == "未"):
-            if(star == "紫薇破军"):
+            if(star == "紫微破军"):
                 tmp = """ [ 紫微破军 ] 在丑未宫 ， 以先生女为宜 。 倘煞刑诸曜 会合 ， 头胎生子者 ， 防破相 ， 
 重则刑克 。 或不足月生 ， 或有产难 。 
 『 紫破 』 守子女宫主 子 女三人 。 见辅佐诸曜对星者 ， 数目增加 ， 但数目仍为单 
@@ -2832,7 +2837,7 @@ def GongXia4th(star, dizhi,
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
         elif(dizhi == "寅" or dizhi == "申"):
-            if(star == "紫薇天府"):
+            if(star == "紫微天府"):
                 tmp = """ 寅申宫 『 紫微天府 』 主子女五人 。 辅佐对星同会 ， 数 目增加 。 且子女有相当数目 。 
 寅申 [ 紫府 ] 见辅佐 『 单星 』 ， 必主有两重子女 ； 故宜 详视夫妻宫 ， 推断其两重 
 子女的意义为何 。 
@@ -2845,7 +2850,7 @@ def GongXia4th(star, dizhi,
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
         elif(dizhi == "卯" or dizhi == "酉"):
-            if(star == "紫薇贪狼"):
+            if(star == "紫微贪狼"):
                 tmp = """卯酉宫 【 紫贪 】 见辅佐诸曜对星 ， 主子女 七 人 ； 『 孤 君 』 则主四人 ； 在卯 者多行 
 生女 ； 在 酉宫者主先生子 。 
 [ 紫贪 ] 两邻 ， 一蹿昌曲单星 ； 一躔左右单星 ， 则子 女婚姻有事端 ， 多为其配偶 
@@ -2855,7 +2860,7 @@ def GongXia4th(star, dizhi,
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
         elif(dizhi == "辰" or dizhi == "戌"):
-            if(star == "紫薇天相"):
+            if(star == "紫微天相"):
                 tmp = """辰戌宫 [ 紫徽天相 ] ， 主子女四人 ； 见辅佐对星则子 、 女数目增加 ； 见煞 ， 则由 
 单数克至双数 。 最不喜为刑忌夹 ， 主子女懦弱 ， 晚辈不得力 。 
 [ 紫相 ] 躔火铃 ， 主子女宜远方发展 。 会禄存 、 化禄 ， 则可帮助自己事业 。 
@@ -2866,7 +2871,7 @@ def GongXia4th(star, dizhi,
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
         elif(dizhi == "巳" or dizhi == "亥"):
-            if(star == "紫薇七杀"):
+            if(star == "紫微七杀"):
                 tmp = """巳亥宫 『 紫微 七 杀 』 ， 主子女三人 。 见辅佐对星 ， 数 目增加 ， 但不超过六人 。 同 
 时见煞忌刑曜 ， 子女有刑克 。 
 巳亥 『 紫杀 』 ， 子女极强头 。 须见禄以调和 ， 否则有 代沟 ， 晚辈性 ： 质亦如是 。 
@@ -2951,19 +2956,31 @@ def GongXia4th(star, dizhi,
 辰成 『 机梁 』 ， 以 『 太阳巨门 』 、 [ 天同太阴 ] 两垣 ， 为 吉凶克应的枢纽 。 """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
-        elif(dizhi == "巳" or dizhi == "亥"):
-            if(star == "天机"):
-                tmp = """巳亥宫天机独坐 ， 与太阴相对 ， 以巳宫为佳 。 亥宫 天机对巳宫太阴落陷 ， 日生 
+        elif(dizhi == "巳") and len(star) == 2:
+            tmp = """巳亥宫天机独坐 ， 与太阴相对 ， 以巳宫为佳 。 亥宫 天机对巳宫太阴落陷 ， 日生 
 人及下半月生人 ， 对长女有妨 。 
-巳宫天机 ， 主二女一子 ； 亥宫者 ， 子极迟得 。 桃 花诸曜同度则女儿数目增加 。 
+巳宫天机 ， 主二女一子  桃 花诸曜同度则女儿数目增加 。 
 辅佐吉曜同度 ， 则子女数目增加 。 
 巳亥天机与四煞空劫同度 ， 正室无子 ， 主偏房外宠 生子 。 
 躔桃花 ， 煞重 ， 又见左辅 、 右弼 『 单星 』 ， 主 『 姑子归宗 』 。 
 巳亥天机若无吉曜 ， 但与空劫 、 天姚同度 ， 主晚辈 及亲信有权术阴谋 。 又见昌 
 曲 、 辅弼对星 ， 则主女性者有助力 。 
 巳亥天机以 『 天同巨门 』 、 『 太阳天梁 』 为吉凶克应的 枢纽 。 """
-                tmp.replace(" ", ""); print(tmp)
-                print("\n")
+            tmp.replace(" ", ""); print(tmp)
+            print("\n")
+        elif(dizhi == "亥") and len(star) == 2:
+            tmp = """巳亥宫天机独坐 ， 与太阴相对 ， 以巳宫为佳 。 亥宫 天机对巳宫太阴落陷 ， 日生 
+人及下半月生人 ， 对长女有妨 。 
+亥宫者 ， 子极迟得 。 桃 花诸曜同度则女儿数目增加 。 
+辅佐吉曜同度 ， 则子女数目增加 。 
+巳亥天机与四煞空劫同度 ， 正室无子 ， 主偏房外宠 生子 。 
+躔桃花 ， 煞重 ， 又见左辅 、 右弼 『 单星 』 ， 主 『 姑子归宗 』 。 
+巳亥天机若无吉曜 ， 但与空劫 、 天姚同度 ， 主晚辈 及亲信有权术阴谋 。 又见昌 
+曲 、 辅弼对星 ， 则主女性者有助力 。 
+巳亥天机以 『 天同巨门 』 、 『 太阳天梁 』 为吉凶克应的 枢纽 。 """
+            tmp.replace(" ", ""); print(tmp)
+            print("\n")
+                
     elif(star[:2] == "太阳"):
         
         print("\n")
@@ -3032,27 +3049,36 @@ def GongXia4th(star, dizhi,
 卯酉 『 太阳天梁 』 ， 以 [ 天同巨门 ] 、 破军两垣 ， 为吉 。 凶克应的枢纽 。"""
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
-        elif(dizhi == "辰" or dizhi == "戌"):
-            if(star == "太阳"):
-                tmp = """ 辰戌宫阴阳对拱 ， 主子女四人 。 辅佐及桃花皆主子 ‘ 
+        elif(dizhi == "辰" or dizhi == "戌") and len(star) == 2:
+            tmp = """ 辰戌宫阴阳对拱 ， 主子女四人 。 辅佐及桃花皆主子 ‘ 
 女数目增加 。 辰宫太阳主聪敏及具魄力 ， 戌宫者平常 。 
 辰戌宫太阳独坐 ， 必视茂门 ， 然后可厘定子女晚辈 下属的性质 。 茂门化忌 ， 则 
 反可从事法律 ， 太阳化忌 ， 亦主是非口舌以生财 ， 或主在外国机构服务 ， 茂门化禄 
 权 ， 则子女为兴创事业人材 。 
 辰戌宫太阳独坐 ， 以 [ 天同天梁 ] 、 天机 、 巨门为流年大这吉凶克应的枢纽 。"""
-                tmp.replace(" ", ""); print(tmp)
-                print("\n")
-        elif(dizhi == "巳" or dizhi == "亥"):
-            if(star == "太阳"):
-                tmp = """巳宫太阳独坐 ， 与巨门对拱亦主子女聪敏 ， 唯在巳宫则更具毅力 。 
+            tmp.replace(" ", ""); print(tmp)
+            print("\n")
+                
+        elif(dizhi == "巳" and len(star) == 2):
+            tmp = """巳宫太阳独坐 ， 与巨门对拱亦主子女聪敏 ， 唯在巳宫则更具毅力 。 
 巳亥宫太阳见占化 、 古曜同会 ， 子女亦为创业或专业人才 ， 可参考 『 太阳 巨 门 』 ， 
 唯巳亥 宫 者 ， 商业性质更重 。 
 巳亥寓太阳均主三男二女 ， 躔辅弼桃花则数目更多 。 唯巳宫者易浮奢 ， 亥宫者 
 则主沉潜 ， 故人生皆有挫折 。 
 巳亥宫太阳独坐 ， 化忌亦无妨 ， 除非火铃同度 ， 否 则不主刑伤 。 唯仍主易分离 。 
 巳亥宫太阳 ， 以天同 、 天机 、 巨门为运限年限吉凶 克应的枢纽 。"""
-                tmp.replace(" ", ""); print(tmp)
-                print("\n")
+            tmp.replace(" ", ""); print(tmp)
+            print("\n")
+        elif(dizhi == "亥") and len(star) == 2:
+            tmp = """
+巳亥宫太阳见占化 、 古曜同会 ， 子女亦为创业或专业人才 ， 可参考 『 太阳 巨 门 』 ， 
+唯巳亥 宫 者 ， 商业性质更重 。 
+巳亥寓太阳均主三男二女 ， 躔辅弼桃花则数目更多 。 唯巳宫者易浮奢 ， 亥宫者 
+则主沉潜 ， 故人生皆有挫折 。 
+巳亥宫太阳独坐 ， 化忌亦无妨 ， 除非火铃同度 ， 否 则不主刑伤 。 唯仍主易分离 。 
+巳亥宫太阳 ， 以天同 、 天机 、 巨门为运限年限吉凶 克应的枢纽 。"""
+            tmp.replace(" ", ""); print(tmp)
+            print("\n")
     elif(star[:2] == "武曲"):
         
         print("\n")
@@ -3115,17 +3141,17 @@ def GongXia4th(star, dizhi,
 卯酉 [ 武曲 七 杀 ] ， 以巨门 、 天机 、 [ 廉贞贪狼 ] 三垣 为吉凶克应之期 。  """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
-        elif(dizhi == "辰" or dizhi == "戌"):
-            if(star == "武曲"):
-                tmp = """辰戌宫武曲独坐 ， 子可较早得 ， 主生一子 。 见辅佐 诸曜则可增加至三子 。 唯仍 
+        elif(dizhi == "辰" or dizhi == "戌") and len(star) == 2:
+            tmp = """辰戌宫武曲独坐 ， 子可较早得 ， 主生一子 。 见辅佐 诸曜则可增加至三子 。 唯仍 
 以先得女为佳 ， 否则长子幼年恐多病 。 
 辰戌宫武曲会贪狼化忌 ， 又有煞曜同度 ， 则主防子 女骄奢倾家 。 躔空劫 、 火铃 
 尤甚 。 若躔羊陀 ， 则仅主极迟得子 。 
 辰戌宫武曲会贪狼化禄 ， 又见桃花 ， 则主外室或继室生子 。 倘又躔火铃 ， 仍防子 
 女骄奢以致倾败 。 
 辰戌宫武曲 ， 以 『 廉贞天相 』 、 贪狼 、 七杀三宫垣为 。 流年大运吉凶克应的枢纽 。  """
-                tmp.replace(" ", ""); print(tmp)
-                print("\n")
+            tmp.replace(" ", ""); print(tmp)
+            print("\n")
+                
         elif(dizhi == "巳" or dizhi == "亥"):
             if(star == "武曲破军"):
                 tmp = """巳亥宫 『 武曲破军 ] ， 主生一子 。 见煞 ， 多于一子则 有刑克 ， 刑至一子为止 ， 须过 
@@ -3197,16 +3223,16 @@ def GongXia4th(star, dizhi,
 寅申 [ 同梁 ] 以天机 、 巨门 、 太阴三垣及本宫为流年 大运吉凶克应的枢纽 。  """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
-        elif(dizhi == "卯" or dizhi == "酉"):
-            if(star == "天同"):
-                tmp = """卯酉天同独坐主女多子少 。 卯宫者子女五人 ， 酉 宫则四人或二人 ， 或由单数刑 
+        elif(dizhi == "卯" or dizhi == "酉") and len(star) == 2:
+            tmp = """卯酉天同独坐主女多子少 。 卯宫者子女五人 ， 酉 宫则四人或二人 ， 或由单数刑 
 至双数 ； 不刑见主少小离家 。 
 卯酉天同 ， 与子午宫 『 天同太阴 』 有类似性质 ， 可以 同参 。 唯不会 [ 太阳巨门 ] ， 
 故性格较为好高鹜远 ， 且理想 高而少实际 。 
 若巨门化忌 ， 主子女性格重理想 而脱离现实 ， 但却 固执 。 
 卯酉天同以巨门 、 太阳 、 太阴三垣 ， 为流年大运吉 凶克应的枢纽 。 """
-                tmp.replace(" ", ""); print(tmp)
-                print("\n")
+            tmp.replace(" ", ""); print(tmp)
+            print("\n")
+                
         elif(dizhi == "辰" or dizhi == "戌"):
             if(star == "天同"):
                 tmp = """辰戌宫天同独坐 ， 子女二至三人 。 见煞则只一人 。 见辅佐吉曜则增至三人 。 
@@ -3316,11 +3342,7 @@ def GongXia4th(star, dizhi,
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
     elif(star[:2] == "天府"):
-        
-        print("\n")
-        tmp = """子女宫喜天府加临 ， 主子女孝顺友爱 、 敦厚诚笃 。 且数目众多 。 
-子女宫见天府独坐 ， 一般主得五子 。 若桃花诸曜同 踞 ， 又见辅佐对星 ， 则可能 
-五子之外更多女 ； 或五女三子 ， 即使见煞 ， 亦主子女总数不少于五人 。 
+        tmp = """子女宫喜天府加临 ， 主子女孝顺友爱 、 敦厚诚笃 。 且数目众多 。  
 天府坐子女宫 ， 不忌煞曜 ， 只忌 空劫 ， 为子女有夭 折之征 。 若会刑忌夹的天相 ， 
 亦主子女有灾病破相夭折等情 ， 或生产时动手术 ， 或与父母性格不相投 。 
 子女宫天府得禄 ， 或 [ 府库空露 1 ， 仅影响子女之际 遇 ， 不影响两代关系 。 
@@ -3332,7 +3354,10 @@ def GongXia4th(star, dizhi,
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
-        
+        if(len(star) == 2):
+            tmp = """子女宫见天府独坐 ， 一般主得五子 。 若桃花诸曜同 踞 ， 又见辅佐对星 ， 则可能 
+五子之外更多女 ； 或五女三子 ， 即使见煞 ， 亦主子女总数不少于五人 。"""
+            tmp.replace(" ", ""); print(tmp)
         if(dizhi == "丑" or dizhi == "未"):
             tmp = """ 丑未宫天府 ， 若对宫 [ 廉贞 七 杀 ] 化忌 ， 有煞 ， 主生 产时需动手术 。 
 丑未天府 ， 见辅佐单星 ， 决主有两重子女 。 亦主外 室先生女 。 亦主外室先生女 ， 
@@ -3362,8 +3387,6 @@ def GongXia4th(star, dizhi,
             tmp.replace(" ", ""); print(tmp)
             print("\n")
     elif(star[:2] == "太阴"):
-        
-        print("\n")
         tmp = """太阴守子女宫 ， 一般主先生女 ， 后生子 ； 或主发妻 先生女 ， 外室 、 继室先生子 。 
 太阴在庙旺宫垣 ， 夜生人 、 上半月生人 ， 子女数目 均多 ， 主五至八人 。 若曰生 
 人 、 下半月生人 ， 则 为三至五人 。 
@@ -3378,11 +3401,12 @@ def GongXia4th(star, dizhi,
 太阴落陷而见吉化吉曜 ， 则子女虽佳 ， 但终嫌欠领 导力 。 宜后天予以抚育栽培 。 
 太阴落陷 ， 禄存同度 ， 则仅得一子 。 煞重 ， 则宜庶 室或外室生子 。 
 太阴与桃花诸曜同度 ， 多女少子 ， 落陷且见火铃 ， 则或主有女无子 。 
-太阴独坐子女宫 ， 以太阳 、 巨门 ： 天同及本宫为流 年大运吉凶克应的枢纽 。
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
-        
+        if(len(star) == 2):
+            tmp = """太阴独坐子女宫 ， 以太阳 、 巨门 ： 天同及本宫为流 年大运吉凶克应的枢纽 。"""
+            tmp.replace(" ", ""); print(tmp)
         if(dizhi == "卯" or dizhi == "酉"):
             tmp = """太阴在卯酉宫 ， 若桃花诸曜重重 ， 则子女易受异性 青眼 ， 须防有感情困扰 。 
 卯酉太阴 ， 若天同化忌拱冲 ， 火铃同度 ， 又见阴煞 、 大耗 、 天虚 、 天月 、 病符 、 
@@ -3617,14 +3641,16 @@ def GongXia4th(star, dizhi,
 始主有子克家 。 见辅佐诸曜单星 ， 则主继室或外室生子 。 亦主成器 。 
 七 杀在子女宫虽主子女少 ， 唯若本身命宫见辅佐诸 曜或为紫微 、 天府等主星见 
 『 百官朝拱 』 ， 则仍主自身下 属众多 ， 仅门生弟子 ， 及追随自己的晚辈稀少 。 
-七 杀独坐 ， 见煞忌刑耗诸曜 ， 往往子息艰难 ， 甚书 无子 ， 但绝不宜招外子 ， 恐 
-反招叛逆 。 与晚辈的关系亦同此推断 。 
 七杀在子女宫 ， 所对的天府 ， 其为府库充盈 ， 或为 府库空露 ， 可用以推断子女 
 享受父母财禄的程度 。 
 七 杀在子女寓 ， 以武曲 、 廉贞 、 天府 、 天相诸垣 ， 为流年大运吉凶克应的枢纽 。
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
+        if(len(star) == 2):
+            tmp = """七 杀独坐 ， 见煞忌刑耗诸曜 ， 往往子息艰难 ， 甚书 无子 ， 但绝不宜招外子 ， 恐 
+反招叛逆 。 与晚辈的关系亦同此推断 。 """
+            tmp.replace(" ", ""); print(tmp)
         if(dizhi == "子" or dizhi == "午"):
             tmp = """子午宫 七 杀 ， 喜武曲化禄朝拱 ； 甚嫌化忌 ， 往往主 伤残 ， 煞轻则主动 手术生产 ， 
 又主头胎流产 。 
@@ -3708,7 +3734,7 @@ def GongXia5th(star, dizhi,
                    tian_goodList,tian_badList,
                    za_goodList,za_badList,
                    caiyiList)
-    if(star[:2] == "紫薇"):
+    if(star[:2] == "紫微"):
         
         print("\n")
         tmp = """紫微守财帛宫 ， 在最好的情形下 ， 亦仅主财源充裕 ， 并不主能积聚 。 盖紫微偏 
@@ -3729,7 +3755,7 @@ def GongXia5th(star, dizhi,
         tmp.replace(" ", ""); print(tmp)
         print("\n")
         if(dizhi == "子" or dizhi == "午"):
-            if(star == "紫薇"):
+            if(star == "紫微"):
                 tmp = """ 紫微与火星同度 ， 居子午宫 ， 因与贪狼相对 ， 故亦 主一 时横发 。 或对宫贪狼成 『 火 
 贪 』、 [ 铃贪 ] 格者亦然 。 除 非 命宫或事业宫有吉化 、 吉曜 ， 否则难以久长 。 
 子午宫紫微在财帛宫 ， 有左辅右弼同会 ， 主财源来 自多方面 。 余宫紫微减等 。 
@@ -3741,7 +3767,7 @@ def GongXia5th(star, dizhi,
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
         elif(dizhi == "丑" or dizhi == "未"):
-            if(star == "紫薇破军"):
+            if(star == "紫微破军"):
                 tmp = """丑未宫 [ 紫微破军 ] 在财帛宫 ， 主一生必可得一次意 外财 。 以程度言 ， 未宫优于 
 丑宫 ； 见吉者性质优良 ， 见煞 者则带凶险性质 。 唯得意 外财后 ， 必于流年经行至丑 
 或未宫时 ， 即生极大破耗 。 若有空劫同度 ， 破耗后较得财前更贫困 。 
@@ -3752,7 +3778,7 @@ def GongXia5th(star, dizhi,
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
         elif(dizhi == "寅" or dizhi == "申"):
-            if(star == "紫薇天府"):
+            if(star == "紫微天府"):
                 tmp = """寅申宫 【 紫微天府 】， 需视有禄无禄以厘定其吉凶 。 若有禄 ， 煲唾可积聚而成富 ， 
 无禄 ， 则不外充足而已 ； 倘无禄有煞 ， 或且见空劫 ， 则仅主表面风光 ， 且常易因求 
 财反生破败 。 
@@ -3761,7 +3787,7 @@ def GongXia5th(star, dizhi,
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
         elif(dizhi == "卯" or dizhi == "酉"):
-            if(star == "紫薇贪狼"):
+            if(star == "紫微贪狼"):
                 tmp = """卯 酉 宫 『 紫微贪狼 』 亦主骤发 ， 若紫徽化科 ， 则财来 较悠久 ， 若贪狼化禄 ， 剥 
 财来较急骤 ， 然而亦隐藏破耗之机 。 
 『 紫贪 』 有 『 百 官朝拱 』 ， 则 主可发财 而非 暴发 ； 若 『 在 野 』 或 『 孤君 』 ， 则仅 
@@ -3776,7 +3802,7 @@ def GongXia5th(star, dizhi,
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
         elif(dizhi == "辰" or dizhi == "戌"):
-            if(star == "紫薇天相"):
+            if(star == "紫微天相"):
                 tmp = """辰戌宫 [ 紫微天相 ] 虽吉化吉曜汇集 ， 一生亦必有一 次波折 ， 或呈胶着状态 ， 难 
 得寸进 。 必须渡过此段时期 ， 然后始能开运 。 
 倘有刑煞忌耗诸曜 ， 则不但时生波折 ， 而且容易因 多意外开支 ， 而致入不敷支 。
@@ -3790,7 +3816,7 @@ def GongXia5th(star, dizhi,
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
         elif(dizhi == "巳" or dizhi == "亥"):
-            if(star == "紫薇七杀"):
+            if(star == "紫微七杀"):
                 tmp = """[ 紫微 七 杀 ] 在巳亥宫 ， 理财胜于积财 ， 故常常事业 广大 ， 而自身积蓄却不相称 。 
 这种财帛宫的格局 ， 只宜以企业公司的资产 ， 作为自己的资产 。 
 [ 紫杀 ] 与禄存同度 ， 守财能力较大 ， 但易因财失义 。 
@@ -4117,13 +4143,9 @@ def GongXia5th(star, dizhi,
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
     elif(star[:2] == "天同"):
-        
-        print("\n")
         tmp = """天同守财帛宫 ， 主白手兴家 。 
 火铃同度者 ， 有祖业亦必散尽 。 然后始主自身创兴 。 若空劫同 度 ， 则自身开创 
 亦何破败 ， 仅能东山 复起 ， 结局 富裕 。 
-天同在财帛宫不喜独坐 ， 若独坐 ， 必须中年辛苦求财 ， 至晚年始得顺遂 。 亦即 
-白手兴家的程度更大 ， 情形亦较艰辛 。 
 天同化禄 ， 决主晚年可成富局 。 但若同时见煞 ， 则发迹之前 ， 必须财帛破败净 
 尽 ， 至身无一文 ， 然后始有意外收获 。 若无煞者 ， 则破败程度较轻 。 
 天同化权 ， 一般情形较为稳定 ， 虽亦主白手兴家 ， 但 [ 白手 ] 的程度不致身无分文 。 
@@ -4136,6 +4158,10 @@ def GongXia5th(star, dizhi,
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
+        if(len(star) == 2):
+            tmp = """天同在财帛宫不喜独坐 ， 若独坐 ， 必须中年辛苦求财 ， 至晚年始得顺遂 。 亦即 
+白手兴家的程度更大 ， 情形亦较艰辛 。 """
+            tmp.replace(" ", ""); print(tmp)
         if(star == "天同巨门"):
             tmp = """『 天同巨门 』 与阴煞 、 天虚 、 大耗同度 ， 则主机关巧 计 。 见天刑 ， 宜从事法律 ， 
 或与纠纷有关的事业 ( 如执达 吏 、 公正行 ) 。 
@@ -4331,7 +4357,7 @@ def GongXia5th(star, dizhi,
 天府对冲廉贞化忌 ， 则多挫折 。 有煞同度者更主破 败 。 """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        elif(dizhi == "卯" or dizhi == "酉"):
+        elif(dizhi == "卯" or dizhi == "酉") and len(star) == 2:
             tmp = """卯酉宫天府独坐 ， 与 『 武曲 七 杀 』 相对 ， 以武曲为财 星 ， 故掌财权之力 ， 大于 
 丑未宫天府 。 是故最宜见辅佐诸 曜 同会 ， 主有现成事业 ， 或经营家族事业 。 
 若见空劫刑耗 ， 且武曲化忌 ，． 则主事业破败 ， 或从 事新项目投资失败 ， 以致影 
@@ -4378,7 +4404,7 @@ def GongXia5th(star, dizhi,
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
-        if(dizhi == "卯" or dizhi == "酉"):
+        if(dizhi == "卯" or dizhi == "酉") and len(star) == 2:
             tmp = """卯酉宫太阴独坐 ， 与天同相对 ， 在酉宫入庙 ， 故优 于在卯宫落陷 ， 唯二者皆主 
 白手兴家 。 大致上可参考子午宫 『 天同太 阴 』 同度时的情形推断 。 
 卯本太阴 ， 在求财时常过份追求理想 ， 因而亦时有 失落感 。 
@@ -4450,7 +4476,7 @@ def GongXia5th(star, dizhi,
 任职大企业营业部门 。 但不宜作计划工作 。 """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        elif(dizhi == "寅" or dizhi == "申"):
+        elif(dizhi == "寅" or dizhi == "申") and len(star) == 2:
             tmp = """寅申宫贪狼独坐 ， 与廉贞相对 ， 一般来说 ， 廉贞化 忌 ， 则宜半偏行业 ， 或 『 凶 
 事以求财 』 ， 以带血光为佳 。 在 现代 ， 经营 冻肉亦属此类 ， 亦可为外科 、 牙科 。 
 倘廉贞化禄对拱 ， 与火铃同度 ， 亦主横发 ， 有煞曜 会合 ， 更见阴煞天姚 ， 则主 
@@ -4460,7 +4486,7 @@ def GongXia5th(star, dizhi,
 机致祸 ， 或经营半偏及偏门行业而致身败名裂 。 """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        elif(dizhi == "辰" or dizhi == "戌"):
+        elif(dizhi == "辰" or dizhi == "戌") and len(star) == 2:
             tmp = """辰戌宫贪狼独坐 ， 与武曲相对 。 火铃宜与贪狼同度 ， 若与武曲同度者 ，． 则虽横 
 发亦必同时起竞争 。 
 喜武曲财星化禄 ， 则 运用财帛的能力甚强 ； 化权 、 化科次之 。 
@@ -4516,7 +4542,7 @@ def GongXia5th(star, dizhi,
 职位 ) ， 因而收丰厚 。  """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        elif(dizhi == "巳" or dizhi == "亥"):
+        elif(dizhi == "巳" or dizhi == "亥") and len(star) == 2:
             tmp = """ 己亥巨门独坐 ， 对宫为太阳 ， 故利于以口舌求财 。 
 巳亥巨门见太阳化禄 ， 亦主受异族推崇 ， 在异族中 有信誉 。 
 若巨门化禄 ， 亦宜门市 、 零售等业 。 以异族为主要 顾客对象者更宜 。 亦宜以外 
@@ -4557,7 +4583,7 @@ def GongXia5th(star, dizhi,
 丑来天相 ， 常以 『 紫破 』 或天相大运或流 年 ， 为突发 克应之期 。 """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        elif(dizhi == "卯" or dizhi == "酉"):
+        elif(dizhi == "卯" or dizhi == "酉") and len(star) == 2:
             tmp = """卯酉寓天相独坐 ， 与 『 廉贞破军 』 相对 ， 基本性质不 吉 。 故稍见煞曜 ， 其财源 
 即不稳定 ， 且时生改变之心 。 
 若与空劫同度 ? ： 再见煞忌 ( 尤不宜廉贞化忌 ) ， 则 易因拖累而致生纠纷 。 若再有 
@@ -4571,10 +4597,6 @@ def GongXia5th(star, dizhi,
             print("\n")
         elif(dizhi == "巳" or dizhi == "亥"):
             tmp = """巳亥宫天相 ， 对 『 武曲破军 』 ， 财源亦不主稳定 ， 唯 较 对拱 『 廉贞破军 』 为佳 。 
-－ 一天相独坐的三种情况 ， 其实皆 主不稳定 ， 唯对拱 『 紫微破军 』 之不稳定 ， 系主 
-突发 ， 以及 突发后仍有波动 ；『 廉贞破军 』 之不稳定 ， 常常出于自发 『 武曲破军 』 之 
-不稳定 ， 则为客观环境所致 。 人类常易克服 客观环境的改变 。 但却不易克服内心的 
-情绪 ， 因此天相对 [ 武破 ] ， 其客观境遇一般便比对拱 [ 廉破 ] 为佳 。 
 巳亥天相最畏武曲化忌冲拱 ， 则 _ 生波折重重 ， 当 境况较佳时 ， 又生变化 。 惟若 
 仍有吉曜会合 ， 而煞不重者 ， 则可从事 『 凶事以求财 ] 的行业 。 如饮食业 、 冻肉业等 ， 
 则 波动较少 。 或从事专业亦可 ， 则以受雇用为宜 。 
@@ -4584,6 +4606,12 @@ def GongXia5th(star, dizhi,
 巳亥天相见禄马交驰 ， 主常得外地提供之生财机 会 。  """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
+            if(len(star) == 2):
+                tmp = """天相独坐的三种情况 ， 其实皆 主不稳定 ， 唯对拱 『 紫微破军 』 之不稳定 ， 系主 
+突发 ， 以及 突发后仍有波动 ；『 廉贞破军 』 之不稳定 ， 常常出于自发 『 武曲破军 』 之 
+不稳定 ， 则为客观环境所致 。 人类常易克服 客观环境的改变 。 但却不易克服内心的 
+情绪 ， 因此天相对 [ 武破 ] ， 其客观境遇一般便比对拱 [ 廉破 ] 为佳 。 """
+                tmp.replace(" ", ""); print(tmp)
     elif(star[:2] == "天梁"):
         
         print("\n")
@@ -4623,7 +4651,7 @@ def GongXia5th(star, dizhi,
 生破败 ， 或引起重大风波 。 """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        elif(dizhi == "丑" or dizhi == "未"):
+        elif(dizhi == "丑" or dizhi == "未") and len(star) == 2:
             tmp = """ 丑未宫天梁独坐 ， 与天机相对 ， 财帛动荡 。 唯左辅 右弼夹者 ， 始主能积存 。 
 丑未天梁 ， 有昌曲夹 ， 一生名大于利 。 故求利不如 求名 。 
 丑未天梁 ， 以丑宫优于未宫 ： 此与子午宫同意 。 
@@ -4676,23 +4704,22 @@ def GongXia5th(star, dizhi,
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
-        if(dizhi == "子" or dizhi == "午"):
+        if(dizhi == "子" or dizhi == "午") and len(star) == 2:
             tmp = """子午宫 七 杀独坐 ， 对宫 『 武曲天府 』 ， 见吉化或禄存 者 ， 常得意外财 。 唯此意外 
 财并非由非法途径得来 。 
 子午七杀躔火铃 ， 则主冒险犯难之财 ， 且不易积聚 。 
 子午 七 杀无占化吉曜 ， 一生至少亦得一次意外财 。 须注意保存元气 ， 因为机会难 
-再 。 武曲化忌者 ， 则破败后只能慢慢培养元气 ， 稍急躁即环境更劣 。 
-七 杀在寅申二宫独坐 ， 对宫为 『 紫微天府 』 ， 亦主横 发 。 其性质可参考子午二宫 。 
+再 。 武曲化忌者 ， 则破败后只能慢慢培养元气 ， 稍急躁即环境更劣 。  
 唯若紫徽化权 ， 则恐因弄权而致倾败 。 喜会紫微 化科 、 天府化科 ， 则虽不横发 ， 
 但风波亦小 。 且常主其人在财政营运上 ， 倾向 于以守为攻 。  """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
         elif(dizhi == "寅" or dizhi == "申"):
             tmp = """寅申 七 杀见禄马交驰 ， 主一生必至少有一次事业 上的重大改变 。 此改变且倾向于 
-良好的 转变"""
+良好的 转变,七 杀在寅申二宫独坐 ， 对宫为 『 紫微天府 』 ， 亦主横 发 。 其性质可参考子午二宫 。"""
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        elif(dizhi == "辰" or dizhi == "戌"):
+        elif(dizhi == "辰" or dizhi == "戌") and len(star) == 2:
             tmp = """辰戌 七 杀独坐 ， 对宫为 [ 廉贞天府 ] ， 若见吉化吉曜 ， 亦主富裕 。 且擅长于以财和 
 再 ， 但却不宜投机赌博 ， 否则必生破败 。 
 辰戌七杀会谦贞化禄 ， 一生财帛不安 ， 收入纵多 ， 支出亦大 ， 或人口不安 ， ’ 或常 
@@ -4779,7 +4806,7 @@ def GongXia6th(star, dizhi,
                    tian_goodList,tian_badList,
                    za_goodList,za_badList,
                    caiyiList)
-    if(star[:2] == "紫薇"):
+    if(star[:2] == "紫微"):
         
         print("\n")
         tmp = """紫徽 属土 ， 主阴分 ， 故于脏腑为脾 。 人身吸收营养 ， 专赖 脾土营运 ， 所以由紫 
@@ -4794,13 +4821,13 @@ def GongXia6th(star, dizhi,
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
-        if(star == "紫薇贪狼"):
+        if(star == "紫微贪狼"):
             tmp = """于紫微诸星系中 ， 尤以 『 紫微贪狼 』 的组合最主色欲 。 见辅佐诸曜 ， 亦不能减 
 轻此特徵 。 故见煞即主肾病 ， 以五行言 ， 则因贪狼属阳木 ， 又属水 ， 木绁水 ， 而紫 
 微土则来克水 ， 肾属水 ， 受到重重克浅 ， 故主有疾 。"""
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        elif(star == "紫薇破军"):
+        elif(star == "紫微破军"):
             tmp = """『 紫微破军 』 亦有肾病的倾向 ， 盖破军属水 ， 与紫微同 度 ， 不受土克也 。 唯与 [ 紫 
 贪 ] 的性质又有不同 。 『 紫贪 』 何贪 狼木 ， 可以引起肝阳上亢 ， 为喜色欲之根源 ， 所 
 生肾病必为亏损 ； 而 『 紫破 』 则属为土水相克 ， 故主肾经暗病 ， 女命 尤主妇科暗病 。 
@@ -4808,14 +4835,14 @@ def GongXia6th(star, dizhi,
 致之皮肤病 。 """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        elif(star == "紫薇天府"):
+        elif(star == "紫微天府"):
             tmp = """紫 微天府的组合 ， 两颗属土的主星同度 ， 故主脾胃肠 脏疾患 。 得百官朝拱 ， 则脾 
 土过重 ， 见桃花虚耗 ， 则亦色欲 。 
 若 『 紫府 』 与火铃同度或对冲 ， 且见武曲化忌来会 ， 则 为消化器官溃疡 、 瘤肿 
 之疾 ， 若更见天月 、 血蛊 、 天虚 、 阴煞等杂曜 ， 则有发展为癌症的倾向 。"""
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        elif(star == "紫薇天相"):
+        elif(star == "紫微天相"):
             tmp = """紫微天相的组合 ， 由于天相属水 ， 故主糖尿 、 肾石 、 膀胱石 ， 即属于 『 水道 』 
 系统的疾病 。 见空劫 ， 可为前列腺 、 摄护腺的疾患 。 见火铃 ， 则为脾土受湿 ， 发展 
 为皮肤过敏 ， 如风疹之类 。 
@@ -4824,7 +4851,7 @@ def GongXia6th(star, dizhi,
 煞者 ， 皆有助于癌病的确定 。"""
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        elif(star == "紫薇七杀"):
+        elif(star == "紫微七杀"):
             tmp = """[ 紫徽 七 杀 ] 主脾土不养肺金 ， 故主胃纳不佳 ， 影响肺 脏或呼吸系统 “ 然肺与大 
 肠互为表裹 ， 故亦可发展为肠病 。 
 『 紫杀 』 见武曲化忌 ， 则 防跌扑损伤 ； 见谦贞化忌者 ， 为血症 ， 或为血光意外 ； 
@@ -5303,7 +5330,7 @@ def GongXia7th(star, dizhi,
                    tian_goodList,tian_badList,
                    za_goodList,za_badList,
                    caiyiList)
-    if(star[:2] == "紫薇"):
+    if(star[:2] == "紫微"):
         
         print("\n")
         tmp = """紫迁移富有百官朝拱 ， 则宜迁移 ， 主有人提携 ， 或 有助力 ； 若为在野 ， 或为孤 
@@ -5321,25 +5348,25 @@ def GongXia7th(star, dizhi,
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
-        if(star == "紫薇破军"):
+        if(star == "紫微破军"):
             tmp = """天相坐命 ， 迁移宫 为 『 紫微破军 ；是否 
 利 于 迁移 ， 须详实际星曜组合而 定 。 一般情形为既有助力 ， 亦 有破坏力 ， 须祥视那 
 一方面的力量加强 。   """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        elif(star == "紫薇天相"):
+        elif(star == "紫微天相"):
             tmp = """若破军坐命 ， 迁 移宫为 『 紫微天相 』 ； 是否 
 利 于 迁移 ， 须详实际星曜组合而 定 。 一般情形为既有助力 ， 亦 有破坏力 ， 须祥视那 
 一方面的力量加强 。  """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        elif(star == "紫薇天府"):
+        elif(star == "紫微天府"):
             tmp = """七 杀坐命 ， 迁移宫为 『 紫微天府 』 ， 并 不 一 定代表 迁移有利 ， 往往迁移后经历波 
 折艰危 ， 然后始能安定 ， 虽 『 紫 府 』 为百官朝拱者亦然 。 倘紫微在野 ， 或为孤君 ， 
 又 或 府 厍 空露 ， 则极不利迁移 ， 往往主倾败 、 挫折 ， 或灾病频仍 。 """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        elif(star == "紫薇七杀"):
+        elif(star == "紫微七杀"):
             tmp = """命宫天府 ， 迁移宫为 [ 紫微七杀 ] ； 若紫徽化权 ， 绝 对不利迁移 ， 或主因发生重 
 大事故而被逼迁移 ， 往往须承受财产上的损失 。 若紫微化科 ， 天府在亥宫者不必迁 
 移 ； 在巳宫者则以迁移为较有利 ， 此因禄存同时必在卯宫之故 ， 影响天府不同性质 。 
@@ -5348,14 +5375,14 @@ def GongXia7th(star, dizhi,
             tmp.replace(" ", ""); print(tmp)
             print("\n")
         if(dizhi == "卯" or dizhi == "酉"):
-            if(star == "紫薇贪狼"):
+            if(star == "紫微贪狼"):
                 tmp = """在卯西二富无正曜 ， 迁移宫为 『 紫微贪狼 』 ， 又 见辅佐吉曜同会 ， 多主迁移有利 。 
     但若原来命宫已见吉化 、 吉 曜 ， 则亦未必一定非迁移不可 。 尤其是所会天相为财荫 
     夹 ， 或所会天府为库廪充盈之时 ， 不主迁移有利 。  """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
         elif(dizhi == "辰" or dizhi == "戌"):
-            if(star == "紫薇天相"):
+            if(star == "紫微天相"):
                 tmp = """辰戌 [ 紫相 ] 在迁移宫 ， 见煞 ， 天月同度 ， 则出门易 染病 ， 且往往为缠绵之疾 。 
 紫微在迁移宫 ， 喜辅弼夹 ； 魁钺夹 ； 昌曲夹 。 分别 主得助力 ； 得人提携 ， 得人 
 欣赏 。 不喜火铃 、 羊陀 、 空劫夹 ， 其性质与同度相同 。   """
@@ -5451,7 +5478,7 @@ def GongXia7th(star, dizhi,
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
-        if(dizhi == "辰" or dizhi == "戌"):
+        if(dizhi == "辰" or dizhi == "戌") and len(star) == 2:
             tmp = """武曲独坐辰戌宫 ， 其性质大致据对宫贪狼而定 。 火 铃夹者 ， 奔波劳碌不堪 。 奔 
 波是否有成 ， 则须详实际星曜组合而定 。 唯若对宫贪狼为火铃夹者 ， 大利迁移 ， 主 
 暴发 。  """
@@ -5669,15 +5696,17 @@ def GongXia7th(star, dizhi,
 有实际利益即为人夺去 。 
 贪狼与羊陀同度 ， 主出门每多是非之挠 ， 且 往 往由 应酬 、 游宴而致 。 更见空劫 ， 
 主遇窃盗 ； 若加会桃花诸曜 ， 则主因色致祸 。 见化忌 ， 尤其是廉贞化忌者 ， 情形 更 
-为严 重 。 
-贪狼独坐迁移宫 ， 化禄 、 化权 ， 或与廉贞化禄同会 ， 即使不与火铃同度 ； 亦主 
-迁移在外精彩发达 。 见火铃尤主暴发 。 但若同时又见煞忌 ， 则暴发之后必暴败 。 
+为严 重 。  
 流年贪狼守迁移宫 ， 原局有煞 ， 被流煞冲起 ， 且见 太岁 、 岁破 、 官符 、 大耗等 
 曜 ， 又逢习星会合 ， 主遭兵贼之灾 ， 或受贪官污吏诬枉 。
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
-        if(star == "贪狼紫薇"):
+        if(len(star) == 2):
+            tmp = """贪狼独坐迁移宫 ， 化禄 、 化权 ， 或与廉贞化禄同会 ， 即使不与火铃同度 ； 亦主 
+迁移在外精彩发达 。 见火铃尤主暴发 。 但若同时又见煞忌 ， 则暴发之后必暴败 。"""
+            tmp.replace(" ", ""); print(tmp)
+        if(star == "贪狼紫微"):
             tmp = """ [ 紫微贪狼 ] 居迁移 ， 宜离出生地发展 ， 亦利经商 。 """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
@@ -5791,7 +5820,7 @@ def GongXia7th(star, dizhi,
 灾祸 ， 重者且主客死异乡 。  """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        elif(star == "天相紫薇"):
+        elif(star == "天相紫微"):
             tmp = """[ 紫徽天相 ] 守迁移宫 ， 不见煞忌 ， 则大利迁移 ， 在 外受人尊崇 ， 易于建立事业 。 
 若见煞忌则招嫉妒是非 。 """
             tmp.replace(" ", ""); print(tmp)
@@ -5876,7 +5905,7 @@ def GongXia7th(star, dizhi,
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
-        if(star == "七杀紫薇"):
+        if(star == "七杀紫微"):
             tmp = """ 紫微与七杀同拱 ， 主出外为人敬畏 ， 亦多人禄 。 落 [ 紫杀 ] 同度而百官朝拱者 ， 
 更主振臂一呼 ， 则群相响应 。 故 在外亦能建立事功 。  """
             tmp.replace(" ", ""); print(tmp)
@@ -5924,7 +5953,7 @@ def GongXia7th(star, dizhi,
 曜同会 ， 主迁居异地至少 。 必有一次重大灾祸 。 或甚至死于异乡 。"""
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
-        if(star == "七杀紫薇"):
+        if(star == "七杀紫微"):
             tmp = """ 紫微与七杀同拱 ， 主出外为人敬畏 ， 亦多人禄 。 落 [ 紫杀 ] 同度而百官朝拱者 ， 
 更主振臂一呼 ， 则群相响应 。 故 在外亦能建立事功 。  """
             tmp.replace(" ", ""); print(tmp)
@@ -5943,7 +5972,7 @@ def GongXia7th(star, dizhi,
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
         elif(dizhi == "丑" or dizhi == "未"):
-            if(star == "破军紫薇"):
+            if(star == "破军紫微"):
                 tmp = """  丑未宫 『 紫微破军 ] 守迁移宫 ， 出外得人敬畏 。 尤以 百官朝拱的情况下为然 。 若 
 只见朝拱 而少主要辅佐 ， 但又见煞 ， 则在异邦当为一行一业的领袖人才 。 
 紫微化权 ， 必同时见武曲化忌 ， 则主在外不宜经商 。 亦主权威虽重 ， 而挫折频仍 。"""
@@ -5973,7 +6002,7 @@ def GongXia8th(star, dizhi,
                    tian_goodList,tian_badList,
                    za_goodList,za_badList,
                    caiyiList)
-    if(star[:2] == "紫薇"):
+    if(star[:2] == "紫微"):
         
         print("\n")
         tmp = """紫微守交友宫 ， 不喜见煞忌刑耗 ， 主下属强顽而且 不得力 ， 甚至以怨报德 ； 但 
@@ -5982,7 +6011,7 @@ def GongXia8th(star, dizhi,
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
-        if(dizhi == "子" or dizhi == "午"):
+        if(dizhi == "子" or dizhi == "午") and len(star) == 2:
             tmp = """ 紫微独坐子午宫 ， 若为在野孤君者 ， 下属强顽而且 无义 。 尤以见空劫者为然 。 
 紫微独坐子午 ， 会对宫贪狼化忌者 ， 倘更见刑忌煞 曜 ， 则主为下属夺权 。 若见 
 桃花诸曜 ， 更主不可与异性下属发生感情 。 
@@ -5990,7 +6019,7 @@ def GongXia8th(star, dizhi,
 辅弼 ， 紫微会昌曲则彼此关系良好 。 一一若以言结交 ， 则可得忠厚之友 。"""
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        if(star == "紫薇破军"):
+        if(star == "紫微破军"):
             tmp = """『 紫微破军 』 见辅佐诸吉 ， 主得力下属易另谋发展 ， 故自己反而时时感到助力 
 不足 。 
 『 紫微破军 』 有 煞 ， 主受友人或下属拖累 。 更见空劫 ， 主因下属亲信而招致事 
@@ -5999,14 +6028,14 @@ def GongXia8th(star, dizhi,
 若廉贞化忌 ， 则防受下属威胁 。"""
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        elif(star == "紫薇天府"):
+        elif(star == "紫微天府"):
             tmp = """『 紫微天府 』 在交友宫 ， 得友诚朴 ， 亦能直谏 。 唯见 辅佐吉曜 ， 除非将事业全 
 心交与亲信 ， 否则 终难顾全双方 关系 。 
 [ 紫微天府 ] 而府库空露 ， 或煞忌刑同会 ， 则亦须防 下属侵吞 。 见武曲化忌 ， 或 
 躔陀罗 、 铃星 ， 则主受拖累 。 见廉贞化忌 ， 或躔擎羊 、 火星 ， 则主下属反叛 。"""
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        elif(star == "紫薇贪狼"):
+        elif(star == "紫微贪狼"):
             tmp = """[ 紫微贪狼 ] 躔桃花 、 昌曲 ， 亦主不宜与异性下属发 生情愫 。 贪狼化忌者尤确 。 
 否则主大权旁落 。 
 [ 紫微贪狼 ] 躔火 、 铃 ， 雇佣关系或合作关系不能持 久 。 
@@ -6014,14 +6043,14 @@ def GongXia8th(star, dizhi,
 系良好 。 """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        elif(star == "紫薇天相"):
+        elif(star == "紫微天相"):
             tmp = """『 紫相 』 在交友宫为不吉结构 ， 除非夫妻合作发展共 同事业 ， 否则下属终难依 
 靠 。 唯夫妻宫秘无正曜 ， 借 『 天 相巨门 』 安星 ， 故婚姻须迟 ， 然后始可得匡助事业 
 的伴侣 。 
 [ 紫相 ] 见府库空露者 ， 又见煞 ， 主为友破财 ， 或 主受下属牵累而致损失 。"""
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        elif(star == "紫薇七杀"):
+        elif(star == "紫微七杀"):
             tmp = """ [ 紫杀 ] 在交友宫 ， 权力太重 。 见吉 ， 主可结交畏友 、 诤友 。 唯防下属权重而招 
 致自身不利 。 
 [ 紫杀 ] 最嫌 见紫微化权 ， 会武曲化忌 ， 则主下属弄 权而致自己事业倾败 。 与陀 
@@ -6455,7 +6484,7 @@ def GongXia8th(star, dizhi,
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
-        if(star == "天相紫薇"):
+        if(star == "天相紫微"):
             tmp = """[ 紫微天相 ] 的组合 ， 吉 则 可 得正义之友及下属 ； 凶则为恶 奴欺主 。 """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
@@ -6526,12 +6555,8 @@ def GongXia8th(star, dizhi,
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
     elif(star[:2] == "破军"):
-        
-        print("\n")
         tmp = """破军入交友宫 ， 基本性质不利 ，．． 盖化气曰耗 ， 主耗 损 、 怨谤二背逃毒唯破军 
-入庙 ， 且化禄或与禄存同度 ， 然 后始主得力 。 
-破军独坐交友宫者 ， 主孤立 。 见辅佐吉曜同度 ， 然 后始得友人或下属之助力 。 
-若见辅弼 ， 但又见煞 ， 则终生是非口舌 ， 且因之破耗 。 见空劫 ， 虚耗者 ， 破耗更大 。 
+入庙 ， 且化禄或与禄存同度 ， 然 后始主得力 。  
 破军为火铃夹 ， 或火铃同度 ， 更见空劫 、 天刑 、 天 虚 、 大耗 、 阴煞 、 天月 、 劫 
 煞等曜 ， 主因友人而起官非 ， 或遭下属盗窃 、 侵吞 ． 或因之惹祸而致败耗 。 
 凡破军坐交友富 ， 最不宜见武曲化忌同度或拱照 ， 主受拖累 、 牵连以致损失 。 
@@ -6540,6 +6565,10 @@ def GongXia8th(star, dizhi,
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
+        if(len(star) == 2):
+            tmp = """破军独坐交友宫者 ， 主孤立 。 见辅佐吉曜同度 ， 然 后始得友人或下属之助力 。 
+若见辅弼 ， 但又见煞 ， 则终生是非口舌 ， 且因之破耗 。 见空劫 ， 虚耗者 ， 破耗更大 。"""
+            tmp.replace(" ", ""); print(tmp)
         if(dizhi == "子" or dizhi == "午"):
             tmp = """子午宫破军入庙 ， 又得对宫 『 廉相 ] 调和 ， 较易招益 友 。 若廉贞化忌 ， 则不宜与 
 友人合作 ， 否则损失 。 更见煞刑诸曜 ， 损耗甚大 。 """
@@ -6571,7 +6600,7 @@ def GongXia9th(star, dizhi,
                    tian_goodList,tian_badList,
                    za_goodList,za_badList,
                    caiyiList)
-    if(star[:2] == "紫薇"):
+    if(star[:2] == "紫微"):
         
         print("\n")
         tmp = """紫微在事业宫 ， 主独当一面 。 但却并不意味其 人可 以宁行经营 ， 亦不主其人可 
@@ -6592,7 +6621,7 @@ def GongXia9th(star, dizhi,
         tmp.replace(" ", ""); print(tmp)
         print("\n")
         if(dizhi == "子" or dizhi == "午"):
-            if(star == "紫薇"):
+            if(star == "紫微"):
                 tmp = """子午紫微守事业宫 。 以命宫或财帛宫得禄为贵 。 老 命宫见 [ 禄马交驰 ] 者 ， 无论 
 经商或任职财经机构 ， 皆可 出人头地 。 若财帛宫廉贞化禄者 ， 宜与人合作创业 ， 但自已需用负责业务管理 。 
 子午紫微 ， 喜辅弼一居事业宫 、 一居夫妻宫 ， ( 昌 曲亦然 ) ， 则主夫妻彼此有助 
@@ -6608,7 +6637,7 @@ def GongXia9th(star, dizhi,
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
         elif(dizhi == "丑" or dizhi == "未"):
-            if(star == "紫薇破军"):
+            if(star == "紫微破军"):
                 tmp = """丑未宫 【 紫微破军 】 在事业宫 ， 以能发挥开创力者为 佳 。 故无论从商从政 ， 皆 
 主开 创而不主守成 ， 因而便有劳累之感 。 
 [ 紫破 ] 与煞曜同宫 ， 主劳身 ； 与昌曲同宫 ， 主劳小 若破军化禄 ， 则一生事业多 
@@ -6623,7 +6652,7 @@ def GongXia9th(star, dizhi,
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
         elif(dizhi == "寅" or dizhi == "申"):
-            if(star == "紫薇天府"):
+            if(star == "紫微天府"):
                 tmp = """寅申宫 [ 紫微天府 ] 同度 ， 必须见百官司朝拱然后施 主有成 ， 若无吉曜 ， 则往往 
 进退失据 ， 或志大才疏 。 
 [ 紫府 ] 与禄马同度 ， 或见禄马交驰 ， 现代则宜经商 ， 为政亦宜经营财政金融 。 
@@ -6636,7 +6665,7 @@ def GongXia9th(star, dizhi,
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
         elif(dizhi == "卯" or dizhi == "酉"):
-            if(star == "紫薇贪狼"):
+            if(star == "紫微贪狼"):
                 tmp = """卯酉宫 [ 紫微贪狼 ] 以从事消费性待业为宜 。 见桃花 昌曲 ， 尤主所营事业带享受 
 性质 。 
 紫贪而贪狼化忌 ， 常主与人合作不能长久 。 若贪 狼化禄 ， 则防大运行至天相宫 
@@ -6653,7 +6682,7 @@ def GongXia9th(star, dizhi,
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
         elif(dizhi == "辰" or dizhi == "戌"):
-            if(star == "紫薇天相"):
+            if(star == "紫微天相"):
                 tmp = """辰成宫 『 紫微天相 』 ， 基本亦主起跌 。 唯与 『 紫破 』 之 起跌不同 。 [ 紫破 ] 者 ， 
 其起跌乃出于主观改变 ； [ 紫相 ] 音 ， 往往受客观环境影响 ， 常有英雄无用武之地的 
 感受 。 
@@ -6666,7 +6695,7 @@ def GongXia9th(star, dizhi,
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
         elif(dizhi == "巳" or dizhi == "亥"):
-            if(star == "紫薇七杀"):
+            if(star == "紫微七杀"):
                 tmp = """巳亥 [ 紫微七杀 ] 在事业宫 ， 其特长在于管理 ， 故宜 以人力资源为主 。 唯若更见紫 
 微化权 ， 则独断独行 ， 影铜管理效果 。 
 [ 紫杀 ] 不宜见廉贞化忌 ， 否则易生破败 ， 见常因感 情用事而 来 。 
@@ -6711,7 +6740,7 @@ def GongXia9th(star, dizhi,
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
-        if(dizhi == "子" or dizhi == "午"):
+        if(dizhi == "子" or dizhi == "午") and len(star) == 2:
             if(star == "天机"):
                 tmp = """ 子午宫天机独坐 ， 对宫巨门 ， 即使会吉星祥曜 ， 其 事业亦必费心机 。 倘有煞忌 
 刑耗诸曜 ， 则往往受客观环境影响 ， 为事业奔波劳累 。 
@@ -7682,21 +7711,15 @@ def GongXia10th(star, dizhi,
                    tian_goodList,tian_badList,
                    za_goodList,za_badList,
                    caiyiList)
-    if(star[:2] == "紫薇"):
-        
-        print("\n")
-        tmp = """紫微独坐守田宅宫 ， 一般均有自置物业。 在午富者 ， 以高楼高地为宜 。 若禄存 
-同度或化禄对拱 ， 宜置可 以生财之地 ， 姐石场 、 矿声之类 ， 亦宜买卖物业 。 
+    if(star[:2] == "紫微"):
+        tmp = """ 
 紫微与破军同度或对拱 ， 主有祖业或现成家业 ， 但 因各种原因退败 。 若为 百官 
 朝拱者 ， 则可保留 。 倘 [ 在 野 ] ， 或羊陀 ， 空劫同会 ， 则主因之而起是非纠纷 。 更见 
 刑 耗 ， 主牵连诉讼 ， 有大巫则为争产 。 见禄， 或破军化禄则有自置物业 ， 惟置旧宅 
 为宜 。 
 紫微与七 杀同度或对拱 ， 须视天府吉凶。 若库扩充盈则有自置物业 ， 若府库空 
 露 ， 则产业动摇 。 见化忌 ， 空动 、 刑耗 、 天虚等曜 ， 则产业消磨破耗 。 
-紫徽与贪狼同度 ， 见辅佐吉曜 ， 住宅必美丽 。 若见 煞 ， 则仅为外表豪华 。 火铃 
-同度而见吉化吉曜 ， 产 业突然增加 ， 唯若同时见空劫刑耗 ， 则暴得暴失 ! 贪狼化渌 ， 
-见 
-吉而不见煞 ， 可以买卖物业 。 
+ 
 凡紫微守田宅宫 ， 除紫贪外 ( 贪狼化忌则仍是 ) ， 均不宜见火星 ， 再会羊陀 ， 空 
 劫 ， 虚耗 ： 主名下物业有火灾 。 于羊陀失并之年克应 。 
 紫微守田宅宫虽见辅佐吉曜 ， 亦不宜昌曲化忌 ， 主 买卖物业因文书契约而受损 
@@ -7718,7 +7741,15 @@ def GongXia10th(star, dizhi,
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
-        
+        if(len(star) == 2):
+            tmp = """紫微独坐守田宅宫 ， 一般均有自置物业。 在午富者 ， 以高楼高地为宜 。 若禄存 
+同度或化禄对拱 ， 宜置可 以生财之地 ， 姐石场 、 矿声之类 ， 亦宜买卖物业 。"""
+            tmp.replace(" ", ""); print(tmp)
+        if(star == "紫微贪狼"):
+            tmp = """紫徽与贪狼同度 ， 见辅佐吉曜 ， 住宅必美丽 。 若见 煞 ， 则仅为外表豪华 。 火铃 
+同度而见吉化吉曜 ， 产 业突然增加 ， 唯若同时见空劫刑耗 ， 则暴得暴失 ! 贪狼化渌 ， 
+见吉而不见煞 ， 可以买卖物业 。"""
+            tmp.replace(" ", ""); print(tmp)
     elif(star[:2] == "天机"):
         
         print("\n")
@@ -7984,7 +8015,7 @@ def GongXia10th(star, dizhi,
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
-        if(star == "天府紫薇"):
+        if(star == "天府紫微"):
             tmp = """天府最喜紫微同度 ， 百官朝拱 ， 则田园丰茂 ， 祖业 及自置均佳 。 唯却主守现成 
 事业 ， 缺乏开创力 ， 须祥命宫曜而定进退 ， 因现代社会环境不利守成 。 """
             tmp.replace(" ", ""); print(tmp)
@@ -8129,10 +8160,7 @@ def GongXia10th(star, dizhi,
             tmp.replace(" ", ""); print(tmp)
             print("\n")
     elif(star[:2] == "七杀"):
-        
-        print("\n")
-        tmp = """七 杀入田宅宫 ， 若为独坐者 ， 除寅申两宫外 ， 均不 利于置业 ， 更不利从事物业 
-买卖 。 
+        tmp = """
 七杀最喜得禄 ， 虽无祖产父业 ， 却能自置 。 倘 七 杀 同躔禄存 ， 又叠化禄 ， 唯同 
 时见煞曜空劫者 ， 则祖业先破 ， 至大运佳美时却能恢复旧观 。  
 七 杀守田宅最不宜忌星同度 ， 武曲化忌主倾效 ， 亦 主被逼离开服务机构 。 若廉 
@@ -8145,6 +8173,10 @@ def GongXia10th(star, dizhi,
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
+        if(len(star) == 2):
+            tmp = """七 杀入田宅宫 ， 若为独坐者 ， 除寅申两宫外 ， 均不 利于置业 ， 更不利从事物业 
+买卖 。 """
+            tmp.replace(" ", ""); print(tmp)
         if(star == "七杀武曲"):
             tmp = """[ 武曲 七 杀 ] 的宫度 ， 因七杀落陷 ， 一般不利田宅 ， 稍 见煞 ， 或对宫天府不吉 。 
 即易产业破败 。 必须武曲化禄 ， 然后始主自置产业丰盈 。七 杀与武曲化忌同度 ， 主降黩 ， 见煞忌 ， 主受掣肘 或处分 ， 与武曲化禄同度 ， 
@@ -8170,7 +8202,7 @@ def GongXia10th(star, dizhi,
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
-        if(star == "破军紫薇"):
+        if(star == "破军紫微"):
             tmp = """[ 紫微破军 ] 同度 ， 见禄存或化禄 ， 而无煞忌刑耗诸 曜 ， 则主有意外资产可得 ， 
 尤喜见天魁天铖同度 ， 稍见煞者 ， 暴得暴失 。"""
             tmp.replace(" ", ""); print(tmp)
@@ -8196,7 +8228,7 @@ def GongXia11th(star, dizhi,
                    tian_goodList,tian_badList,
                    za_goodList,za_badList,
                    caiyiList)
-    if(star[:2] == "紫薇"):
+    if(star[:2] == "紫微"):
         
         print("\n")
         tmp = """紫微为帝星 ， 入福德宫时 ， 可主福厚 ， 亦可为极度 主观 ， 并因而产生痛苦 。 此 
@@ -8207,18 +8239,21 @@ def GongXia11th(star, dizhi,
         tmp.replace(" ", ""); print(tmp)
         print("\n")
         if(dizhi == "子" or dizhi == "午"):
-            if(star == "紫薇"):
-                tmp = """子午宫紫微喜化科不喜化权 ， 二者虽皆主决断 ， 唯 化科较柔 ， 化权者较刚 ， 过 
+            tmp = """子午宫紫微喜化科不喜化权 ， 二者虽皆主决断 ， 唯 化科较柔 ， 化权者较刚 ， 过 
 刚则折 ， 亦容易产生挫折感 。 ( 所 以化权者在福德宫不喜更见魁铖 。 ) 
-紫微独坐 ， 辅佐吉曜同会 ， 纵命宫不吉 ， 亦受人 尊崇 。 倘无吉曜 ， 而煞忌刑曜
-同会 ， 则流为孤僻 ， 易自 寻烦恼 。 兼之受憎之心极浓厚 ， 由是产生困扰或纠纷 。 
 紫微坐福 德宫者 ， 即使见煞 ， 一般气质较同侪为高 ， 
 但却因此易感孤立 。 凡辅弼同拱 ， 然后多人缘助力 。 
 子午紫徽为羊陀夹 ， 主观而且孤僻 ， 为火铃夹则主 思想时不集中 。  """
+            tmp.replace(" ", ""); print(tmp)
+            print("\n")
+                
+            if(star == "紫微"):
+                tmp = """紫微独坐 ， 辅佐吉曜同会 ， 纵命宫不吉 ， 亦受人 尊崇 。 倘无吉曜 ， 而煞忌刑曜
+同会 ， 则流为孤僻 ， 易自 寻烦恼 。 兼之受憎之心极浓厚 ， 由是产生困扰或纠纷 。 """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
         elif(dizhi == "丑" or dizhi == "未"):
-            if(star == "紫薇破军"):
+            if(star == "紫微破军"):
                 tmp = """丑未 [ 紫微破军 ] 守福德 ， 主其人好亲力亲为 ， 纵有 左辅右弼夹 ， 只主助力多 ， 
 但仍不易放心 。 
 [ 紫破 ] 若见吉化 ， 吉曜 ， 吉夹 ， 则创造力极强 ， 故 宜从事有开创性之思考 。 破 
@@ -8228,7 +8263,7 @@ def GongXia11th(star, dizhi,
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
         elif(dizhi == "寅" or dizhi == "申"):
-            if(star == "紫薇天府"):
+            if(star == "紫微天府"):
                 tmp = """寅申宫 [ 紫破天府 ] ， 有吉曜朝拱则福厚 ， 且宽厚大 度 ， 无则劳心 ， 再见煞则多 
 迟疑不决 ， 进退失据 ， 以致劳累不安 。 
 [ 紫府 ] 与禄存同度 ， 虽多物质享受 ， 但常存自利之 心 。 若更火铃夹 ， 则思想常 
@@ -8238,7 +8273,7 @@ def GongXia11th(star, dizhi,
 忧虑 。  """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
-        if(star == "紫薇贪狼"):
+        if(star == "紫微贪狼"):
             tmp = """[ 紫贪 ] 守福德 ， 若贪狼化禄 ， 则不喜昌曲 、 桃花 ， 否 则只主好色 。 无者 ， 则主有 
 风雅的嗜好 。 或喜追随潮流 。 思想活跃 。 
 倘贪狼化忌 ， 则主多奔波劳碌 ， 且往往因不能当机 立断而常生追悔之心 。 
@@ -8246,7 +8281,7 @@ def GongXia11th(star, dizhi,
 于理财生财 ， 若会武曲化忌 ， 则防因理想太高而自招烦恼 。"""
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        elif(star == "紫薇天相"):
+        elif(star == "紫微天相"):
             tmp = """[ 紫微天相 ] 守福德宫 ， 见辅佐吉曜则宽厚大度 。 有 利忌夹者 ， 则主多疑 ， 且自 
 尊心极重 。 若财荫夹者 ， 则更常存公益之心 ， 喜为人服务 。 
 [ 紫相 ] 见煞 ， 反主小器 ， 若煞重 ， 又见吉曜 ， 则为 政客 。 
@@ -8256,7 +8291,7 @@ def GongXia11th(star, dizhi,
 [ 紫相 ] 躔空劫 ， 见华盖 ， 则其人极富哲思 。 唯若又 见天姚 ， 则易流为伪君子 。 """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        elif(star == "紫薇七杀"):
+        elif(star == "紫微七杀"):
             tmp = """[ 紫相 七 杀 ] 守福德宫者 ， 主观极强 ， 爱个曾之心亦强 。 
 化权者尤甚 。 
 【 紫微 七 杀 】 而紫微化科 ， 则恐因自尊心与权力欲而 致自招烦个卤 。 
@@ -8757,7 +8792,7 @@ def GongXia12th(star, dizhi,
                    tian_goodList,tian_badList,
                    za_goodList,za_badList,
                    caiyiList)
-    if(star[:2] == "紫薇"):
+    if(star[:2] == "紫微"):
         
         print("\n")
         tmp = """紫微守父母宫 ， 主父母有权威 。 然如无百官朝拱 ， 则仅主父母主观 ， 在家庭有 
@@ -8776,14 +8811,14 @@ def GongXia12th(star, dizhi,
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
-        if(star == "紫薇贪狼"):
+        if(star == "紫微贪狼"):
             tmp = """若 [ 紫微贪狼 ] 同度 ， 则不宜见武曲化忌 ， 更见煞 ， 主父母有意外灾病 。 亦不 ， 
 宜见廉贞化忌 ， 见煞则主不为父母爱护 。 火星在命宫者 ， 主童年出继 。 
 [ 紫微贪狼 ] 与火 、 铃同度 ， 亦主少小即离开父亲或 母亲 。 见吉 ， 其分离性质温 
 和 ， 如 出外寄宿 ， 或父亲出外谋生之类 。"""
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        elif(star == "紫薇破军"):
+        elif(star == "紫微破军"):
             tmp = """『 紫微破军 』 见煞 ， 即易刑克分离 。 与上司的关系则 主易生变化更迁 。 
 紫微破军对拱破军的组合 ， 则不主刑克 ； 见煞仅 主离别 ， 着更会武曲化忌 ， 亦 
 主父母灾痫 。 会廉贞化忌 ， 见煞 重重 ， 主伦常有变 ； 煞轻主不和 。 
@@ -8796,7 +8831,7 @@ def GongXia12th(star, dizhi,
             tmp.replace(" ", ""); print(tmp)
             print("\n")
         elif(dizhi == "寅" or dizhi == "申"):
-            if(star == "紫薇天府"):
+            if(star == "紫微天府"):
                 tmp = """ 寅申宫 [ 紫微天府 ] 在父母寓 ， 不见在辅佐单星 ， 则无刑克 ； 若见单星 ， 主二母 ； 
 桃花诸曜重重者 ， 主自身为继室所生 。 
 紫微化科 ， 父母权威 ； 天府化科 ， 父母呵护 。 唯紫微化权则武曲必同时化忌 ， 
@@ -8804,7 +8839,7 @@ def GongXia12th(star, dizhi,
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
         elif(dizhi == "巳" or dizhi == "亥"):
-            if(star == "紫薇七杀"):
+            if(star == "紫微七杀"):
                 tmp = """巳亥宫 【 紫微 七 杀 】 ， 对四化影响极为敏感 。 基本性质则为父母有责任心 ， 无论 
 任何种 情 形下 ， 对自己均能呵护 。 
 故最喜见廉贞化禄 、 破军化权 、 武曲化科同时相会则两代感情融洽 ， 且主受父 
@@ -9097,9 +9132,7 @@ def GongXia12th(star, dizhi,
         
         print("\n")
         tmp = """太阴守父母宫 ， 一般不主刑克 。 倘太阴入庙 ， 即使 见煞 ， 往往亦仅主生离 。 
-太阴落陷则不利母 。 倘仅躔火 、 铃 ， 则只主分离 。 若煞重 ， 则防刑克 。 
-太阴独坐更不宜落陷 。 轻则主幼年狐独 ， 不为母亲 疼爱 。 重则远离父母 ， 或刑 
-伤生母 。 
+太阴落陷则不利母 。 倘仅躔火 、 铃 ， 则只主分离 。 若煞重 ， 则防刑克 。  
 太阴擎羊同度 ， 主与母亲 缘份浅 ， 落陷更甚 。 
 太阴陀罗同度 ， 主与母亲不和 ， 各怀成见 ， 亦落陷 者更甚 。 
 太阴与天马 、 天虚同度 ， 不见火铃亦主远离父母 。 见火铃 ， 少幼时父母及自身 
@@ -9112,6 +9145,10 @@ def GongXia12th(star, dizhi,
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
+        if(len(star) == 2):
+            tmp = """太阴独坐更不宜落陷 。 轻则主幼年狐独 ， 不为母亲 疼爱 。 重则远离父母 ， 或刑 
+伤生母 。"""
+            tmp.replace(" ", ""); print(tmp)
         if(dizhi == "卯" or dizhi == "酉"):
             tmp = """卯酉宫太阴 ， 见天同化忌 ， 主父母事业破败 ； 见天 同化禄 ， 则亦不主克享父荫 ， 
 盖天同对父母宫的影响 ， 其基本意义为自立 。  """
@@ -9154,7 +9191,7 @@ def GongXia12th(star, dizhi,
             tmp.replace(" ", ""); print(tmp)
             print("\n")
         
-        elif(dizhi == "辰" or dizhi == "戌"):
+        elif(dizhi == "辰" or dizhi == "戌") and len(star) == 2:
             tmp = """ 贪狼在辰戌宫独坐 ， 对宫武曲化忌 ， 有火铃 、 空 劫 、 父业突生崩败 。 
 贪狼若与武曲化禄相拱 ， 则父业峥嵘 ， 见辅佐诸曜 尤吉 。 唯若同时见桃花 ， 则 
 父亲有外宠 。 """
@@ -9255,13 +9292,9 @@ def GongXia12th(star, dizhi,
         tmp.replace(" ", ""); print(tmp)
         print("\n")
     elif(star[:2] == "破军"):
-        
-        print("\n")
         tmp = """破军守父母宫 ， 基本性质不忍受 ， 稍见煞即主远离 ， 煞重则主刑克 。 
 破军与火星 、 铃星同度 ， 尤 主远离 。 火铃二星一 居父母宫 ， 一居命宫 ， 主与 
-父母关系疏离 。 见孤辰 、 寡宿 ， 尤主幼年即远离父母 。 
-破军独坐于父母宫 ， 基本性质孤独 。 亦主跟上司关 系疏远 ， 故有时亦主时时变 
-换工作 。 唯见辅佐对星者 ， 则可 以调和关系 。 
+父母关系疏离 。 见孤辰 、 寡宿 ， 尤主幼年即远离父母 。  
 破军与擎羊 、 陀罗 、 空劫 、 天刑 、 天伤 、 天虚等同 度 ， 主刑克 。 古人认为宜 
 重拜父母 ， 二姓延生 。 在现代 ， 可能为离家后再难与父母相聚 ， 唯却与岳家相处 。 
 破军与忌星相会 ， 多主 刑 克 ， 若更见羊陀交并者尤 确 。 以论上司关系 ， 则主终 
@@ -9276,5 +9309,9 @@ def GongXia12th(star, dizhi,
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
+        if(len(star) == 2):
+            tmp = """破军独坐于父母宫 ， 基本性质孤独 。 亦主跟上司关 系疏远 ， 故有时亦主时时变 
+换工作 。 唯见辅佐对星者 ， 则可 以调和关系 。"""
+            tmp.replace(" ", ""); print(tmp)
 
 

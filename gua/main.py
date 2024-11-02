@@ -1,18 +1,18 @@
 from gongV1 import *
 from gongV2 import *
-allStar = ['紫薇','天机','太阳','武曲','天同','廉贞','天府','太阴','贪狼','巨门','天相','天梁','七杀','破军']
-star1st = allStar[0]
-star2nd = allStar[1]
-star3rd = allStar[2]
-star4th = allStar[3]
-star5th = allStar[4]
-star6th = allStar[5] + allStar[0]
-star7th = allStar[6]
-star8th = allStar[7]
-star9th = allStar[8]
-star10th = allStar[9]
-star11th = allStar[10]
-star12th = allStar[11]
+
+star1st = "武曲七杀"
+star2nd = "天同天梁"
+star3rd = "天相"
+star4th = "巨门"
+star5th = "廉贞贪狼"
+star6th = "太阴"
+star7th = "天府"
+star8th = "天同天梁"
+star9th = "紫微破军"
+star10th = "天机"
+star11th = "廉贞贪狼"
+star12th = "太阳"
 starlist =[star1st, star2nd, star3rd, star4th, star5th, star6th, star7th, star8th, star9th, star10th, star11th, star12th]
 
 #-----------------------------------------------
@@ -259,7 +259,7 @@ za_goodList = [za_good1st, za_good2nd, za_good3rd, za_good4th, za_good5th, za_go
 caiyiList = [caiyi1st, caiyi2nd, caiyi3rd, caiyi4th, caiyi5th, caiyi6th, caiyi7th, caiyi8th, caiyi9th, caiyi10th, caiyi11th, caiyi12th]
 dizhitmp = ['亥', '戌', '酉', '申', '未', '午', '巳', '辰', '卯', '寅', '丑', '子']
 
-pian = 6#默认命宫为亥，如果命宫在巳，偏移量为6
+pian = 8#默认命宫为亥，如果命宫在巳，偏移量为6
 dizhilist = []
 for i in range(12):
     dizhilist.append(dizhitmp[(i + pian)%12])
