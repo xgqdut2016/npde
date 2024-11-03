@@ -2,20 +2,10 @@ from fuStar import *
 
 def GongChu1st(star, dizhi,
                    fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList):
+                   shayaoList,huayaoList):
     print(star, dizhi)
     smallStarList = printsmallStar(fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList)
+                   shayaoList,huayaoList)
     if(star[:2] == "紫微"):
         tmp = """ 
         星曜名称 紫微
@@ -32,29 +22,40 @@ def GongChu1st(star, dizhi,
         print("\n")
         if(len(star) == 2):
             tmp = """紫微独坐除喜[百官朝拱]外，更喜左辅右弼夹命，文昌文曲夹命；龙池凤阁夹
-命，可以增加气势，减少辛劳。 
-若为在野孤君，更见天空、地空等空曜，则宜追寻哲理，成为宗教人物，亦可
-成为领导人才。遇华盖，宗教信仰更深，且喜探索神秘事物。 
-紫微独坐而辅、佐、煞、化诸曜并见之时，须详各星曜的多寡以及力量而定其
-吉凶。一般来说，多主人理想高而行动力量不足，后天补救，注意努力寻求理想的
-实现。 
-倘如无吉曜会合，只逢煞曜，则容易觉得怀才不遇，宜于经商。只要煞曜入庙，
-而且碰到的煞曜不多，仍能经商致富。最好是能与化禄或禄存会合，则致富之外且
-有相当社会地位，尤其是在商业社会，更易发展。若从事政治、文教，则反多蹭蹬
-坎坷。 
-煞曜重，一般皆主纠纷是非。尤其是碰到落陷的擎羊，更主词讼，或外科手术。
-紫微独坐，亦喜化权、化科。化权能增加人的领导力及竞争力，化科则有声誉，
-宜从事学术研究，可融汇百家而有所创造，但皆令人的主观更强，不易接受别人的
-意见。 
-唯紫微见一二点煞忌等曜，却主为人耳朵软，易听谗言是非。 
-凡紫微独坐，对宮必见贪狼，亦主人好色，见桃花诸曜会合更甚，唯同时会合
-天刑，则主人能自律；见陀罗，则亦可自制。 
+命，可以增加气势，减少辛劳。  
+若为在野孤君，更见天空、地空等空曜，则宜追寻哲理，成为宗教人物，亦可成为领导人才。
+遇华盖，宗教信仰更深，且喜探索神秘事物。
+凡紫微独坐，对宮必见贪狼，亦主人好色，三方有桃花诸曜更甚，唯同时三方有
+天刑，则主人能自律；三方见陀罗，则亦可自制。 
+唯紫微见一二点煞忌等曜，却主为人耳朵软，易听谗言是非。
 大限流年在紫微独坐的宮限，须详会合的星曜而定吉凶。见吉则职位升迁，商务发展，福禄皆厚，若逢空劫、耙星则主经济困难或破财；见煞曜相会，主纠纷，
 在商或致停业，在职则有降黜之虞。"""
             print(tmp)
             print("\n")
-        
-        
+            
+            if (len(fuyaoList) > 0 and len(zuoyaoList) > 0 and len(shayaoList) > 0 and len(huayaoList) > 0):
+                tmp == """紫微独坐而辅、佐、煞、化诸曜并见之时，须详各星曜的多寡以及力量而定其
+吉凶。一般来说，多主人理想高而行动力量不足，后天补救，注意努力寻求理想的
+实现。"""
+                print(tmp)
+            if(len(shayaoList) > 0):
+                tmp = """倘如无吉曜会合，只逢煞曜，则容易觉得怀才不遇，宜于经商。只要煞曜入庙，
+而且碰到的煞曜不多，仍能经商致富。最好是三方有化禄或禄存，则致富之外且
+有相当社会地位，尤其是在商业社会，更易发展。若从事政治、文教，则反多蹭蹬
+坎坷。 
+煞曜重，一般皆主纠纷是非。尤其是碰到落陷的擎羊，更主词讼，或外科手术。 """
+                print(tmp)
+            if (len(huayaoList) > 0):
+                for smallStar in huayaoList:
+                    if (smallStar == "紫微化权"):
+                        tmp == """紫微独坐，亦喜化权、化科。化权能增加人的领导力及竞争力 """
+                        print(tmp)
+                    elif (smallStar == "紫微化科"):
+                        tmp == """紫微独坐，亦喜化权、化科。化科则有声誉，
+宜从事学术研究，可融汇百家而有所创造，但皆令人的主观更强，不易接受别人的
+意见。 """
+                        print(tmp)
+            
         if(dizhi == "子" or dizhi == "午"):
             tmp = """
             星曜组合 紫微贪狼
@@ -79,20 +80,11 @@ def GongChu1st(star, dizhi,
         if(len(star) == 4):
             if(star == "紫微破军"):
                 print("紫微破军\n")
-                tmp = """ 
-        但当破军化权的时候，破军的变动力增加，因而人生，便更多变化。若见左辅、
-        右弼会合，则能减少辛劳，倘遇四煞，则只宜经商，并须注意经营具创新性质的行
-        业。 
-        如果破军化禄，则于开创的同时亦有进财的机遇，使人的物质生活富足，以补
-        偿所付了的辛劳。可是与此同时，却易多感情困扰，而且使人偏于肉欲享受。因为
-        这时在巳宫会合的廉贞贪狼，亦易因破军化禄的会合而发挥作用。 
-        无论破军化权抑或化禄，均可令此格局的人富贵。但若同时会合四煞刑忌诸曜，
-        则虽富足却招是非口舌。见擎羊、天刑、化忌，且易兴爭讼。宜从事武职或法律界，
-        及为适合。 
+                tmp = """   
         紫微破军的星系既主变动，所以经商者须注意不时出魂的机遇，而且有同时经
         营两三种关系行和可能。若是雇员，则主兼差、兼职，或多超时工作，但必独当一
         面。 
-        紫破坐命，主人耿直。但若逢华盖，则宜研究宗教或哲理。 
+        紫破坐命，主人耿直。 紫微破军但若逢华盖，则宜研究宗教或哲理。
         不过，由于其人多思虑、多变动，而且福德宮的天府又主思虑周密，所以当会
         煞曜空曜之吋，有时又会表现得自私。一一古人说：[紫微破军，为臣不忠，为子不
         孝]；又说[紫破同宫无左右，无占曜，凶恶胥吏之徒]，即是指出其自私的本性，及
@@ -101,6 +93,24 @@ def GongChu1st(star, dizhi,
         则宜三思，不可仓卒变动。倘吉曜煞曜并集，应视下一运限之吉以定行止。"""
                 print(tmp)
                 print("\n")
+                if(len(huayaoList) > 0):
+                    for smallStar in huayaoList:
+                        if smallStar == "破军化权":
+                            tmp = """但当破军化权的时候，破军的变动力增加，因而人生，便更多变化。若见左辅、
+        右弼会合，则能减少辛劳，倘遇四煞，则只宜经商，并须注意经营具创新性质的行
+        业。无论破军化权抑或化禄，均可令此格局的人富贵。但若同时会合四煞刑忌诸曜，
+        则虽富足却招是非口舌。见擎羊、天刑、化忌，且易兴爭讼。宜从事武职或法律界，
+        及为适合。 """
+                            print(tmp)
+                        if smallStar == "破军化禄":
+                            tmp = """如果破军化禄，则于开创的同时亦有进财的机遇，使人的物质生活富足，以补
+        偿所付了的辛劳。可是与此同时，却易多感情困扰，而且使人偏于肉欲享受。因为
+        这时在巳宫会合的廉贞贪狼，亦易因破军化禄的会合而发挥作用。无论破军化权抑或化禄，均可令此格局的人富贵。但若同时会合四煞刑忌诸曜，
+        则虽富足却招是非口舌。见擎羊、天刑、化忌，且易兴爭讼。宜从事武职或法律界，
+        及为适合。"""
+                            print(tmp)
+                        
+                
                 if(dizhi == "丑" or dizhi == "未"):
                     tmp == """紫微坐丑、未两宫，皆有破军同度。这是一个很有开创力的星系结构。破军本
         已为先锋战将之材，得紫微蜒占身驾驭，破坏力因之减少，创造力却相对增加。虽
@@ -123,21 +133,27 @@ def GongChu1st(star, dizhi,
             elif(star == "紫微天府"):
                 print("紫微天府\n")
                 tmp = """
-        紫府同宫时，紫微若化权或化科，则紫微的力暈轨大，气派亦大；倘天府化科，
-        则仅倾向于信诺，有一言九鼎的美德，可是反而显得过份恭俭纯良，欠缺领导与一
-        切从实际开创的能力。 
         这种星系结构，最宜见[禄马交驰]来会，主富贵双全；其次为[禄文拱命]，即
         禄存或化禄，与文昌文曲同全，亦主富贵；再次则为辅、佐诸曜会合，主贵而不主富。 
         若辅佐诸曜不会，而火、铃、羊、陀四煞并见．则反主为人外忠诚而内刁诈，
         多兴背面是非。更逢空曜，或落空亡，则更为人孤独，庸碌度日。 
         女命紫微天府，若福德宮贪狼会合红鸾、天喜、咸池、天姚等桃花诸曜，宜重
-        视感情生活；若命宫煞刑诸曜毕集，则只宜继室，或由于孤芳自赏而终身不婚。 
+        视感情生活； 若命宫煞刑诸曜毕集，则只宜继室，或由于孤芳自赏而终身不婚。
         大限流年命宮见紫微、天府，比较在星盘的命宫吋为吉利，主得贵人助力，有
         突发性的表现。倘更见天魁、天钺，或流魁、流钺，则能因政制命令的改变，或企
         业制度的改变而得益。在商者亦多不求自得的幸运际遇。"""
                 print(tmp)
                 print("\n")
-
+                if (len(huayaoList) > 0):
+                    for smallStar in huayaoList:
+                        if smallStar == "紫微化权" or smallStar == "紫微化科":
+                            tmp = """紫府同宫时，紫微若化权或化科，则紫微的力暈轨大，气派亦大；"""
+                            print(tmp)
+                        if smallStar == "天府化科":
+                            tmp = """倘天府化科，则仅倾向于信诺，有一言九鼎的美德，可是反而显得过份恭俭纯良，欠缺领导与一
+        切从实际开创的能力。"""
+                            print(tmp)
+                
                 if(dizhi == "寅" or dizhi == "申"):
                     tmp = """紫微天府二曜，在寅、申二宫同度。紫微力北斗主星，性宜开创；天府为南斗
         主星，性利保守，所以两颗主星相遇，不但有[一山不能藏二虎]的冲突，而蛙性质
@@ -161,32 +177,53 @@ def GongChu1st(star, dizhi,
                     print(tmp)
             elif(star == "紫微贪狼"):
                 print("紫微贪狼\n")
-                tmp = """
-        若紫微化权，得[百官朝拱]，则有如太平盛世的风流天子，富贵多情；紫微化科
-        会吉曜，则其入虽克享盛名，学而有成，但仍偏重于情欲及物欲。 
-        如果贪狼化禄，则主多交际应酬，偏重物欲，但却主其人财运亨通；贪狼化权，
-        物欲亦重，但主经历竞争而有成；贪狼化忌，虽桃花减色，可是人的才艺却亦较难
-        发展。虽有物欲，却难如愿。 
-        紫贪星系，喜左辅、右弼同宫，而不喜文昌文曲。若昌曲同宫，其人吸引异性
-        的倾向更大，而且重视修饰以及事情的表面完美，所以做事便多虛少实。但如果左
-        辅与文昌，或右弼与文曲夹命宫，则反易发挥才志，事业有成。――古人所说的[左
+                tmp = """紫贪星系，但如果左辅与文昌，或右弼与文曲夹命宫，则反易发挥才志，事业有成。――古人所说的[左
         右昌曲夹制]，依[中州派]的意见，是指[交叉夹命宫]而言，因为紫贪永无左右夹命、
-        昌曲夹命的可能。 
-        紫贪见煞，只宜经商，但煞重亦有是非纷争。若更见空曜及华盖，反宜宗教生
-        涯。 
-        女命紫微贪狼，见桃花及煞曜，易落风尘，尤其不喜见擎羊，若桃花诸曜咸集，
-        堕落风尘的危险更大。同时有因追求物欲而堕落的倾向。但假如酉宮坐命，借入卯
-        宫的紫同(图三)，此点宜加注意。 
+        昌曲夹命的可能。  若更见空曜及华盖，反宜宗教生涯。
         大限或流年命宫见紫微贪狼，桃花的性质较会星盘命宫时为轻。一般来说，会
         吉曜时，主小幅度的去旧更，可得进步；但如果诸煞并集，又见刑忌，则可能进步；
-        但如果诸煞并集，又见型忌，则可能因色破财招灾，又或者因应酬而招口舌是非。"""
+        但如果诸煞并集，又见型忌，则可能因色破财招灾，又或者因应酬而招口舌是非。
+        所以逢紫贪同宫，最不宜再见红驾、天喜、咸池、大耗、天姚、沐浴等桃花诸曜，
+        否则主人易吸引异性而不能自制，倘再逢煞曜，主因色致祸，即使不逢煞曜，亦影响事业。
+        """
                 print(tmp)
                 print("\n")
+                if (len(huayaoList) > 0):
+                    for smallStar in huayaoList:
+                        if smallStar == "紫微化权":
+                            tmp = """若紫微化权，得[百官朝拱]，则有如太平盛世的风流天子，富贵多情；"""
+                            print(tmp)
+                        elif smallStar == "紫微化科":
+                            tmp = """紫微化科会吉曜，则其入虽克享盛名，学而有成，但仍偏重于情欲及物欲。 """
+                            print(tmp)
+                        elif smallStar == "贪狼化禄":
+                            tmp = """如果贪狼化禄，则主多交际应酬，偏重物欲，但却主其人财运亨通； """
+                            print(tmp)
+                        elif smallStar == "贪狼化权":
+                            tmp = """贪狼化权，物欲亦重，但主经历竞争而有成； """
+                            print(tmp)
+                        elif smallStar == "贪狼化忌":
+                            tmp = """贪狼化忌，虽桃花减色，可是人的才艺却亦较难发展。虽有物欲，却难如愿。 """
+                            print(tmp)
+                if (len(fuyaoList) > 0):
+                    for smallStar in fuyaoList:
+                        if smallStar == "左辅" or smallStar == "右弼":
+                            tmp = """紫贪星系，喜左辅、右弼同宫，而不喜文昌文曲。"""
+                            print(tmp)
+                if (len(zuoyaoList) > 0):
+                    for smallStar in zuoyaoList:
+                        if smallStar == "文昌" or smallStar == "文曲":
+                            tmp = """紫贪星系，若昌曲同宫，其人吸引异性的倾向更大，而且重视修饰以及事情的表面完美，所以做事便多虛少实。"""
+                            print(tmp)
+                if (len(shayaoList) > 0):
+                    tmp = """紫贪见煞，只宜经商，但煞重亦有是非纷争。女命紫微贪狼，见桃花及煞曜，易落风尘，尤其不喜见擎羊，若桃花诸曜咸集，
+        堕落风尘的危险更大。同时有因追求物欲而堕落的倾向。但假如酉宮坐命，借入卯
+        宫的紫同(图三)，此点宜加注意。"""
+                    print(tmp)
+                    
+                
                 if(dizhi == "卯" or dizhi == "酉"):
-                    tmp = """紫微贪狼在卯、西二宮同度，古人称这种格局为[桃花犯主]，认为主人淫乱。
-        所以逢紫贪同宫，最不宜再见红驾、天喜、咸池、大耗、天姚、沐浴等桃花诸曜，
-        否则主人易吸引异性而不能自制，倘再逢煞曜，主因色致祸，即使不逢煞曜，亦影
-        响事业。 """
+                    tmp = """紫微贪狼在卯、西二宮同度，古人称这种格局为[桃花犯主]，认为主人淫乱。"""
                     print(tmp)
                     print("\n")
                     tmp = """
@@ -202,6 +239,7 @@ def GongChu1st(star, dizhi,
         高处滑行、高级情商、在高空柔软的、曲线往中间的
             """
                     print(tmp)
+                    
             elif(star == "紫微天相"):
                 print("紫微天相\n")
                 tmp = """ 
@@ -2880,20 +2918,10 @@ def GongChu1st(star, dizhi,
                     """
                     print(tmp)
 def GongChu2nd(star, dizhi, fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList):
+                   shayaoList,huayaoList):
     print(star, dizhi)
     smallStarList = printsmallStar(fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList)
+                   shayaoList,huayaoList)
     if(star[:2] == "紫微"):
         
         print("\n")
@@ -3267,20 +3295,10 @@ def GongChu2nd(star, dizhi, fuyaoList,zuoyaoList,
             print("\n")
     
 def GongChu3rd(star, dizhi, fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList):
+                   shayaoList,huayaoList):
     print(star, dizhi)
     smallStarList = printsmallStar(fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList)
+                   shayaoList,huayaoList)
     if(star[:2] == "紫微"):
         
         print("\n")
@@ -3853,20 +3871,10 @@ def GongChu3rd(star, dizhi, fuyaoList,zuoyaoList,
             print("\n")
     
 def GongChu4th(star, dizhi, fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList):
+                   shayaoList,huayaoList):
     print(star, dizhi)
     smallStarList = printsmallStar(fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList)
+                   shayaoList,huayaoList)
     if(star[:2] == "紫微"):
         tmp = """得子女必性刚，志高气傲，但多秀发。 
 会化禄、化权、化科必得佳儿。但以迟得为宜，主贵禄。 
@@ -4257,20 +4265,10 @@ def GongChu4th(star, dizhi, fuyaoList,zuoyaoList,
             print("\n")
     
 def GongChu5th(star, dizhi, fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList):
+                   shayaoList,huayaoList):
     print(star, dizhi)
     smallStarList = printsmallStar(fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList)
+                   shayaoList,huayaoList)
     if(star[:2] == "紫微"):
         tmp = """紫微守财帛宫，一般情形下主富厚。 
 会照破军，须先经波折然后得财，唯得财后仍何波折。会煞则防得后破败。 
@@ -4640,20 +4638,10 @@ def GongChu5th(star, dizhi, fuyaoList,zuoyaoList,
         
     
 def GongChu6th(star, dizhi, fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList):
+                   shayaoList,huayaoList):
     print(star, dizhi)
     smallStarList = printsmallStar(fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList)
+                   shayaoList,huayaoList)
     if(star[:2] == "紫微"):
         tmp = """紫微守疾厄宫，一般均主脾胃病。常见的情形，是腹泻、呕吐、气痛、气胀。 
 脾胃有病，有时亦表现为脾土不运化而致吸收不良，或胃纳不佳而致胃寒。 
@@ -4982,20 +4970,10 @@ def GongChu6th(star, dizhi, fuyaoList,zuoyaoList,
                 print(tmp)
                 print("\n")
 def GongChu7th(star, dizhi, fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList):
+                   shayaoList,huayaoList):
     print(star, dizhi)
     smallStarList = printsmallStar(fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList)
+                   shayaoList,huayaoList)
     if(star[:2] == "紫微"):
         tmp = """紫微守迁移宫，主出外得人敬重。 
 更会照左辅、右弼，出外得人助力。亦主交游广阔，或所交多益友。 
@@ -5411,20 +5389,10 @@ def GongChu7th(star, dizhi, fuyaoList,zuoyaoList,
             print("\n")
     
 def GongChu8th(star, dizhi, fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList):
+                   shayaoList,huayaoList):
     print(star, dizhi)
     smallStarList = printsmallStar(fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList)
+                   shayaoList,huayaoList)
     if(star[:2] == "紫微"):
         tmp = """紫微守交友宫，星曜太强，一般情形下，主下属难以控制。若入庙，且有左辅、右弼等辅佐诸曜同度或会照，则星曜更强，虽在平辈交游
 中主可得益友，但朋友必胜于己，而下属则必更难控制。但若自己能心胸宽广，提
@@ -5883,7 +5851,7 @@ def GongChu8th(star, dizhi, fuyaoList,zuoyaoList,
             tmp = """地劫 :一般均主挫折。见擎羊、天刑、化忌，则在异乡倾败。"""
             print(tmp)
             print("\n")
-        if(smallStar == '化禄' or smallStar == '化权' or smallStar == '化科'):
+        if(smallStar == '破军化禄' or smallStar == '破军化权' or smallStar == '破军化科'):
             tmp = """化禄、化权、化科 ：一般主得交社会地位高尚人士；又主手下人众多得力，能助己兴家创业。若更
 加会吉霍祥曜，则彼此提携之力更大。 
 若见煞星恶曜，则虽交权势，亦防因之招损。或于下人反易凌驾于自己之上。"""
@@ -5892,20 +5860,10 @@ def GongChu8th(star, dizhi, fuyaoList,zuoyaoList,
     
    
 def GongChu9th(star, dizhi, fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList):
+                   shayaoList,huayaoList):
     print(star, dizhi)
     smallStarList = printsmallStar(fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList)
+                   shayaoList,huayaoList)
     if(star[:2] == "紫微"):
         tmp = """紫徽守事业宫，入庙者，若不见煞曜刑忌会合，而与天府、天相、左辅、右弼、
 天魁、天钺、三台、八座、恩光、天贵同度或会照，则可从事政治，当官高禄厚。
@@ -6310,20 +6268,10 @@ def GongChu9th(star, dizhi, fuyaoList,zuoyaoList,
         print(tmp)
         print("\n")
 def GongChu10th(star, dizhi, fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList):
+                   shayaoList,huayaoList):
     print(star, dizhi)
     smallStarList = printsmallStar(fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList)
+                   shayaoList,huayaoList)
     if(star[:2] == "紫微"):
         tmp = """紫微入田宅宫一般主有产业承继，及有自己增置的产业。尤喜见禄存或化禄会
 照，必主增购物业。(所以当大限或流年的田宅宫见紫微坐守，有流禄或流化禄同度
@@ -6660,20 +6608,10 @@ def GongChu10th(star, dizhi, fuyaoList,zuoyaoList,
                 print(tmp)
                 print("\n")
 def GongChu11th(star, dizhi, fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList):
+                   shayaoList,huayaoList):
     print(star, dizhi)
     smallStarList = printsmallStar(fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList)
+                   shayaoList,huayaoList)
     if(star[:2] == "紫微"):
         tmp = """紫微守福德宫，一般均主人的人品敦厚，但主观甚强。因为紫微既为帝星，自
 然喜以自己的意见为意见。 
@@ -7052,20 +6990,10 @@ def GongChu11th(star, dizhi, fuyaoList,zuoyaoList,
                 print(tmp)
                 print("\n")
 def GongChu12th(star, dizhi, fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList):
+                   shayaoList,huayaoList):
     print(star, dizhi)
     smallStarList = printsmallStar(fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList)
+                   shayaoList,huayaoList)
     if(star[:2] == "紫微"):
         tmp = """紫微守父母宫，入庙，且会诸吉，主其人父母富贵，且无刑克。 
 若落陷，则父母主见极强，易与自身发生意见。见煞曜则主不和。于大限流年

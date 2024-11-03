@@ -1,20 +1,10 @@
 from fuStar import *
 def GongXia1st(star, dizhi,
                    fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList):
+                   shayaoList,huayaoList):
     print(star, dizhi)
     smallStarList = printsmallStar(fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList)
+                   shayaoList,huayaoList)
     if(star[:2] == "紫微"):
         
         print("\n")
@@ -1185,20 +1175,10 @@ def GongXia1st(star, dizhi,
             print("\n")
 def GongXia2nd(star, dizhi,
                    fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList):
+                   shayaoList,huayaoList):
     print(star, dizhi)
     smallStarList = printsmallStar(fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList)
+                   shayaoList,huayaoList)
     if(star[:2] == "紫微"):       
         if(dizhi == "子" or dizhi == "午") and len(star) == 2:
             tmp = """ 子午宫紫微独坐 ， 躔桃花诸曜 ， 兄弟行中以长女为先 。 或与长兄不和 。 
@@ -1745,20 +1725,10 @@ def GongXia2nd(star, dizhi,
         
 def GongXia3rd(star, dizhi,
                    fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList):
+                   shayaoList,huayaoList):
     print(star, dizhi)
     smallStarList = printsmallStar(fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList)
+                   shayaoList,huayaoList)
     if(star[:2] == "紫微"):
         
         print("\n")
@@ -2781,20 +2751,10 @@ def GongXia3rd(star, dizhi,
         
 def GongXia4th(star, dizhi,
                    fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList):
+                   shayaoList,huayaoList):
     print(star, dizhi)
     smallStarList = printsmallStar(fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList)
+                   shayaoList,huayaoList)
     if(star[:2] == "紫微"):
         
         print("\n")
@@ -3720,20 +3680,10 @@ def GongXia4th(star, dizhi,
         
 def GongXia5th(star, dizhi,
                    fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList):
+                   shayaoList,huayaoList):
     print(star, dizhi)
     smallStarList = printsmallStar(fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList)
+                   shayaoList,huayaoList)
     if(star[:2] == "紫微"):
         
         print("\n")
@@ -4792,20 +4742,10 @@ def GongXia5th(star, dizhi,
 
 def GongXia6th(star, dizhi,
                    fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList):
+                   shayaoList,huayaoList):
     print(star, dizhi)
     smallStarList = printsmallStar(fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList)
+                   shayaoList,huayaoList)
     if(star[:2] == "紫微"):
         
         print("\n")
@@ -5316,20 +5256,10 @@ def GongXia6th(star, dizhi,
         print("\n")
 def GongXia7th(star, dizhi,
                    fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList):
+                   shayaoList,huayaoList):
     print(star, dizhi)
     smallStarList = printsmallStar(fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList)
+                   shayaoList,huayaoList)
     if(star[:2] == "紫微"):
         
         print("\n")
@@ -5988,20 +5918,10 @@ def GongXia7th(star, dizhi,
             print("\n")
 def GongXia8th(star, dizhi,
                    fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList):
+                   shayaoList,huayaoList):
     print(star, dizhi)
     smallStarList = printsmallStar(fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList)
+                   shayaoList,huayaoList)
     if(star[:2] == "紫微"):
         
         print("\n")
@@ -6586,20 +6506,10 @@ def GongXia8th(star, dizhi,
             print("\n")
 def GongXia9th(star, dizhi,
                    fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList):
+                   shayaoList,huayaoList):
     print(star, dizhi)
     smallStarList = printsmallStar(fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList)
+                   shayaoList,huayaoList)
     if(star[:2] == "紫微"):
         
         print("\n")
@@ -7697,20 +7607,10 @@ def GongXia9th(star, dizhi,
         
 def GongXia10th(star, dizhi,
                    fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList):
+                   shayaoList,huayaoList):
     print(star, dizhi)
     smallStarList = printsmallStar(fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList)
+                   shayaoList,huayaoList)
     if(star[:2] == "紫微"):
         tmp = """ 
 紫微与破军同度或对拱 ， 主有祖业或现成家业 ， 但 因各种原因退败 。 若为 百官 
@@ -8214,20 +8114,10 @@ def GongXia10th(star, dizhi,
             print("\n")
 def GongXia11th(star, dizhi,
                    fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList):
+                   shayaoList,huayaoList):
     print(star, dizhi)
     smallStarList = printsmallStar(fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList)
+                   shayaoList,huayaoList)
     if(star[:2] == "紫微"):
         
         print("\n")
@@ -8778,20 +8668,10 @@ def GongXia11th(star, dizhi,
         print("\n")
 def GongXia12th(star, dizhi,
                    fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList):
+                   shayaoList,huayaoList):
     print(star, dizhi)
     smallStarList = printsmallStar(fuyaoList,zuoyaoList,
-                   shayaoList,kongyaoList,
-                   xinyaoList,jiyaoList,
-                   taohuaList,huayaoList,
-                   tian_goodList,tian_badList,
-                   za_goodList,za_badList,
-                   caiyiList)
+                   shayaoList,huayaoList)
     if(star[:2] == "紫微"):
         
         print("\n")
