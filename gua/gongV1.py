@@ -5151,7 +5151,7 @@ def GongChu4th(star, dizhi, fuyaoList,zuoyaoList,
                     print(tmp)
         if (len(huayaoList) > 0):
             for smallStar in huayaoList:
-                if (smallStar == "巨门化禄" or (smallStar == "巨门化权" or (smallStar == "巨门化科"):
+                if (smallStar == "巨门化禄" or smallStar == "巨门化权" or smallStar == "巨门化科"):
                     tmp = """得化禄、化权、化科或禄存，方有祥和之气。 """
                     print(tmp)
         if (len(fuyaoList) > 0):
@@ -5169,7 +5169,7 @@ def GongChu4th(star, dizhi, fuyaoList,zuoyaoList,
                 print("\n")
                 if (len(huayaoList) > 0):
                     for smallStar in huayaoList:
-                        if (smallStar == "巨门化禄" or (smallStar == "巨门化权" or (smallStar == "巨门化科"):
+                        if (smallStar == "巨门化禄" or smallStar == "巨门化权" or smallStar == "巨门化科"):
                             tmp = """见左右、魁钺、三化者，主三人以上，且必属佳儿，能富能贵，聪明多才。 """
                             print(tmp)
                 if (len(fuyaoList) > 0):
@@ -5772,12 +5772,15 @@ def GongChu6th(star, dizhi, fuyaoList,zuoyaoList,
 见属土的星曜多，如天府、左辅、禄存、化禄、三台、八座、恩光、天贵、天
 官、天福、台辅、封诰，则主有肾病，或主生殖系统病。亦主患色痨。 
 与火星铃星同度会照，主湿火、湿疹、皮肤病、胃热、消化不良。 
-与空劫同度会照，主眼目昏花、青光眼、胃痛胃寒、胃神经痛。   
 凡紫微入疾厄宫，见煞曜会照，又见天刑，主因病动手术。 
-紫微会桃花诸曜，再会廉贞化忌，主性病。尤以紫微破军同居丑未，会廉贞贪
-狼者，患性病的可能更大。疾厄宫有此结构的人，宜戒沾花惹草。"""
+紫微会桃花诸曜，再会廉贞化忌，主性病。疾厄宫有此结构的人，宜戒沾花惹草。"""
         print(tmp)
         print("\n")
+        if (len(shayaoList) > 0):
+            for smallStar in shayaoList:
+                if (smallStar == "地空" or smallStar == "地劫"):
+                    tmp = """与空劫同度会照，主眼目昏花、青光眼、胃痛胃寒、胃神经痛。 """
+                    print(tmp)
         if(len(star) == 4):
             if(star == "紫微破军"):
                 tmp = """紫微破军，主妇女暗病。会擎羊，主手术或破相。亦主口吃、神经紧张。见属
@@ -5785,6 +5788,9 @@ def GongChu6th(star, dizhi, fuyaoList,zuoyaoList,
 不和。若煞忌刑曜重重，则主神经分裂。 """
                 print(tmp)
                 print("\n")
+                if (dizhi == "丑" or dizhi == "未"):
+                    tmp = """紫微破军同居丑未，会廉贞贪狼者，患性病的可能更大。"""
+                    print(tmp)
             elif(star == "紫微贪狼"):
                 tmp = """紫微贪狼，主好色。会照天姚、咸池等，有手淫、遗精、色痨等病。若会擎羊，
 男主包皮过长；女主外阴皮长，或有妇女暗病。会红鸾、天喜者，经期不准、赤白
@@ -5797,10 +5803,13 @@ def GongChu6th(star, dizhi, fuyaoList,zuoyaoList,
                 print(tmp)
                 print("\n")
             elif(star == "紫微七杀"):
-                tmp = """紫微七杀，主大肠乾结或虚泻。气虚阴亏、气痛。见煞曜，则主外伤。若会廉
+                tmp = """紫微七杀，主大肠乾结或虚泻。气虚阴亏、气痛。若会廉
 贞化忌，防意外伤损。 """
                 print(tmp)
                 print("\n")
+                if (len(shayaoList) > 0):
+                    tmp = """见煞曜，则主外伤。 """
+                    print(tmp)
             elif(star == "紫微天府"):
                 tmp = """紫微天府同度或会照，亦主胃病。 """
                 print(tmp)
@@ -5808,8 +5817,8 @@ def GongChu6th(star, dizhi, fuyaoList,zuoyaoList,
     elif(star[:2] == "天机"):
         tmp = """天机守疾厄宫，一般主患肝病、胆病。或主人于婴儿时多灾病，易患惊风。――
 风属木，故天机亦主惊风。 
-肝胆有病，表现出来为肝气胃痛；肝旺脾虚以致吸收营养的机能欠佳；或主肝
-阳上亢，出现头晕目眩、眼风等现象，女命则主经血枯少，此乃阴分亏损之故。 
+肝胆有病，表现出来为肝气胃痛；肝旺脾虚以致吸收营养的机能欠佳；或主肝阳上亢，出现头晕目眩、眼风等现象，
+女命则主经血枯少，此乃阴分亏损之故。 
  女命天机守疾厄宫，更见太阴、红鸾天喜、咸池、天姚同度，主经期不准、
 经痛，或子宫有暗病如子宫不正之类。
 天机与擎羊、天刑、大耗同度，主需动手术。 
@@ -5827,12 +5836,15 @@ def GongChu6th(star, dizhi, fuyaoList,zuoyaoList,
                 print(tmp)
                 print("\n")
             elif(star == "天机天梁"):
-                tmp = """天机天梁同度，亦为木克脾土，主胃纳不和、消化不良。见羊陀，则湿火伤筋，
-再见天刑，则主盲肠炎。若见火星、铃星、化忌、天刑并照，再与阴煞、劫杀会合
+                tmp = """天机天梁同度，亦为木克脾土，主胃纳不和、消化不良。若见火星、铃星、化忌、天刑并照，再与阴煞、劫杀会合
 或同度，则有乳癌、胃癌的可能。 """
                 print(tmp)
                 print("\n")
-            
+                if (len(shayaoList) > 0):
+                    for smallStar in shayaoList:
+                        if (smallStar == "擎羊" or smallStar == "陀罗"):
+                            tmp = """见羊陀，则湿火伤筋，再见天刑，则主盲肠炎。 """
+                            print(tmp)
     elif(star[:2] == "太阳"):
         tmp = """太阳守疾厄宫，一般均主血压心脏有病，如血压高、血糖高，或血管栓塞。故亦有
 头痛、头晕、眼花等现象。太阳在午宫守疾厄宫，或落陷遇羊陀，主患目疾，或眼
@@ -5854,23 +5866,44 @@ def GongChu6th(star, dizhi, fuyaoList,zuoyaoList,
                 print(tmp)
                 print("\n")
             elif(star == "太阳天梁"):
-                tmp = """太阳太梁同宫，为火士星曜会合，故亦主内分泌系统及循环器官疾病。见火铃，[母慈灭子]，天梁反主因受生太过而致病，再见刑忌，主患乳癌、胃癌。 
+                tmp = """太阳太梁同宫，为火士星曜会合，故亦主内分泌系统及循环器官疾病。
 内分泌疾患，则为甲状腺分泌亢进之类。亦主易生湿疹、风斑等疾。 """
                 print(tmp)
                 print("\n")
+                if (len(shayaoList) > 0):
+                    for smallStar in shayaoList:
+                        if (smallStar == "火星" or smallStar == "铃星"):
+                            tmp = """见火铃，[母慈灭子]，天梁反主因受生太过而致病，再见刑忌，主患乳癌、胃癌。  """
+                            print(tmp)
     elif(star[:2] == "武曲"):
         tmp = """武曲守疾厄寓，一般均丰肺部及呼吸器官疾病。 
-若见天马及火铃，为属火的星曜，伤克武曲阴金，咳嗽、吐血。为肺结核的现
-象。更见天刑、化忌，则主有肺癌的危险。 
 武曲亦主鼻衄、声哑。或支气管炎、气管炎等疾患。 
 由于武曲亦主小肠痛症，故可表现为大便燥结，或阳明喉痛。 
-武曲与文曲同度，见火、铃，主白喉、鹅喉。 
 倘武曲守疾厄宫，见火、铃、羊、陀、空、劫、天刑，则一生多灾病，且主开
-刀手术。武曲天府同度，一般情形下灾病轻。但武曲化忌，再见煞曜，则有胃病；
-武曲化忌，防胃癌、或肺癌。 
+刀手术。武曲天府同度，一般情形下灾病轻。
 """
         print(tmp)
         print("\n")
+        if (len(shayaoList) > 0):
+            for smallStar in shayaoList:
+                if (smallStar == "火星" or smallStar == "铃星"):
+                    tmp = """若见天马及火铃，为属火的星曜，伤克武曲阴金，咳嗽、吐血。为肺结核的现
+象。更见天刑、化忌，则主有肺癌的危险。   """
+                    print(tmp)
+        if (len(huayaoList) > 0):
+            for smallStar in huayaoList:
+                if (smallStar == "武曲化忌"):
+                    tmp = """但武曲化忌，再见煞曜，则有胃病；武曲化忌，防胃癌、或肺癌。   """
+                    print(tmp)
+        if (len(zuoyaoList) > 0):
+            for smallStar in zuoyaoList:
+                if (smallStar == "天马"):
+                    tmp = """若见天马及火铃，为属火的星曜，伤克武曲阴金，咳嗽、吐血。为肺结核的现
+象。更见天刑、化忌，则主有肺癌的危险。  """
+                    print(tmp)
+                elif (smallStar == "文昌" or smallStar == "文曲"):
+                    tmp = """武曲与文曲同度，见火、铃，主白喉、鹅喉。  """
+                    print(tmp)
         if(len(star) == 4):
             if(star == "武曲贪狼"):
                 tmp = """武曲贪狼同度，或会合照，主手脚易伤。若煞、忌、刑曜会照，武曲更化为忌
@@ -5883,10 +5916,14 @@ def GongChu6th(star, dizhi, fuyaoList,zuoyaoList,
                 print(tmp)
                 print("\n")
             elif(star == "武曲七杀"):
-                tmp = """武曲七杀，一般均主损伤，若会陀罗则手足相残；见空劫，金受火克，则有呼
-吸系统敏感诸疾。 """
+                tmp = """武曲七杀，一般均主损伤，若会陀罗则手足相残； """
                 print(tmp)
                 print("\n")
+                if (len(shayaoList) > 0):
+                    for smallStar in shayaoList:
+                        if (smallStar == "地空" or smallStar == "地劫"):
+                            tmp = """见空劫，金受火克，则有呼吸系统敏感诸疾。  """
+                            print(tmp)
             elif(star == "武曲破军"):
                 tmp = """武曲破军，一般情形下主牙痛拔牙、补牙、牙周痫等。若武曲化忌，更见诸煞，
 则为瘤肿癌症之灾。 """
@@ -5894,12 +5931,15 @@ def GongChu6th(star, dizhi, fuyaoList,zuoyaoList,
                 print("\n")
     elif(star[:2] == "天同"):
         tmp = """天同入疾厄宫，一般情形下主灾难少。在疾病方面，则表现为肾脏、膀胱、尿
-道、输精管或输卵管的疾病。 
-天同见煞曜，则主子宫病、前列腺病。或主淋病、疝气、痔疮。 
+道、输精管或输卵管的疾病。  
 天同见天虚、凤阁、天月，则主寒热风邪，或见腹痛水泻。 
 """
         print(tmp)
         print("\n")
+        if (len(shayaoList) > 0):
+            tmp = """天同见煞曜，则主子宫病、前列腺病。或主淋病、疝气、痔疮。  """
+            print(tmp)
+                
         if(len(star) == 4):
             if(star == "天同巨门"):
                 tmp = """天同巨门同度，或会照见煞，主骨质增生、骨剌、骨膜退化等症，以致影响手
@@ -5914,24 +5954,29 @@ def GongChu6th(star, dizhi, fuyaoList,zuoyaoList,
                 print(tmp)
                 print("\n")
             elif(star == "天同天梁"):
-                tmp = """天同天梁同度，主肝胃气痛。若见煞曜，则主心气痛、心肌栓塞或血管疾患。
-落陷更见煞忌刑耗，女命肾病或妇科缠绵；男子亦主肾病，或生殖能力不足。 """
+                tmp = """天同天梁同度，主肝胃气痛。 """
                 print(tmp)
                 print("\n")
-            
+                if (len(shayaoList) > 0):
+                    tmp = """若见煞曜，则主心气痛、心肌栓塞或血管疾患。
+落陷更见煞忌刑耗，女命肾病或妇科缠绵；男子亦主肾病，或生殖能力不足。 """
+                    print(tmp)
     elif(star[:2] == "廉贞"):
         tmp = """廉贞在疾厄宫，多主虚火上升或心火急燥，此乃以廉贞为阴火之故。 
-廉贞在斗数中又为[血星]，故主便血、咯血、心血、亏损、心肾不交而致血份亏少失眠、贫血等疾。女命亦主经血不足，经期不准。化忌者，见煞曜刑主血癌，
-或先天性贫血。 
+廉贞在斗数中又为[血星]，故主便血、咯血、心血、亏损、心肾不交而致血份亏少失眠、贫血等疾。女命亦主经血不足，经期不准。
 廉贞为次桃花，守疾厄宫，故又主手淫、意淫、遗精、淋病、梅毒，及诸般性
 病。 
 廉贞守疾厄宫，亦主人易患流行性感冒。见天月，则感冒缠绵，以致鼻过敏、
 气管过敏。 
-若廉贞化忌，见煞曜、空劫，则有血光之灾，见天刑者尤的确；若无天刑，恐
-亦主有脓血之病，轻者为易生暗疮。
 """
         print(tmp)
         print("\n")
+        if (len(huayaoList) > 0):
+            for smallStar in huayaoList:
+                if (smallStar == "廉贞化忌"):
+                    tmp = """若廉贞化忌，见煞曜、空劫，则有血光之灾，见天刑者尤的确；若无天刑，恐
+亦主有脓血之病，轻者为易生暗疮。化忌者，见煞曜刑主血癌，或先天性贫血。  """
+                    print(tmp)
         if(len(star) == 4):
             if(star == "廉贞贪狼"):
                 tmp = """廉贞贪狼同度，男命主梦遗，女命主经痛，或子宫疾患。见煞忌刑耗及空劫，
@@ -5965,21 +6010,19 @@ def GongChu6th(star, dizhi, fuyaoList,zuoyaoList,
         print(tmp)
         print("\n")
     elif(star[:2] == "太阴"):
-        tmp = """太阴守疾厄宫，一般皆主阴虚亏损。表现为泻痢、脚肿、阴瘘、或脾胃及小肠
-湿热。 
+        tmp = """太阴守疾厄宫，一般皆主阴虚亏损。表现为泻痢、脚肿、阴瘘、或脾胃及小肠湿热。 
 见桃花诸曜，如红鸾、天喜、成池、大耗、阴煞、天虚，男子主肾虚精冷。女
 子主冷感。蒋见煞曜、刑忌，则阴分极亏，可致因气血不和而生之诸般恶跃，如糖
 尿、水肿、恶疾、鼓胀以及瘫痪。 
 太阴会天同，主眼病，如飞蚊癍之类。亦主任何有斑点之疾患，更会文曲化忌，
 则主麻诊。 
-太阴会天机，亦丰妇女暗病。若太阴化意，则反主肝旺致成固疾。若天机化忌，
+太阴会天机，亦丰妇女暗病。若太阴化忌，则反主肝旺致成固疾。若天机化忌，
 更见煞曜及天虚、阴煞，男主阳痿，女则阴痿。一般情况下，亦主神经过敏。"""
         print(tmp)
         print("\n")
     elif(star[:2] == "贪狼"):
-        tmp = """贪狼在疾厄宫，一般均主有肝胆病。主肝旺、脾虚、胆分泌失调。幼年则主肝
-风抽缩。 
-贪狼与擎羊、陀罗、火星，主有痔疮。若更会廉贞，则主肝气痛，或头晕、头
+        tmp = """贪狼在疾厄宫，一般均主有肝胆病。主肝旺、脾虚、胆分泌失调。幼年则主肝风抽缩。 
+贪狼与擎羊、陀罗、火星相会，主有痔疮。若更会廉贞，则主肝气痛，或头晕、头
 风、贫血等症。 
 """
         print(tmp)
@@ -5991,11 +6034,15 @@ def GongChu6th(star, dizhi, fuyaoList,zuoyaoList,
             print("\n")
         if(len(star) == 4):
             if(star == "贪狼紫微"):
-                tmp = """贪狼与紫微同度，见煞曜，主多欲。贪狼化忌，则主手淫，并主阴亏损、虚阳
-上亢。中晚年则主阳痿。  """
+                tmp = """贪狼与紫微同度，见煞曜，主多欲。 """
                 print(tmp)
                 print("\n")
-            elif(star == "贪狼廉贞"):
+                if (len(huayaoList) > 0):
+                    for smallStar in huayaoList:
+                        if (smallStar == "贪狼化忌"):
+                            tmp = """贪狼化忌，则主手淫，并主阴亏损、虚阳上亢。中晚年则主阳痿。   """
+                            print(tmp)
+            elif(star == "贪狼廉贞") and (dizhi == "巳" or dizhi == "亥"):
                 tmp = """廉贞与贪狼同度于巳、亥宫，则主梦遗，性欲亢进。女命更主经痛、腰痛、子
 宫不正、赤白带、及妇女暗病。  """
                 print(tmp)
@@ -6003,14 +6050,23 @@ def GongChu6th(star, dizhi, fuyaoList,zuoyaoList,
             
     elif(star[:2] == "巨门"):
         tmp = """巨门守疾厄宫，主脾胃病及消化杌能病。但由于土能生金，若脾土虚弱，则金
-亦少生助，故亦可能牵连致呼吸器官疾病。
-故巨门在疾厄宫，见禄存或化禄，则主暴饮暴食而致生胃病。 
+亦少生助，故亦可能牵连致呼吸器官疾病。 
 若见擎羊、陀罗、化忌、天刑，则主有生胃癌、食道癌的可能。
 由于胃病，或消化机能不佳，亦主人消瘦、阴损。更见天虚、大耗，则为阴疽
 或肺病，再若煞曜刑忌并见则为肺癌。  
 """
         print(tmp)
         print("\n")
+        if (len(huayaoList) > 0):
+            for smallStar in huayaoList:
+                if (smallStar == "巨门化禄"):
+                    tmp = """故巨门在疾厄宫，见禄存或化禄，则主暴饮暴食而致生胃病。  """
+                    print(tmp)
+        if (len(zuoyaoList) > 0):
+            for smallStar in zuoyaoList:
+                if (smallStar == "禄存"):
+                    tmp = """故巨门在疾厄宫，见禄存或化禄，则主暴饮暴食而致生胃病。  """
+                    print(tmp)
         if(len(star) == 4):
             if(star == "巨门天机"):
                 tmp = """巨门与天机同度，主肝胃不和，表徵为嗳气、嗳酸、反胃等。或心气郁结、胸
@@ -6052,44 +6108,46 @@ def GongChu6th(star, dizhi, fuyaoList,zuoyaoList,
             tmp == """太阳天梁同度，见煞耗，亦主内分泌失调。"""
             print(tmp)
     elif(star[:2] == "七杀"):
-        
-        print("\n")
         tmp = """七杀临疾厄宫，主人幼年多灾病，且易暴怒，伤致肝肺。  
 有紫微或天府拱照，主肠胃不和，胃纳不佳。紫府同时拱会，又见擎羊，亦主
 瘤肿之灾。轻删为盲肠炎，肠胃炎。见天马、天刑、天魁、天钺，刚差便血、咯血。 
-七杀火星同度，主目疾，为阴虚所致。 
 七杀龙池同度，主耳聋，为金不荞水，肾阳受损所致。"""
         print(tmp)
         print("\n")
+        if (len(shayaoList) > 0):
+            for smallStar in shayaoList:
+                if (smallStar == "火星"):
+                    tmp = """七杀火星同度，主目疾，为阴虚所致。  """
+                    print(tmp)
         if(len(star) == 4):
             if(star == "七杀武曲"):
                 tmp = """武曲七杀同度，主受伤，会陀罗则丰手足受伤，煞重则可致残疾。 """
                 print(tmp)
                 print("\n")
             elif(star == "七杀廉贞"):
-                tmp = """与廉贞同度，多扭转、跌伤、撞伤。煞曜及化忌会照，则为瘤肿之灾，或为血
-疾。 
+                tmp = """与廉贞同度，多扭转、跌伤、撞伤。煞曜及化忌会照，则为瘤肿之灾，或为血疾。 
  廉贞同度，亦主肺瘸，咳血。蔷更见红鸾、天喜，则为哮喘。 """
                 print(tmp)
                 print("\n")
     elif(star[:2] == "破军"):
-        
-        print("\n")
         tmp = """破军守疾厄宫，主人幼年多脓血之灾。见天虚、大耗、阴煞，主人不足月生，
-需受特殊照料。 
-破军与擎羊同度，主开刀或手术。 
+需受特殊照料。  
 破军为阴水，故主人有生殖机能疾患，如遗精、阳痿、女子经痛、赤白带。  
 """
         print(tmp)
         print("\n")
+        if (len(shayaoList) > 0):
+            for smallStar in shayaoList:
+                if (smallStar == "擎羊"):
+                    tmp = """破军与擎羊同度，主开刀或手术。  """
+                    print(tmp)
         if(len(star) == 4):
             if(star == "破军紫微"):
                 tmp = """紫微破军，主腹泻。 """
                 print(tmp)
                 print("\n")
             elif(star == "破军武曲"):
-                tmp = """武曲同度，主牙痛亦女口牙周病，故主牙科手术及拔牙。并主日疾，及男亏损
-诸般疾患。 
+                tmp = """武曲同度，主牙痛亦女口牙周病，故主牙科手术及拔牙。并主日疾，及男亏损诸般疾患。 
 武曲同度而化忌，主癌症，亦发痫于生殖器官。 """
                 print(tmp)
                 print("\n")
