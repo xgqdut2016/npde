@@ -3659,30 +3659,38 @@ def GongChu2nd(star, dizhi, fuyaoList,zuoyaoList,
     smallStarList = printsmallStar(fuyaoList,zuoyaoList,
                    shayaoList,huayaoList)
     if(star[:2] == "紫微"):
-        
-        print("\n")
-        tmp = """有兄长可依靠(或主受同事提拔)。或兄长富裕宽厚。加四煞空劫，则克害或欠
-和，否则兄弟破败衰退落。 
+        tmp = """有兄长可依靠(或主受同事提拔)。或兄长富裕宽厚。
 兄弟近贵。会魁钺、昌曲、辅弼舌尤贵。但若会四煞、空劫、刑忌者，则主刑
 克，或兄弟姐妹中有事业衰败。流煞及流忌入宫亦防大限或流年内兄弟姐妹刑刑真
 伤破败。 
-见四煞，倘父母宫有鸾喜，则可能兄弟各胞，且不同心。 
+ 
 天马会照，兄弟姐妹各散东西。 
-见天府，兄弟姐妹三人。 
-遇天相，三至四人。破军会照，亦主三人。然有刑克，或析产分居。或异母所生。若父母宫桃花遍
+ 
+破军会照，亦主三人。然有刑克，或析产分居。或异母所生。若父母宫桃花遍
 集，又见右弼者。更可推断有异母兄弟。 
-见左辅右弼，五人以上。
 会昌曲，五或七人。加羊陀火铃七杀，则兄弟姐妹宜双数，否则刑事克。  
 """
         print(tmp)
         print("\n")
+        if (len(shayaoList) > 0):
+            tmp = """加四煞空劫，则克害或欠和，否则兄弟破败衰退落。 """
+            print(tmp)
+            for smallStar in shayaoList:
+                if (smallStar == "火星" or smallStar == "铃星" or smallStar == "擎羊" or smallStar == "陀罗"):
+                    tmp = """见四煞，倘父母宫有鸾喜，则可能兄弟各胞，且不同心。"""
+                    print(tmp)
+        if (len(fuyaoList) > 0):
+            for smallStar in fuyaoList:
+                if (smallStar == "左辅" or smallStar == "右弼"):
+                    tmp = """见左辅右弼，五人以上。"""
+                    print(tmp)
         if(len(star) == 4):
             if(star == "紫微破军"):
                 tmp = """紫破，三人，不和或不得力，亦主各胞。 """
                 print(tmp)
                 print("\n")
             elif(star == "紫微天府"):
-                tmp = """紫府，三人，兄弟各有主见。"""
+                tmp = """紫府，兄弟姐妹三人。兄弟各有主见。"""
                 print(tmp)
                 print("\n")
             elif(star == "紫微七杀"):
@@ -3690,7 +3698,7 @@ def GongChu2nd(star, dizhi, fuyaoList,zuoyaoList,
                 print(tmp)
                 print("\n")
             elif(star == "紫微天相"):
-                tmp = """紫相，三四人。加煞忌二人。感情易忽生破裂。"""
+                tmp = """紫相，三至四人。加煞忌二人。感情易忽生破裂。"""
                 print(tmp)
                 print("\n")
             elif(star == "紫微贪狼"):
@@ -3700,7 +3708,7 @@ def GongChu2nd(star, dizhi, fuyaoList,zuoyaoList,
     elif(star[:2] == "天机"):
         
         print("\n")
-        tmp = """主兄弟姐妹寡少。唯见辅佐吉曜则可增添数日。 
+        tmp = """主兄弟姐妹寡少。
 人庙二人，会吉有显贵者。 
 巨门或天梁或太阴会照，二人。 
 天机落陷守兄弟宫，兄弟不和，各有主见。见天梁天刑，有争讼。 
@@ -3709,6 +3717,10 @@ def GongChu2nd(star, dizhi, fuyaoList,zuoyaoList,
 """
         print(tmp)
         print("\n")
+        if (len(fuyaoList) > 0 or len(zuoyaoList) > 0):
+            tmp = """唯见辅佐吉曜则可增添数目。 """
+            print(tmp)
+                    
         if(len(star) == 4):
             if(star == "天机巨门"):
                 tmp = """机巨，二人，有口舌纷争。 """
@@ -3724,16 +3736,23 @@ def GongChu2nd(star, dizhi, fuyaoList,zuoyaoList,
                 print("\n")
             
     elif(star[:2] == "太阳"):
-        
-        print("\n")
         tmp = """入庙兄弟姐妹三人以上，见吉会，兄弟主贵。 
 落陷及夜生人，兄弟多争不和，乖达无靠。倘见四煞、空劫、天刑，主兄弟有
 刑克，或自身因兄弟而受意外的伤害。 
 凡太阳落陷失地居兄弟宫，宜异居，不同居一地者更佳。 
- 
- 以上见左辅右弼、文昌文曲、天魁天钺者亦可增加兄弟姐妹数目。"""
+ """
         print(tmp)
         print("\n")
+        if (len(fuyaoList) > 0):
+            for smallStar in fuyaoList:
+                if (smallStar == "左辅" or smallStar == "右弼" or smallStar == "天魁" or smallStar == "天钺"):
+                    tmp = """以上见左辅右弼、文昌文曲、天魁天钺者亦可增加兄弟姐妹数目。"""
+                    print(tmp)
+        if (len(zuoyaoList) > 0):
+            for smallStar in zuoyaoList:
+                if (smallStar == "文昌" or smallStar == "文曲"):
+                    tmp = """以上见左辅右弼、文昌文曲、天魁天钺者亦可增加兄弟姐妹数目。"""
+                    print(tmp)
         if(len(star) == 4):
             if(star == "太阳太阴"):
                 tmp = """阳阴，五人以上。一般主感情融洽。"""
@@ -3748,16 +3767,22 @@ def GongChu2nd(star, dizhi, fuyaoList,zuoyaoList,
                 print(tmp)
                 print("\n")
     elif(star[:2] == "武曲"):
-        
-        print("\n")
         tmp = """武曲入兄弟宫，主不和睦，无助力。入庙二人。见吉得一人力。 
-落陷一人。 
-逢昌曲，三人以上。见辅弼，亦主三人以上。 
-见七杀破军，仅一人，见煞孤身，或各胞。 
+落陷一人。 见煞孤身，或各胞。 
 四煞空劫会，孤身。 
 """
         print(tmp)
         print("\n")
+        if (len(fuyaoList) > 0):
+            for smallStar in fuyaoList:
+                if (smallStar == "左辅" or smallStar == "右弼"):
+                    tmp = """见辅弼，亦主三人以上。"""
+                    print(tmp)
+        if (len(zuoyaoList) > 0):
+            for smallStar in zuoyaoList:
+                if (smallStar == "文昌" or smallStar == "文曲"):
+                    tmp = """逢昌曲，三人以上。"""
+                    print(tmp)
         if(len(star) == 4):
             if(star == "武曲天府"):
                 tmp = """武府，三人。见煞忌有克，或二人欠和。"""
@@ -3776,17 +3801,27 @@ def GongChu2nd(star, dizhi, fuyaoList,zuoyaoList,
                 print(tmp)
                 print("\n")
     elif(star[:2] == "天同"):
-        
-        print("\n")
         tmp = """入庙，四人以上。和睦但少助力。 
 落陷，二人。兄弟软弱。 
- 逢四煞、天府、空劫，兄弟姐妹刑克不和，以异居为宜。 
-独居辰戌，有异胞兄弟，见辅弼昌曲，共六人以上。同巨，兄弟姐妹三人，有
-口舌是非。 
- 
 """
         print(tmp)
         print("\n")
+        if (len(star) == 2) and (dizhi == "辰" or dizhi == "戌"):
+            tmp = """独居辰戌，有异胞兄弟，"""
+            print(tmp)
+            if (len(fuyaoList) > 0):
+                for smallStar in fuyaoList:
+                    if (smallStar == "左辅" or smallStar == "右弼"):
+                        tmp = """见辅弼昌曲，共六人以上。"""
+                        print(tmp)
+            if (len(zuoyaoList) > 0):
+                for smallStar in zuoyaoList:
+                    if (smallStar == "文昌" or smallStar == "文曲"):
+                        tmp = """见辅弼昌曲，共六人以上。"""
+                        print(tmp)
+        if (len(shayaoList) > 0):
+            tmp = """逢四煞、天府、空劫，兄弟姐妹刑克不和，以异居为宜。"""
+            print(tmp)
         if(len(star) == 4):
             if(star == "天同天梁"):
                 tmp = """同梁，三人，有暗争。若在寅申宮遇煞，则多无兄弟。"""
@@ -3796,12 +3831,17 @@ def GongChu2nd(star, dizhi, fuyaoList,zuoyaoList,
                 tmp = """同月，五人。 """
                 print(tmp)
                 print("\n")
+            elif(star == "天同巨门"):
+                tmp = """同巨，兄弟姐妹三人，有口舌是非。 """
+                print(tmp)
+                print("\n")
+            elif(star == "天同天府"):
+                tmp = """逢四煞、天府、空劫，兄弟姐妹刑克不和，以异居为宜。 """
+                print(tmp)
+                print("\n")
     elif(star[:2] == "廉贞"):
-        
-        print("\n")
         tmp = """入庙，兄弟姐妹二人。一般主感情和洽。 
-会左辅、右弼、文昌、文曲、天魁、天钺、天贵、天府等吉曜，兄弟姐妹五人
-留三人。 
+会左辅、右弼、文昌、文曲、天魁、天钺、天贵、天府等吉曜，兄弟姐妹五人留三人。 
 遇四煞空劫天刑，主刑克、灾病或不和。常见分居离居。 
 """
         print(tmp)
@@ -3828,29 +3868,40 @@ def GongChu2nd(star, dizhi, fuyaoList,zuoyaoList,
                 print(tmp)
                 print("\n")
     elif(star[:2] == "天府"):
-        
-        print("\n")
         tmp = """守兄弟宫主兄弟众多，五人以上。 
-见昌曲、魁钺、辅弼，兄弟多才能，且彼此有助力。 
 与武曲、廉贞会，有伤克。再见文曲则主兄弟姐妹多虚伪。见四煞、化忌、天
 刑、空劫、大耗者，刑克不和，或兄弟姐妹仅得一二人，需自身予以资助。 
 见七杀破军会合，招怨。再见四煞、空劫，兄弟只余二人。"""
         print(tmp)
         print("\n")
+        if (len(fuyaoList) > 0):
+            for smallStar in fuyaoList:
+                if (smallStar == "左辅" or smallStar == "右弼" or smallStar == "天魁" or smallStar == "天钺"):
+                    tmp = """见昌曲、魁钺、辅弼，兄弟多才能，且彼此有助力。"""
+                    print(tmp)
+        if (len(zuoyaoList) > 0):
+            for smallStar in zuoyaoList:
+                if (smallStar == "文昌" or smallStar == "文曲"):
+                    tmp = """见昌曲、魁钺、辅弼，兄弟多才能，且彼此有助力。"""
+                    print(tmp)
     elif(star[:2] == "太阴"):
-        
-        print("\n")
         tmp = """入庙兄弟姐妹五人。 
 陷地三人不同心。天机同度二人。 
-遇化禄、化权、化科者，兄弟富贵多才。 
-遇四煞、空劫、刑克不和，或分居不和。 
-太阴化忌，会合天梁，见煞，主兄弟有阴谋。 
 太阴与天同相对，兄弟中以女居长者为佳。否则易见刑克。"""
         print(tmp)
         print("\n")
+        if (len(shayaoList) > 0):
+            tmp = """遇四煞、空劫、刑克不和，或分居不和。"""
+            print(tmp)
+        if (len(huayaoList) > 0):
+            for smallStar in huayaoList:
+                if (smallStar == "太阴化忌"):
+                    tmp = """太阴化忌，会合天梁，见煞，主兄弟有阴谋。 """
+                    print(tmp)
+                else:
+                    tmp = """遇化禄、化权、化科者，兄弟富贵多才。  """
+                    print(tmp)
     elif(star[:2] == "贪狼"):
-        
-        print("\n")
         tmp = """会辅弼、魁钺，兄弟和睦，互相帮助。能保持生活水平上的来往，主有兄弟三人。 
 会照武曲者孤单，或异母所生。 
 贪狼落陷守兄弟宫，亦主有异母兄弟。 
@@ -3867,16 +3918,16 @@ def GongChu2nd(star, dizhi, fuyaoList,zuoyaoList,
                 print(tmp)
                 print("\n")
     elif(star[:2] == "巨门"):
-        
-        print("\n")
         tmp = """入庙二人。 
-与太阳同度，兄弟姐妹三人。再与辅弼、魁钺、昌曲、恩光、天贵、天福等曜
-会合，并有化禄、化权、化科同踞者，主兄弟皆有创业之才。
 凡巨门守兄弟宫，与空劫、大耗会照者，多受兄弟之剥削。与四煞、阴煞、孤
-辰、寡宿会照者，刑克是非纷争。化忌者，亦主是非口舌，且主灾病破耗。见天月、
-刑耗则主因兄弟灾病耗而破财。"""
+辰、寡宿会照者，刑克是非纷争。见天月、刑耗则主因兄弟灾病耗而破财。"""
         print(tmp)
         print("\n")
+        if (len(huayaoList) > 0):
+            for smallStar in huayaoList:
+                if (smallStar == "巨门化忌"):
+                    tmp = """化忌者，亦主是非口舌，且主灾病破耗。 """
+                    print(tmp)
         if(len(star) == 4):
             if(star == "巨门天机"):
                 tmp = """巨机，二人，各有机心，东西离散。 """
@@ -3886,32 +3937,62 @@ def GongChu2nd(star, dizhi, fuyaoList,zuoyaoList,
                 tmp = """巨同，有结拜兄弟，但凶终隙末。 """
                 print(tmp)
                 print("\n")
+            elif(star == "巨门太阳"):
+                tmp = """与太阳同度，兄弟姐妹三人。再与辅弼、魁钺、昌曲、恩光、天贵、天福等曜
+会合，并有化禄、化权、化科同踞者，主兄弟皆有创业之才。 """
+                print(tmp)
+                print("\n")
     elif(star[:2] == "天相"):
         
         print("\n")
-        tmp = """入庙有辅弼会照，五人以上。紫微同度，三人以上，且兄弟好强好高。 
-武曲或廉贞同度者，兄弟姐妹二人，而意见不合。 
-见化禄、化权、化科及禄存者，兄弟秀发，有财有势。 
+        tmp = """入庙有辅弼会照，五人以上。  
 武曲破军拱照，有辅弼者，兄弟虽多，但有刑伤，或异母兄弟，及有年龄相差
 甚多之小兄弟，约为八年或十二年以上。"""
         print(tmp)
         print("\n")
+        if(len(star) == 4):
+            if(star == "天相紫微"):
+                tmp = """紫微同度，三人以上，且兄弟好强好高。 """
+                print(tmp)
+                print("\n")
+            elif(star == "天相武曲"):
+                tmp = """武曲或廉贞同度者，兄弟姐妹二人，而意见不合。 """
+                print(tmp)
+                print("\n")
+            elif(star == "天相廉贞"):
+                tmp = """武曲或廉贞同度者，兄弟姐妹二人，而意见不合。 """
+                print(tmp)
+                print("\n")
+        if (len(huayaoList) > 0):
+            for smallStar in huayaoList:
+                if (smallStar == "天相化禄" or smallStar == "天相化权" or smallStar == "天相化科"):
+                    tmp = """见化禄、化权、化科及禄存者，兄弟秀发，有财有势。 """
+                    print(tmp)
+        if (len(zuoyaoList) > 0):
+            for smallStar in zuoyaoList:
+                if (smallStar == "禄存"):
+                    tmp = """见化禄、化权、化科及禄存者，兄弟秀发，有财有势。 """
+                    print(tmp)
     elif(star[:2] == "天梁"):
-        
-        print("\n")
         tmp = """入庙临兄弟宫，会辅弼、魁钺者，五人以上，且兄弟姐妹和气。若入庙而无辅
 弼，主有异母兄弟。 
-凡人庙见魁钺而无辅弼，同胞兄弟仅二三人，有暗争，倾挤，或且分离。 
-与太阳同度于卯西宫者，主争夺家产，或互生误会妒忌。 
 与天机同度者或会照者，兄弟二人。 
 与太阴，红鸾、天喜会照， 多姊妹。 
-与天同同度者， 同居一地者二人，分居或居异地三人。 
 与四煞、天刑、空劫等星会合，拦刑克不和，分离纠纷。"""
         print(tmp)
         print("\n")
+        if (len(fuyaoList) > 0):
+            for smallStar in fuyaoList:
+                if (smallStar == "天魁" or smallStar == "天钺"):
+                    tmp = """凡人庙见魁钺而无辅弼，同胞兄弟仅二三人，有暗争，倾挤，或且分离。 """
+                    print(tmp)
+        if (star == "天梁太阳") and (dizhi == "卯" or dizhi == "酉"):
+            tmp = """与太阳同度于卯西宫者，主争夺家产，或互生误会妒忌。 """
+            print(tmp)
+        if (star == "天梁天同"):
+            tmp = """与天同同度者， 同居一地者二人，分居或居异地三人。  """
+            print(tmp)
     elif(star[:2] == "七杀"):
-        
-        print("\n")
         tmp = """人庙且会照禄、权、科辅弼者。兄弟众多唯有刑克。 
 七杀守兄弟宫，而会照辅弼，或命宮会照辅弼者，亦主兄弟多而有刑克分离。
 感情和洽， 怔少实际助力。  
@@ -3931,8 +4012,6 @@ def GongChu2nd(star, dizhi, fuyaoList,zuoyaoList,
             print(tmp)
             print("\n")
     elif(star[:2] == "破军"):
-        
-        print("\n")
         tmp = """主兄弟分居或刑克。 
 凡破军守兄弟宫，自身常居长，或虽排行二三，但在各种情形下，虽非兄长而
 形同兄长，如兄长逝世或继出；或长姊出嫁，或自身继出等。否則亦自身肩负长于
@@ -4074,14 +4153,10 @@ def GongChu3rd(star, dizhi, fuyaoList,zuoyaoList,
                 print(tmp)
                 print("\n")
     elif(star[:2] == "天机"):
-        
-        print("\n")
         tmp = """配偶易适应环境。感情则起变化，不宜见左右火铃。其变化常由任性仁而来，
-见吉限吉年，可以复合。唯配偶多才，男命宜小配，须相差三岁以上。妻子性情机
-巧，持家有道。 
+见吉限吉年，可以复合。唯配偶多才，男命宜小配，须相差三岁以上。妻子性情机巧，持家有道。 
 亲家易不和，遇煞忌尤的确。 
-常有无正式仪式的婚礼。或主配偶好投机。天机独坐丑未，居丑宫昔主配偶外出离别：竹末宫者，夫易受诱惑。婚前有波
-折。 
+常有无正式仪式的婚礼。或主配偶好投机。天机独坐丑未，居丑宫昔主配偶外出离别：竹末宫者，夫易受诱惑。婚前有波折。 
 """
         print(tmp)
         print("\n")
@@ -4107,16 +4182,17 @@ def GongChu3rd(star, dizhi, fuyaoList,zuoyaoList,
                 print("\n")
             
     elif(star[:2] == "太阳"):
-        
-        print("\n")
         tmp = """太阳会羊陀，初热终冷，非正式结婚为宜； 
-女主配贵显。落陷平常，但亦热情。 
-日陷化忌，妻多疑，夫多灾病。或易离。 
+女主配贵显。落陷平常，但亦热情。  
 遇吉，男主因妻得贵。日破遇则非礼成婚。 
-  
 """
         print(tmp)
         print("\n")
+        if (len(huayaoList) > 0):
+            for smallStar in huayaoList:
+                if (smallStar == "太阳化忌"):
+                    tmp = """日陷化忌，妻多疑，夫多灾病。或易离。"""
+                    print(tmp)
         if(dizhi == "子" or dizhi == "午"):
             tmp = """子午宫，宜迟婚，男上得妻坚贞，持家有道；夫年长，淡泊自甘。纵有感情波折
 终能化解。六吉多见，又见煞及桃花，则夫妻各有外遇。 """
@@ -4146,20 +4222,40 @@ def GongChu3rd(star, dizhi, fuyaoList,zuoyaoList,
             print(tmp)
             print("\n")
     elif(star[:2] == "武曲"):
-        
-        print("\n")
-        tmp = """主孤克。遇杀破，三度姻缘。入庙者迟婚可免。 
-见昌曲化科，妻贤能。禄马遇，因妻得财。遇凶曜，则因妻破财。 
-最嫌化忌，常因贫而离异，不因感情。 
-会天姚，凭媒约者必克离，主恋爱成亲。 
- 女命会煞破忌，再婚或偏房，或丈夫不能人道。若令武曲化忌见煞破，亦主有名
-无实。 
-武火遇，半生孤独。见化忌尤甚。 
-武曲化禄，夫为财经界人才；化权则主政要之荣；化科为名利双收之士，见煞
-减色。 
+        tmp = """主孤克。入庙者迟婚可免。遇凶曜，则因妻破财。 
+ 会天姚，凭媒约者必克离，主恋爱成亲。 
+ 女命会煞破忌，再婚或偏房，或丈夫不能人道。
 """
         print(tmp)
         print("\n")
+        if (len(zuoyaoList) > 0):
+            for smallStar in zuoyaoList:
+                if (smallStar == "文昌" or smallStar == "文曲"):
+                    tmp = """见昌曲化科，妻贤能。 """
+                    print(tmp)
+                elif (smallStar == "禄存" or smallStar == "天马"):
+                    tmp = """禄马遇，因妻得财。 """
+                    print(tmp)
+        if (len(shayaoList) > 0):
+            for smallStar in shayaoList:
+                if (smallStar == "火星"):
+                    tmp = """武火遇，半生孤独。见化忌尤甚。 """
+                    print(tmp)
+                
+        if (len(huayaoList) > 0):
+            for smallStar in huayaoList:
+                if (smallStar == "武曲化忌"):
+                    tmp = """最嫌化忌，常因贫而离异，不因感情。女命若令武曲化忌见煞破，亦主有名无实。 """
+                    print(tmp)
+                elif (smallStar == "武曲化科"):
+                    tmp = """男命见昌曲化科，妻贤能。女命，配偶化科为名利双收之士，见煞减色。 """
+                    print(tmp)
+                elif (smallStar == "武曲化禄"):
+                    tmp = """武曲化禄，夫为财经界人才。"""
+                    print(tmp)
+                elif (smallStar == "武曲化权"):
+                    tmp = """化权则主政要之荣；"""
+                    print(tmp)
         if(len(star) == 4):
             if(star == "武曲天府"):
                 tmp = """武府，女孩子命易为有家室者追求。"""
@@ -4172,12 +4268,12 @@ def GongChu3rd(star, dizhi, fuyaoList,zuoyaoList,
                 print("\n")
             elif(star == "武曲七杀"):
                 tmp = """武杀，见左右文曲天钺，易生畸恋，或橫刀夺爱。见陀罗，婚前波折。女命主
-夺夫权。若煞忌重者，配偶有意外伤心事。"""
+夺夫权。若煞忌重者，配偶有意外伤心事。遇杀破，三度姻缘。"""
                 print(tmp)
                 print("\n")
             elif(star == "武曲破军"):
                 tmp = """武破，畏妻。女命则主会少离多。化忌或见空劫火铃左右，出墙红杏，或主丈
-夫患不治之症，或不能人道。主再婚，或继室。"""
+夫患不治之症，或不能人道。主再婚，或继室。遇杀破，三度姻缘。"""
                 print(tmp)
                 print("\n")
     elif(star[:2] == "天同"):
@@ -4186,8 +4282,7 @@ def GongChu3rd(star, dizhi, fuyaoList,zuoyaoList,
         tmp = """见六吉，配偶秀丽、潇洒。 
 女命夫妻宮天同会四煞化忌，有名无实，宜偏房，或离婚再嫁，或配偶病灾。
 会巨门，口舌连连。 
-男女皆须迟婚，已订婚者解约再娶为宜，或不举正式婚礼，否则三妻之命，小
-配可免。会四煞亦有名无实。 
+男女皆须迟婚，已订婚者解约再娶为宜，或不举正式婚礼，否则三妻之命，小配可免。会四煞亦有名无实。 
 """
         print(tmp)
         print("\n")
@@ -4224,13 +4319,10 @@ def GongChu3rd(star, dizhi, fuyaoList,zuoyaoList,
                 print("\n")
             
     elif(star[:2] == "廉贞"):
-        
-        print("\n")
         tmp = """主刑克，见煞三克。 
-男命妻美，见忌，离而再娶美妻。见桃花，妻有外遇。见杀破，不和。见四煞
+男命妻美，见忌，离而再娶美妻。见桃花，妻有外遇。见四煞
 刑克，因男女感事而有词讼。 
  女命会煞，徒有虚名。以不举行婚礼为宜。 
- 见天府，配偶性刚免克。 
 """
         print(tmp)
         print("\n")
@@ -4248,7 +4340,7 @@ def GongChu3rd(star, dizhi, fuyaoList,zuoyaoList,
             elif(star == "廉贞七杀"):
                 tmp = """
  廉杀，妻媚而淫，见吉则可免祸。见辅弼六煞化忌，婚姻不利。女命主夫善理
-财。 
+财。 见杀破，不和。
  """
                 print(tmp)
                 print("\n")
@@ -4259,8 +4351,8 @@ def GongChu3rd(star, dizhi, fuyaoList,zuoyaoList,
                 print("\n")
             elif(star == "廉贞天府"):
                 tmp = """
- 廉府，有感情纠纷，配偶善交际。见辅弼化忌六煞，主外遇。性刚无克。见桃
-花，恋有妇之夫。 """
+ 廉府，有感情纠纷，配偶善交际。见辅弼化忌六煞，主外遇。见桃
+花，恋有妇之夫。见天府，配偶性刚免克。  """
                 print(tmp)
                 print("\n")
             elif(star == "廉贞贪狼"):
@@ -4298,16 +4390,28 @@ def GongChu3rd(star, dizhi, fuyaoList,zuoyaoList,
                 print(tmp)
                 print("\n")
     elif(star[:2] == "太阴"):
-        
-        print("\n")
-        tmp = """男主妻年少聪美。加昌曲极美。亦主妻多。女主夫长且早嫁。
-见四煞空劫忌不克，但主生离。 
+        tmp = """男主妻年少聪美。亦主妻多。女主夫长且早嫁。
 见吉，主配偶富裕。 
-女命夫妻宫太阴见三化，外则擅应酬，内则能怀柔丈夫。最嫌化忌，主配偶离
-乡背井，或与自身六亲无缘。 
 """
         print(tmp)
         print("\n")
+        if (len(zuoyaoList) > 0):
+            for smallStar in zuoyaoList:
+                if (smallStar == "文昌" or smallStar == "文曲"):
+                    tmp = """加昌曲妻子极美。 """
+                    print(tmp)
+        if (len(shayaoList) > 0):
+            tmp = """见四煞空劫忌不克，但主生离。  """
+            print(tmp)    
+        if (len(huayaoList) > 0):
+            for smallStar in huayaoList:
+                if (smallStar == "太阴化忌"):
+                    tmp = """女命最嫌化忌，主配偶离乡背井，或与自身六亲无缘。  """
+                    print(tmp)
+                else:
+                    tmp = """女命夫妻宫太阴见三化，外则擅应酬，内则能怀柔丈夫。 """
+                    print(tmp)
+                
         if (dizhi == "辰" or dizhi == "戌") and len(star) == 2:
             tmp = """独从辰戌，婚前波折，婚后美满。 """
             print(tmp)
@@ -4318,24 +4422,41 @@ def GongChu3rd(star, dizhi, fuyaoList,zuoyaoList,
             print("\n")
         elif (dizhi == "巳" or dizhi == "亥") and len(star) == 2:
             tmp = """独坐巳亥，宜男不宜女，亥优于巳。见煞忌辅弼，夫长十年以上可偕老，否则
-波折。于亥宫入庙，得贤妻，见魁钺，因妻得财。女命则不宜见左辅右弼同坐，主
-夫有外宠，且貌不如己。"""
+波折。于亥宫入庙，得贤妻，见魁钺，因妻得财。"""
             print(tmp)
             print("\n")
+            if (len(fuyaoList) > 0):
+                for smallStar in fuyaoList:
+                    if (smallStar == "左辅" or smallStar == "右弼"):
+                        tmp = """女命则不宜见左辅右弼同坐，主夫有外宠，且貌不如己。 """
+                        print(tmp)
     elif(star[:2] == "贪狼"):
-        
-        print("\n")
-        tmp = """见煞，男主三度新郎。入庙，迟娶免克。 
-女命，夫宜年长婚迟。加四煞，主生离。 
-女命夫宫贪狼，夫有外遇免刑。 
+        tmp = """入庙，迟娶免克。 
+女命，夫宜年长婚迟。
+女命夫妻宫贪狼，夫有外遇免刑。 
 男女皆主配偶有才艺。 
-见火铃，配偶发足迹变泰。化忌，少桃花。见空曜， 
- 配偶沉实。
-见擎羊，配偶有特殊技能。 
-见陀罗，主配偶貌寝。 
+见空曜， 配偶沉实。
 """
         print(tmp)
         print("\n")
+        if (len(shayaoList) > 0):
+            tmp = """见煞，男主三度新郎。"""
+            print(tmp)
+            for smallStar in shayaoList:
+                if (smallStar == "擎羊"):
+                    tmp = """见擎羊，配偶有特殊技能。女命加四煞，主生离。  """
+                    print(tmp)
+                elif (smallStar == "陀罗"):
+                    tmp = """见陀罗，主配偶貌寝。女命加四煞，主生离。  """
+                    print(tmp)
+                elif (smallStar == "火星" or smallStar == "铃星"):
+                    tmp = """见火铃，配偶发足迹变泰。女命加四煞，主生离。  """
+                    print(tmp)
+        if (len(huayaoList) > 0):
+            for smallStar in huayaoList:
+                if (smallStar == "贪狼化忌"):
+                    tmp = """化忌，少桃花。 """
+                    print(tmp)
         if(len(star) == 2):
             tmp = """贪狼独坐，见桃花，亦主妻为风尘中人出身。 """
             print(tmp)
@@ -4358,17 +4479,29 @@ def GongChu3rd(star, dizhi, fuyaoList,zuoyaoList,
             print(tmp)
             print("\n")
     elif(star[:2] == "巨门"):
-        
-        print("\n")
         tmp = """主常有口舌，妻以长配为宜。 
-见羊陀火铃，男克二妻或生离。又见天刑，女主三嫁，以不举行婚礼为宜。 
-化忌，多无谓争吵。
  女宜夫长，否则移情别恋。 
 男女婚前皆易与已婚者恋爱。 
 初恋者必不能结合。 
 """
         print(tmp)
         print("\n")
+        if (len(shayaoList) > 0):
+            for smallStar in shayaoList:
+                if (smallStar == "擎羊"):
+                    tmp = """见羊陀火铃，男克二妻或生离。又见天刑，女主三嫁，以不举行婚礼为宜。  """
+                    print(tmp)
+                elif (smallStar == "陀罗"):
+                    tmp = """见羊陀火铃，男克二妻或生离。又见天刑，女主三嫁，以不举行婚礼为宜。  """
+                    print(tmp)
+                elif (smallStar == "火星" or smallStar == "铃星"):
+                    tmp = """见羊陀火铃，男克二妻或生离。又见天刑，女主三嫁，以不举行婚礼为宜。 """
+                    print(tmp)
+        if (len(huayaoList) > 0):
+            for smallStar in huayaoList:
+                if (smallStar == "巨门化忌"):
+                    tmp = """巨门化忌，多无谓争吵。 """
+                    print(tmp)
         if (dizhi == "辰" or dizhi == "戌") and len(star) == 2:
             tmp = """独坐辰戌，见化忌，配偶幼年坎坷，且多惹是非。见左右，感情不佳。无煞，
 配偶任劳。 """
@@ -4401,15 +4534,22 @@ def GongChu3rd(star, dizhi, fuyaoList,zuoyaoList,
                 print(tmp)
                 print("\n")
     elif(star[:2] == "天相"):
-        
-        print("\n")
         tmp = """主配偶为人谋而不为家室谋。或聚少离多。 
 男妇皆主亲上加亲，或旧情复燃，或旧相识重逢而恋爱。 
 女宜长配，会吉，夫体贴温柔。 
-见化禄及禄存同宫，得妻财。 
  """
         print(tmp)
         print("\n")
+        if (len(huayaoList) > 0):
+            for smallStar in huayaoList:
+                if (smallStar == "天相化禄"):
+                    tmp = """见化禄及禄存同宫，得妻财。  """
+                    print(tmp)
+        if (len(zuoyaoList) > 0):
+            for smallStar in zuoyaoList:
+                if (smallStar == "禄存"):
+                    tmp = """见化禄及禄存同宫，得妻财。  """
+                    print(tmp)
         if(len(star) == 4):
             if(star == "天相紫微"):
                 tmp = """紫微同躔，妻志高，宜迟婚。"""
@@ -4439,15 +4579,15 @@ def GongChu3rd(star, dizhi, fuyaoList,zuoyaoList,
             print(tmp)
             print("\n")
     elif(star[:2] == "天梁"):
-        
-        print("\n")
         tmp = """男命，主妻子美容，但宜比自己年长三岁以上。 
-月梁同拱照，妻美丽生离，但仍藕断丝连。 
-男女命皆主婚前婚后有变化，或曾解除婚约，或遇尊长阻力，或因灾乱及环境关系致延误婚期，唯有情人终成眷属。婚后遇挫折，或祸乱，或误会而分离。不遇
-煞则复合。 
+太阴天梁同拱照，妻美丽生离，但仍藕断丝连。 
+男女命皆主婚前婚后有变化，或曾解除婚约，或遇尊长阻力，或因灾乱及环境关系致延误婚期，唯有情人终成眷属。婚后遇挫折，或祸乱，或误会而分离。
 """
         print(tmp)
         print("\n")
+        if (len(shayaoList) == 0):
+            tmp = """不遇煞则复合。 """
+            print(tmp)
         if (dizhi == "丑" or dizhi == "未") and len(star) == 2:
             tmp = """独坐丑未，妻年长，有名士风。女命，夫清贵。丑宫优于未宫。"""
             print(tmp)
@@ -4470,40 +4610,53 @@ def GongChu3rd(star, dizhi, fuyaoList,zuoyaoList,
                 print("\n")
             
     elif(star[:2] == "七杀"):
-        
-        print("\n")
-        tmp = """主异族通婚。见太阳、巨门于命宫者尤为的确。 
-见四煞空劫，克三。无煞，孤而不克。 
+        tmp = """主异族通婚。见太阳、巨门于命宫者尤为的确。 见四煞空劫，克夫。
 男女皆主表面和谐，内心不满，有卞青无缘。女命，主夫有成，且责任心重。 
  """
         print(tmp)
         print("\n")
+        if (len(shayaoList) == 0):
+            tmp = """无煞，孤而不克。  """
+            print(tmp)
         if (dizhi == "寅" or dizhi == "申") and len(star) == 2:
             tmp = """独坐寅申，必迟婚。婚前花多眼乱。男宜妻小五岁以上，女宜夫长五至十年。
 配偶忙碌。 """
             print(tmp)
             print("\n")
         elif (dizhi == "辰" or dizhi == "戌") and len(star) == 2:
-            tmp = """独坐辰戌，为罗网，主不和谐。婚前有波折。见煞同，配偶有专门技能，尤宜
-医药。会煞曜则宜军警。见廉贞化忌尤的。"""
+            tmp = """独坐辰戌，为罗网，主不和谐。婚前有波折。会煞曜则宜军警。见廉贞化忌尤的。"""
             print(tmp)
             print("\n")
+            if (len(shayaoList) > 0):
+                tmp = """见煞同，配偶有专门技能，尤宜医药。  """
+                print(tmp)
         elif (dizhi == "子" or dizhi == "午") and len(star) == 2:
-            tmp = """独坐子午，婚前多波折，婚后和谐。见六煞，异地而居，或夫妻志趣不投。  """
+            tmp = """独坐子午，婚前多波折，婚后和谐。  """
             print(tmp)
             print("\n")
+            if (len(shayaoList) > 0):
+                tmp = """见六煞，异地而居，或夫妻志趣不投。  """
+                print(tmp)
     elif (star[:2] == "破军"):
         tmp = """男妇俱克，或生离另婚，宜迟婚。 
 波折大，聚少离多，兴趣不合。 
 易因意气用事而离，限吉可复合。 
-不过六吉，欠情趣。 
-或主妻较夫年长，或同居试婚，或婚后即分居异地。武曲同度主生离，再化忌
-星，配偶有灾病；廉贞同度，则防有外遇；紫微同度，宜长配；若见禄存化禄，反
-主家庭不利。 
+不过六吉，欠情趣。 或主妻较夫年长，或同居试婚，或婚后即分居异地。武曲同度主生离，再化忌
+星，配偶有灾病；廉贞同度，则防有外遇；紫微同度，宜长配；
 妻御夫，夫亦主有支配欲。 
 """
         print(tmp)
         print("\n")
+        if (len(huayaoList) > 0):
+            for smallStar in huayaoList:
+                if (smallStar == "七杀化禄"):
+                    tmp = """若见禄存化禄，反主家庭不利。 """
+                    print(tmp)
+        if (len(zuoyaoList) > 0):
+            for smallStar in zuoyaoList:
+                if (smallStar == "禄存"):
+                    tmp = """若见禄存化禄，反主家庭不利。 """
+                    print(tmp)
         if(len(star) == 2):
             if (dizhi == '子' or dizhi == '午'):
                 tmp = """独坐子午，配偶性刚。妻夺夫权。化权，年龄相若。"""
@@ -4614,55 +4767,78 @@ def GongChu4th(star, dizhi, fuyaoList,zuoyaoList,
     if(star[:2] == "紫微"):
         tmp = """得子女必性刚，志高气傲，但多秀发。 
 会化禄、化权、化科必得佳儿。但以迟得为宜，主贵禄。 
-会左辅右弼，五胎以上。同时会照四煞，则有刑克，虚花少实。或主子女因气
-高而横破。 
+会左辅右弼，五胎以上。同时会照四煞，则有刑克，虚花少实。或主子女因气高而横破。 
 会文昌文曲或化科、子女聪明；会辅弼，子女忠厚。 
-会天马，子女远离；会禄存或化禄，子女能富；擎羊同度，子女破相或父子不和，
-或不能享子女福。会魁钺，子女贵。 
+会天马，子女远离；会禄存或化禄，子女能富；会魁钺，子女贵。 
 """
         print(tmp)
         print("\n")
+        if (len(shayaoList) > 0):
+            for smallStar in shayaoList:
+                if (smallStar == "擎羊"):
+                    tmp = """擎羊同度，子女破相或父子不和，或不能享子女福。"""
+                    print(tmp)
         if(len(star) == 2):
-            tmp = """紫微独坐，庙旺男三女二；加吉星如辅弼昌曲五人；加羊陀火铃空劫，二人，
-或偏室或继室生子，或招祀子。空劫尤主庶出。 """
+            tmp = """紫微独坐，庙旺男三女二； """
             print(tmp)
+            if (len(shayaoList) > 0):
+                tmp = """加羊陀火铃空劫，二人，或偏室或继室生子，或招祀子。空劫尤主庶出。"""
+                print(tmp)
+            if (len(smallStarList) > 0):
+                for smallStar in smallStarList:
+                    if (smallStar == "左辅" or smallStar == "右弼" or smallStar == "文昌" or smallStar == "文曲"):
+                        tmp = """加吉星如辅弼昌曲五人；"""
+                        print(tmp)
         if(len(star) == 4):
             if(star == "紫微天府"):
-                tmp = """紫府，三人，加左右昌曲五人，且贵。再见破军刑忌，见多得少。"""
+                tmp = """紫府，三人，再见破军刑忌，见多得少。"""
                 print(tmp)
                 print("\n")
+                if (len(smallStarList) > 0):
+                    for smallStar in smallStarList:
+                        if (smallStar == "左辅" or smallStar == "右弼" or smallStar == "文昌" or smallStar == "文曲"):
+                            tmp = """加左右昌曲五人，且贵。"""
+                            print(tmp)
             elif(star == "紫微贪狼"):
                 tmp = """紫贪，二人迟得，贪化忌防子倾家。加四煞刑忌则一二人，且主难产或小产。"""
                 print(tmp)
                 print("\n")
             elif(star == "紫微天相"):
-                tmp = """紫相，二人，加昌曲辅弼三四人且贵。父子感情始 
-吉终凶，或煞忌并见，一则有志高倔强倾家之子。见吉，子 
-得父荫。"""
+                tmp = """紫相，二人，父子感情始吉终凶，或煞忌并见，一则有志高倔强倾家之子。见吉，子 得父荫。"""
                 print(tmp)
                 print("\n")
+                if (len(smallStarList) > 0):
+                    for smallStar in smallStarList:
+                        if (smallStar == "左辅" or smallStar == "右弼" or smallStar == "文昌" or smallStar == "文曲"):
+                            tmp = """加昌曲辅弼三四人且贵。"""
+                            print(tmp)
             elif(star == "紫微七杀"):
                 tmp = """紫杀，一二人，加吉三入。遇煞，子强横，加吉则可成大器，但亦先劳后逸。"""
                 print(tmp)
                 print("\n")
             elif(star == "紫微破军"):
-                tmp = """紫破，二人，加吉三人。见禄则子女有成，见四煞刑忌空劫，多克害，．主堕胎
+                tmp = """紫破，二人，加吉三人，见四煞刑忌空劫，多克害，主堕胎
 小产。或长子有克，破相，或不足月生。"""
                 print(tmp)
                 print("\n")
-            
+                if (len(smallStarList) > 0):
+                    for smallStar in smallStarList:
+                        if (smallStar == "禄存" or smallStar == "紫微化禄"):
+                            tmp = """见禄则子女有成"""
+                            print(tmp)
     elif(star[:2] == "天机"):
         tmp = """天机入庙，主子女聪明机巧。天机入子女宫，主子女少。或迟生。 
-天机落陷，最忌见煞忌空劫，无子，有亦不和，或子女品格不佳，多心机巧诈，
-或克害。 
+天机落陷，最忌见煞忌空劫，无子，有亦不和，或子女品格不佳，多心机巧诈，或克害。 
 天机守子女宫，亦主庶出，或女招外子。  
  """
         print(tmp)
         print("\n")
         if(len(star) == 2):
-            tmp = """天机独坐，庙旺二人。或庶出多。唯独坐酉宫，会红鸾天喜及大耗等，主女多
-子少。 """
+            tmp = """天机独坐，庙旺二人。或庶出多。 """
             print(tmp)
+            if (dizhi == "酉"):
+                tmp = """唯独坐酉宫，会红鸾天喜及大耗等，主女多子少。"""
+                print(tmp)
         if(dizhi == '寅'):
             tmp = """若坐寅宫会照天梁，则子三人。 """
             print(tmp)
@@ -4680,43 +4856,83 @@ def GongChu4th(star, dizhi, fuyaoList,zuoyaoList,
                 print(tmp)
                 print("\n")
     elif(star[:2] == "太阳"):
-        tmp = """太阳坐子女宫，巨门会照而太阳庙旺，子聪明能创业，见禄杈科或昌曲，有语
-言天才或辩才。 
+        tmp = """太阳坐子女宫，巨门会照而太阳庙旺，子聪明能创业， 
 太阳落陷于子女宫，不利长子。 
-太阳化忌，子多病痛。见四煞空劫刑，子多克，只一子送终。  
+见四煞空劫刑，子多克，只一子送终。  
  """
         print(tmp)
         print("\n")
-        if(len(star) == 2):
+        if (len(huayaoList) > 0):
+            for smallStar in huayaoList:
+                if (smallStar == "太阳化忌"):
+                    tmp = """太阳化忌，子多病痛。"""
+                    print(tmp)
+                else:
+                    tmp = """见禄杈科或昌曲，有语言天才或辩才。"""
+                    print(tmp)
+        if (len(zuoyaoList) > 0):
+            for smallStar in zuoyaoList:
+                if (smallStar == "文昌" or smallStar == "文曲"):
+                    tmp = """见禄杈科或昌曲，有语言天才或辩才。"""
+                    print(tmp)
+        if(len(star) == 2) and (len(shayaoList) == 0):
             tmp = """太阳独坐，庙旺无煞，八胎以上。 """
             print(tmp)
         if(len(star) == 4):
             if(star == "太阳太阴"):
-                tmp = """阳阴，四五人。见煞余二三人。 """
+                tmp = """阳阴，四五人。 """
                 print(tmp)
                 print("\n")
+                if (len(shayaoList) > 0):
+                    tmp = """见煞余二三人。"""
+                    print(tmp)
             elif(star == "太阳巨门"):
-                tmp = """阳巨，三人。季子难养。化禄子贵显，巨门化禄而 
- 太阳化权，反宜小心教养，否则子女气高横破。"""
+                tmp = """阳巨，三人。季子难养"""
                 print(tmp)
                 print("\n")
+                if (len(huayaoList) > 0):
+                    for smallStar in huayaoList:
+                        if (smallStar == "太阳化禄"):
+                            tmp = """太阳化禄子贵显"""
+                            print(tmp)
+                        elif (smallStar == "巨门化禄"):
+                            tmp = """巨门化禄而太阳化权，反宜小心教养，否则子女气高横破。"""
+                            print(tmp)
             elif(star == "太阳天梁"):
-                tmp = """阳梁，卯宫三人，酉宫二人。见煞主小产流产。子女易与父母分离。见昌禄，
+                tmp = """阳梁，卯宫三人，酉宫二人。子女易与父母分离。见昌禄，
 子女学业均佳，且原则性极强。"""
                 print(tmp)
                 print("\n")
+                if (len(shayaoList) == 0):
+                    tmp = """见煞主小产流产。"""
+                    print(tmp)
     elif(star[:2] == "武曲"):
-        
-        print("\n")
         tmp = """武曲入子女宫，宜继室偏房产子，结发者多虚花。子女刚耿，但落落寡合。 
-武曲主克，见七杀及化忌，主流产。
-凡子女宫会照武曲七杀，均主开刀生子。 
+武曲主克，凡子女宫会照武曲七杀，均主开刀生子。 
 武曲入子女宫亦主外子得力，或贤婿佳。 
 四煞刑忌空劫迭见，绝嗣。 
-武曲见辅弼昌曲、独坐，子聪明，仍主子少。若避鸾喜耗等，有女。 
  """
         print(tmp)
         print("\n")
+        if (len(huayaoList) > 0):
+            for smallStar in huayaoList:
+                if (smallStar == "武曲化忌"):
+                    tmp = """见七杀及化忌，主流产。"""
+                    print(tmp)
+        if (len(fuyaoList) > 0):
+            for smallStar in fuyaoList:
+                if (smallStar == "左辅" or smallStar == "右弼"):
+                    tmp = """武曲见辅弼昌曲、独坐，子聪明，仍主子少。若避鸾喜耗等，有女。"""
+                    print(tmp)
+        if (len(zuoyaoList) > 0):
+            for smallStar in zuoyaoList:
+                if (smallStar == "文昌" or smallStar == "文曲"):
+                    tmp = """武曲见辅弼昌曲、独坐，子聪明，仍主子少。若避鸾喜耗等，有女。"""
+                    print(tmp)
+        if (len(star) == 2):
+            tmp = """武曲见辅弼昌曲、独坐，子聪明，仍主子少。若避鸾喜耗等，有女。"""
+            print(tmp)
+                    
         if(len(star) == 4):
             if(star == "武曲天府"):
                 tmp = """武府，二人。加煞一人。  """
@@ -4731,48 +4947,72 @@ def GongChu4th(star, dizhi, fuyaoList,zuoyaoList,
                 print(tmp)
                 print("\n")
             elif(star == "武曲七杀"):
-                tmp = """武杀，无子。有一子亦防伤残，见煞尤的。宜继室或偏室生子。见吉得子极迟。"""
+                tmp = """武杀，无子。有一子亦防伤残，见煞尤的。宜继室或偏室生子。见吉得子极迟。见七杀及化忌，主流产。"""
                 print(tmp)
                 print("\n")
             elif(star == "武曲破军"):
-                tmp = """武破，主有破相之子。亦主刑，刑至一二人。加昌曲辅弼则三人。"""
+                tmp = """武破，主有破相之子。亦主刑，刑至一二人。"""
                 print(tmp)
                 print("\n")
+                if (len(fuyaoList) > 0):
+                    for smallStar in fuyaoList:
+                        if (smallStar == "左辅" or smallStar == "右弼"):
+                            tmp = """加昌曲辅弼则三人。"""
+                            print(tmp)
+                if (len(zuoyaoList) > 0):
+                    for smallStar in zuoyaoList:
+                        if (smallStar == "文昌" or smallStar == "文曲"):
+                            tmp = """加昌曲辅弼则三人。"""
+                            print(tmp)
     elif(star[:2] == "天同"):
         tmp = """凡天同坐子女宫，首胎以见女为佳。  
 天同坐子女宫，会天机，有子女二人，但迟得。 
-天同化禄，不宜见煞，否则子女破家。此盖由于耽于享乐之故。 
 天同落陷见煞，一子送终。 
  """
         print(tmp)
         print("\n")
+        if (len(huayaoList) > 0):
+            for smallStar in huayaoList:
+                if (smallStar == "天同化禄"):
+                    tmp = """天同化禄，不宜见煞，否则子女破家。此盖由于耽于享乐之故。 """
+                    print(tmp)
         if(len(star) == 2):
             tmp = """天同坐巳独守，对宫天梁，得子可能弱智，唯以见煞忌始是。天同主子女软弱怕事，且易安于逸乐，少斗志，难经风浪。为人情绪化。"""
             print(tmp)
         if(len(star) == 4):
             if(star == "天同巨门"):
-                tmp = """同巨，三人，加四煞、空劫则一人。再加化忌、大耗，得子多病多灾，破耗钱
-财后仍见刑克。宜祀出或分居。  """
+                tmp = """同巨，三人 """
                 print(tmp)
                 print("\n")
+                if (len(shayaoList) > 0):
+                    tmp = """加四煞、空劫则一人。再加化忌、大耗，得子多病多灾，破耗钱
+财后仍见刑克。宜祀出或分居。  """
+                    print(tmp)
             elif(star == "天同天梁"):
                 tmp = """同梁，以先女后子为顺，子女二人。 """
                 print(tmp)
                 print("\n")
             elif(star == "天同太阴"):
                 tmp = """同阴，子宫五人，女多子少为贵；午宫二人，亦宜 
-先见女，有天刑同，破相或远离。见煞，以祀子为宜。且主子女内向。"""
+先见女，有天刑同，破相或远离。"""
                 print(tmp)
                 print("\n")
+                if (len(shayaoList) > 0):
+                    tmp = """见煞，以祀子为宜。且主子女内向。  """
+                    print(tmp)
     elif(star[:2] == "廉贞"):
-        tmp = """最喜与天府相会，主得贵子三人。
-廉贞化忌，子女多灾病，或破相。 
+        tmp = """最喜与天府相会，主得贵子三人。 
 廉贞会杀破狼，子女有刑伤。 
 会四煞空劫刑，主招祀子。 
 廉贞落陷守子女宫，见吉亦有刑伤。 
 """
         print(tmp)
         print("\n")
+        if (len(huayaoList) > 0):
+            for smallStar in huayaoList:
+                if (smallStar == "廉贞化忌"):
+                    tmp = """廉贞化忌，子女多灾病，或破相。 """
+                    print(tmp)
         if(len(star) == 2):
             tmp = """廉贞独坐庙旺，一子独秀，平宫一人，苗而不秀，陷宫主克。 """
             print(tmp)
@@ -4783,9 +5023,14 @@ def GongChu4th(star, dizhi, fuyaoList,zuoyaoList,
                 print(tmp)
                 print("\n")
             elif(star == "廉贞贪狼"):
-                tmp = """廉贪，子少，加吉亦仅二人。见昌曲，聪明敏感。见煞体弱。 """
+                tmp = """廉贪，子少，加吉亦仅二人。见煞体弱。 """
                 print(tmp)
                 print("\n")
+                if (len(zuoyaoList) > 0):
+                    for smallStar in zuoyaoList:
+                        if (smallStar == "文昌" or smallStar == "文曲"):
+                            tmp = """见昌曲，聪明敏感。"""
+                            print(tmp)
             elif(star == "廉贞天相"):
                 tmp = """廉相，二人。子女忠厚，可以守成。"""
                 print(tmp)
@@ -4806,8 +5051,11 @@ def GongChu4th(star, dizhi, fuyaoList,zuoyaoList,
         print(tmp)
         print("\n")
         if(len(star) == 2):
-            tmp = """天府独坐庙旺，五人见四煞空劫，三人。会左右，五胎以上。 """
+            tmp = """天府独坐庙旺，五人，会左右，五胎以上。 """
             print(tmp)
+            if (len(shayaoList) > 0):
+                tmp = """见四煞空劫，三人。  """
+                print(tmp)
         if(len(star) == 4):
             if(star == "天府廉贞"):
                 tmp = """天府廉贞文曲同度，必有刑克。   """
@@ -4816,15 +5064,32 @@ def GongChu4th(star, dizhi, fuyaoList,zuoyaoList,
     elif(star[:2] == "太阴"):
         tmp = """庙旺，一般情形下主子女富有。先女后子为宜，否则女多子少。 
 落陷得子软弱，或刑克。先招祀子为宜。 
-加四煞空劫子少，会鸾喜则多女。 
-太阴落陷，则先知外予为宜，则亲子可免
+ 太阴落陷，则先知外予为宜，则亲子可免
 刑克。 """
         print(tmp)
         print("\n")
-        if(len(star) == 2):
-            tmp = """太阴庙旺独坐，女三男二，加煞劫二人，见昌曲聪明，见辅弼能克家守成，见
-魁钺则子女贵。见禄存化禄主子女富。 """
+        if (len(shayaoList) > 0):
+            tmp = """加四煞空劫子少，会鸾喜则多女。  """
             print(tmp)
+        if(len(star) == 2):
+            tmp = """太阴庙旺独坐，女三男二，见禄存化禄主子女富。 """
+            print(tmp)
+            if (len(shayaoList) > 0):
+                tmp = """加煞劫二人  """
+                print(tmp)
+                if (len(zuoyaoList) > 0):
+                    for smallStar in zuoyaoList:
+                        if (smallStar == "文昌" or smallStar == "文曲"):
+                            tmp = """见昌曲聪明"""
+                            print(tmp)
+                if (len(fuyaoList) > 0):
+                    for smallStar in fuyaoList:
+                        if (smallStar == "左辅" or smallStar == "右弼"):
+                            tmp = """见辅弼能克家守成"""
+                            print(tmp)
+                        elif (smallStar == "天魁" or smallStar == "天钺"):
+                            tmp = """见魁钺则子女贵。"""
+                            print(tmp)
         if(len(star) == 4):
             if(star == "太阴天机"):
                 tmp = """天机同度，加吉，亦仅二子女送终。   """
@@ -4833,44 +5098,85 @@ def GongChu4th(star, dizhi, fuyaoList,zuoyaoList,
     elif(star[:2] == "贪狼"):
         tmp = """贪狼会咸池天姚，主女多子少。亦主先女后子，否则偏房继室生子。 
 贪狼入庙，会左右、魁钺、天贵，子女二三人，且有贵显者。 
- 贪狼化禄居子女宫，见吉，子善经营，见煞主子女骄奢。 
-贪狼化忌，子女坎坷，或浪费。有理想而不能成就。 
-贪狼见四煞，主小产或难产。见天开刑，子女难养。 
+见天开刑，子女难养。 
 """
         print(tmp)
         print("\n")
+        if (len(shayaoList) > 0):
+            for smallStar in shayaoList:
+                if (smallStar == "火星" or smallStar == "铃星" or smallStar == "擎羊" or smallStar == "陀罗"):
+                    tmp = """贪狼见四煞，主小产或难产。"""
+                    print(tmp)
+        if (len(huayaoList) > 0):
+            for smallStar in huayaoList:
+                if (smallStar == "贪狼化忌"):
+                    tmp = """贪狼化忌，子女坎坷，或浪费。有理想而不能成就。 """
+                    print(tmp)
+                elif (smallStar == "贪狼化禄"):
+                    tmp = """贪狼化禄居子女宫，见吉，子善经营，见煞主子女骄奢。  """
+                    print(tmp)
         if(len(star) == 4):
             if(star == "贪狼紫微"):
                 tmp = """紫贪同度，子必迟得。  """
                 print(tmp)
                 print("\n")
             elif(star == "贪狼武曲"):
-                tmp = """武贪同度，见左右昌曲三人。否则迟得二人。  """
+                tmp = """武贪同度，迟得二人。  """
                 print(tmp)
                 print("\n")
+                if (len(zuoyaoList) > 0):
+                    for smallStar in zuoyaoList:
+                        if (smallStar == "文昌" or smallStar == "文曲"):
+                            tmp = """见左右昌曲三人。"""
+                            print(tmp)
+                if (len(fuyaoList) > 0):
+                    for smallStar in fuyaoList:
+                        if (smallStar == "左辅" or smallStar == "右弼"):
+                            tmp = """见左右昌曲三人。"""
+                            print(tmp)
             elif(star == "贪狼廉贞"):
                 tmp = """廉贪，子女二人。子则一入。"""
                 print(tmp)
                 print("\n")
     elif(star[:2] == "巨门"):
         tmp = """巨门守子女宫，以迟得子为宜，否则长了难养。巨门主孤独，必见太阳始解其
-暗；得化禄、化权、化科或禄存，方有祥和之气。 
-天同辅弼同寓，则主亲子得力，庶子送终。 
+暗；
 """
         print(tmp)
         print("\n")
+        if (len(zuoyaoList) > 0):
+            for smallStar in zuoyaoList:
+                if (smallStar == "禄存"):
+                    tmp = """得化禄、化权、化科或禄存，方有祥和之气。 """
+                    print(tmp)
+        if (len(huayaoList) > 0):
+            for smallStar in huayaoList:
+                if (smallStar == "巨门化禄" or (smallStar == "巨门化权" or (smallStar == "巨门化科"):
+                    tmp = """得化禄、化权、化科或禄存，方有祥和之气。 """
+                    print(tmp)
+        if (len(fuyaoList) > 0):
+            for smallStar in fuyaoList:
+                if (smallStar == "左辅" or smallStar == "右弼"):
+                    tmp = """天同辅弼同寓，则主亲子得力，庶子送终。 """
+                    print(tmp)
         if(len(star) == 2):
             tmp = """巨门独坐，入庙二人，落陷或见煞一人，再见空劫绝嗣，唯可有女。  """
             print(tmp)
         if(len(star) == 4):
             if(star == "巨门太阳"):
-                tmp = """巨阳，见左右、魁钺、三化者，主三人以上，且必属佳儿，能富能贵，聪明多
-才。见诸吉拥护，可为外交人才。见昌曲同度，宜法律界。"""
+                tmp = """巨阳，见诸吉拥护，可为外交人才。见昌曲同度，宜法律界。"""
                 print(tmp)
                 print("\n")
+                if (len(huayaoList) > 0):
+                    for smallStar in huayaoList:
+                        if (smallStar == "巨门化禄" or (smallStar == "巨门化权" or (smallStar == "巨门化科"):
+                            tmp = """见左右、魁钺、三化者，主三人以上，且必属佳儿，能富能贵，聪明多才。 """
+                            print(tmp)
+                if (len(fuyaoList) > 0):
+                    tmp = """见左右、魁钺、三化者，主三人以上，且必属佳儿，能富能贵，聪明多才。 """
+                    print(tmp)
+                            
     elif(star[:2] == "天相"):
-        
-        print("\n")
         tmp = """天相坐子女宫，见武曲破军拱照，主刑克，迟得为宜。首胎有小产流产，或有
 损伤。以先生女为佳。否则主偏房继室生子。 
 天相与四煞会，又见辅弼，前三胎有损，须偏房继室生子，唯第一胎仍小产。 
@@ -4883,20 +5189,33 @@ def GongChu4th(star, dizhi, fuyaoList,zuoyaoList,
         tmp = """天梁入庙居子女宫，会照辅弼、三吉化曜、天巫、恩光、昌曲、魁钺者，主子
 女聪明多才，做事有原则，且耿直心慈，能富能贵。 
 庙旺二人。陷地一人。 
-天梁在子女宫，多主先得女。 
-遇辅弼昌曲天同，子庶出者一人。 
+天梁在子女宫，多主先得女。  
 天梁守子女宫不宜见煞，主早子克。再见空劫删总，有绝嗣之虞。化忌会照，
 子女多灾病。 
 """
         print(tmp)
         print("\n")
+        if (len(zuoyaoList) > 0):
+            for smallStar in zuoyaoList:
+                if (smallStar == "文昌" or smallStar == "文曲"):
+                    tmp = """遇辅弼昌曲天同，子庶出者一人。 """
+                    print(tmp)
+        if (len(fuyaoList) > 0):
+            for smallStar in fuyaoList:
+                if (smallStar == "左辅" or smallStar == "右弼"):
+                    tmp = """遇辅弼昌曲天同，子庶出者一人。 """
+                    print(tmp)
+        if (star == "天梁天同"):
+            tmp = """遇辅弼昌曲天同，子庶出者一人。 """
+            print(tmp)
+                    
         if(len(star) == 4):
             if(star == "天梁天机"):
                 tmp = """梁机，必小产，主二人。"""
                 print(tmp)
                 print("\n")
     elif(star[:2] == "七杀"):
-        tmp = """七杀守子女宫，入庙或乘胜旺，见辅弼、魁钺、昌曲，皆主子女可以兴家。 
+        tmp = """七杀守子女宫，入庙或乘胜旺， 
 七杀守子女宫主孤。以先女后子为宜。 
 庙旺会吉，一子。平间宫纵得一子亦主强横破家。陷地见煞者绝嗣。 
 七杀守子女宫，父子感情有代沟。 
@@ -4904,6 +5223,15 @@ def GongChu4th(star, dizhi, fuyaoList,zuoyaoList,
 空劫会照，钱财因子女而破耗。"""
         print(tmp)
         print("\n")
+        if (len(zuoyaoList) > 0):
+            for smallStar in zuoyaoList:
+                if (smallStar == "文昌" or smallStar == "文曲"):
+                    tmp = """见辅弼、魁钺、昌曲，皆主子女可以兴家。"""
+                    print(tmp)
+        if (len(fuyaoList) > 0):
+            tmp = """见辅弼、魁钺、昌曲，皆主子女可以兴家。 """
+            print(tmp)
+                    
         if(len(star) == 2):
             tmp = """七杀独守，见四煞空劫刑忌者无子，亦不宜招外子，主不得力。   """
             print(tmp)
@@ -4913,16 +5241,22 @@ def GongChu4th(star, dizhi, fuyaoList,zuoyaoList,
                 print(tmp)
                 print("\n")
     elif(star[:2] == "破军"):
-        
-        print("\n")
         tmp = """破军入子女宫，酋胎刑伤，多流产小产。须偏房继室生子，先立祀子亦可。 
 入庙三子，性刚强。见禄则为兴家之才。 
-破军守子女宫见四煞，一子，且不得力。 
- 见羊陀相生有制则有一子，难依靠。 
- 见火铃空劫，一子，难依靠。 
 破军入子女宫，长子易破相，或口吃，或不足月生。"""
         print(tmp)
         print("\n")
+        if (len(shayaoList) > 0):
+            for smallStar in shayaoList:
+                if (smallStar == "火星" or smallStar == "铃星"):
+                    tmp = """破军守子女宫见四煞，一子，且不得力。见火铃空劫，一子，难依靠。 """
+                    print(tmp)
+                elif (smallStar == "陀罗" or smallStar == "擎羊"):
+                    tmp = """破军守子女宫见四煞，一子，且不得力。见羊陀相生有制则有一子，难依靠。 """
+                    print(tmp)
+                elif (smallStar == "地空" or smallStar == "地劫"):
+                    tmp = """见辅弼、魁钺、昌曲，皆主子女可以兴家。见火铃空劫，一子，难依靠。"""
+                    print(tmp)
     print("-------------------------------------")
     for smallStar in smallStarList:
         if(smallStar == '禄存'):
@@ -5025,10 +5359,15 @@ def GongChu5th(star, dizhi, fuyaoList,zuoyaoList,
                 print(tmp)
                 print("\n")
             elif(star == "紫微贪狼"):
-                tmp = """紫贪，宜以本身才艺求财，虽经历艰难一不会煞忌亦能富裕。见火、铃，因有
-紫微克制火铃的力量。反不如[火贪格]、[铃贪格]之能骤发。 """
+                tmp = """紫贪，宜以本身才艺求财，虽经历艰难，会煞忌亦能富裕。 """
                 print(tmp)
                 print("\n")
+                if (len(shayaoList) > 0):
+                    for smallStar in shayaoList:
+                        if (smallStar == "火星" or smallStar == "铃星"):
+                            tmp = """见火、铃，因有
+紫微克制火铃的力量。反不如[火贪格]、[铃贪格]之能骤发。 """
+                            print(tmp)
             elif(star == "紫微天相"):
                 tmp = """紫相，如命宫为七杀之[雄宿乾元格]，不会恶煞，主财帛丰盈。若会恶曜，则财帛有成亦何破。须详每大限财帛宫而定。唯一生必有意外财源，因之骤发。 """
                 print(tmp)
@@ -5044,8 +5383,7 @@ def GongChu5th(star, dizhi, fuyaoList,zuoyaoList,
                 print("\n")
     elif(star[:2] == "天机"):
         tmp = """天机守财帛宫，主有财难储。即使入庙，亦不过财来财去，无缺乏之虞。 
-人庙，与禄存、天马、化禄会合：定富裕，财帛丰足。若天机化禄，则主由旧
-业中生出新业得财。单见禄存，小人觊觎。 
+人庙，与禄存、天马、化禄会合：定富裕，财帛丰足。 
 若落陷地，则财源多变化周折，且主人劳心劳力。再会煞曜，历艰辛而后得财。
 唯最嫌与巨门会照，必须费尽唇舌，劳神思虑然后得财，尤主凡事引起竞争。 
 与天梁会照，则主人巧计谋财，临事多机变。 
@@ -5053,6 +5391,16 @@ def GongChu5th(star, dizhi, fuyaoList,zuoyaoList,
 """
         print(tmp)
         print("\n")
+        if (len(huayaoList) > 0):
+            for smallStar in huayaoList:
+                if (smallStar == "天机化禄"):
+                    tmp = """若天机化禄，则主由旧业中生出新业得财。"""
+                    print(tmp)
+        if (len(zuoyaoList) > 0):
+            for smallStar in zuoyaoList:
+                if (smallStar == "禄存"):
+                    tmp = """单见禄存，小人觊觎。"""
+                    print(tmp)
         if(len(star) == 4):
             if(star == "天机太阴"):
                 tmp = """机月，主白手兴家，或不藉父母余荫而自身创业得财。 """
@@ -5088,14 +5436,14 @@ def GongChu5th(star, dizhi, fuyaoList,zuoyaoList,
 主得人提携带挈以发财。更见化禄、禄存及诸吉，发财万金。  """
                 print(tmp)
                 print("\n")
-            elif(star == "太阳巨门"):
-                tmp = """日巨，太阳巨门于寅中二酉同度，寅宫主庸旺之乡，自比申寓为佳，所以在寅
+            elif(star == "太阳巨门") and (dizhi == "寅" or dizhi == "申"):
+                tmp = """日巨，太阳巨门于寅申二宫同度，寅宫主庸旺之乡，自比申寓为佳，所以在寅
 宫者可以白手创业，虽劳碌竞争、中年以后仍有所获，叉主得人信任．在已成基业
 下扩充发展；或主受外国人提拔推崇。 """
                 print(tmp)
                 print("\n")
-            elif(star == "太阳天梁"):
-                tmp = """阳梁．在卯寓太阳为旭日初升，可以消解天梁的孤忌性质，所以虽征财帛方面
+            elif(star == "太阳天梁") and (dizhi == "卯" or dizhi == "酉"):
+                tmp = """阳梁．在卯酉太阳为旭日初升，可以消解天梁的孤忌性质，所以虽征财帛方面
 常起争夺，但仍主可以丰足，唯必须加诸吉曜者始是。在酉宫太阳西沉，争夺更重。
 见擎羊、天刑，主因财生讼。 """
                 print(tmp)
@@ -5103,18 +5451,28 @@ def GongChu5th(star, dizhi, fuyaoList,zuoyaoList,
     elif(star[:2] == "武曲"):
         tmp = """武曲为司财帛的主星，人庙主财帛丰足，而且得财顺利。亦主其人有管理财帛
 的能力。 
-如入庙更会化禄、禄存、天马者，更为巨富之格。唯如无其他吉曜会合，仅得
-禄能上能下，则主在劳心劳力中进财，或在竞争中得利。 
+如入庙更会化禄、禄存、天马者，更为巨富之格。唯如无其他吉曜会合，仅得禄能上能下，则主在劳心劳力中进财，或在竞争中得利。 
 武曲不喜会照破军。虽会吉曜，亦主财来财去，有波浪起伏，唯终能积蓄；如
 凶星恶曜并会，则终无积财之望。 
 武曲亦喜紫微、天相同时会照，主财源丰足。 
- 见[火贪]或[铃贪]。会照，主有意外之财。但若同宫，则反不如拱会。 
-最不喜擎羊、陀罗同度，主因财生灾。 
-见化忌，主周转困难。武曲自身化忌，周转更加困难。 
-见地空地劫，主人忙碌求财，且少成多破。 
+ 见[火贪]或[铃贪]会照，主有意外之财。但若同宫，则反不如拱会。 
+见其他主星化忌，主周转困难。
 """
         print(tmp)
         print("\n")
+        if (len(huayaoList) > 0):
+            for smallStar in huayaoList:
+                if (smallStar == "武曲化忌"):
+                    tmp = """武曲自身化忌，周转更加困难。 """
+                    print(tmp)
+        if (len(shayaoList) > 0):
+            for smallStar in shayaoList:
+                if (smallStar == "擎羊" or smallStar == "陀罗"):
+                    tmp = """最不喜擎羊、陀罗同度，主因财生灾。"""
+                    print(tmp)
+                elif (smallStar == "地空" or smallStar == "地劫"):
+                    tmp = """见地空地劫，主人忙碌求财，且少成多破。 """
+                    print(tmp)
         if(len(star) == 4):
             if(star == "武曲天府"):
                 tmp = """武府，武曲财星，遇天府财库，若会照左辅右弼、禄存化禄，更为大富者的格
@@ -5134,11 +5492,21 @@ def GongChu5th(star, dizhi, fuyaoList,zuoyaoList,
                 print(tmp)
                 print("\n")
             elif(star == "武曲七杀"):
-                tmp = """武杀，如不见煞曜，主白手兴家生财。见禄或禄存，主富足，晚年亦有积蓄。
-但有煞曜，则主横得横失，暴发暴破。倘煞曜、天刑会照，主因财生灾。擎羊同度，
-或火星同度，则主有争夺、劫掠、偷盗等情，更不宜见阴煞或劫煞。  """
+                tmp = """武杀，见禄或禄存，主富足，晚年亦有积蓄。
+倘煞曜、天刑会照，主因财生灾。 """
                 print(tmp)
                 print("\n")
+                if (len(shayaoList) > 0):
+                    tmp = """但有煞曜，则主横得横失，暴发暴破。"""
+                    print(tmp)
+                    for smallStar in shayaoList:
+                        if (smallStar == "擎羊" or smallStar == "火星"):
+                            tmp = """擎羊同度，或火星同度，则主有争夺、劫掠、偷盗等情，更不宜见阴煞或劫煞。 """
+                            print(tmp)
+                        
+                if (len(shayaoList) == 0):
+                    tmp = """武杀，如不见煞曜，主白手兴家生财。"""
+                    print(tmp)
             elif(star == "武曲破军"):
                 tmp = """武破，主财来财去，虽有禄存、化禄、天马，亦难积储。但天府坐夫妻宫，故
 夫妻宫会合众吉者，可藉配偶之力储财。 """
@@ -5156,12 +5524,14 @@ def GongChu5th(star, dizhi, fuyaoList,zuoyaoList,
         if(len(star) == 4):
             if(star == "天同太阴"):
                 tmp = """同月，二曜同宫，见吉曜，虽白手兴家，但主有意外收获。这种意外收获跟[火
-贪]、[铃贪]不同，少竞争或暴发的意味，仪主有意料之外的机遇。倘见煞曜，则难
-枞聚。 
+贪]、[铃贪]不同，少竞争或暴发的意味，仪主有意料之外的机遇。 
 同月，一般情形下主财源得失无定，难积聚。若见吉星祥曜，则仍主丰裕，唯
 仍主以专门知识技能致富，尤宜医药、法律。  """
                 print(tmp)
                 print("\n")
+                if (len(shayaoList) == 0):
+                    tmp = """倘见煞曜，则难枞聚。"""
+                    print(tmp)
             elif(star == "天同天梁"):
                 tmp = """同梁，二曜会太阴天机，若再见诸吉，仍主一生衣禄丰足。见擎羊、天刑，则有纷争，唯从事医药、法律或社会工作者可免。见煞，亦主技艺谋生；无煞，可担
 任公职。"""
@@ -5170,17 +5540,15 @@ def GongChu5th(star, dizhi, fuyaoList,zuoyaoList,
     elif(star[:2] == "廉贞"):
         tmp = """廉贞入庙居财帛宫，主竞争中生财。 
 若入陷宫，则主于艰难中得财，且财来财去聚散无常。 
-廉贞化忌，主因财而致生烦个商，或因感情困扰而破财。煞曜刑忌并见，主因
-财生灾。遇空劫、大耗，防洛贼窥劫。 
-最坏的结构是化忌、羊陀、空劫并遇，主因官非而破财。 
- 
-廉破，喜见命寓武曲贪狼会合本宫的火星铃星，则可横发，但恐发后横破。若
-见禄存、化禄诸吉，亦丰劳碌 
-中生财，但亦有破败。但若见煞忌会合，则主人破败多端，一生穷困。再见大耗，
-贫无立锥。 
+煞曜刑忌并见，主因财生灾。遇空劫、大耗，防洛贼窥劫。 
 """
         print(tmp)
         print("\n")
+        if (len(huayaoList) > 0):
+            for smallStar in huayaoList:
+                if (smallStar == "廉贞化忌"):
+                    tmp = """廉贞化忌，主因财而致生烦个商，或因感情困扰而破财。最坏的结构是化忌、羊陀、空劫并遇，主因官非而破财。 """
+                    print(tmp)
         if(len(star) == 4):
             if(star == "廉贞天相"):
                 tmp = """廉相，得紫微天孵、武曲会照，最宜从商，见吉曜，主富足。逢擎羊或火星同宫，
@@ -5203,9 +5571,13 @@ def GongChu5th(star, dizhi, fuyaoList,zuoyaoList,
 者宜作屠宰，则可免凶危，见吉会且主富裕。唯一生不宜投机，亦须防因色破败。"""
                 print(tmp)
                 print("\n")
+            elif(star == "廉贞破军"):
+                tmp = """廉破，喜见命寓武曲贪狼会合本宫的火星铃星，则可横发，但恐发后横破。若
+见禄存、化禄诸吉，亦丰劳碌中生财，但亦有破败。但若见煞忌会合，则主人破败多端，一生穷困。再见大耗，
+贫无立锥。 """
+                print(tmp)
+                print("\n")
     elif(star[:2] == "天府"):
-        
-        print("\n")
         tmp = """天府为财库，守财帛宫，主人可积聚，故多一一生富足。 
 若会左辅右弼、禄存、化禄．更见紫微、武曲者，则为巨富之格。 
  天府居于平闲宫度，先经艰难而后得财。 
@@ -5214,8 +5586,6 @@ def GongChu5th(star, dizhi, fuyaoList,zuoyaoList,
         print(tmp)
         print("\n")
     elif(star[:2] == "太阴"):
-        
-        print("\n")
         tmp = """太阴主富，守财帛宫主富裕。 
 入庙宫，与禄存、化禄、右辅右弼、文昌文曲相会，为富奢之命。 
 入陷宫，有吉曜，富足；无吉曜，则须凭运限而定其财帛聚散。 
@@ -5223,25 +5593,32 @@ def GongChu5th(star, dizhi, fuyaoList,zuoyaoList,
         print(tmp)
         print("\n")
     elif(star[:2] == "贪狼"):
-        tmp = """贪狼守财帛宫，最喜火星或铃星同度，则主横发，或主得意外之财。 
-亦喜禄存、化禄会照，则主财禄丰盈。 
+        tmp = """贪狼守财帛宫，喜禄存、化禄会照，则主财禄丰盈。 
 若见煞再与成池、大耗、天刑、天姚、红鸾、天喜、阴煞同会，则主因争倾家。廉贞会照，亦不宜见煞，否则亦主因色而财帛耗损。 
 会照四煞，再见空劫，主因赌博投机破家；或主染不良嗜好而至破败。"""
         print(tmp)
         print("\n")
+        if (len(shayaoList) > 0):
+            for smallStar in shayaoList:
+                if (smallStar == "火星" or smallStar == "铃星"):
+                    tmp = """贪狼守财帛宫，最喜火星或铃星同度，则主横发，或主得意外之财。 """
+                    print(tmp)
     elif(star[:2] == "巨门"):
-        tmp = """巨门守财帛宫，主劳心费力，于竞争中生财。或主凭脑力思虑，或主凭口才，
-费尽唇舌而得财。 
+        tmp = """巨门守财帛宫，主劳心费力，于竞争中生财。或主凭脑力思虑，或主凭口才，费尽唇舌而得财。 
 巨门在财帛宫，亦主人白手兴家。 
 巨门会照吉曜，或化禄、化权、禄存同度，皆主富裕。唯防发财后气焰带逼人，
 或理想太高，不量力而为，则主受人排挤。 
 凡巨门守财帛宫，皆伏破败之机。若自身能收敛锋芒，不生破败，则须教育子
 女，防子女败散。 
- 若见擎羊、陀罗同度，主因财纠纷涉讼。 
  倘火铃、空劫、大耗同度或会照，则主有盗劫或火灾。  
 """
         print(tmp)
         print("\n")
+        if (len(shayaoList) > 0):
+            for smallStar in shayaoList:
+                if (smallStar == "擎羊" or smallStar == "陀罗"):
+                    tmp = """若见擎羊、陀罗同度，主因财纠纷涉讼。 """
+                    print(tmp)
         if(len(star) == 4):
             if(star == "巨门天同"):
                 tmp = """天同巨门，白手创业，且宜忌专业谋生。"""
@@ -5256,31 +5633,33 @@ def GongChu5th(star, dizhi, fuyaoList,zuoyaoList,
 主财帛丰足，即居陷地，亦主人可以白手成家。一一如与廉贞同度，则可从商，主
 长袖善舞；若与武曲同度，则以专门技艺兴家。 
 与紫微会照，一生必有突然发达的机遇。 
-与武啦破军拱会，则主得失无定，或主破尽祖业而后生财。 
+与武曲破军拱会，则主得失无定，或主破尽祖业而后生财。 
 武曲破军会拱、再逢空劫 、大耗，则家无恒产，或甚至透支，若与煞曜、天删
 会台，则因财纷争，煞重且见化忌者，可至倾家，否则即为牢狱之灾。无苦星解救，
 且或有性命之虞。 
 无武曲破军拱照而见煞曜刑忌，刚主忽得忽失，败难积聚。"""
         print(tmp)
         print("\n")
+        
     elif(star[:2] == "天梁"):
-        tmp = """天梁最喜与太阴会合。若入腼会照太阴、化禄、禄存，则主可以发达。再见天
+        tmp = """天梁最喜与太阴会合。若入庙会照太阴、化禄、禄存，则主可以发达。再见天
 巫。则主可以承受遗产，或垂手而得现成财帛。 
 与化禄、化极、化科会合，古人称为[白屋公卿]，即富裕而无功名。 
-天梁不喜居子宫为财帛宫，主虽有财源，但耗散亦多。 
 若与化忌照会，主因财而生是非口舌纷争。或因败而敢精神痛苦。 
 若与羊陀、火铃、空助、人耗、天刑会照，则主有破产的危险，或因财而生巨
 变，或涉讼而招巨大破损。得吉星祥曜，如魁钺、昌曲、辅弼化解，则主历尽艰辛
-而后得财，但仍不免有支绌之苦。 
-生财。 
+而后得财，但仍不免有支绌之苦。  
 武曲破军会拱，再逢空劫 t 大耗，则家无恒产，或甚至透支。若与煞曜、天删
 会合，则因财纷争，煞重且见化忌者，可至倾家，否则即为牢狱之灾。无吉星解救，目减致有性命之虞。 
 无武曲破军拱照而见煞曜刑忌，则主忽得忽失，财难积聚。"""
         print(tmp)
         print("\n")
+        if (dizhi == "子"):
+            tmp = """天梁不喜居子宫为财帛宫，主虽有财源，但耗散亦多。"""
+            print(tmp)
     elif(star[:2] == "七杀"):
         tmp = """七杀入庙，会照化禄、化权、化科、神通存者，主财源丰厚，能得意外财源。 
-七杀居财帛，若与煞曜、天删会照，主因财生灾，或遭抢劫偷盗。 
+七杀居财帛，若与煞曜、天伤会照，主因财生灾，或遭抢劫偷盗。 
 与空劫、大耗会照，则常感困乏，须凭劳力求财而多感不足。且破耗机会极多。 
 七杀居财帛宫，无沦在何宫度，皆主一生必须经过一次危机，轻则周转困难，
 重则倾家破产，但览化禄、禄存及诸吉者，可以于短期内翻身。落陷，再见煞曜、
@@ -5292,12 +5671,21 @@ def GongChu5th(star, dizhi, fuyaoList,zuoyaoList,
 盖武杀难能暴发，亦能暴败。 """
             print(tmp)
     elif(star[:2] == "破军"):
-        tmp = """
-破军与地空、地劫同度，入不敷支。 
-擎羊、火星同度，暴得暴失。 
-陀罗、大耗同度，则生纠纷烦扰，破耗极重。"""
+        tmp = """破军与大耗同度，则生纠纷烦扰，破耗极重。"""
         print(tmp)
         print("\n")
+        if (len(shayaoList) > 0):
+            for smallStar in shayaoList:
+                if (smallStar == "陀罗"):
+                    tmp = """破军与陀罗、大耗同度，则生纠纷烦扰，破耗极重。 """
+                    print(tmp)
+                elif (smallStar == "地空" or smallStar == "地劫"):
+                    tmp = """破军与地空、地劫同度，入不敷支。 """
+                    print(tmp)
+                elif (smallStar == "火星" or smallStar == "铃星"):
+                    tmp = """破军与擎羊、火星同度，暴得暴失。  """
+                    print(tmp)
+        
         if (len(star) == 2):
             if (dizhi == '寅' or dizhi == '申'):
                 tmp = """破军不喜独坐寅、申宫，主人祖业倾败。 """
