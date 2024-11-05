@@ -6162,19 +6162,33 @@ def GongChu7th(star, dizhi, fuyaoList,zuoyaoList,
 若会天魁、天钺或化禄、化杈、化科，则主有贵人助力而得益。倘命宫星曜不
 吉者，应考虑离开出生地发展。 
 紫微会照禄存、化禄、天马，则主出门得财，亦宜外出。但若同时会照煞曜、
-空劫，则虽出外得财，但却与人竞争及交恶。 
-倘紫微与禄存同度，虽主能出外发财唯主受人排挤。应避免出锋头。 
+空劫，则虽出外得财，但却与人竞争及交恶。  
  擎羊、陀罗与紫微会照，主少人缘，亦主心绪不宁。火星、铃星、地空、地劫、
 大耗、天刑会照，则在外多是非口舌，煞重者更主官非、破财。 
 """
         print(tmp)
         print("\n")
+        if (len(zuoyaoList) > 0):
+            for smallStar in zuoyaoList:
+                if (smallStar == "禄存"):
+                    tmp = """倘紫微与禄存同度，虽主能出外发财唯主受人排挤。应避免出锋头。"""
+                    print(tmp)
         if(len(star) == 4):
             if(star == "紫微天府"):
                 tmp = """紫府，出外得人尊重或提拔。离出生地经营或就业，可以得利，且提高社会地
-位。见禄存、天马、化禄者，出外财气尤丰。  """
+位。  """
                 print(tmp)
                 print("\n")
+                if (len(zuoyaoList) > 0):
+                    for smallStar in zuoyaoList:
+                        if (smallStar == "禄存" or smallStar == "天马"):
+                            tmp = """见禄存、天马、化禄者，出外财气尤丰。"""
+                            print(tmp)
+                if (len(huayaoList) > 0):
+                    for smallStar in huayaoList:
+                        if (smallStar == "紫微化禄" or smallStar == "天府化禄"):
+                            tmp = """见禄存、天马、化禄者，出外财气尤丰。"""
+                            print(tmp)
             elif(star == "紫微破军"):
                 tmp = """紫破，出处可得人扶助，但同时亦必有小人妒忌是非。 """
                 print(tmp)
@@ -6186,7 +6200,7 @@ def GongChu7th(star, dizhi, fuyaoList,zuoyaoList,
                 print("\n")
             elif(star == "紫微贪狼"):
                 tmp = """紫贪，无煞会照，出门常受人欢迎尊敬，且交际应酬愉快。有煞，仅主劳心劳
-力而成事业；倘煞曜、化忌、零劫、天刑多见，则主被盗窃或抢劫。 """
+力而成事业；倘煞曜、化忌、空劫、天刑多见，则主被盗窃或抢劫。 """
                 print(tmp)
                 print("\n")
             elif(star == "紫微天相"):
@@ -6195,8 +6209,6 @@ def GongChu7th(star, dizhi, fuyaoList,zuoyaoList,
                 print(tmp)
                 print("\n")
     elif(star[:2] == "天机"):
-        
-        print("\n")
         tmp = """天机为浮动的星曜，主活动，主变化。所以凡天机坐迁移宫的人，离开出生地
 发展反而有利。若居于出生地，反主心志动摇不定，见异思迁，且易生是非口舌。 
 但若天机在迁移宫会照擎羊、陀罗、火星、铃星、空劫者，则出门不利，主有
@@ -6218,55 +6230,92 @@ def GongChu7th(star, dizhi, fuyaoList,zuoyaoList,
                 print(tmp)
                 print("\n")
             elif(star == "天机天梁"):
-                tmp = """机梁，主出外有机缘，且多为现成的机会，垂手可得。或主贵人助力。见煞曜仅
-一两点，又见文昌文曲，则为落拓江湖的文士。"""
+                tmp = """机梁，主出外有机缘，且多为现成的机会，垂手可得。或主贵人助力。"""
                 print(tmp)
                 print("\n")
-            
+                if (len(shayaoList) > 0):
+                    tmp = """见煞曜仅一两点，又见文昌文曲，则为落拓江湖的文士。"""
+                    print(tmp)
+                            
     elif(star[:2] == "太阳"):
-        
-        print("\n")
         tmp = """太阳亦不是宁静的星曜，虽浮动性不如天机，但亦利动不利静。故凡太阳坐命
 宫的人，不宜静守，宜出外发展。若出门或徒居外地，可以得近贵人以成事业。 
-唯若太阳落于陷地，则主出外奔忙，劳心键力。虽近贵人，亦仅主受贵人东差
-西遣。 
-若太阳化忌，则东奔西走终无成就。倘化忌又见煞曜，则在外且主有灾或有病。
-太阳在福德宫见羊、陀、火、铃四煞及空劫者，出门 
-必有是非破耗。  
+唯若太阳落于陷地，则主出外奔忙，劳心键力。虽近贵人，亦仅主受贵人东差西遣。  
 """
         print(tmp)
         print("\n")
+        if (len(huayaoList) > 0):
+            for smallStar in huayaoList:
+                if (smallStar == "太阳化忌"):
+                    tmp = """若太阳化忌，则东奔西走终无成就。倘化忌又见煞曜，则在外且主有灾或有病。"""
+                    print(tmp)
+        if (len(shayaoList) > 0):
+            tmp = """太阳在福德宫见羊、陀、火、铃四煞及空劫者，出门必有是非破耗。 """
+            print(tmp)
         if(len(star) == 4):
             if(star == "太阳太阴"):
-                tmp = """日月，出外必忙碌奔波。见文昌、文曲、左辅、右弼、天魁、天钺则必多贵人
-助力，可以发达，但千万不能与人争斗，否则虽不逢煞曜，亦主破耗。  """
+                tmp = """日月，出外必忙碌奔波。  """
                 print(tmp)
                 print("\n")
+                if (len(zuoyaoList) > 0):
+                    for smallStar in zuoyaoList:
+                        if (smallStar == "文昌" or smallStar == "文曲"):
+                            tmp = """见文昌、文曲、左辅、右弼、天魁、天钺则必多贵人
+助力，可以发达，但千万不能与人争斗，否则虽不逢煞曜，亦主破耗。"""
+                            print(tmp)
+                if (len(fuyaoList) > 0):
+                    tmp = """见文昌、文曲、左辅、右弼、天魁、天钺则必多贵人
+助力，可以发达，但千万不能与人争斗，否则虽不逢煞曜，亦主破耗。"""
+                    print(tmp)
+                            
             elif(star == "太阳巨门"):
-                tmp = """日巨，太阳巨门同度，在寅宫者优于中宫。见化禄、化权、化科或禄存者，主
-出门事业可以大成-且能以言词取信于他人。又主得异方人欣赏及捉携，有意外收获。
-符巨门化忌则主口舌；太阳化忌，则奔波劳碌而无成。  """
+                tmp = """日巨，太阳巨门同度，在寅宫者优于中宫。
+  """
                 print(tmp)
                 print("\n")
+                if (len(zuoyaoList) > 0):
+                    for smallStar in zuoyaoList:
+                        if (smallStar == "禄存"):
+                            tmp = """见化禄、化权、化科或禄存者，主出门事业可以大成-且能以言词取信于他人。
+                            又主得异方人欣赏及捉携，有意外收获。"""
+                            print(tmp)
+                if (len(huayaoList) > 0):
+                    for smallStar in huayaoList:
+                        if (smallStar == "太阳化忌"):
+                            tmp = """太阳化忌，则奔波劳碌而无成。"""
+                            print(tmp)
+                        elif (smallStar == "巨门化忌"):
+                            tmp = """巨门化忌则主口舌；"""
+                            print(tmp)
+                        else:
+                            tmp = """见化禄、化权、化科或禄存者，主出门事业可以大成-且能以言词取信于他人。
+                            又主得异方人欣赏及捉携，有意外收获。"""
+                            print(tmp)
             elif(star == "太阳天梁"):
                 tmp = """阳梁，太阳天梁居迁移宫，最利出外求名，宜出门求学。若阳、梁、昌、禄四
-曜同会于迁移宫，定主在异地名成利就。太阳化忌，则仍多是非口舌。唯若于异地
+曜同会于迁移宫，定主在异地名成利就。唯若于异地
 教学，从事学术研究，或执业律师，或从事推销，则虽化忌亦无妨。"""
                 print(tmp)
                 print("\n")
+                if (len(huayaoList) > 0):
+                    for smallStar in huayaoList:
+                        if (smallStar == "太阳化忌"):
+                            tmp = """太阳化忌，则仍多是非口舌。"""
+                            print(tmp)
     elif(star[:2] == "武曲"):
-        
-        print("\n")
-        tmp = """武曲守迁移宫，在一般情况下不利出门或徙移。因武曲为财帛星主，宜静不宜
-动。 
+        tmp = """武曲守迁移宫，在一般情况下不利出门或徙移。因武曲为财帛星主，宜静不宜动。 
 所以凡武曲居迁移宫，出外必劳心费力，即有吉曜扶持，亦主劳碌奔忙然后发
 财。若会照擎羊、陀罗、火星、铃星、地空、地劫、天刑、天虚等恶煞诸曜，则在
 外虽奔波仍无结果，到头一场春梦，故引起悲观消极；又或诸事多昝多吝，时生纠
-纷，往往功败垂成，亦足令人悲观失望。 
-倘武曲化忌，更遇刑忌诸煞，则主于异乡有灾病，破耗甚大。   
+纷，往往功败垂成，亦足令人悲观失望。  
 """
         print(tmp)
         print("\n")
+        if (len(huayaoList) > 0):
+            for smallStar in huayaoList:
+                if (smallStar == "武曲化忌"):
+                    tmp = """倘武曲化忌，更遇刑忌诸煞，则主于异乡有灾病，破耗甚大。  """
+                    print(tmp)
         if(len(star) == 4):
             if(star == "武曲天府"):
                 tmp = """武府，主出门发财致富，远涉重洋者更佳。但逢陀罗、火星、阴煞，则防遇小
@@ -6274,10 +6323,25 @@ def GongChu7th(star, dizhi, fuyaoList,zuoyaoList,
                 print(tmp)
                 print("\n")
             elif(star == "武曲贪狼"):
-                tmp = """武贪，武曲贪狼同度，主在异邦发富，但不宜更见火星、铃星，不主暴发，只
-主是非及纠纷。喜见禄存、化禄、化权、化科，名利双收。 """
+                tmp = """武贪，武曲贪狼同度，主在异邦发富， """
                 print(tmp)
                 print("\n")
+                if (len(huayaoList) > 0):
+                    for smallStar in huayaoList:
+                        if (smallStar == "武曲化禄" or smallStar == "武曲化权" or smallStar == "武曲化科" or smallStar == "贪狼化禄" or smallStar == "贪狼化权" or smallStar == "贪狼化科"):
+                            tmp = """喜见禄存、化禄、化权、化科，名利双收。  """
+                            print(tmp)
+                if (len(zuoyaoList) > 0):
+                    for smallStar in zuoyaoList:
+                        if (smallStar == "禄存"):
+                            tmp = """喜见禄存、化禄、化权、化科，名利双收。  """
+                            print(tmp)
+                if (len(shayaoList) > 0):
+                    for smallStar in shayaoList:
+                        if (smallStar == "火星" or smallStar == "铃星"):
+                            tmp = """武曲贪狼同度，不宜更见火星、铃星，不主暴发，只
+主是非及纠纷。  """
+                            print(tmp)
             elif(star == "武曲天相"):
                 tmp = """武相，主在外名利双收，得意外财。唯见四煞及天刑会照，反主在外乡孤独。
 煞曜刑忌重者，则主遭小人陷害以致遭祸。"""
@@ -6285,58 +6349,79 @@ def GongChu7th(star, dizhi, fuyaoList,zuoyaoList,
                 print("\n")
             elif(star == "武曲七杀"):
                 tmp = """武杀，武曲七杀同度，主人在异乡有甚强活动能力，交游广阔，并因此而获财
-利。但若武曲化忌，在异乡有灾病，或事业失败。若在外邦定居，则一生中必有官
-司，煞曜及刑忌多见者，且主有牢狱之灾。"""
+利。若在外邦定居，则一生中必有官司，煞曜及刑忌多见者，且主有牢狱之灾。"""
                 print(tmp)
                 print("\n")
+                if (len(huayaoList) > 0):
+                    for smallStar in huayaoList:
+                        if (smallStar == "武曲化忌"):
+                            tmp = """但若武曲化忌，在异乡有灾病，或事业失败。 """
+                            print(tmp)
             elif(star == "武曲破军"):
                 tmp = """武破，武曲破军同度，主在异邦以技艺或专门知识，或以艺术谋生。见吉亦有
 成，但仍主人心神不宁。"""
                 print(tmp)
                 print("\n")
     elif(star[:2] == "天同"):
-        
-        print("\n")
         tmp = """天同在迁移宫，主人动静咸宜。若见禄马交驰于迁移宫，主在他乡可以致富。
 否则亦主出门得福。 
 唯天同落陷会照擎羊、陀罗，主在外多纷扰及灾祸。火星、铃星及天刑会照，
-在外有斗争。地空、地劫会照，主旅途财物失窃，或因事破耗以致滞留于异乡。 
-若天同入庙，见四煞、空劫，仍主不宁。  
+在外有斗争。地空、地劫会照，主旅途财物失窃，或因事破耗以致滞留于异乡。  
 """
         print(tmp)
         print("\n")
+        if (len(shayaoList) > 0):
+            tmp = """若天同入庙，见四煞、空劫，仍主不宁。  """
+            print(tmp)
+                    
         if(len(star) == 4):
             if(star == "天同太阴"):
                 tmp = """同月，主远涉重洋，出门致富，唯奔波难免。若太阴落陷，则主艰辛。 """
                 print(tmp)
                 print("\n")
             elif(star == "天同巨门"):
-                tmp = """同居，最喜禄存、化禄、化权同度，远涉重洋，白手创业，唯多烦恼是非口舌。 """
+                tmp = """同巨，最喜禄存、化禄、化权同度，远涉重洋，白手创业，唯多烦恼是非口舌。 """
                 print(tmp)
                 print("\n")
             elif(star == "天同天梁"):
-                tmp = """同梁，出门发展稳定。见左辅右弼、天魁天钺、文昌文曲则多逢助力提携。唯
-天同化忌则多口舌纷扰，不得安宁。见煞，主小人阴谋侵害。"""
+                tmp = """同梁，出门发展稳定。"""
                 print(tmp)
                 print("\n")
-            
+                if (len(zuoyaoList) > 0):
+                    for smallStar in zuoyaoList:
+                        if (smallStar == "文昌" or smallStar == "文曲"):
+                            tmp = """见左辅右弼、天魁天钺、文昌文曲则多逢助力提携。 """
+                            print(tmp)
+                if (len(huayaoList) > 0):
+                    for smallStar in huayaoList:
+                        if (smallStar == "天同化忌"):
+                            tmp = """唯天同化忌则多口舌纷扰，不得安宁。 """
+                            print(tmp)
+                if (len(fuyaoList) > 0):
+                    tmp = """见左辅右弼、天魁天钺、文昌文曲则多逢助力提携。 """
+                    print(tmp)
+                if (len(shayaoList) > 0):
+                    tmp = """见煞，主小人阴谋侵害。 """
+                    print(tmp)           
     elif(star[:2] == "廉贞"):
         
         print("\n")
         tmp = """廉贞坐迁移宫，不宜在出生地留恋，以外走他乡为宜。喜得诸吉会照。最嫌化
 忌，次则嫌见煞。 
-廉贞为次桃花，故若廉贞化忌，主在外因酒色招灾。更见煞曜、天刑、大耗于
-三方四正，无吉星祥曜化解，则主客死他乡。若煞刑轻，有吉曜扶持，但见天月，
-则主于他乡染病。
 廉贞最喜见紫微、天相，则可化解其凶，且主在外乡得贵人助力。
 """
         print(tmp)
         print("\n")
+        if (len(huayaoList) > 0):
+            for smallStar in huayaoList:
+                if (smallStar == "廉贞化忌"):
+                    tmp = """廉贞为次桃花，故若廉贞化忌，主在外因酒色招灾。更见煞曜、天刑、大耗于
+三方四正，无吉星祥曜化解，则主客死他乡。若煞刑轻，有吉曜扶持，但见天月，则主于他乡染病。 """
+                    print(tmp)
         if(len(star) == 4):
             if(star == "廉贞天相"):
                 tmp = """廉相，得天相同度，气质转为祥和，主人出外坚忍刚毅，终能创业，尤喜见三
-吉化及禄存，则终有名利，即遇煞忌刑耗，亦可转危为安。但亦主在外少人缘，即
-得左辅右弼扶持，仍难免孤独。 """
+吉化及禄存，则终有名利，即遇煞忌刑耗，亦可转危为安。但亦主在外少人缘，即得左辅右弼扶持，仍难免孤独。 """
                 print(tmp)
                 print("\n")
             elif(star == "廉贞七杀"):
@@ -6353,18 +6438,34 @@ def GongChu7th(star, dizhi, fuyaoList,zuoyaoList,
                 print("\n")
             elif(star == "廉贞贪狼"):
                 tmp = """廉贪，廉贞贪狼于迁移宫同度，主人在外擅长交际，人际关系甚佳，多应酬，
-见吉曜，则能因此发福，见火、铃同度，更主异乡暴发，若见贪狼化忌，则凡事不
-如理想；若廉贞化忌，则主在外因酒色而生灾危。  """
+见吉曜，则能因此发福，  """
                 print(tmp)
                 print("\n")
+                if (len(shayaoList) > 0):
+                    for smallStar in shayaoList:
+                        if (smallStar == "火星" or smallStar == "铃星"):
+                            tmp = """见火、铃同度，更主异乡暴发，"""
+                            print(tmp)
+                if (len(huayaoList) > 0):
+                    for smallStar in huayaoList:
+                        if (smallStar == "廉贞化忌"):
+                            tmp = """若廉贞化忌，则主在外因酒色而生灾危。 """
+                            print(tmp)
+                        elif (smallStar == "贪狼化忌"):
+                            tmp = """若见贪狼化忌，则凡事不如理想。 """
+                            print(tmp)
             elif(star == "廉贞天府"):
-                tmp = """廉府，在外交游广阔，遇吉，可作富商巨贾；遇煞曜，则作事多费精神。 """
+                tmp = """廉府，在外交游广阔，遇吉，可作富商巨贾；"""
                 print(tmp)
                 print("\n")
+                if (len(shayaoList) > 0):
+                    tmp = """遇煞曜，则作事多费精神。 """
+                    print(tmp)
+                            
     elif(star[:2] == "天府"):
         tmp = """天府坐迁移宫，主人动静皆宜。 
 若出外或徙居，可以遂心，且得入尊重，有助力，创业或经商，皆可富裕。尤
-以会照武曲或武曲同度者为宜，利远涉重洋致富。最嫌天府落陷，逢陀罗、火星，更逢阴煞，则在外须．防小入阴谋。 
+以会照武曲或武曲同度者为宜，利远涉重洋致富。最嫌天府落陷，逢陀罗、火星，更逢阴煞，则在外须防小入阴谋。 
 若与擎羊、天刑同度，则主小人损害。见大耗者主破财。 
 倘擎羊、天月同度，则主染病他乡。"""
         print(tmp)
@@ -6372,14 +6473,22 @@ def GongChu7th(star, dizhi, fuyaoList,zuoyaoList,
     elif(star[:2] == "太阴"):
         tmp = """太阴在迁移宫入庙，主为人人缘极佳，在异乡有贵人扶持。 
 若落陷地，则多招是非口舌阴谋。更见擎羊、陀罗、天刑、阴煞，则更多小人
-阴损。即有吉星祥曜会合解救，亦主奔波而无结果。 
-太阴化忌于庙旺之宫，主人犹豫不决。或受引诱投资而招致损失。见煞更主多
-是非口舌。 
-太阴与地劫、地空同度，在外必有破耗。 
+阴损。即有吉星祥曜会合解救，亦主奔波而无结果。  
 凡太阴坐迁移宫，无论在何宫度，即使吉星遍集，亦不宜与人争强斗胜。凡事
 退让三分，反成福泽。"""
         print(tmp)
         print("\n")
+        if (len(huayaoList) > 0):
+            for smallStar in huayaoList:
+                if (smallStar == "太阴化忌"):
+                    tmp = """太阴化忌于庙旺之宫，主人犹豫不决。或受引诱投资而招致损失。见煞更主多
+是非口舌。  """
+                    print(tmp)
+        if (len(shayaoList) > 0):
+            for smallStar in shayaoList:
+                if (smallStar == "地劫" or smallStar == "地空"):
+                    tmp = """太阴与地劫、地空同度，在外必有破耗。"""
+                    print(tmp)             
     elif(star[:2] == "贪狼"):
         tmp = """贪狼为正桃花，主酒色财气。故凡贪狼在迁移宫，会化禄、化权、化科或禄存，
 主在异乡多酒色的应酬。多赌友、饮友，或花酒风月之友。最佳者则为有宗教信仰
@@ -6387,29 +6496,48 @@ def GongChu7th(star, dizhi, fuyaoList,zuoyaoList,
 若会文昌文曲，则多诗酒应酬之乐。 
 贪狼在迁移宫会照擎羊、陀罗、大耗、空劫，主出门遭盗贼窃掠。加会咸池、
 天姚，主因色致祸。 
- 凡与廉贞同度而遇煞，落陷或化忌，除酒色生灾外又主遭人陷害。倘吉星祥曜同
-时会照，则虽有灾祸，但仍主其人能在外享乐。 
-贪狼化忌，主为人夺爱。 
-廉贞化忌，防脓血之灾。"""
+"""
         print(tmp)
         print("\n")
+        
         if(len(star) == 4):
             if(star == "贪狼廉贞"):
                 tmp = """唯与廉贞同度，则应酬固多，为人却主无事劳碌，但却无法偷闲。见煞，主因
-色招灾。  """
+色招灾。凡与廉贞同度而遇煞，落陷或化忌，除酒色生灾外又主遭人陷害。倘吉星祥曜同时会照，则虽有灾祸，但仍主其人能在外享乐。 """
                 print(tmp)
                 print("\n")
-            
+                if (len(huayaoList) > 0):
+                    for smallStar in huayaoList:
+                        if (smallStar == "贪狼化忌"):
+                            tmp = """贪狼化忌，主为人夺爱。  """
+                            print(tmp)
+                        elif (smallStar == "廉贞化忌"):
+                            tmp = """廉贞化忌，防脓血之灾。  """
+                            print(tmp)
     elif(star[:2] == "巨门"):
-        tmp = """巨门守迁移宫，最喜有化禄、化权，或禄存同度。若巨门入庙，则主其人以讲
+        tmp = """若巨门入庙，则主其人以讲
 学、辩论名扬异域。故宜为外交人员。 
- 倘巨门化忌，则出门多是非口舌纷扰，令人心神不宁，且劳碌奔波而少成。 
+  
  若太阳在巳宫或午宫照会，由于阳光强烈，反易遭小人所忌。 
 巨门在迁移宫遇擎羊、陀罗、火星、铃星、天刑、大耗会照，出外易遭灾屯。
 且主人缘不佳，多是非。更遇流年化忌及流煞并临，则有牢狱之灾，或六亲刑克。 
 故巨门在迁移宫会合星曜不吉者，以不离出生地方为宜。"""
         print(tmp)
         print("\n")
+        if (len(huayaoList) > 0):
+            for smallStar in huayaoList:
+                if (smallStar == "巨门化忌"):
+                    tmp = """倘巨门化忌，则出门多是非口舌纷扰，令人心神不宁，且劳碌奔波而少成。 """
+                    print(tmp)
+                elif (smallStar == "巨门化权" or smallStar == "巨门化禄"):
+                    tmp = """巨门守迁移宫，最喜有化禄、化权，或禄存同度。  """
+                    print(tmp)
+        if (len(zuoyaoList) > 0):
+            for smallStar in zuoyaoList:
+                if (smallStar == "禄存"):
+                    tmp = """巨门守迁移宫，最喜有化禄、化权，或禄存同度。"""
+                    print(tmp)
+            
     elif(star[:2] == "天相"):
         tmp = """天相守迁移宫，最喜化禄、化权、化科、禄存、左辅、右弼、天魁、天钺、天马
 等吉星祥曜会照。主人在外有意料不及之机遇，一且得贵人提拔，友人助力，及当地人士摧崇拥护，可以发富或发福。 。  
@@ -6450,24 +6578,37 @@ def GongChu7th(star, dizhi, fuyaoList,zuoyaoList,
                 print(tmp)
                 print("\n")
             elif(star == "天梁太阳"):
-                tmp = """太阳与天梁同度，主人在异帮成名。尤宜从事医药、法律、会计、或理科研究。
-若天梁与化忌同度，则出外主多是非口舌，更见四煞会照，出外有灾，且主遭
-小人阴损。"""
+                tmp = """太阳与天梁同度，主人在异帮成名。尤宜从事医药、法律、会计、或理科研究。"""
                 print(tmp)
                 print("\n")
+                if (len(huayaoList) > 0):
+                    for smallStar in huayaoList:
+                        if (smallStar == "天梁化忌"):
+                            tmp = """若天梁与化忌同度，则出外主多是非口舌，更见四煞会照，出外有灾，且主遭小人阴损。 """
+                            print(tmp)
     elif(star[:2] == "七杀"):
-        tmp = """七杀在迁移富，一般均主人在外乡有权势，可以威福，及令当地人士敬畏。 
+        tmp = """七杀在迁移宫，一般均主人在外乡有权势，可以威福，及令当地人士敬畏。 
  若与天刑同度，则主人在异乡有灾。若七杀落陷，则主受人连累。或在外受人压
-力。再见煞曜，则主受威协。 
- 擎羊、陀罗同度，最宜在异乡担任武职。或从事工程、技艺，否则主少人缘，且
-必须历尽艰辛然后始能安定。 
- 喜火星独与七杀同宫，则主有意外之财。若铃星独与七杀同度，财主人以武职，
-或技艺立身，且事业可得成就。 
- 七杀若与地空、地劫同度，则以投资工业为宜，否则反主流荡无依。 
+力。再见煞曜，则主受威协。   
  武曲化忌与七杀同度，则在外乡有灾，或事业失败，且主牵涉官非。 
 """
         print(tmp)
         print("\n")
+        if (len(shayaoList) > 0):
+            for smallStar in shayaoList:
+                if (smallStar == "擎羊" or smallStar == "陀罗"):
+                    tmp = """擎羊、陀罗同度，最宜在异乡担任武职。或从事工程、技艺，否则主少人缘，且
+必须历尽艰辛然后始能安定。 """
+                    print(tmp)
+                elif (smallStar == "火星"):
+                    tmp = """喜火星独与七杀同宫，则主有意外之财。"""
+                    print(tmp)
+                elif (smallStar == "铃星"):
+                    tmp = """若铃星独与七杀同度，财主人以武职，或技艺立身，且事业可得成就。 """
+                    print(tmp)
+                elif (smallStar == "地劫" or smallStar == "地空"):
+                    tmp = """七杀若与地空、地劫同度，则以投资工业为宜，否则反主流荡无依。 """
+                    print(tmp)
         if(len(star) == 4):
             if(star == "七杀廉贞" and dizhi == "丑"):
                 tmp = """廉贞七杀在丑宫同度，出外难吉亦主必生是非口舌。  """
@@ -6496,10 +6637,15 @@ def GongChu7th(star, dizhi, fuyaoList,zuoyaoList,
                 print(tmp)
                 print("\n")
             elif(star == "破军武曲"):
-                tmp = """若武曲与破军同度，则其人必有能文能武之技艺才能，可以在异邦立足。擎羊、陀罗、火星、铃星同度，出外多破败，不如在出生地发展，否则徒然奔
-波劳碌。"""
+                tmp = """若武曲与破军同度，则其人必有能文能武之技艺才能，可以在异邦立足。"""
                 print(tmp)
                 print("\n")
+                if (len(shayaoList) > 0):
+                    for smallStar in shayaoList:
+                        if (smallStar == "擎羊" or smallStar == "陀罗" or smallStar == "火星" or smallStar == "铃星"):
+                            tmp = """擎羊、陀罗、火星、铃星同度，出外多破败，不如在出生地发展，否则徒然奔波劳碌。 """
+                            print(tmp)
+                        
     print("---------------------------------------")
     for smallStar in smallStarList:
         if(smallStar == '禄存'):
