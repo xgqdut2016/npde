@@ -1652,20 +1652,34 @@ def GongXia2nd(star, dizhi,
             if(star == "紫微贪狼"):
                 tmp = """ 卯酉宫 [ 紫贪 ] 守兄弟宫 ， 见桃花诸曜主兄弟行中先 见长女 ； 见空曜则主兄弟行 
     中赞凶长兄 。 
-    卯酉宫 [ 紫贪 ] 多吉曜 ， 亦主兄长得力 ； 倘见火贪则 富裕 ， 唯反与自身无益 。 若 
+    卯酉宫 [ 紫贪 ] 多吉曜 ， 亦主兄长得力 ； 
     煞忌刑耗并见 ， 主受累倾家 ； 更见桃 花诸曜 ， 又见辅佐单星 ， 主乱伦 。 
     卯本宫 [ 紫贪 ] ， 与异性合作时每易生情愫 ， 且易招 不利 。 克应的年份 ， 每为天 
     同 、 巨门守兄弟宫之时 。"""
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
+                if (len(shayaoList) > 0):
+                    for smallStar in shayaoList:
+                        if (smallStar == "火星" or smallStar == "铃星"):
+                            tmp = """ 倘见火贪则 富裕 ， 唯反与自身无益 。 """
+                            tmp.replace(" ", ""); print(tmp)
         elif(dizhi == "辰" or dizhi == "戌"):
             if(star == "紫微天相"):
                 tmp = """  
-    辰戌宫 [ 紫微天相 ] ， 亦主有异母兄弟 ； 倘见魁钺 、 辅弼 、 昌曲 ， 则往往有双胞 。 
+    辰戌宫 [ 紫微天相 ] ， 亦主有异母兄弟 ； 
     辰戌 [ 紫相 ] ， 见吉曜则主和好合作 ， 见凶曜则各怀 异见 。 皆每于流年兄弟宫行 
     至 [ 紫相 ] 、 破军 、 [ 武府 ] 的年份 克应 。 若折产破裂 ， 则于 [ 机巨 ] 、 天梁的年份克应 。"""
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
+                if (len(fuyaoList) > 0):
+                    tmp = """倘见魁钺 、 辅弼 、 昌曲 ， 则往往有双胞 。  """
+                    tmp.replace(" ", ""); print(tmp)
+                            
+                if (len(zuoyaoList) > 0):
+                    for smallStar in zuoyaoList:
+                        if (smallStar == "文昌" or smallStar == "文曲"):
+                            tmp = """ 倘见魁钺 、 辅弼 、 昌曲 ， 则往往有双胞 。  """
+                            tmp.replace(" ", ""); print(tmp)
         elif(dizhi == "巳" or dizhi == "亥"):
             if(star == "紫微七杀"):
                 tmp = """巳亥宫 [ 紫杀 ] ， 见吉则兄弟有权贵 ， 亦主可依附权 贵之友人 。 若见煞 ， 则受欺 
@@ -1694,21 +1708,30 @@ def GongXia2nd(star, dizhi,
             print("\n")
         elif(dizhi == "寅" or dizhi == "申"):
             if(star == "天机太阴"):
-                tmp = """寅申宫 [ 天机太阴 ] 同度 ， 见化忌 ， 则兄弟朋友间皆 易生权术阴谋 。 必须见吉 ， 
-    然后始主平和 ， 但仍少助力 。 
+                tmp = """ 
     寅申 [ 机阴 ] 见辅佐吉曜 ， 则一生得兄弟及友人之 力 。 与人合作虽不持久 ， 但时 
     时有使用伙伴 。 若更见禄马交驰 ， 则有远方友人助力 。 
     寅申 『 机阴 』 见煞 ， 兄弟及知交流离 ， 不处一方 。 """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
+                if (len(huayaoList) > 0):
+                    for smallStar in huayaoList:
+                        if (smallStar[2:] == "化忌"):
+                            tmp = """ 寅申宫 [ 天机太阴 ] 同度 ， 见化忌 ， 则兄弟朋友间皆 易生权术阴谋 。 必须见吉 ， 
+    然后始主平和 ， 但仍少助力 。  """
+                            tmp.replace(" ", ""); print(tmp)
         elif(dizhi == "卯" or dizhi == "酉"):
             if(star == "天机巨门"):
-                tmp = """ 卯酉 『 天机巨门 』 守兄弟宫 ， 见煞曜主始善终恶 。 见 吉曜 ， 则多短暂的助力 ， 
+                tmp = """ 卯酉 『 天机巨门 』 守兄弟宫 ，见 吉曜 ， 则多短暂的助力 ， 
     不宜谋求长期合作关系 。 
     卯酉 [ 机巨 ] ， 亦主多饮食之友 。 
     卯酉 [ 机巨 ] 不宜兄弟宫行至 『 杀破狼 』 的宫度 ， 见煞 忌 ， 主乖离 、 是非 、 词讼 。 """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
+                if (len(shayaoList) > 0):
+                    tmp = """ 卯酉 『 天机巨门 』 守兄弟宫 ， 见煞曜主始善终恶 。 """
+                    tmp.replace(" ", ""); print(tmp)
+                            
         elif(dizhi == "辰" or dizhi == "戌"):
             if(star == "天机天梁"):
                 tmp = """辰戌 [ 机梁 ] 守兄弟宫 ， 主兄弟姊妹有小产流产 。 亦 主与知交或合作伙伴中道分 
@@ -1719,18 +1742,26 @@ def GongXia2nd(star, dizhi,
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
         elif(dizhi == "巳" or dizhi == "亥"):
-            tmp = """ 巳亥宫天机独守兄弟宫 ， 即使无煞 ， 亦主兄弟或友 人相背 ， 知交寥落 。 必须见 
-辅佐诸曜 ， 始主交友广阔 ， 但 知交仍稀 。 
+            tmp = """ 巳亥宫天机独守兄弟宫 ， 即使无煞 ， 亦主兄弟或友 人相背 ， 知交寥落 。 
 巳亥宫天机 ， 不宜与人合作 ， 主有权术侵占之类事 端 。 见吉则多短暂助力 。 
 巳亥宫天机 ， 以兄弟宫行 [ 同巨 ] 、 『 武相 』 、 [ 廉府 ] 等 宫垣 ， 为吉凶克应之期 。 """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
+            if (len(fuyaoList) > 0 and len(zuoyaoList) > 0):
+                tmp = """必须见 辅佐诸曜 ， 始主交友广阔 ， 但 知交仍稀 。  """
+                tmp.replace(" ", ""); print(tmp)
     elif(star[:2] == "太阳"):
-        
-        print("\n")
-        if(dizhi == "子" or dizhi == "午"):
-            tmp = """子午太阳守兄弟宫 ， 居子宫者无力 ， 居午宫者则易 贵而不实 ， 备有缺陷 。 
-子宫太阳易受友人挑剔 ； 午宫者则得诤谏之友 。 见 煞忌 ， 长兄死亡 。 或主因兄 
+        if(dizhi == "子"):
+            tmp = """子午太阳守兄弟宫 ， 居子宫者无力 ，  
+子宫太阳易受友人挑剔 ；见 煞忌 ， 长兄死亡 。 或主因兄 
+弟友人之事牵涉风波 。 
+子午太阳 ， 兄弟知交皆易离散 。 见吉 ， 则离散后仍 主助力 。 
+子午太阳 ， 以天同宫垣为不利事端克应之期 。"""
+            tmp.replace(" ", ""); print(tmp)
+            print("\n")
+        if(dizhi == "午"):
+            tmp = """子午太阳守兄弟宫 ，居午宫者则易 贵而不实 ， 备有缺陷 。 
+ 午宫者则得诤谏之友 。 见 煞忌 ， 长兄死亡 。 或主因兄 
 弟友人之事牵涉风波 。 
 子午太阳 ， 兄弟知交皆易离散 。 见吉 ， 则离散后仍 主助力 。 
 子午太阳 ， 以天同宫垣为不利事端克应之期 。"""
@@ -1738,22 +1769,38 @@ def GongXia2nd(star, dizhi,
             print("\n")
         elif(dizhi == "丑" or dizhi == "未"):
             if(star == "太阳太阴"):
-                tmp = """丑未 『 太阴太阳 ] 同守兄弟宫 ， 一般情形下主兄弟朋 友众多 。 入庙见辅佐诸曜则 
-    有助力 ； 落陷见煞忌 ， 则主生损害 、 刑克 、 剥削 。 吉凶交杂 ， 多泛泛之交 。 
+                tmp = """丑未 『 太阴太阳 ] 同守兄弟宫 ， 一般情形下主兄弟朋 友众多 。 落陷见煞忌 ， 则主生损害 、 刑克 、 剥削 。 吉凶交杂 ， 多泛泛之交 。 
     丑未 [ 阴阳 ] 行至 [ 机巨 ] 守兄弟宫的大限流年 ， 绝不 宜与人合作 ， 主决裂 、 拖累 。 
-    丑宫者 ， 若太阳化忌 ， 主受兄弟或友人伤害 ； 未宫 者 ， 若太阴化忌 ， 主为兄弟 
-    或友人破财 。  """
+    """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
+                if (len(fuyaoList) > 0 and len(zuoyaoList) > 0):
+                    tmp = """ 入庙见辅佐诸曜则 有助力 ；  """
+                    tmp.replace(" ", ""); print(tmp)
+                if (len(huayaoList) > 0):
+                    for smallStar in huayaoList:
+                        if (smallStar == "太阴化忌"):
+                            tmp = """ 未宫 者 ， 若太阴化忌 ， 主为兄弟 或友人破财 。   """
+                            tmp.replace(" ", ""); print(tmp)
+                        if (smallStar == "太阳化忌"):
+                            tmp = """ 丑宫者 ， 若太阳化忌 ， 主受兄弟或友人伤害 ；  """
+                            tmp.replace(" ", ""); print(tmp)
         elif(dizhi == "寅" or dizhi == "申"):
             if(star == "太阳巨门"):
                 tmp = """ 寅申 [ 太阳巨门 ] 同度 ， 见吉曜则兄弟友人皆有助 力 ， 宜发展彼此有联系的业务 。 
-    寅申 [ 巨阳 ] 化权禄 ， 主受异族友人提携 。 化忌 ， 则 主兄弟朋友始善终恶 ， 有极
-    大纠纷 。 以 [ 机梁 ] 、 [ 同阴 ] 为克 应之年 
+    以 [ 机梁 ] 、 [ 同阴 ] 为克 应之年 
     一寅宫者交友较广 ； 申宫苦 ． 多泛泛之交 。 诸吉遍集 ， 则主自身为兄弟友人服 
     役 。 """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
+                if (len(huayaoList) > 0):
+                    for smallStar in huayaoList:
+                        if (smallStar[2:] == "化忌"):
+                            tmp = """ 化忌 ， 则 主兄弟朋友始善终恶 ， 有极大纠纷 。    """
+                            tmp.replace(" ", ""); print(tmp)
+                        if (smallStar[2:] == "化禄"):
+                            tmp = """ 寅申 [ 巨阳 ] 化权禄 ， 主受异族友人提携 。   """
+                            tmp.replace(" ", ""); print(tmp)
         elif(dizhi == "卯" or dizhi == "酉"):
             if(star == "太阳天梁"):
                 tmp = """ 卯酉 『 阳梁 』 守兄弟宫 ， 见煞主兄弟分离 ， 无助力 。 见刑忌 ， 主兄弟或友人争 
@@ -1761,31 +1808,53 @@ def GongXia2nd(star, dizhi,
     卯酉 [ 阳梁 ] ， 以兄弟宫经行 [ 阳梁 ] 本宫及对宫为克 应之年 。 """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
-        elif(dizhi == "辰" or dizhi == "戌"):
-            tmp = """ 辰戌宫太阳 ， 辰宫者 ， 兄弟多和 ， 戌宫多不和 。 
+        elif(dizhi == "辰"):
+            tmp = """ 辰戌宫太阳 ， 辰宫者 ， 兄弟多和 ， 
 辰宫者多异性友人 ， 见吉且主助力 。 
 辰宫者主多异族朋友 。 
-辰宫太阳化忌 ， 亦主多异族友人 ； 戌宫太阳化忌 ， 主兄弟朋友多是非口舌 。 
+辰戌太阳见吉曜 ， 皆可与友人合作 ， 以 [ 同梁 ] 、 天机 、 巨门 
+踞兄弟宫为克应之年 。 """
+            tmp.replace(" ", ""); print(tmp)
+            print("\n")
+            if (len(huayaoList) > 0):
+                for smallStar in huayaoList:
+                    if (smallStar == "太阳化忌"):
+                        tmp = """ 辰宫太阳化忌 ， 亦主多异族友人 ；   """
+                        tmp.replace(" ", ""); print(tmp)
+        elif(dizhi == "戌"):
+            tmp = """ 辰戌宫太阳 ，戌宫多不和 。  
 辰戌太阳见吉曜 ， 皆可与友人合作 ， 唯戌宫者不耐 久 。 以 [ 同梁 ] 、 天机 、 巨门 
 踞兄弟宫为克应之年 。 """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        elif(dizhi == "巳" or dizhi == "亥"):
-            tmp = """巳亥太阳皆主交友广阔 。 巳宫者主动 ； 亥宫者被动 。 巳宫者且多异族友人 。 
-已宫太阳化忌 ， 主知交离散 ； 亥宫者主多是非争端 。 
-巳宫太阳吉化 ， 见辅佐诸曜 ， 得良好合作伙伴 ； 亥 宫者平常 。 
+            if (len(huayaoList) > 0):
+                for smallStar in huayaoList:
+                    if (smallStar == "太阳化忌"):
+                        tmp = """ 戌宫太阳化忌 ， 主兄弟朋友多是非口舌 。  """
+                        tmp.replace(" ", ""); print(tmp)
+        elif(dizhi == "巳"):
+            tmp = """巳亥太阳皆主交友广阔 。 巳宫者主动 ；巳宫者且多异族友人 。 
+已宫太阳化忌 ， 主知交离散 ；
+巳宫太阳吉化 ， 见辅佐诸曜 ， 得良好合作伙伴 ； 
+巳亥太阳 ， 以兄弟宫经行太阳 、 巨门 、 天梁 、 天同 诸宫垣 ， 为克应之年 。  """
+            tmp.replace(" ", ""); print(tmp)
+            print("\n")
+        elif(dizhi == "亥"):
+            tmp = """巳亥太阳皆主交友广阔 。亥宫者被动 。  亥宫者主多是非争端 。 亥 宫者平常 。 
 巳亥太阳 ， 以兄弟宫经行太阳 、 巨门 、 天梁 、 天同 诸宫垣 ， 为克应之年 。  """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
     elif(star[:2] == "武曲"):
-        
-        print("\n")
         tmp = """  
-凡武曲在兄弟宫 ， 见擎羊或火星同度 ， 皆主争财 。 与煞曜空劫同度 ， 兄弟明友 
-稀少 ， 自身常感孤立 。
+凡武曲在兄弟宫， 与煞曜空劫同度 ， 兄弟明友 稀少 ， 自身常感孤立 。
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
+        if (len(shayaoList) > 0):
+            for smallStar in shayaoList:
+                if (smallStar == "火星" or smallStar == "擎羊"):
+                    tmp = """ 凡武曲在兄弟宫 ， 见擎羊或火星同度 ， 皆主争财 。 """
+                    tmp.replace(" ", ""); print(tmp)
         if(dizhi == "子" or dizhi == "午"):
             if(star == "武曲天府"):
                 tmp = """子午 『 武府 』 守兄弟宫 ， 吉曜多者始主和好 ， 稍见煞 曜 ， 即主面和心不和 。 
@@ -1797,12 +1866,15 @@ def GongXia2nd(star, dizhi,
         elif(dizhi == "丑" or dizhi == "未"):
             if(star == "武曲贪狼"):
                 tmp = """ 丑未 [ 武贪 ] ， 见吉化 、 吉曜 ， 则可受兄弟友人之益 荫 ， 但不可争权 。 见煞忌刑 
-    曜 ， 则反主益荫兄弟及友人 。 未宫优于丑宫 。 
-    丑未 『 武贪 ] 与火铃同度 ， 无刑忌 ， 自 身命宫又会吉曜吉化者 ， 主因兄弟可友人 
-    而横发 。 
+    曜 ， 则反主益荫兄弟及友人 。 未宫优于丑宫 。  
     丑未 [ 武贪 ] 见煞忌刑 ， 自身命宫又弱 ， 则主一生受 制 。 """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
+                if (len(shayaoList) > 0):
+                    for smallStar in shayaoList:
+                        if (smallStar == "火星" or smallStar == "铃星"):
+                            tmp = """丑未 『 武贪 ] 与火铃同度 ， 无刑忌 ， 自 身命宫又会吉曜吉化者 ， 主因兄弟可友人而横发 。 """
+                            tmp.replace(" ", ""); print(tmp)
         elif(dizhi == "寅" or dizhi == "申"):
             if(star == "武曲天相"):
                 tmp = """寅申宫 [ 武相 ] 同度 ， 见吉则主助力 ， 见煞 ( 或 [ 刑 忌夹印 ] ) 则主动助友人反受连 
@@ -1830,13 +1902,15 @@ def GongXia2nd(star, dizhi,
             if(star == "武曲破军"):
                 tmp = """ 巳亥 [ 武破 ] 守兄弟宫 ， 即使见吉曜 ， 亦不主兄弟友 人得力 ， 合作亦不耐久 。 见 
     煞忌刑曜 ， 更主受掣肘 。 唯交异族 、 异乡友人 ， 情形则较佳 。 
-    巳亥 [ 武破 ] 会廉贞化忌 ， [ 武破 ] 又与火铃同躔 ， 主 因兄弟或友人而生血光之灾 。 
     常以 [ 廉杀 ] 、 『 武破 ] 躔兄弟宫 之年为克应 。 ( 有过一个实例 ， 一为友人输血 。 ) """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
+                if (len(shayaoList) > 0):
+                    for smallStar in shayaoList:
+                        if (smallStar == "火星" or smallStar == "铃星"):
+                            tmp = """巳亥 [ 武破 ] 会廉贞化忌 ， [ 武破 ] 又与火铃同躔 ， 主 因兄弟或友人而生血光之灾 。 """
+                            tmp.replace(" ", ""); print(tmp)
     elif(star[:2] == "天同"):
-        
-        print("\n")
         tmp = """
 凡天同守兄弟宫 ， 多主兄弟和好 ， 有煞亦多表面和 好 。 且主为人能结交中下 层的朋友 ， 唯无太多实际助力 。
 """
@@ -1844,7 +1918,7 @@ def GongXia2nd(star, dizhi,
         print("\n")
         if(dizhi == "子" or dizhi == "午"):
             if(star == "天同太阴"):
-                tmp = """ 子 午宫 『 天同太阴 』 同度守兄弟富 ， 兄弟众多 ， 但主 兄弟行中以长姊为大 。 见 
+                tmp = """ 子 午宫 『 天同太阴 』 同度守兄弟宫 ， 兄弟众多 ， 但主 兄弟行中以长姊为大 。 见 
     煞忌 ， 则兄弟行中长兄难养 ， 以先见姊为宜 。 
     子午 『 同阴 』 ， 见吉仅主兄弟温驯 ， 友人亦助力薄弱 。 见煞忌刑 ， 再见空劫 ， 主 
     兄弟中有弱智耆 ， 又主受友情拖累 。 
@@ -1853,29 +1927,63 @@ def GongXia2nd(star, dizhi,
                 print("\n")
         elif(dizhi == "丑" or dizhi == "未"):
             if(star == "天同巨门"):
-                tmp = """ 丑未 [ 天同巨门 ] 同度 ， 见禄必起纷争 ； 见煞者则易 凶终隙末 。 
+                tmp = """ 丑未 [ 天同巨门 ] 同度 ，见煞者则易 凶终隙末 。 
     丑未 [ 同巨 ] ， 见吉亦主一时助力 。 故不宜有长 期合作计划 。 
     丑未 【 同巨 】 居兄弟宫的人 ， 常有与人合资的冲动 ， 则于太阴 、 天机 、 [ 同巨 ] 
     守兄 弟宫的年限 ， 为口舌纷争拆股之期 。 """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
+                if (len(huayaoList) > 0):
+                    for smallStar in huayaoList:
+                        if (smallStar[2:] == "化禄"):
+                            tmp = """丑未 [ 天同巨门 ] 同度 ， 见禄必起纷争 ；"""
+                            tmp.replace(" ", ""); print(tmp)
+                if (len(zuoyaoList) > 0):
+                    for smallStar in zuoyaoList:
+                        if (smallStar == "禄存"):
+                            tmp = """丑未 [ 天同巨门 ] 同度 ， 见禄必起纷争 ；"""
+                            tmp.replace(" ", ""); print(tmp)
         elif(dizhi == "寅" or dizhi == "申"):
             if(star == "天同天梁"):
-                tmp = """ 寅申宫 『 同梁 ] 同度 ， 稍见煞曜 ， 即主兄弟或友人表面和好 ， 内心各怀鬼胎 。 煞 
-    重 ， 与兄弟或事业合作伙伴互相倾轧 。 见吉 ， 则和好而易离散 。 
-    寅申 [ 同梁 ] 同度 ， 煞刑并见 ， 无兄弟但有姊妹 。 见 昌曲 ， 或见魁钺 ， 而不见辅 
-    弼 ， 主有异母兄弟 。 
+                tmp = """ 寅申宫 『 同梁 ] 同度 ，见吉 ， 则和好而易离散 。 
+    寅申 [ 同梁 ] 同度 ， 煞刑并见 ， 无兄弟但有姊妹 。 
     寅申 『 同梁 』 ， 倾轧离散克应之期 ， 为天相 、 巨门躔 守兄弟宫的年限 。 """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
+                if (len(shayaoList) > 0):
+                    tmp = """寅申宫 『 同梁 ] 同度 ， 稍见煞曜 ， 即主兄弟或友人表面和好 ， 内心各怀鬼胎 。 煞 
+    重 ， 与兄弟或事业合作伙伴互相倾轧 。"""
+                    tmp.replace(" ", ""); print(tmp)
+                            
+                if (len(zuoyaoList) > 0):
+                    for smallStar in zuoyaoList:
+                        if (smallStar == "文曲" or smallStar == "文昌"):
+                            tmp = """见 昌曲 ， 或见魁钺 ， 而不见辅 弼 ， 主有异母兄弟 。 """
+                            tmp.replace(" ", ""); print(tmp)
+                if (len(fuyaoList) > 0):
+                    for smallStar in fuyaoList:
+                        if (smallStar == "天魁" or smallStar == "天钺"):
+                            tmp = """见 昌曲 ， 或见魁钺 ， 而不见辅 弼 ， 主有异母兄弟 。 """
+                            tmp.replace(" ", ""); print(tmp)
         elif(dizhi == "卯" or dizhi == "酉") and len(star) == 2:
-            tmp = """ 卯本天同独坐守兄弟宫 ， 卯宫兄弟五人 ， 酉宫仅二 三人 。 亦以先姊后弟为宜 ， 
-否则长兄难养 。 
-卯酉天同 ， 亦主交友广阔 ， 唯实际助力不大 。 略见 煞曜 ， 则多征歌逐色游乐之 
-友 。 
-卯酉天同见昌曲 ， 姊妹多兄弟少 。 再单见魁钺 ， 主 各胞 。 """
+            tmp = """ 卯本天同独坐守兄弟宫 ， 亦以先姊后弟为宜 ， 否则长兄难养 。 
+卯酉天同 ， 亦主交友广阔 ， 唯实际助力不大 。 """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
+            if (dizhi == "卯"):
+                tmp = """卯宫兄弟五人 """
+                tmp.replace(" ", ""); print(tmp)
+            if (dizhi == "酉"):
+                tmp = """ 酉宫仅二 三人 。"""
+                tmp.replace(" ", ""); print(tmp)
+            if (len(shayaoList) > 0):
+                tmp = """  略见 煞曜 ， 则多征歌逐色游乐之 友 。 """
+                tmp.replace(" ", ""); print(tmp)
+            if (len(zuoyaoList) > 0):
+                for smallStar in zuoyaoList:
+                    if (smallStar == "文曲" or smallStar == "文昌"):
+                        tmp = """卯酉天同见昌曲 ， 姊妹多兄弟少 。 再单见魁钺 ， 主 各胞 。 """
+                        tmp.replace(" ", ""); print(tmp)
         elif(dizhi == "辰" or dizhi == "戌"):
             tmp = """辰戌天同守兄弟宫 ， 兄弟或友人间常多无谓争执 。 见煞重 ， 则主受拖累 ， 或生 
 大决裂 。 
@@ -1887,14 +1995,12 @@ def GongXia2nd(star, dizhi,
             tmp = """
 巳亥天同独坐守兄弟宫 ， 亦主兄弟众多 ， 唯一般情 形下姊妹多于兄弟 。 同时亦 
 主交友面广 ， 尤擅结交地位不如己者 。 
-巳亥夭同亦主多与事业合作伙伴暗争 。 见煞忌刑重 尤确 。 ‘ 有时又为自身配偶与 
+巳亥夭同亦主多与事业合作伙伴暗争 。 见煞忌刑重 尤确 。 有时又为自身配偶与 
 兄弟或夥伴之配偶不和 ， 引起争端 。 其争端克应之期 ， 为 [ 天机巨门 ] 、 天梁蹿度兄 
 弟 宫 之年限 。 """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
     elif(star[:2] == "廉贞"):
-        
-        print("\n")
         tmp = """ 
 凡廉贞守兄弟宫 ， 兄弟宫及朋友之间 ， 以 [ 君子之交淡如 水 ] 为宜 。 除非吉化吉 
 曜并集 ， 则主得助力 ， 此时即应谋善处 。 
@@ -1903,13 +2009,16 @@ def GongXia2nd(star, dizhi,
         print("\n")
         if(dizhi == "子" or dizhi == "午"):
             if(star == "廉贞天相"):
-                tmp = """ 子午宫 【 廉贞天相 】 在兄弟宫 ， 无煞则主感情融洽 ， 且亦有友人助力 。 交友面 
+                tmp = """ 子午宫 【 廉贞天相 】 在兄弟宫 ，交友面 
     不太广 ， 但亦多朋友 。 
     子午 [ 廉相 ] 见煞忌刑诸曜重重同会 ， 则主兄弟中有 残疾者 ； 与人结交 ， 愈亲密 
     愈易反目成仇 ， 煞轻则减等 。 反目克应 ， 为太阳 、 天梁 、 巨门守兄弟宫之年 。 
     子午 [ 廉相 ] ， 结交不宜太滥 ， 否则易结党纷争 。 则 以破军为克应之期 。"""
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
+                if (len(shayaoList) == 0):
+                    tmp = """  子午宫 【 廉贞天相 】 在兄弟宫 ， 无煞则主感情融洽 ， 且亦有友人助力 。 """
+                    tmp.replace(" ", ""); print(tmp)
         elif(dizhi == "丑" or dizhi == "未"):
             if(star == "廉贞七杀"):
                 tmp = """丑未 [ 廉杀 ] 在兄弟宫 ， 见权禄及吉曜者 ， 兄弟融洽 ， 见煞曜则 主表面和洽 ， 助 
@@ -1927,12 +2036,21 @@ def GongXia2nd(star, dizhi,
             print("\n")
         elif(dizhi == "卯" or dizhi == "酉"):
             if(star == "廉贞破军"):
-                tmp = """卯酉宫 『 廉贞破军 』 同度 ， 见火铃 ， 兄弟或知交成仇 。 见吉曜及吉化 ， 则可以 
+                tmp = """卯酉宫 『 廉贞破军 』 同度 ，见吉曜及吉化 ， 则可以 
     融洽持久 ， 且亦可合作营运事业 ， 主得力 。 
-    卯 酉 [ 廉破 ] 见辅佐单星 ， 主兄弟各胞 ， 亦主牵涉及 友人之纷争 。 如廉贞化忌 ， 
-    则受累甚大 。 以有忌星冲起廉贞化忌之年为克应 。 """
+    卯 酉 [ 廉破 ] 见辅佐单星 ， 主兄弟各胞 ， 亦主牵涉及 友人之纷争 。  """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
+                if (len(shayaoList) > 0):
+                    for smallStar in shayaoList:
+                        if (smallStar == "火星" or smallStar == "铃星"):
+                            tmp = """ 见火铃 ， 兄弟或知交成仇 。  """
+                            tmp.replace(" ", ""); print(tmp)
+                if (len(huayaoList) > 0):
+                    for smallStar in huayaoList:
+                        if (smallStar == "廉贞化忌"):
+                            tmp = """ 如廉贞化忌 ， 则受累甚大 。 以有忌星冲起廉贞化忌之年为克应 。  """
+                            tmp.replace(" ", ""); print(tmp)
         elif(dizhi == "辰" or dizhi == "戌"):
             if(star == "廉贞天府"):
                 tmp = """辰戌 [ 廉府 ] 守兄弟宫 ， 兄弟多 ， 交友亦较广 。 唯必 须天府不 [ 空露 ] ， 然后始吉 ， 
@@ -1944,24 +2062,30 @@ def GongXia2nd(star, dizhi,
                 print("\n")
         elif(dizhi == "巳" or dizhi == "亥"):
             if(star == "廉贞贪狼"):
-                tmp = """巳亥 [ 廉贪 ] 守兄弟宫 ， 兄弟或知交反易生尤怨 。 故 以人合作事业为宜 。 
-    巳亥 [ 廉贪 ] 见贪狼 化忌 ， 主受兄弟或合作夥伴支排 差遣 ， 但仍受怨责 。 唯夥伴 
-    之工作能力则甚强 。 故须注意善处之道 。 
-    巳亥 [ 廉贪 ] 见廉贞化忌 ， 又见煞 ， 则尤怨甚深 。 """
+                tmp = """巳亥 [ 廉贪 ] 守兄弟宫 ， 兄弟或知交反易生尤怨 。 故 以人合作事业为宜 。 """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
+                if (len(huayaoList) > 0):
+                    for smallStar in huayaoList:
+                        if (smallStar == "廉贞化忌"):
+                            tmp = """ 巳亥 [ 廉贪 ] 见廉贞化忌 ， 又见煞 ， 则尤怨甚深 。  """
+                            tmp.replace(" ", ""); print(tmp)
+                        elif (smallStar == "贪狼化忌"):
+                            tmp = """ 巳亥 [ 廉贪 ] 见贪狼 化忌 ， 主受兄弟或合作夥伴支排 差遣 ， 但仍受怨责 。 唯夥伴 
+    之工作能力则甚强 。 故须注意善处之道 。   """
+                            tmp.replace(" ", ""); print(tmp)
     elif(star[:2] == "天府"):
-        
-        print("\n")
         tmp = """凡天府守兄弟宫 ， 府库不宜 『 空露 ] ， 否则主受兄弟 或友人剥削连累 。 
-凡天府守兄弟宫 ， 会天姚 、 天虚 、 大耗 ， 主兄弟或 友人权术阴谋 。 
-天府守兄弟宫 ， 见辅佐诸曜中之一对 ， 却又另见 [ 单 星 ] ， 主兄弟各胞 。 
+凡天府守兄弟宫 ， 会天姚 、 天虚 、 大耗 ， 主兄弟或 友人权术阴谋 。  
 天府守兄弟宫 ， 见 煞忌刑曜主兄弟少或主多而刑 克 ； 见辅佐诸曜始主兄弟众多 。 
 天府守兄弟宫 ， 最嫌会廉贞化忌 ， 主兄弟或知交反 目 ， 恩反成仇 。 亦嫌会武曲 
 化忌 ， 主为兄弟或友人破财 ， 煞重则为争财之兆 。 
  """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
+        if (len(fuyaoList) > 0 or len(zuoyaoList) > 0):
+            tmp = """天府守兄弟宫 ， 见辅佐诸曜中之一对 ， 却又另见 [ 单 星 ] ， 主兄弟各胞 。"""
+            tmp.replace(" ", ""); print(tmp)
         if(dizhi == "丑" or dizhi == "未"):
             tmp = """ 天府独守兄弟宫在丑未者 ， 吉凶多在天同 、 巨门 ， [ 武破 ] 宫垣为兄弟宫时克应 ；"""
             tmp.replace(" ", ""); print(tmp)
@@ -1976,19 +2100,20 @@ def GongXia2nd(star, dizhi,
             tmp.replace(" ", ""); print(tmp)
             print("\n")
     elif(star[:2] == "太阴"):
-        
-        print("\n")
         tmp = """太阴守兄弟宫 ， 入庙 ， 夜生人最吉 ； 落陷 ， 夜生人 值之 ， 须见吉曜始主兄弟和 
 荚 ， 若见煞 ， 则多刑克或不和 
 太阴守兄弟宫 ， 日生人值之 ， 虽入庙亦不和美 ； 见 煞主刑克 、 不和 ； 见吉曜始 
 和美 ， 但亦有缺憾 。 如日生人值太阴落陷 ， 则刑克甚重 。 
 太阴守兄弟宫 ， 有刑者 ， 多主姊妹克应 。 ( 比较一 一太阳守兄弟宫有刑 ， 则主兄 
-弟克应 。 ) 
-太阴化忌守兄弟宫 ， 无煞 ， 虽主受兄弟或伙伴之累 ， 但多属无心之失 。 
+弟克应 。 )  
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
-                
+        if (len(huayaoList) > 0):
+            for smallStar in huayaoList:
+                if (smallStar == "太阴化忌"):
+                    tmp = """ 太阴化忌守兄弟宫 ， 无煞 ， 虽主受兄弟或伙伴之累 ， 但多属无心之失 。 """
+                    tmp.replace(" ", ""); print(tmp)
         if(dizhi == "卯" or dizhi == "酉"):
             tmp = """卯酉宫太阴吉凶克应 ， 以天机 、 天同 、 天梁守兄弟 宫之年为重 。 """
             tmp.replace(" ", ""); print(tmp)
@@ -1998,19 +2123,18 @@ def GongXia2nd(star, dizhi,
             tmp.replace(" ", ""); print(tmp)
             print("\n")
         elif(dizhi == "巳" or dizhi == "亥"):
-            tmp = """太阴在亥宫化忌守兄弟宫 ， 男命 ， 反主得姊妹之力 ， 或宜与女性合作事业 。巳亥宫太阴吉凶克应 ， 以 [ 同巨 ] 、 
+            tmp = """巳亥宫太阴吉凶克应 ， 以 [ 同巨 ] 、 
 『 阳梁 』 守 兄弟宫之年为重 。  """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
+            if (len(huayaoList) > 0):
+                for smallStar in huayaoList:
+                    if (smallStar == "太阴化忌"):
+                        tmp = """ 太阴在亥宫化忌守兄弟宫 ， 男命 ， 反主得姊妹之力 ， 或宜与女性合作事业 。"""
+                        tmp.replace(" ", ""); print(tmp)
     elif(star[:2] == "贪狼"):
-        
-        print("\n")
         tmp = """贪狼守兄弟宫 ， 除巳亥二宫为贪狼陷地外 ， 一般情 形下均主兄弟和睦 ， 亦主人 
 交友广阔 。 唯不见吉化吉曜者 ， 则多酒肉之交 。 
-贪狼于巳亥陷地 ， [ 对星单见 ] ， 又见桃花者 ， 多主 有异胞兄弟 ； 见煞 ， 则兄弟 
-知交多生尤怨 ， 或各怀异心 。 若贪狼化忌 ， 主 受累 。 
-贪狼守兄弟宫 ， 若与火铃同度 ， 见寿 ， 主受兄弟或 合作伙伴益荫 ， 见煞忌 ， 则 
-反主突然受累 ， 事前毫无征兆 。 
 贪狼在兄弟宫成 『 泛水桃花 』 格局者 ， 生平多酒色之 友 ， 且因之受累 。 威 『 风 
 流彩杖 』 格局者亦然 。  
 贪狼在兄弟宫 ， 最嫌武曲化忌与贪狼化忌相照 ， 若 更见 [ 铃昌陀武 ] 之 格 ， 则主 
@@ -2018,16 +2142,24 @@ def GongXia2nd(star, dizhi,
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
+        if (len(shayaoList) > 0):
+            for smallStar in shayaoList:
+                if (smallStar == "火星" or smallStar == "铃星"):
+                    tmp = """ 贪狼守兄弟宫 ， 若与火铃同度 ， 见寿 ， 主受兄弟或 合作伙伴益荫 ， 见煞忌 ， 则 
+反主突然受累 ， 事前毫无征兆 。   """
+                    tmp.replace(" ", ""); print(tmp)
         if(dizhi == "子" or dizhi == "午"):
             tmp = """子午贪狼 ， 其吉凶克应 ， 多在 [ 同巨 ] 、 破军守兄弟 宫的流年 ； 寅申宫贪狼 ， 基 
 舍凶克应 ， 多在 『 紫相 』、 破军 、 七杀守兄弟宫的流年 ； 辰成宫贪狼 ， 其吉凶多在天 
 梁 、 天机 、 [ 廉相 ] 守兄弟宫的流年 。"""
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        
+        if(dizhi == "巳" or dizhi == "亥"):
+            tmp = """贪狼于巳亥陷地 ， [ 对星单见 ] ， 又见桃花者 ， 多主 有异胞兄弟 ； 见煞 ， 则兄弟 
+知交多生尤怨 ， 或各怀异心 。 若贪狼化忌 ， 主 受累 。 """
+            tmp.replace(" ", ""); print(tmp)
+            print("\n")
     elif(star[:2] == "巨门"):
-        
-        print("\n")
         tmp = """巨门于兄弟宫中为恶曜 ， 多主骨肉参商 ， 虽有辅佐 吉曜 ， 或见吉化 ， 亦仅主兄 
 弟有成 ， 并不主兄弟感情深厚 。 稍见煞曜 ， 即多是非 。 若煞忌刑曜并见 ， 则 主受兄 
 弟连累 ， 或致涉词讼 、 破耗 。 故巨门守兄弟 宫者 ， 绝不宜与人合作事业 。 唯 [ 太阳巨 
@@ -2054,20 +2186,19 @@ def GongXia2nd(star, dizhi,
             tmp.replace(" ", ""); print(tmp)
             print("\n")
     elif(star[:2] == "天相"):
-        
-        print("\n")
         tmp = """天相临兄弟宫 ， 须注意 [ 刑忌夹印 ] ， 及 『 财荫夹印 』 两个格局 。 不能单以天相 
 会照的星曜而定 。 若 [ 刑忌夹印 ] ， 主受兄弟或友人拖累甚深 ； 若 [ 财荫夹印 ] ， 则主 
 受兄弟 或友人益荫 。 以 [ 夹印 ] 之年为克应 。 
 天相对武曲 、 廉贞 、 破军三曜至为敏感 。 此三曜化 吉则吉 ， 化忌或加煞则凶 。 
 天相见昌曲 、 左右相夹 ， 或同会 ， 无虚耗刑煞者 ， 主兄弟双胞 。 但必须家族有 
-双胞胎传统者始是 。 
-天相守兄弟宫 ， 对煞曜至为敏感 。 四煞空劫多者 ， 主孤独 ， 亦主有祀入之兄弟 ； 
-或主自身祀出 。  
+双胞胎传统者始是 。  
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
-               
+        if (len(shayaoList) > 0):
+            tmp = """天相守兄弟宫 ， 对煞曜至为敏感 。 四煞空劫多者 ， 主孤独 ， 亦主有祀入之兄弟 ； 
+或主自身祀出 。 """
+            tmp.replace(" ", ""); print(tmp)   
         if(dizhi == "丑" or dizhi == "未"):
             tmp = """ 丑未宫天相 ， 吉凶克 应之年 ， 以天相 、 巨门 、 [ 同梁 ] 守兄弟宫之年为克应 。 """
             tmp.replace(" ", ""); print(tmp)
@@ -2081,8 +2212,6 @@ def GongXia2nd(star, dizhi,
             tmp.replace(" ", ""); print(tmp)
             print("\n")
     elif(star[:2] == "天梁"):
-        
-        print("\n")
         tmp = """天梁守兄弟宫 ， 入庙和美 ， 落陷则不和美 。 会辅弼 、 魁钺和美 ， 会煞则不和美 。 
 天梁无吉会 ， 兄弟少 ， 多则为各胞 。 见桃花诸曜 ， 主姊妹多兄弟少 。 
 天梁吉 ， 则主兄弟或友人暗生助力 。 凶恶则主暗争 、 排挤 。 吉凶皆在暗面而不 
@@ -2110,12 +2239,8 @@ def GongXia2nd(star, dizhi,
             tmp.replace(" ", ""); print(tmp)
             print("\n")
     elif(star[:2] == "七杀"):
-        
-        print("\n")
-        tmp = """七杀守兄弟宫 ， 见禄 、 权 、 科及辅弼 ， 兄弟众多 。 命宫见辅弼 ， 则兄弟宫之 七 
-杀虽不会辅佐诸吉 ， 亦主兄弟 众多 ， 但有刑克或不和 。 
-七杀守兄弟宫 ， 煞曜聚合者 ， 则主孤单 。 更见天刑 乃主刑克 。 否则兄弟自小分 
-离 。 
+        tmp = """ 命宫见辅弼 ， 则兄弟宫之 七 
+杀虽不会辅佐诸吉 ， 亦主兄弟 众多 ， 但有刑克或不和 。  
 若七杀在兄弟宫有煞刑诸曜 ， 而命宫又见辅弼诸 吉 ， 则或为两重父母 ， 例如本 
 身多兄弟 ， 祀出后无兄弟 。 又或为本多兄弟而刑克至孤单 。 一一凡言刑克 ， 终身残 
 疾者亦为刑克之应 。 
@@ -2124,6 +2249,26 @@ def GongXia2nd(star, dizhi,
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
+        if (len(huayaoList) > 0):
+            for smallStar in huayaoList:
+                if (smallStar[2:] == "化禄" or smallStar[2:] == "化科" or smallStar[2:] == "化权"):
+                    tmp = """ 七杀守兄弟宫 ， 见禄 、 权 、 科及辅弼 ， 兄弟众多 。"""
+                    tmp.replace(" ", ""); print(tmp)
+        if (len(fuyaoList) > 0):
+            for smallStar in fuyaoList:
+                if (smallStar == "左辅" or smallStar == "右弼"):
+                    tmp = """ 七杀守兄弟宫 ， 见禄 、 权 、 科及辅弼 ， 兄弟众多 。"""
+                    tmp.replace(" ", ""); print(tmp)
+        if (len(zuoyaoList) > 0):
+            for smallStar in zuoyaoList:
+                if (smallStar == "禄存"):
+                    tmp = """ 七杀守兄弟宫 ， 见禄 、 权 、 科及辅弼 ， 兄弟众多 。"""
+                    tmp.replace(" ", ""); print(tmp)
+        if (len(shayaoList) > 0):
+            for smallStar in shayaoList:
+                tmp = """ 七杀守兄弟宫 ， 煞曜聚合者 ， 则主孤单 。 更见天刑 乃主刑克 。 否则兄弟自小分 离 。"""
+                tmp.replace(" ", ""); print(tmp)
+                    
         if(dizhi == "子" or dizhi == "午"):
             tmp = """ 子午七杀守兄弟宫 ， 以 【 杀破狼 】 蹿兄弟 宫之年 ， 为 吉凶克应 。"""
             tmp.replace(" ", ""); print(tmp)
@@ -2137,19 +2282,26 @@ def GongXia2nd(star, dizhi,
             tmp.replace(" ", ""); print(tmp)
             print("\n")
     elif(star[:2] == "破军"):
-        
-        print("\n")
         tmp = """破军守兄弟宫 ， 多主有缺点 ， 会煞曜主孤单 ， 更会 刑忌则兄弟刑克 ， 知交反目 。 
-即使会辅佐诸吉 ， 亦不利长兄或长姊 。 若与禄存间度 ， 则且需独立负起长子或长女 
-之责任 。 与人合作 ， 亦主开创而不主收成 。 
+即使会辅佐诸吉 ， 亦不利长兄或长姊 。 
 破军守兄弟宫 ， 除非孤单 ， 否则兄弟年龄有差距 ， 由八年至十二年以上不等 。 
-破军守兄弟宫 ， 火铃同度更见空劫 ， 主兄弟有两重 父母 ( 如祀出 、 过继 、 童年受 
-抛掷 ) ， 否则主一生分离异地 。 故见此格局 ， 不宜与人合作 ， 否则易中道破裂 。 
 破军守兄弟宫而辅佐吉曜咸集 ， 则可藉他人之力创 业 。 ( 注意禄存同度时情形恰 
 恰相反 ) 。  
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
+        if (len(zuoyaoList) > 0):
+            for smallStar in zuoyaoList:
+                if (smallStar == "禄存"):
+                    tmp = """ 若与禄存同度 ， 则且需独立负起长子或长女 
+之责任 。 与人合作 ， 亦主开创而不主收成 。 """
+                    tmp.replace(" ", ""); print(tmp)
+        if (len(shayaoList) > 0):
+            for smallStar in shayaoList:
+                if (smallStar == "火星" or smallStar == "铃星"):
+                    tmp = """ 破军守兄弟宫 ， 火铃同度更见空劫 ， 主兄弟有两重 父母 ( 如祀出 、 过继 、 童年受 
+抛掷 ) ， 否则主一生分离异地 。 故见此格局 ， 不宜与人合作 ， 否则易中道破裂 。  """
+                    tmp.replace(" ", ""); print(tmp)
         if(dizhi == "子" or dizhi == "午"):
             tmp = """ 子午破军守兄弟宫 ， 吉凶克应 ， 为破军 、 七杀 、 [ 廉 相 ] 蹿度兄弟宫之年 。 """
             tmp.replace(" ", ""); print(tmp)
@@ -2172,8 +2324,6 @@ def GongXia3rd(star, dizhi,
     smallStarList = printsmallStar(fuyaoList,zuoyaoList,
                    shayaoList,huayaoList)
     if(star[:2] == "紫微"):
-        
-        print("\n")
         tmp = """ 
 男命夫妻宫见紫微者 ， 不论在何宫度 ， 皆宜妻子有 事业 。 若作家庭主妇 ， 即多 
 将其领导力发挥于家庭 ， 甚至变成控制丈夫 。 
@@ -2183,19 +2333,22 @@ def GongXia3rd(star, dizhi,
         tmp.replace(" ", ""); print(tmp)
         print("\n")
         if(star == "紫微破军"):
-            tmp = """[ 紫破 ] 必须见 [ 百官朝拱 ] ， 又不见辅佐单 星 ， 然后始主婚姻吉利 。『 紫 
-破 』 且主夫妻可以合作创业 ， 白 手兴家 。 唯 『 紫相 』 始终有缺点 ， 夫妻 年龄有大差 
-距 ， 然后始可适应忍让 。[ 紫破 ] 宜配偶年龄有大差距 。 唯男命配年 长二三年之妻 ； 女命配年 
+            tmp = """『 紫 
+破 』 且主夫妻可以合作创业 ， 白 手兴家 。 [ 紫破 ] 宜配偶年龄有大差距 。 唯男命配年 长二三年之妻 ； 女命配年 
 少二三年之夫 ， 亦作大差距看 。  """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
+            if (len(fuyaoList) == 0 and len(zuoyaoList) == 0):
+                tmp = """[ 紫破 ] 必须见 [ 百官朝拱 ] ， 又不见辅佐单 星 ， 然后始主婚姻吉利 。"""
+                tmp.replace(" ", ""); print(tmp)
         elif(star == "紫微七杀"):
-            tmp = """ [ 紫杀 ] 必须见 [ 百官朝拱 ] ， 又不见辅佐单 星。 """
+            tmp = """ [ 紫杀 ] 必须见 [ 百官朝拱 ] ， 又不见辅佐单 星。 然后始主婚姻吉利 。 """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
         elif(star == "紫微天相"):
             tmp = """ 紫相宜配偶年龄有大差距 。 唯男命配年 长二三年之妻 ； 女命配年 
-少二三年之夫 ， 亦作大差距看 。 """
+少二三年之夫 ， 亦作大差距看 。唯 『 紫相 』 始终有缺点 ， 夫妻 年龄有大差 
+距 ， 然后始可适应忍让 。 """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
         if(dizhi == "子" or dizhi == "午") and len(star) == 2:
@@ -2217,7 +2370,6 @@ def GongXia3rd(star, dizhi,
             if(star == "紫微破军"):
                 tmp = """ 丑未 [ 紫破 ] ， 一般不利居夫妻宫 。 虽本持安定 ， 亦 主婚前有波折 ； 若动荡昔 ， 
     则每易异离 。 
-    丑未 『 紫破 』 ， 最不宜见辅佐 『 单星 』 ， 每主有第三者 介入 。 
     丑未 『 紫破 』 本质安定者 ， 经行煞忌刑耗空劫重重之 大运流年 ， 主配偶有灾病 ， 
     或事业倾败 。 原局 『 紫破 』 动荡 ， 经行此等宫垣 ， 则每主生离死别 。 一一此等宫垣 ， 
     以 『 紫 破 』 、 [ 廉贪 ] [ 同梁 ] 、 巨门坐守者最为吃紧 。 
@@ -2225,23 +2377,34 @@ def GongXia3rd(star, dizhi,
     则配偶且 有不良嗜好 。 每于再行 [ 紫破 ] 之年出事 。  """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
+                if (len(fuyaoList) == 1 and len(zuoyaoList) == 1):
+                    tmp = """丑未 『 紫破 』 ， 最不宜见辅佐 『 单星 』 ， 每主有第三者 介入 。 """
+                    tmp.replace(" ", ""); print(tmp)
         elif(dizhi == "寅" or dizhi == "申"):
             if(star == "紫微天府"):
                 tmp = """ 寅申宫 [ 紫府 ] 同度 ， 若无辅佐诸曜 ( 或有 ， 而所见 者多 [ 单星 ]) ， 或府库 『 空露 ] ， 
     则防于贪狼 、 破军 、 巨门大 运 ， 婚姻发生变化 。 此等宫垣 ， 见煞忌空劫即为生变之 
     兆 。 
-    寅申宫 『 紫府 ] ， 必须见辅佐对星者 ， 然后主白头偕 老 。 唯若禄存同度 ， 仍主配 
-    偶自私 ， 有支配欲 。 
     寅申 『 紫府 』 ， 天寿同躔 ， 男命宜小配 ， 女命宜长配 。 
     寅申 『 紫府 』 而倾向于进取性者 ， 居夫妻宫并不主配 偶有进取心 ， 反主易生外 
     鹜 ， 其外鹜之年 ， 多为 『 廉相 』 、 天 同 、 天机三垣 。"""
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
+                if (len(fuyaoList) > 0):
+                    tmp = """寅申宫 『 紫府 ] ， 必须见辅佐对星者 ， 然后主白头偕 老 。"""
+                    tmp.replace(" ", ""); print(tmp)
+                if (len(zuoyaoList) > 0):
+                    tmp = """寅申宫 『 紫府 ] ， 必须见辅佐对星者 ， 然后主白头偕 老 。"""
+                    tmp.replace(" ", ""); print(tmp)
+                    for smallStar in zuoyaoList:
+                        if (smallStar == "禄存"):
+                            tmp = """ 唯若禄存同度 ， 仍主配 
+    偶自私 ， 有支配欲 。 """
+                            tmp.replace(" ", ""); print(tmp)
         elif(dizhi == "卯" or dizhi == "酉"):
             if(star == "紫微贪狼"):
                 tmp = """ 卯酉宫 [ 紫贪 ] 须分别 物欲或情欲的本质 。 物欲 『 紫 贪 ] 主配偶进取 ； 情欲者则婚 
-    前因多波折 ， 婚后亦每易 生外心 。 
-    卯酉 { 紫贪 } 又见昌曲 ， 每生非礼成婚 ( 『 紫破 』 则见 辅弼 ) 。 但可免生离死别之克 。 
+    前因多波折 ， 婚后亦每易 生外心 。  
     唯与廉贞化禄会者 ， 配偶不 顾家室 ； 与廉贞化忌会者 ， 配偶聪明而易丧志 ， 且善找 
     寻刺激 。 
     『 紫贪 』 见吉 ， 不可作 『 桃花犯主 』 看 。 亦主夫妻可以 合作创业 ， 唯必须以配
@@ -2249,19 +2412,28 @@ def GongXia3rd(star, dizhi,
     卯酉 『 紫贪 』 ， 凶者以经行巨门 、 廉杀 、 武破 、 太 阳坐守宫垣为克应之年 。 """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
+                if (len(zuoyaoList) > 0):
+                    for smallStar in zuoyaoList:
+                        if (smallStar == "文曲" or smallStar == "文昌"):
+                            tmp = """ 卯酉 { 紫贪 } 又见昌曲 ， 每生非礼成婚 ( 『 紫破 』 则见 辅弼 ) 。 但可免生离死别之克 。 """
+                            tmp.replace(" ", ""); print(tmp)
         elif(dizhi == "辰" or dizhi == "戌"):
             if(star == "紫微天相"):
-                tmp = """ 辰成 『 紫相 』 ， 男命配妻宜年小 ( 可小十二年以上 ) ， 女命配夫宜年长 ( 八年至十 
+                tmp = """ 辰戌 『 紫相 』 ， 男命配妻宜年小 ( 可小十二年以上 ) ， 女命配夫宜年长 ( 八年至十 
     二年 ) 。 若 『 紫相 』 无情者 ， 尤须 夫妻年龄有差距始可弥补 ， 否则主生离 。 
     辰戌 『 紫相 』， 以与曾结婚或同居的人结合为宜 。 见 辅佐 『 单星 』 者尤然 。 
     辰戌 [ 紫相 ] 无情 ， 虽夫妻感情不变 ， 仍防配偶突生 疾患 。 见大运流年夫妻宫叠 
     冲煞忌之年克应 。 
-    辰戌 『 紫相 』 有情 ， 见辅弼吉曜 ， 利夫妻合作创业 ， 谓之夫唱妇随 ， 可以发达 
-    兴家 ， 然仍备怀自私之心 。 
     辰戌 『 紫相 』， 吉者以 [ 阴阳 ] 、 [ 武府 ] 、 破军 、 七 杀 为克应之年 ； 凶者以 『 武府 』 、 
     破军 、 天梁为克应之年 。 """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
+                if (len(fuyaoList) > 0):
+                    for smallStar in fuyaoList:
+                        if (smallStar == "左辅" or smallStar == "右弼"):
+                            tmp = """ 辰戌 『 紫相 』 有情 ， 见辅弼吉曜 ， 利夫妻合作创业 ， 谓之夫唱妇随 ， 可以发达 
+    兴家 ， 然仍备怀自私之心 。  """
+                            tmp.replace(" ", ""); print(tmp)
         elif(dizhi == "巳" or dizhi == "亥"):
             if(star == "紫微七杀"):
                 tmp = """ 巳亥 [ 紫杀 ] 一般均主配偶弄权 。 若见辅佐吉曜 ， 则 配偶事业广大 。 唯易与自 身 
@@ -2274,36 +2446,44 @@ def GongXia3rd(star, dizhi,
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
     elif(star[:2] == "天机"):
-        
-        print("\n")
         tmp = """
 天机在夫妻宫者 ， 基本上不利 。 唯与太阴相对或同 度的情形下 ， 见吉曜 ， 然后 
 始主谐美 。 
-天机在夫妻宫最不喜天同或巨门化忌 ， 均主感情困 扰 ， 古代以此为婢妾女命 。
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
+        if (len(huayaoList) > 0):
+            for smallStar in huayaoList:
+                if (smallStar == "天同化忌" or smallStar == "巨门化忌"):
+                    tmp = """ 天机在夫妻宫最不喜天同或巨门化忌 ， 均主感情困 扰 ， 古代以此为婢妾女命 。 """
+                    tmp.replace(" ", ""); print(tmp)
         if(dizhi == "子" or dizhi == "午") and len(star) == 2:
             if(star == "天机"):
                 tmp = """子午天机独坐 ， 对宫巨门 ， 稍带煞曜即己主夫妻貌 合神离 。 若天机化忌或巨门 
 化忌 ， 则夫妻因性格不合或不满客观环境 ， 时生改变之心 。 若巨门 化忌者 ， 虽离异 
 仍难求满意对象 。 
-子午天机化忌 ， 夫妻各怀机心 ， 再见煞 ， 则往往于 [ 同梁 ] 或 [ 廉贪 ] 宫度发生事 
-端 。 再婚即多满意 。 一一唯须 注意 ， 天机化忌而火铃空劫同度者 ， 再婚亦仍不佳 。 
-子午天机见天同化禄者吉 ， 主夫妇白手兴家 。 若天 同化忌 ， 则主离多会少 。 
-子午天机见吉 ， 不怕行太阴 、 太阳限 ； 若见煞忌 ， 行太阴太阳限 、 亦主口舌纷 
-扰 。 
+子午天机见吉 ， 不怕行太阴 、 太阳限 ； 若见煞忌 ， 行太阴太阳限 、 亦主口舌纷 扰 。 
 子午天机以 [ 同梁 ] 星系最为关键 ， 见火铃主恶性分 离 ； 见禄马主良性分离 ； 见
 煞忌亦主离异 。 若见禄权科会 ， 则夫妻可以白头 。 但若同时见巨门化忌 ， 则仍须自 
 我克制 。  """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
+                if (len(huayaoList) > 0):
+                    for smallStar in huayaoList:
+                        if (smallStar == "天机化忌"):
+                            tmp = """ 子午天机化忌 ， 夫妻各怀机心 ， 再见煞 ， 则往往于 [ 同梁 ] 或 [ 廉贪 ] 宫度发生事 
+端 。 再婚即多满意 。须 注意 ， 天机化忌而火铃空劫同度者 ， 再婚亦仍不佳 。 """
+                            tmp.replace(" ", ""); print(tmp)
+                        elif (smallStar == "天同化禄"):
+                            tmp = """ 子午天机见天同化禄者吉 ， 主夫妇白手兴家 。 """
+                            tmp.replace(" ", ""); print(tmp)
+                        elif (smallStar == "天同化忌"):
+                            tmp = """ 若天 同化忌 ， 则主离多会少 。  """
+                            tmp.replace(" ", ""); print(tmp)
         elif(dizhi == "丑" or dizhi == "未") and len(star) == 2:
             if(star == "天机"):
                 tmp = """丑未天机独坐 ， 对宫为天梁 ， 于夫妻宫有所不宜 。 多主早婚而离异 ， 或虽迟婚 ， 
-但婚前却经多次恋爱挫折 ， 见空劫者尤然 。 
-丑未天机最怕陀罗同度 ， 不但婚迟 ， 而且多误良缘 ， 反与性格不投的人结合 ， 
-由是滋生不满 。 
+但婚前却经多次恋爱挫折 ， 见空劫者尤然 。  
 丑未宫天机吉化 ， 无煞者尚可 ， 有煞 ， 虽吉化亦不 意味姻缘美满 。 以年龄有差 
 距 ， 或妻子年龄反比丈夫大者为宜 ， 始能偕自首 。 
 丑未天机 ， 以婚前饱经挫折 ， 或婚前有风波阻碍者 为佳 。 若婚前顺利 ， 则婚后 
@@ -2312,6 +2492,11 @@ def GongXia3rd(star, dizhi,
 天同 备宫垣为吉凶枢纽 。  """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
+                if (len(shayaoList) > 0):
+                    for smallStar in shayaoList:
+                        if (smallStar == "陀罗"):
+                            tmp = """ 丑未天机最怕陀罗同度 ， 不但婚迟 ， 而且多误良缘 ， 反与性格不投的人结合 ， 由是滋生不满 。 """
+                            tmp.replace(" ", ""); print(tmp)
         elif(dizhi == "寅" or dizhi == "申"):
             if(star == "天机太阴"):
                 tmp = """ 寅申宫 [ 天机太阴 ] ， 男命优于女命 。 男命夫妻宫见 [ 机月 ] ， 主妻子美容 ， 且能 
@@ -2324,103 +2509,174 @@ def GongXia3rd(star, dizhi,
                 print("\n")
         elif(dizhi == "卯" or dizhi == "酉"):
             if(star == "天机巨门"):
-                tmp = """卯本宫 [ 天机巨门 ] ， 必须见禄 ， 然后夫妻始偕白发 。 但火铃同度则成破格 ， 主 
-始则和谐 ， 终亦成冰炭 。 以天同 、 天梁宫垣 为克应之期 。 
+                tmp = """
 卯酉 宫 [ 天机巨门 ] ， 以订婚后即有风波 ， 经历风波 始谐连理者为宜 。 否则婚后 
-多变故 。 若天机化忌 ， 主易与有家室的人恋爱 ； 若巨门化忌 ， 则更多感情上的隐衷 。 
-见煞 ， 主二婚 。 
+多变故 。
 女命夫妻宫不宜 『 机巨 』 。 古人说 ， 『 天机巨门为破 荡 ] ， 虽指命宫 ， 在夫妻宫者 
 亦然 。 见火铃或陀罗与天同同 躔 ， 即非一婚之命 。 
 卯酉宫 [ 机巨 ] ， 常以 『 武曲天府 』 限为关键 。 化禄化 忌均生变化 。 男女命均易 
 为有家室的人追求 ， 由是产生感困扰 。  """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
+                if (len(shayaoList) > 0):
+                    for smallStar in shayaoList:
+                        if (smallStar == "铃星" or smallStar == "火星"):
+                            tmp = """  但火铃同度， 主 始则和谐 ， 终亦成冰炭 。 """
+                            tmp.replace(" ", ""); print(tmp)
+                if (len(zuoyaoList) > 0):
+                    for smallStar in zuoyaoList:
+                        if (smallStar == "禄存"):
+                            tmp = """ 卯本宫 [ 天机巨门 ] ， 必须见禄 ， 然后夫妻始偕白发 。"""
+                            tmp.replace(" ", ""); print(tmp)
+                if (len(huayaoList) > 0):
+                    for smallStar in huayaoList:
+                        if (smallStar[2:] == "化禄"):
+                            tmp = """ 卯本宫 [ 天机巨门 ] ， 必须见禄 ， 然后夫妻始偕白发 。 """
+                            tmp.replace(" ", ""); print(tmp)
+                        if (smallStar == "天机化忌"):
+                            tmp = """  若天机化忌 ， 主易与有家室的人恋爱 ；  """
+                            tmp.replace(" ", ""); print(tmp)
+                        if (smallStar == "巨门化忌"):
+                            tmp = """ 若巨门化忌 ， 则更多感情上的隐衷 。 见煞 ， 主二婚 。  """
+                            tmp.replace(" ", ""); print(tmp)
         elif(dizhi == "辰" or dizhi == "戌"):
             if(star == "天机天梁"):
                 tmp = """ 辰戌宫 [ 天机天梁 ] 同度 ， 主迟婚 ， 或婚前有恋爱风 波 ， 否则生离 。 
 辰戌宫 【 天机 天梁 】， 见吉曜会合 ， 配夫宜年长 ， 配 妻宜小六年以上 ， 则夫妻白 
 头偕老 。 亦主婚前一度离别 ， 再见面始谐连理 。 
-『 机梁 』 在辰 ， 见煞 ， 行至未垣大限夫妻宫 ， 易受有 家室者追求 ； 在戌见煞 ， 
-行至丑垣大限夫妻宫亦然 。 见陀罗 、 铃星者 ， 则弄至多角风波 。 备方面当事入之困 
-扰 ， 难以分解 。 
 辰戌宫 『 机梁 』 以 『 武贪 』 宫垣为枢纽 。 化吉或吉会而 不见桃花者 ， 尚可以平 
 安无事 。 若化忌 ， 则主夫妻感情变化 。 化吉而见桃花 ， 亦主夫妻伦常有变 。 """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
+                if (len(shayaoList) > 0):
+                    tmp = """机梁 』 在辰 ， 见煞 ， 行至未垣大限夫妻宫 ， 易受有 家室者追求 ；『在戌见煞 ， 
+行至丑垣大限夫妻宫亦然 。 """
+                    tmp.replace(" ", ""); print(tmp)
+                    for smallStar in shayaoList:
+                        if (smallStar == "陀罗" or smallStar == "铃星"):
+                            tmp = """  见陀罗 、 铃星者 ， 则弄至多角风波 。 备方面当事入之困 
+扰 ， 难以分解 。  """
+                            tmp.replace(" ", ""); print(tmp)
         elif(dizhi == "巳" or dizhi == "亥"):
             if(star == "天机"):
                 tmp = """ 巳亥宫天机 ， 在亥宫者 ， 妻子貌寝 ； 在巳宫者则主 美容 。 此乃以太阴庙陷而作 
 分别 。 
-巳亥天机见 昌曲 ， 再同会桃花诸曜 ， 主配偶易为别 人追求 。 故若更见煞忌刑曜 ， 
-则主夫妻中道分张 。 
-巳亥天机有吉化 ， 见辅弼 、 魁钺 ， 则主配偶文秀 ， 且能创建事业 。 
-巳亥天机若会天同化禄 ， 巨门化忌 ， 则自己于婚后 易移情别恋 。 女命 ， 会太阳 
-化忌 ， 见煞 ， 主与配偶生离 。 
+巳亥天机若会天同化禄 ， 巨门化忌 ， 则自己于婚后 易移情别恋 。 女命 ， 会太阳 化忌 ， 见煞 ， 主与配偶生离 。 
 巳亥天机以 『 太阳天梁 』、 『 天同巨门 。 』 、 破军诸垣 ， 为 吉凶克应之枢纽 。 """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
+                if (len(zuoyaoList) > 0):
+                    for smallStar in zuoyaoList:
+                        if (smallStar == "文曲" or smallStar =="文昌"):
+                            tmp = """ 巳亥天机见 昌曲 ， 再同会桃花诸曜 ， 主配偶易为别 人追求 。 故若更见煞忌刑曜 ， 则主夫妻中道分张 。"""
+                            tmp.replace(" ", ""); print(tmp)
+                if (len(fuyaoList) > 0):
+                    tmp = """ 巳亥天机有吉化 ， 见辅弼 、 魁钺 ， 则主配偶文秀 ， 且能创建事业 。 """
+                    tmp.replace(" ", ""); print(tmp)
+                            
     elif(star[:2] == "太阳"):
         
         print("\n")
-        tmp = """  
-一般而言 ， 凡太阳在夫妻宫 ， 最不喜化忌 ， 无论男 女 ， 均主与原配生离死别 。 
-凡太阳在夫妻宫见火铃 ， 初时感情深厚 ， 久后即如 水火 。 
-女命夫妻宫太阳落陷 ， 化忌 ， 以三十后结婚 ， 且无 正式婚礼者为宜 。 
-女命夫妻宫太阳落陷化忌 ， 行至大限夫妻宫会照太 阳 ， 流煞冲并 ， 主因夫婿伤 
-心落泪 ， 或主遭人遗弃 。 
+        tmp = """   
 女命夜生人一般不宜夫妻宫见太阳 。 虽吉亦虚 ， 稍 带桃花 ， 夫婿即易生异心 。
 
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
+        if (len(huayaoList) > 0):
+            for smallStar in huayaoList:
+                if (smallStar[2:] == "化忌"):
+                    tmp = """ 一般而言 ， 凡太阳在夫妻宫 ， 最不喜化忌 ， 无论男 女 ， 均主与原配生离死别 。
+                    女命夫妻宫太阳落陷 ， 化忌 ， 以三十后结婚 ， 且无 正式婚礼者为宜 。女命夫妻宫太阳落陷化忌 ， 行至大限夫妻宫会照太 阳 ， 流煞冲并 ， 主因夫婿伤 
+心落泪 ， 或主遭人遗弃 。  """
+                    tmp.replace(" ", ""); print(tmp)
+        if (len(shayaoList) > 0):
+            for smallStar in shayaoList:
+                if (smallStar == "火星" or smallStar == "铃星"):
+                    tmp = """  凡太阳在夫妻宫见火铃 ， 初时感情深厚 ， 久后即如 水火 。 """
+                    tmp.replace(" ", ""); print(tmp)
         if(star == "太阳巨门"):
             tmp = """ 【 太阳巨门 】 见吉化 ， 而 『 福德宫 』 不吉者 ， 女命主离 乡背井 ， 嫁夫随夫 ； 男 
 命主入赘 ， 或主与岳父岳母同住 ， 而父母反别炊 。 
 『 太阳巨门 ] 见煞 ， 但不重 ， 主夫妇意见参商 。 煞忌 刑凑 ， 则有生离死别之虞 。 
-[ 太阳巨门 ] 见辅佐诸吉 ， 女命配夫显贵 ； 男命宜妻 子有独立事业 ， 否则便多是 
-非 。  """
+ """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
+            if (len(fuyaoList) > 0 and len(zuoyaoList) > 0):
+                tmp = """[ 太阳巨门 ] 见辅佐诸吉 ， 女命配夫显贵 ； 男命宜妻 子有独立事业 ， 否则便多是 非 。 """
+                tmp.replace(" ", ""); print(tmp)
         if(dizhi == "子" or dizhi == "午"):
             if(dizhi == "子"):
-                tmp = """太阳在子 ， 主配偶性情多挑剔 ， 见火铃者尤甚 。 若 空劫同度 ， 则往往迟婚 ， 或 
+                tmp = """太阳在子 ， 主配偶性情多挑剔 ， 见火铃者尤甚 。  唯禄马躔于申宫 ， 太阳化禄 ， 则主姻缘在于异域 ， 仍以迟婚为宜 。 
+太阳 在子 ， 一般不宜行巨门 、 [ 武破 ] 二垣 。 即使吉 星汇集 ， 亦多不如意 。 
+ """
+                tmp.replace(" ", ""); print(tmp)
+                print("\n")
+                if (len(shayaoList) > 0):
+                    for smallStar in shayaoList:
+                        if (smallStar == "地空" or smallStar == "地劫"):
+                            tmp = """  若 空劫同度 ， 则往往迟婚 ， 或 
 虽有婚约而难以结合 。 太阳化忌而有空劫同躔 ， 则女命主早寡 ， 有吉曜同时会合 ， 
-亦主生离 。 唯禄马躔于申宫 ， 太阳化禄 ， 则主姻缘在于异域 ， 仍以迟婚为宜 。 
-女命夫妻宫太阳在子化忌 ， 大限命宫行至子垣 ， 往 往婚姻不利 ， 或主生离 ， 或 
+亦主生离 。 """
+                            tmp.replace(" ", ""); print(tmp)
+                if (len(huayaoList) > 0):
+                    for smallStar in huayaoList:
+                        if (smallStar == "太阳化忌"):
+                            tmp = """ 女命夫妻宫太阳在子化忌 ， 大限命宫行至子垣 ， 往 往婚姻不利 ， 或主生离 ， 或 
 受感情困扰 ， 影响深远 。 夜生人尤甚 。 
 男命夫妻宫太阳在子化忌 ， 三十后即易生感情变 化 。 夜生人尤甚 ．。 
 太阳在子 ， 得 [ 百官朝拱 ] ， 女命虽主丈夫富贵 ， 唯 亦有名无实 。 夜生人尤甚 。 
-男命则妻子有事业 ， 不顾家室 。 
-太阳 在子 ， 一般不宜行巨门 、 [ 武破 ] 二垣 。 即使吉 星汇集 ， 亦多不如意 。 
-太阳在午 ， 主配偶贤明 ， 有责任感 。 见煞曜同度 ， 则日夜在外奔忙 ， 少家室之 
-乐 。 倘空劫同度 ， 亦以迟婚为宜 。 太阳化忌 ， 女命不宜早婚 ， 但往往多男女应酬约 
-会 。 唯天马于寅宫 ， 太阳化禄 ， 则于夫妻宫行至天同坐守之垣时亦主姻缘在异域 。 """
-                tmp.replace(" ", ""); print(tmp)
-                print("\n")
+男命则妻子有事业 ， 不顾家室 。   """
+                            tmp.replace(" ", ""); print(tmp)
             elif(dizhi == "午"):
-                tmp = """女命夫妻宫太阳在午化忌 ， 亦不宜大限命宫行至午 垣 ， 主感情易生困扰 ， 且易为 
-异性所累 。 
-男命夫妻富太阳在午化忌 ， 有煞 ， 三十后岁易生感 情变化 。 
+                tmp = """太阳在午 ， 主配偶贤明 ， 有责任感 。
 女命太阳在午 ， 会辅佐诸曜 ， 主夫婿贵显 。 男命 ， 古代主因妻得贵 ， 在现代 ， 
 妇女有自己事 业 ， 亦主妻子有良好事业 。 
 太阳在午一般不喜行天同 、 [ 廉杀 ] 二垣 ， 稍见煞曜 ， 婚姻即起波澜 。"""
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
+                if (len(shayaoList) > 0):
+                    tmp = """见煞曜同度 ， 则日夜在外奔忙 ， 少家室之 乐 。 """
+                    tmp.replace(" ", ""); print(tmp)
+                    for smallStar in shayaoList:
+                        if (smallStar == "地空" or smallStar == "地劫"):
+                            tmp = """   倘空劫同度 ， 亦以迟婚为宜 。  """
+                            tmp.replace(" ", ""); print(tmp)
+                if (len(huayaoList) > 0):
+                    for smallStar in huayaoList:
+                        if (smallStar == "太阳化忌"):
+                            tmp = """ 太阳化忌 ， 女命不宜早婚 ， 但往往多男女应酬约 会 。女命夫妻宫太阳在午化忌 ， 亦不宜大限命宫行至午 垣 ， 主感情易生困扰 ， 且易为 
+异性所累 。 男命夫妻富太阳在午化忌 ， 有煞 ， 三十后岁易生感 情变化 。   """
+                            tmp.replace(" ", ""); print(tmp)
+                        elif (smallStar == "太阳化禄"):
+                            tmp = """ 唯天马于寅宫 ， 太阳化禄 ， 则于夫妻宫行至天同坐守之垣时亦主姻缘在异域 。  """
+                            tmp.replace(" ", ""); print(tmp)
         elif(dizhi == "丑" or dizhi == "未"):
             if(star == "太阳太阴"):
-                tmp = """ 太阳在丑 ， [ 太阴太阳 ] 同度 ， 见吉 ， 主妻子志凌丈 夫 ， 夜生人尤甚 。 若见煞忌刑 
+                tmp = """  太阳在丑 ， [ 太阴太阳 ] 同度 ， 见吉 ， 主妻子志凌丈 夫 ， 夜生人尤甚 。 若见煞忌刑 
 同会 ， 则因妻破家 ， 轻则主因妻破财 ， 亦夜生人尤甚 。 若在女命 ， 见吉反主夫婿情 
 深 ， 夜生人更吉 。 见煞忌刑重者 ， 则主夫妇互相参商 。 
-[ 太阳太阴 ] 在丑 ， 见火铃 ， 主亲家不和 。 或主夫妻 年龄学历等不相称 。 
-男命夫妻宫 [ 阴阳 ] 在丑 ， 若太阴化忌 ， 则易与妻家 女眷不和 。 见煞 ， 妻多灾病 ， 
-或妻破财 。 见吉 ， 或太阴化禄 ， 则主得妻家助力 。 一般主得内助 。 
-女命夫妻宫 [ 阴阳 ] 在丑 ， 若太阳化忌 ， 主夫多灾病 ， 煞重 ， 则见刑克 ， 否则生 
-离 。 因太阴化忌亦不吉 ， 主夫多灾病而致自身不安 。 
+见吉 ， 或太阴化禄 ， 则主得妻家助力 。 一般主得内助 。 
 太阳在未 ， 亦 [ 太阴太阳 ] 同度 ， 与在丑宫大致同一 意义 。 唯在丑宫者较利男命 ；
 在未宫者较利女命 。 
 丑未宫 [ 阴阳 ] ， 以天同 、 天梁 、 『 天机巨门 』 宫垣 ， 为 吉凶克应的枢纽 。 """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
+                if (len(shayaoList) > 0):
+                    for smallStar in shayaoList:
+                        if (smallStar == "火星" or smallStar == "铃星"):
+                            tmp = """  [ 太阳太阴 ] 在丑 ， 见火铃 ， 主亲家不和 。 或主夫妻 年龄学历等不相称 。  """
+                            tmp.replace(" ", ""); print(tmp)
+                if (len(huayaoList) > 0):
+                    for smallStar in huayaoList:
+                        if (smallStar == "太阴化忌"):
+                            tmp = """ 男命夫妻宫 [ 阴阳 ] 在丑 ， 若太阴化忌 ， 则易与妻家 女眷不和 。 见煞 ， 妻多灾病 ， 
+或妻破财 。因太阴化忌亦不吉 ， 主夫多灾病而致自身不安 。   """
+                            tmp.replace(" ", ""); print(tmp)
+                        if (smallStar == "太阳化忌"):
+                            tmp = """ 女命夫妻宫 [ 阴阳 ] 在丑 ， 若太阳化忌 ， 主夫多灾病 ， 煞重 ， 则见刑克 ， 否则生 
+离 。"""
+                            tmp.replace(" ", ""); print(tmp)
         elif(dizhi == "寅" or dizhi == "申"):
             if(star == "太阳巨门"):
                 tmp = """ 太阳在寅 ， [ 太阳巨门 ] 同度 ， 见太阳化禄 、 化权 、 或 太阳化忌而无火铃 ， 均主 
@@ -2435,43 +2691,60 @@ def GongXia3rd(star, dizhi,
 [ 太阳天梁 ] 见 吉 ， 主夫妻年龄有差距 。 或主妻子长于丈夫 。 见天寿 ， 差距尤大 。 
 [ 太阳天梁 ] 见煞忌 ， 主夫妻生离死别 ， 或主配偶因 事业关系 ， 长期在外 。 一般 
 以迟婚为宜 。 
-[ 太阳天梁 ] 在夫妻宫 ， 主婚前有波折 ， 或旧侣重逢 而后结合 。 见昌曲 ( 单星 ) ， 
-则有两度婚姻 。 
-[ 太阳天梁 ] 必须见辅佐吉曜 ， 然后始主夫妻匹配 ； 自首偕老 ， 唯婚前仍有波折 ， 
-或婚后即有段一时期分别 。 
+[ 太阳天梁 ] 在夫妻宫 ， 主婚前有波折 ， 或旧侣重逢 而后结合 。 
 [ 阳梁 ] 在 『 夫妻宫 』 ， 以 [ 天同巨门 ] 、 贪狼 、 [ 阳梁 ] 各 垣 ， 为流年大运的枢纽 。 """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
+                if (len(zuoyaoList) > 0):
+                    for smallStar in zuoyaoList:
+                        if (smallStar == "文曲" or smallStar =="文昌"):
+                            tmp = """ 见昌曲 ( 单星 ) ， 则有两度婚姻 。 """
+                            tmp.replace(" ", ""); print(tmp)
+                if (len(fuyaoList) > 0 or len(zuoyaoList) > 0):
+                    tmp = """ [ 太阳天梁 ] 必须见辅佐吉曜 ， 然后始主夫妻匹配 ； 白首偕老 ， 唯婚前仍有波折 ， 
+或婚后即有段一时期分别 。  """
+                    tmp.replace(" ", ""); print(tmp)
+                            
         elif(dizhi == "辰" or dizhi == "戌"):
             if(star == "太阳"):
-                tmp = """太阳在辰 ， 最不喜巨门化忌 ， 主生离死别 。 化禄 ， 则亦可能与异族通婚 。 
-太阳在戌 ， 巨门化忌者其不利性质更为严重 。 化禄 不主异族通婚 。 但女命主受 
-异族追求 。 
+                tmp = """
 太阳在辰戌为夫妻宫 ； 命宫行至 [ 紫破 ] 大限 ， 常主 非礼成亲 。 
 太阳在辰戌 ， 见吉化吉曜 ， 女命主夫婿富贵 ， 唯在 戌宫者常主有名无实 。 
-太阳在辰戌 ， 最不宜陀罗 、 火星同度 ； 或擎羊 、 铃 星同度 ， 均主不能与结发夫 
-妻同偕自首 。 唯在辰宫者 ， 再婚则利 。 
 太阳在辰戌 ， 以巨门 、 天机 、 [ 天同天梁 ] 各垣为吉 凶克应之枢纽 。  """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
+                if (dizhi == "戌"):
+                    tmp = """太阳在戌 ， 巨门化忌者其不利性质更为严重 。 化禄 不主异族通婚 。 但女命主受 
+异族追求 。"""
+                    tmp.replace(" ", ""); print(tmp)
+                if (dizhi == "辰"):
+                    tmp = """太阳在辰 ， 最不喜巨门化忌 ， 主生离死别 。 化禄 ， 则亦可能与异族通婚 。 """
+                    tmp.replace(" ", ""); print(tmp)
+                if (len(shayaoList) > 0):
+                    for smallStar in shayaoList:
+                        if (smallStar == "火星" or smallStar == "铃星" or smallStar == "擎羊" or smallStar == "陀罗"):
+                            tmp = """ 太阳在辰戌 ， 最不宜陀罗 、 火星同度 ； 或擎羊 、 铃 星同度 ， 均主不能与结发夫 
+妻同偕自首 。 唯在辰宫者 ， 再婚则利 。   """
+                            tmp.replace(" ", ""); print(tmp)
         elif(dizhi == "巳" or dizhi == "亥"):
             if(star == "太阳"):
-                tmp = """ 太阳在巳 ， 优于太阳在亥 。 男女命皆如此 。 唯女命 太阳在亥 ， 见辅佐诸曜华集 ， 
-太阳又吉化者 ， 主夫婿经历艰辛而成大业 。 若见昌曲 、 左右 [ 单星 1 ， 则为二嫁之命 ， 
-再 嫁始卜完美 。 
-太阳在巳 ， 见煞化忌 ， 女命大限夫妻宫行至 [ 紫府 ] 守垣 ， 或 太阴守垣 ， 皆不主 
-吉利 。 
-太阳在亥 ， 见煞化忌 ， 男命不宜早婚 。 行至 『 紫府 ] 大限主无媒苟合 ， 但感情终 
-成水火 。 女命 ， 则夫妻宫行于天同守垣之大限 ， 往往亦生事端 。 
+                tmp = """ 太阳在巳 ， 优于太阳在亥 。 男女命皆如此 。
 太阳在巳亥二垣 ， 纵见吉 ， 亦主婚前恋爱波折 。 
 太阳在巳亥 ， 见辅佐诸曜对星齐备 ， 又为 [ 百官朝 拱 ] 之局 ， 男命主因妻得贵 。命宫有火星 、 铃星 ， 亦主入赘 ， 或与岳父岳母同住 ， 而父母反别炊 。 
 太阳在巳亥最嫌巨门化忌 ? 则夫妻性格 、 家世 、 学 识均不匹配 ， 且是非口舌连连 。 
 配偶如为 [ 口舌生财 ] ( 如教 师 、 推销 ) ； 或 [ 是非生财 ]( 如律师 、 警察 ) 者 ， 则较吉 。"""
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
+                if (dizhi == "亥"):
+                    tmp = """ 唯女命 太阳在亥 ， 见辅佐诸曜华集 ， 
+太阳又吉化者 ， 主夫婿经历艰辛而成大业 。 若见昌曲 、 左右 [ 单星 】， 则为二嫁之命 ， 
+再 嫁始卜完美 。太阳在亥 ， 见煞化忌 ， 男命不宜早婚 。 行至 『 紫府 ] 大限主无媒苟合 ， 但感情终 
+成水火 。 女命 ， 则夫妻宫行于天同守垣之大限 ， 往往亦生事端 。 """
+                    tmp.replace(" ", ""); print(tmp)
+                if (dizhi == "巳"):
+                    tmp = """太阳在巳 ， 见煞化忌 ， 女命大限夫妻宫行至 [ 紫府 ] 守垣 ， 或 太阴守垣 ， 皆不主 吉利 。 """
+                    tmp.replace(" ", ""); print(tmp)
     elif(star[:2] == "武曲"):
-        
-        print("\n")
         tmp = """  
 凡武在夫妻宫 ， 文曲化忌同度 ， 皆主无正式婚礼 。 若成 [ 铃昌陀武 ] 格局者 ， 则 
 婚姻必主破裂 ， 甚至刑事克配 偶 。
@@ -2480,46 +2753,66 @@ def GongXia3rd(star, dizhi,
         print("\n")
         if(dizhi == "子" or dizhi == "午"):
             if(star == "武曲天府"):
-                tmp = """ 子午宫 [ 武曲天府 ] ， 必须见禄始主婚姻谐美 。 又以 会廉贞化禄为佳 ； 若武曲化 
-禄 ， 男命嫌妻子太能干 ， 夺去丈夫光芒 。 倘七 杀与禄存同度拱照 ， 则 [ 妇夺夫权 ] 的 
-情形 更严重 。 男命 ， 若命富有火铃 ， 主入赘岳家 。 
-子午宫 [ 武府 J ， 若武曲化忌 ， 女命主婚姻生活中断 ， 其原因 ， 或为丈夫有病 ， 
-或为丈夫移情别恋 。 男命主夫妻生离 。 倘更多煞曜会合 ， 则为再婚之命 。 
-子午宫 [ 武府 ] ， 若见辅佐诸曜 ， 男女皆主为有家室 者追求 。 见辅佐 [ 单星 ] ， 则 
-为再婚之命 。 桃花诸曜同会 ， 则 再婚后仍受有家室的人追求 。 女命尤甚 。 
+                tmp = """ 子午宫 [ 武曲天府 ] ， 必须见禄始主婚姻谐美 。 又以 会廉贞化禄为佳 ；  倘七 杀与禄存同度拱照 ， 则 [ 妇夺夫权 ] 的 
+情形 更严重 。 男命 ， 若命宫有火铃 ， 主入赘岳家 。  
 子午宫 [ 武府 ] ， 以破军 、 [ 紫相 ] 、 天同 、 [ 机巨 ] 等宫 垣 ， 为吉凶克应的枢纽 。"""
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
+                if (len(huayaoList) > 0):
+                    for smallStar in huayaoList:
+                        if (smallStar == "武曲化禄"):
+                            tmp = """ 若武曲化 
+禄 ， 男命嫌妻子太能干 ， 夺去丈夫光芒 。  """
+                            tmp.replace(" ", ""); print(tmp)
+                        if (smallStar == "武曲化忌"):
+                            tmp = """ 子午宫 [ 武府 J ， 若武曲化忌 ， 女命主婚姻生活中断 ， 其原因 ， 或为丈夫有病 ， 
+或为丈夫移情别恋 。 男命主夫妻生离 。 倘更多煞曜会合 ， 则为再婚之命 。 """
+                            tmp.replace(" ", ""); print(tmp)
+                if (len(fuyaoList) > 0 or len(zuoyaoList) > 0):
+                    tmp = """子午宫 [ 武府 ] ， 若见辅佐诸曜 ， 男女皆主为有家室 者追求 。 见辅佐 [ 单星 ] ， 则 
+为再婚之命 。 桃花诸曜同会 ， 则 再婚后仍受有家室的人追求 。 女命尤甚 。 """
+                    tmp.replace(" ", ""); print(tmp)
         elif(dizhi == "丑" or dizhi == "未"):
             if(star == "武曲贪狼"):
-                tmp = """ 丑未宫 [ 武曲贪狼 ] ， 与火铃同度 ， 主感情始热终冷 。 若桃花诸曜齐集 ， 则主婚 
-前婚后皆有感情纷扰 。 
+                tmp = """ 丑未宫 [ 武曲贪狼 ] ， 若桃花诸曜齐集 ， 则主婚 前婚后皆有感情纷扰 。 
 丑未宫 [ 武曲贪狼 ] ， 一般主配偶吝啬 ， 以钱财为重 ， 时思左右配偶的财权 。 禄 
-存或化禄照会则不是 ， 主夫婿富足 ， 或妻子能凭自力经营 。 
-丑未 [ 武贪 ] 化忌 ， 主因配偶破财 。 见科文诸曜或见 桃花 ， 则主移情别恋 。 见火 
-铃空劫 ， 则主无闺房之乐 。 或主再婚 。 
+存或化禄照会则不是 ， 主夫婿富足 ， 或妻子能凭自力经营 。  
 [ 武贪 ] 在夫妻宫 ， 以 『 机梁 』 、 [ 同阴 ] 所在宫垣 ， 为推 断吉凶之关键 。 武曲化忌 
 者 ， 女命 ， 尤以夫妻宫见 『 机梁 ]( 借入对富 ) 以定夫婿吉凶 。"""
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
+                if (len(shayaoList) > 0):
+                    for smallStar in shayaoList:
+                        if (smallStar == "火星" or smallStar == "铃星"):
+                            tmp = """ 丑未宫 [ 武曲贪狼 ] ， 与火铃同度 ， 主感情始热终冷 。  """
+                            tmp.replace(" ", ""); print(tmp)
+                if (len(huayaoList) > 0):
+                    for smallStar in huayaoList:
+                        if (smallStar[2:] == "化忌"):
+                            tmp = """丑未 [ 武贪 ] 化忌 ， 主因配偶破财 。 见科文诸曜或见 桃花 ， 则主移情别恋 。 见火 
+铃空劫 ， 则主无闺房之乐 。 或主再婚 。 """
+                            tmp.replace(" ", ""); print(tmp)
         elif(dizhi == "寅" or dizhi == "申"):
             if(star == "武曲天相"):
-                tmp = """ 寅申宫 [ 武曲天相 ] ， 须刚柔互济然后始主婚姻完 美 。 若见左辅右弼 ， 则更主夫 
-妻 间有助力 。 
+                tmp = """ 寅申宫 [ 武曲天相 ] ， 须刚柔互济然后始主婚姻完 美 。 
 寅申 [ 武相 ] ， 过刚则夫妻姻缘不到头 ( 男命更主受 妻子支配左右 ) ， 过柔则可能 
 受配偶之拖累 。 皆非美局 。 见 火铃夹 、 羊陀夹者 ， 其不利程度更甚 。 唯若火铃夹而 
-对富有禄马 ， 则主配偶奔波劳禄 ， 或自身奔波 ， 以致会少离多 。 
+对宫有禄马 ， 则主配偶奔波劳禄 ， 或自身奔波 ， 以致会少离多 。 
 寅申 [ 武相 ] ， 见桃花诸曜 ， 及辅佐 [ 单星 ] 时 ， 每主 婚后仍易与已婚的人相恋 。 
 若为 [ 刑忌夹印 ] ， 更陷于感情 的泥沼不能自拔 。 若为 [ 财荫夹印 ] ， 则主其恋爱有倚 
 赖对 方的性质 。 
 寅申宫 [ 武相 ] ， 以 [ 太阳天梁 ] 、 [ 天同巨门 ] 及 [ 武 相 ] 本身备宫为吉凶之枢纽 。"""
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
+                if (len(fuyaoList) > 0):
+                    for smallStar in fuyaoList:
+                        if (smallStar == "左辅" or smallStar == "右弼"):
+                            tmp = """ 若见左辅右弼 ， 则更主夫 妻 间有助力 。  """
+                            tmp.replace(" ", ""); print(tmp)
         elif(dizhi == "卯" or dizhi == "酉"):
             if(star == "武曲七杀"):
-                tmp = """ 卯酉宫 [ 武曲 七 杀 ] ， 每宜 迟婚 ， 否则婚姻多悔吝 。 坐酉宫者尤甚 。 盖卯宫者 ， 
-太阳在辰为庙旺 ， 太阴在戌宫亦为庙旺 ； 在酉宫 ， 则太阳在戌 ， 太阴在辰 ， 皆落陷
-宫 ， 故酉不如卯 ( 视婚姻 ， 除 [ 夫妻宫 ] 外 ， 亦须兼视太阴太阳之 庙旺利陷 ) 。 
+                tmp = """ 卯酉宫 [ 武曲 七 杀 ] ， 每宜 迟婚 ， 否则婚姻多悔吝 。 坐酉宫者尤甚 。
+酉不如卯 ( 视婚姻 ， 除 [ 夫妻宫 ] 外 ， 亦须兼视太阴太阳之 庙旺利陷 ) 。 
 卯酉宫 [ 武曲 七 杀 ] ， 若武曲化忌 ， 或会廉贞化忌 ， 更见四煞空劫交集于三方四 
 正 ， 主配偶遭逢意外 ， 或因配偶遭逢意外 ， 或因配偶招破败 。 出事之期 ， 每在武曲 、 
 廉贞叠忌 ， 或羊陀迭并之年 。 论大限 ， 则以借星 『 廉贪 』 或天 相限内 。 
@@ -2530,36 +2823,47 @@ def GongXia3rd(star, dizhi,
 故主配偶性格刚烈 ， 往往难以 调和 。 能否调和 ， 只视 [ 廉贪 ] 一组星系 ， 必须带感情 
 色彩 ， 然后可以调和 。 若偏重于物欲 ， 则难免夫妻彼此皆欲控制对方 。 在这种情形 
 下 ， 命宫带桃花 ， 并不主夫妻难以白头偕老 。 
-卯酉 [ 武杀 ] 最不宜火星陀罗同度 ， 主再婚 。 见昌曲 [ 单星 ] 或化忌 ， 主无正式婚 
-礼成亲 。 煞重 ， 武曲化忌 ， 丈 夫有隐疾 ， 或有肺病 。"""
+见昌曲 [ 单星 ] 或化忌 ， 主无正式婚 礼成亲 。 煞重 ， 武曲化忌 ， 丈 夫有隐疾 ， 或有肺病 。"""
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
+                if (len(shayaoList) > 0):
+                    for smallStar in shayaoList:
+                        if (smallStar == "火星" or smallStar == "陀罗"):
+                            tmp = """ 卯酉 [ 武杀 ] 最不宜火星陀罗同度 ， 主再婚 。  """
+                            tmp.replace(" ", ""); print(tmp)
         elif(dizhi == "辰" or dizhi == "戌") and len(star) == 2:
             if(star == "武曲"):
-                tmp = """ 辰戌宫武曲独坐 ， 宜迟婚 。 火铃同度 ， 主仓卒成婚 。 见吉化吉曜 ， 则配偶精明 
+                tmp = """ 辰戌宫武曲独坐 ， 宜迟婚 。 见吉化吉曜 ， 则配偶精明 
 能干 。 见煞忌刑曜 ， 主夫妻生离死别 ； 煞轻者 ， 主因配偶破财 。 
-辰戌宫武曲 ， 会对宫贪狼火星或铃星 ， 主多热恋 ， 但亦多感情挫折 。 天姚同度 
-者更甚 。 
+辰戌宫武曲 ， 会对宫贪狼火星或铃星 ， 主多热恋 ， 但亦多感情挫折 。 天姚同度 者更甚 。 
 辰宫武曲优于戌宫 ， 视太阳太阴庙陷可知 。 
 辰戌武曲克害较少 。 唯大限行至破军 、 七 杀宫垣 ， 见煞忌刑凑者 ， 亦主有克害 。 
 辰戌武曲 ， 以破军 、 七杀 、 天梁 、 巨门各垣为吉凶 克应之枢纽 。 """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
+                if (len(shayaoList) > 0):
+                    for smallStar in shayaoList:
+                        if (smallStar == "火星" or smallStar == "铃星"):
+                            tmp = """ 火铃同度 ， 主仓卒成婚 。  """
+                            tmp.replace(" ", ""); print(tmp)
         elif(dizhi == "巳" or dizhi == "亥"):
             if(star == "武曲破军"):
                 tmp = """ 巳亥宫 [ 武破 ] 见煞忌刑曜 ， 婚姻必不利 ， 以迟婚为 宜 ， 否则亦主再婚 ， 且系偏 
-房继室 。 尤不宜火铃空劫同度 ， 往往多怨偶 。 
+房继室 。  
 巳亥宫 [ 武破 ] 见吉化 、 吉曜 ， 则主配偶精明 ， 但自 身仍受配偶控制 。 
-若 [ 武破 ] 与禄马同躔 ， 或与禄马拱照 ， 则主夫妻各 处一方 ， 会少离多 。 火铃或 
-空劫同度者 ， 夫妻有名无实 。 
+若 [ 武破 ] 与禄马同躔 ， 或与禄马拱照 ， 则主夫妻各 处一方 ， 会少离多 。 
 巳亥 [ 武破 ] 见吉化吉曜 ， 七 杀带禄来会 ， 男命主因 妻得财 ， 女命主夫婿富贵 。 
 以巳宫较亥宫为佳 。 
 巳亥 [ 武破 ] ， 以天同 、 巨门 、 天梁 、 太阳备宫垣 ， 为吉凶克应之枢纽 。 """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
+                if (len(shayaoList) > 0):
+                    for smallStar in shayaoList:
+                        if (smallStar == "火星" or smallStar == "铃星" or smallStar == "地空" or smallStar == "地劫"):
+                            tmp = """ 尤不宜火铃空劫同度 ， 往往多怨偶 。火铃或 
+空劫同度者 ， 夫妻有名无实 。   """
+                            tmp.replace(" ", ""); print(tmp)
     elif(star[:2] == "天同"):
-        
-        print("\n")
         tmp = """天同主白手兴家 ， 即去尽现成事业而后 自行兴创 。 将此层意义移入 [ 夫妻宫 ] ， 
 即为两度姻缘 。 尤其是在古代 ， 婚姻必凭媒妁 ( 等于 [ 现成 ]) ， 故天同在夫妻宫者多 
 主纳妾 ( 等于 [ 自创 ]) 。 在现代 ， 往往为婚前曾与人同居或热恋 ， 离 散后再成婚嫔 。 
@@ -2573,7 +2877,6 @@ def GongXia3rd(star, dizhi,
             if(star == "天同太阴"):
                 tmp = """子午宫 [ 天同太阴 ] ， 男命主娶美妻 ； 女命配夫亦风 度翩翩 。 见科文诸曜 ， 或桃 
 花诸曜 ， 主配偶受异性垂青 。 
-[ 天同太阴 ] 而太阴化忌 ， 主再婚吉利 ， 可偕自首 。 若 天同化忌 ， 则再婚亦不吉 。 
 会巨门化忌 ， 多口舌 ， 易离异 。 会太阳化忌 ， 主妻子多疑 ， 或丈夫多病 。 
 [ 天同太阴 ] 见禄 ， 尤其是天同化禄 、 巨门化禄 ， 主 自身常生外向之心 。 见辅佐 [ 单 
 星 ] 者 ， 尤易发生婚外感情 。 
@@ -2581,41 +2884,68 @@ def GongXia3rd(star, dizhi,
 贞破军 ] 、 [ 天机天梁 ] 三垣 ， 为 吉凶克应的枢纽 。  """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
+                if (len(huayaoList) > 0):
+                    for smallStar in huayaoList:
+                        if (smallStar == "太阴化忌"):
+                            tmp = """[ 天同太阴 ] 而太阴化忌 ， 主再婚吉利 ， 可偕自首 。  """
+                            tmp.replace(" ", ""); print(tmp)
+                        elif (smallStar == "天同化忌"):
+                            tmp = """若 天同化忌 ， 则再婚亦不吉 。  """
+                            tmp.replace(" ", ""); print(tmp)
         elif(dizhi == "丑" or dizhi == "未"):
             if(star == "天同巨门"):
-                tmp = """ 丑未宫 [ 天同巨门 ] ， 见化忌 、 化禄 ， 均易发生苦恋 、 畸恋 、 或单恋 。 唯巨门化 
-忌 ， 尚带门舌争吵的性质 。 
-丑未 『 同巨 』 ， 见辅佐吉曜 ， 且系成对会入 ， 然后婚 姻始主稳定 。 若见 『 单 星 ] ， 
-则主两度或三度姻缘 ， 曾同居 ， 或解除婚约者可免 。 利迟婚 ， 女命亦宜偏房继室 。 
+                tmp = """  
 丑未 [ 同巨 ] ， 于经行至 『 廉府 』 及 [ 武相 ] 会合的各宫 垣 ， 主与已婚的人恋爱 。 
 视桃花诸曜 ， 或科文诸曜在何宫垣 ， 即可确定 。 
 丑未 [ 同巨 ] 在 [ 夫妻宫 ] ， 命宫为 [ 阳梁昌禄 ] 格者 ， 卯宫优于酉宫 ， 然均主配偶 
 独立发展事业 。 故以不同行 、 不同机构者为宜 ， 否则多口舌纷扰 。"""
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
+                if (len(huayaoList) > 0):
+                    for smallStar in huayaoList:
+                        if (smallStar == "巨门化忌"):
+                            tmp = """唯巨门化 忌 ， 尚带门舌争吵的性质 。   """
+                            tmp.replace(" ", ""); print(tmp)
+                        if (smallStar[2:] == "化忌" or smallStar[2:] == "化禄"):
+                            tmp = """丑未宫 [ 天同巨门 ] ， 见化忌 、 化禄 ， 均易发生苦恋 、 畸恋 、 或单恋 。   """
+                            tmp.replace(" ", ""); print(tmp)
+                if (len(fuyaoList) > 0 or len(zuoyaoList) > 0):
+                    tmp = """丑未 『 同巨 』 ， 见辅佐吉曜 ， 且系成对会入 ， 然后婚 姻始主稳定 。 若见 『 单 星 ] ， 
+则主两度或三度姻缘 ， 曾同居 ， 或解除婚约者可免 。 利迟婚 ， 女命亦宜偏房继室 。  """
+                    tmp.replace(" ", ""); print(tmp)
         elif(dizhi == "寅" or dizhi == "申"):
             if(star == "天同天梁"):
                 tmp = """ 寅申宫 [ 天同天梁 ] ， 男命主离婚后得配美貌之妻 ； 女命主再嫁事业优胜之夫 。 
 男宜小配 ， 女宜长配的意义更加明显 。 若非再婚 ； 见主夫妻因环境影响而离散 ， 然 
 后破镜重圆 。 
-寅申宫 『 同梁 』 ， 见辅佐 [ 单星 ] 者 ， 必主再婚 ； 见煞 忌刑曜 ， 则主夫妻徒具虚名 ， 
+寅申宫 『 同梁 』 ， 见煞 忌刑曜 ， 则主夫妻徒具虚名 ， 
 或见刑克 。 于廉贞化忌会武曲化忌的宫垣 ， 克应配偶灾难丧祸 ； 于太阳化忌会太阴 
 化忌的宫垣 ， 克应配偶生离 。"""
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
+                if (len(fuyaoList) > 0 or len(zuoyaoList) > 0):
+                    tmp = """寅申宫 『 同梁 』 ， 见辅佐 [ 单星 ] 者 ， 必主再婚 ；  """
+                    tmp.replace(" ", ""); print(tmp)
         elif(dizhi == "卯" or dizhi == "酉") and len(star) == 2:
             if(star == "天同"):
                 tmp = """ 卯酉天同独坐 ， 对太阴 ， 亦主配偶俊美 。 见吉化 、 吉曜 ， 可卜 婚姻和美 。 尤以 
 曾同居然后正式举行婚嫔者 为然 。 若煞忌刑凑会 ， 则主两度或三度婚姻 。 女命以偏 
 房继室为宜 。 
-卯宫天同 ， 会亥宫禄马 ； 或酉宫天同 ， 会巳宫禄马 ， 火铃与天同同度 ， 主因客 
-观环境而致夫妻分离 。 
-卯酉天同 ， 见火铃 、 空劫 ， 而有解神 ( 年解 、 月解 ) 、 寡宿 、 大耗 、 天虚 等杂曜 
-同度 ， 主夫妻有名无实 。 
 男命夫妻宫为卯酉天同 ， 亦不宜见天姚 、 阴煞 、 劫 煞 ， 主妻子有权术 。 
 卯 酉天同 ， 以巨门 、 天梁 、 破军 、 『 廉贞天相 』 为枢纽 。"""
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
+                if (len(shayaoList) > 0):
+                    for smallStar in shayaoList:
+                        if (smallStar == "地空" or smallStar == "地劫"):
+                            tmp = """ 卯酉天同 ， 见火铃 、 空劫 ， 而有解神 ( 年解 、 月解 ) 、 寡宿 、 大耗 、 天虚 等杂曜 
+同度 ， 主夫妻有名无实 。  """
+                            tmp.replace(" ", ""); print(tmp)
+                        elif (smallStar == "火星" or smallStar == "铃星"):
+                            tmp = """ 卯宫天同 ， 会亥宫禄马 ； 或酉宫天同 ， 会巳宫禄马 ， 火铃与天同同度 ， 主因客 
+观环境而致夫妻分离 。 卯酉天同 ， 见火铃 、 空劫 ， 而有解神 ( 年解 、 月解 ) 、 寡宿 、 大耗 、 天虚 等杂曜 
+同度 ， 主夫妻有名无实 。 """
+                            tmp.replace(" ", ""); print(tmp)
         elif(dizhi == "辰" or dizhi == "戌") and len(star) == 2:
             if(star == "天同"):
                 tmp = """ 辰戌宫天同独坐 ， 与巨门相对 ， 情形大致与 [ 天同 巨门 ] 相同 。 以天同 、 巨门宫 
@@ -2633,47 +2963,65 @@ def GongXia3rd(star, dizhi,
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
     elif(star[:2] == "廉贞"):
-        
-        print("\n")
         tmp = """廉贞守夫妻宫 ， 绝非善星 ， 唯主生离多于死别 。 夫 妻不和而能偕老 ， 已经可算 
-是良好的结果 。 若廉贞化忌 ， 又叠其他正曜化忌 ， 更见煞曜凑合 ， 往往即为生离死 
-别克应之期 。 
+是良好的结果 。 
 廉贞守夫妻宫最忌贪狼 、 破军 。 此为推算之大纲 。 更见煞忌 ， 往往主三度婚姻 。 
-女命以偏房继室为宜 ， 男命应不举行正式婚礼 ， 则可趋避 。 
-廉贞最忌火星同宫 ， 即使见吉曜吉化 ， 亦主因客观 环境以致夫妇分居二地 。 
+女命以偏房继室为宜 ， 男命应不举行正式婚礼 ， 则可趋避 。  
 廉贞在夫妻 宫 ， 男命宜配年少之妻 ， 女命宜配年长 之夫 。 年龄差距由六年至十 
 二年不等 ， 甚至可在十二年以上 。 
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
+        if (len(huayaoList) > 0):
+            for smallStar in huayaoList:
+                if (smallStar == "廉贞化忌"):
+                    tmp = """若廉贞化忌 ， 又叠其他正曜化忌 ， 更见煞曜凑合 ， 往往即为生离死 别克应之期 。   """
+                    tmp.replace(" ", ""); print(tmp)
+        if (len(shayaoList) > 0):
+            for smallStar in shayaoList:
+                if (smallStar == "火星"):
+                    tmp = """ 廉贞最忌火星同宫 ， 即使见吉曜吉化 ， 亦主因客观 环境以致夫妇分居二地 。 """
+                    tmp.replace(" ", ""); print(tmp)
         if(dizhi == "子" or dizhi == "午"):
             if(star == "廉贞天相"):
                 tmp = """ 子午 [ 廉贞天相 ] ， 与破军相对 ， 性质不佳 。 即使有 吉化 、 吉曜 ， 亦主夫妻备怀 
 己见 ， 为己谋而不为配偶谋 ， 以致彼此参商 。 
 子午 [ 廉相 ] ， 擎羊同度或对拱 ， 又见火铃或空劫 ， 则主配偶有灾病 。 以七杀 ， [ 紫 
 府 ] 、 破军 、 贪狼诸宫垣为克 应之期 。 
-子午 [ 廉相 ] ， 不宜见辅诸曜 [ 单星 ] ， 亦为再婚之兆 。 克勤克俭应之期 ， 往往在 
-昌曲化忌之年限运限 。 
 子午 [ 廉相 ] ， 夫妻年龄差距在十二年以上者较佳 ， 
 则宜见昌曲 ， 主和美偕老 。 """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
+                if (len(fuyaoList) > 0):
+                    tmp = """ 子午 [ 廉相 ] ， 不宜见辅诸曜 [ 单星 ] ， 亦为再婚之兆 。 克勤克俭应之期 ， 往往在 
+昌曲化忌之年限运限 。  """
+                    tmp.replace(" ", ""); print(tmp)
         elif(dizhi == "丑" or dizhi == "未"):
             if(star == "廉贞七杀"):
-                tmp = """丑未 『 廉贞 七 杀 』 ， 只有当化禄 、 权 、 科齐全 ， 且见 辅佐对星的情况下 ， 始主可 
-偕白首 ， 但人生仍有一段时间夫妇分离 。 
-若 『 廉杀 』 见辅佐 『 单星 』 ， 亦主再婚 。 见擎羊 、 陀罗 同度 ， 则主刑克 。 再婚克 
-应之期 ， 视天同 、 巨门 、『 武曲破军 』 诸宫垣 ； 刑克之克应 ， 则以 [ 廉杀 ] 叠冲化忌 ， 
-在夫妻宫 或田宅宫 、 或福德宫之期为准 。 
+                tmp = """ 
 丑未 [ 廉贞七杀 ] ， 擎羊同度 ， 或对拱 ， 更见天刑 ， 而不见辅佐 [ 单星 ] ， 不主克 ， 
 不主离 ， 仅主配偶受异性垂 青 。 从事以接触异性为主的行业 ， 即可适应 。  """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
+                if (len(huayaoList) > 0):
+                    for smallStar in huayaoList:
+                        if (smallStar[2:] != "化忌"):
+                            tmp = """丑未 『 廉贞 七 杀 』 ， 只有当化禄 、 权 、 科齐全 ， 且见 辅佐对星的情况下 ， 始主可 
+偕白首 ， 但人生仍有一段时间夫妇分离 。  """
+                            tmp.replace(" ", ""); print(tmp)
+                if (len(fuyaoList) > 0 or len(zuoyaoList) > 0):
+                    tmp = """ 若 『 廉杀 』 见辅佐 『 单星 』 ， 亦主再婚 。 """
+                    tmp.replace(" ", ""); print(tmp)
+                if (len(shayaoList) > 0):
+                    for smallStar in shayaoList:
+                        if (smallStar == "陀罗" or smallStar == "擎羊"):
+                            tmp = """ 见擎羊 、 陀罗 同度 ， 则主刑克 。 再婚克应之期 ， 视天同 、 巨门 、『 武曲破军 』 诸宫垣 ； 刑克之克应 ， 则以 [ 廉杀 ] 叠冲化忌 ， 
+在夫妻宫 或田宅宫 、 或福德宫之期为准 。  """
+                            tmp.replace(" ", ""); print(tmp)
         elif(dizhi == "寅" or dizhi == "申"):
             if(star == "廉贞"):
                 tmp = """寅申宫廉贞 ， 会对宫 『 火贪 』 、 『 铃贪 ] ， 主热恋 ， 但 感情易中断 。 若廉贞与昌曲 
 同会 ， 则夫妻能守礼 ， 不致逾越 。 
-寅申宫廉贞与火铃同度 ， 主仓卒成婚 。 若再见天姚 ， 则主先同居而后结婚 。 
 寅申宫廉贞会刑忌夹的天相 ， 女命主为偏房 。 
 寅申廉贞煞忌重重 ， 主再婚或三度婚姻 。 
 寅申廉贞 ， 每主与有家室者变爱 ： 以会 [ 武曲天府 ] 宫垣 ， 且见桃花 、 昌见桃花 、 
@@ -2681,19 +3029,34 @@ def GongXia3rd(star, dizhi,
 寅申廉贞 ， 以破军 、 贪狼 、 巳宫的天梁 、 巳宫的天 同为吉凶克应的枢纽 。  """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
+                if (len(shayaoList) > 0):
+                    for smallStar in shayaoList:
+                        if (smallStar == "火星" or smallStar == "铃星"):
+                            tmp = """ 寅申宫廉贞与火铃同度 ， 主仓卒成婚 。 若再见天姚 ， 则主先同居而后结婚 。 """
+                            tmp.replace(" ", ""); print(tmp)
         elif(dizhi == "卯" or dizhi == "酉"):
             if(star == "廉贞破军"):
-                tmp = """卯酉宫 『 廉贞破军 』 同度 ， 破折的性质相当严重 ， 纵 有吉化及吉曜 ， 亦主夫妻 
-不和 。 
-卯酉宫 『 廉贞破军 』， 更见火铃同度 ， 为祸最烈 ， 主 配偶意外 ， 或主因配偶而有
-倾家 。 于推断大限夫妻宫时应详其发生之期 ， 以及事件的性质 。 ( 如大限夫妻宫见 『 武 
-贪 』 而武曲化忌 ， 可能为倾家 ； 见天同化忌 ， 可能为遭逢意外 。 ) 
-卯酉 [ 廉破 ] ， 见辅佐 『 单星 ] 主再婚 。 见昌曲对星 ， 又见桃花诸曜 ， 则主移情别 
-恋 。 唯再婚亦未见吉利 。 女命又主再婚无名份 。 
+                tmp = """卯酉宫 『 廉贞破军 』 同度 ， 破折的性质相当严重 ， 纵 有吉化及吉曜 ， 亦主夫妻不和 。   
 卯酉 [ 廉破 ] ， 以 『 武曲贪狼 』、 [ 天同太阴 ] 、 『 天机天 梁 』 、 天相各垣 ， 为吉凶克 
 应的枢纽 。  """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
+                if (len(shayaoList) > 0):
+                    for smallStar in shayaoList:
+                        if (smallStar == "火星" or smallStar == "铃星"):
+                            tmp = """ 卯酉宫 『 廉贞破军 』， 更见火铃同度 ， 为祸最烈 ， 主 配偶意外 ， 或主因配偶而有
+倾家 。 于推断大限夫妻宫时应详其发生之期 ， 以及事件的性质 。 ( 如大限夫妻宫见 『 武 
+贪 』 而武曲化忌 ， 可能为倾家 ； 见天同化忌 ， 可能为遭逢意外 。 )  """
+                            tmp.replace(" ", ""); print(tmp)
+                if (len(fuyaoList) > 0 or len(zuoyaoList) > 0):
+                    tmp = """ 卯酉 [ 廉破 ] ， 见辅佐 『 单星 ] 主再婚 。 """
+                    tmp.replace(" ", ""); print(tmp)
+                if (len(zuoyaoList) > 0):
+                    for smallStar in zuoyaoList:
+                        if (smallStar == "文昌" or smallStar == "文曲"):
+                            tmp = """ 见昌曲对星 ， 又见桃花诸曜 ， 则主移情别 
+恋 。 唯再婚亦未见吉利 。 女命又主再婚无名份 。 """
+                            tmp.replace(" ", ""); print(tmp)  
         elif(dizhi == "辰" or dizhi == "戌"):
             if(star == "廉贞天府"):
                 tmp = """辰戌宫 [ 廉贞夭府 ] ， 结构较为稳定 ， 多主不和 ， 不 主克离 。 
@@ -2708,21 +3071,29 @@ def GongXia3rd(star, dizhi,
         elif(dizhi == "巳" or dizhi == "亥"):
             if(star == "廉贞贪狼"):
                 tmp = """巳亥 【 廉贪 】， 会 [ 紫破 ] 、 [ 武杀 ] ， 性质非良 。 见吉 化吉曜 ， 亦主不美 。 见煞刑 
-空劫诸曜 ， 已主夫妻离异 ， 或因桃色事件而经官动府 。 倘更逢化忌 ， 则主刑克 。 
-巳亥 [ 廉贪 ] 与火铃同度 ， 主夫妻有名无实 ， 或表面 和好 ， 而内心则各有隐衷 。 
-巳亥 『 廉贪 』 见辅佐 『 单星 』 ， 男女皆主两度姻缘 ， 第 二度优于前度 。 
-巳亥 『 廉贪 ] ， 借星安宫者 ， 性质比原宫的 [ 廉贪 ] 更 劣 ， 并不主再婚优于第一度 
-婚姻 。 
-巳亥 [ 廉贪 ] 见禄马 、 火铃 ， 亦主配偶因客观环境栖 迁异地 。 
+空劫诸曜 ， 已主夫妻离异 ， 或因桃色事件而经官动府 。 倘更逢化忌 ， 则主刑克 。
+巳亥 『 廉贪 ] ， 借星安宫者 ， 性质比原宫的 [ 廉贪 ] 更 劣 ， 并不主再婚优于第一度 婚姻 。 
 巳亥 [ 廉贪 ] 与桃花同躔 ， 主配偶有艺术才能 。 唯婚 姻亦易起裂痕 。 
 巳亥 [ 廉贪 ] ， 以 『 紫微破军 』 、 [ 武曲 七 杀 ] 、 [ 天同天 梁 ] 、 巨门备垣 ， 为运限年 
 限之枢纽 。  """
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
+                if (len(shayaoList) > 0):
+                    for smallStar in shayaoList:
+                        if (smallStar == "火星" or smallStar == "铃星"):
+                            tmp = """ 巳亥 [ 廉贪 ] 与火铃同度 ， 主夫妻有名无实 ， 或表面 和好 ， 而内心则各有隐衷 。 
+                            巳亥 [ 廉贪 ] 见禄马 、 火铃 ， 亦主配偶因客观环境栖 迁异地 。 """
+                            tmp.replace(" ", ""); print(tmp)
+                if (len(fuyaoList) > 0 or len(zuoyaoList) > 0):
+                    tmp = """ 巳亥 『 廉贪 』 见辅佐 『 单星 』 ， 男女皆主两度姻缘 ， 第 二度优于前度 。 """
+                    tmp.replace(" ", ""); print(tmp)
+                if (len(zuoyaoList) > 0):
+                    for smallStar in zuoyaoList:
+                        if (smallStar == "禄存" or smallStar == "天马"):
+                            tmp = """ 巳亥 [ 廉贪 ] 见禄马 、 火铃 ， 亦主配偶因客观环境栖 迁异地 。  """
+                            tmp.replace(" ", ""); print(tmp)  
     elif(star[:2] == "天府"):
-        
-        print("\n")
-        tmp = """天府躔夫妻宫 ， 称为善曜 ， 邓使会星曜恶 ， 一般 亦 仅主生离 ， 不生死别 。 倘星 
+        tmp = """天府躔夫妻宫 ， 称为善曜 ， 即使会星曜恶 ， 一般 亦 仅主生离 ， 不生死别 。 倘星 
 曜吉凶交集 ， 即使生离亦不决绝 ， 仍带藕断丝连 。 
 天府未必要见煞忌刑曜始为不良 。 凡府库空露者 ， 均主婚姻不良 ， 男命主宠妾 
 灭妻 ； 女命主作偏房继室 。 故男命宜配年少之妻 ， 女命宜配年长之夫 ， 即可趋避 ， 
@@ -2743,139 +3114,206 @@ def GongXia3rd(star, dizhi,
             print("\n")
         elif(dizhi == "卯" or dizhi == "酉") and len(star) == 2:
             tmp = """ 卯酉宫天府独坐 ， 只需府库不空露 ， 所会的天相不 为刑忌所夹 ， 不会廉贞化忌 
-或贪狼化忌 ， 婚姻即完美 。 否则男命主有外遇 ， 或因配偶破财 ； 女命则主为偏房继 
-室 。 
-因对宫 『 武杀 』 落陷的关系 ， 酉宫天府不如卯宫 ， 稍 见煞曜即主两度姻缘 。 若 
-煞刑诸曜同度尤确 。 
+或贪狼化忌 ， 婚姻即完美 。 否则男命主有外遇 ， 或因配偶破财 ； 女命则主为偏房继室 。 
 卯酉宫天府会吉 ， 见吉化 ， 男女皆主美配 ， 感情既 佳 ， 又能互相扶助 。 
 卯酉宫天府 ， 若躔桃花诸曜 ， 亦主与已婚的人恋爱 。 见辅佐 [ 单星 ] 尤确 。 
 卯酉宫天府 ， 以 [ 紫破 ] 、 [ 廉贪 ] 、 天相备垣 ， 为吉 凶克应的枢纽 """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
+            if (len(shayaoList) > 0):
+                tmp = """因对宫 『 武杀 』 落陷的关系 ， 酉宫天府不如卯宫 ， 稍 见煞曜即主两度姻缘 。 若煞刑诸曜同度尤确 。 """
+                tmp.replace(" ", ""); print(tmp)
         elif(dizhi == "巳" or dizhi == "亥"):
             tmp = """ 巳亥宫天府 ， 性质较卯西尤佳 。 由于对宫为 [ 紫杀 ] ， 主配偶精明贤能 。 
 巳亥天府见煞忌刑曜 ， 亦主宠妾灭妻 。 唯与原配仍藕断丝连 。 女命宜偏房继室 。 
 巳亥宫天府会财荫夹的天相 ， 主夫妻助力 ， 刑忌夹 者 ， 则配偶体弱 ， 因病破财 。 
-巳亥天府与陀罗同度 ， 府库空露 ， 亦主自寻烦恼 ， 或主配偶有病 。 
-巳亥天府见吉化吉电信局 ， 夫妻佳且和美 。 
+巳亥天府见吉化吉， 夫妻佳且和美 。 
 巳亥天府 ， 以 [ 太阳巨门 ] 、 『 天同太阴 ] 、 天相备宫 垣 ， 为吉凶克应的运限年限 。"""
             tmp.replace(" ", ""); print(tmp)
             print("\n")
+            if (len(shayaoList) > 0):
+                for smallStar in shayaoList:
+                    if (smallStar == "陀罗"):
+                        tmp = """ 巳亥天府与陀罗同度 ， 府库空露 ， 亦主自寻烦恼 ， 或主配偶有病 。  """
+                        tmp.replace(" ", ""); print(tmp)
     elif(star[:2] == "太阴"):
-        
-        print("\n")
         tmp = """太阴守夫妻宫 ， 文昌文曲同度相会 ， 主夫凭妻贵 。 亦主妻子貌美贤慧 。 古人说 ： 
-『 太阴同昌曲于妻宫 ， 蟾宫折桂之荣 』 ， 现代已未必克应 。 有禄同度者 ， 主因妻得财 。 
-太阴守夫妻宫 ， 见煞忌 ， 女命日生人 ， 而太阴又化 忌星者 ， 始主夫婿灾病 。 男 
-命则主与妻子不同心 ， 或为妻室所累 。 
+『 太阴同昌曲于妻宫 ， 蟾宫折桂之荣 』 ， 现代已未必克应 。 
 太阴昌曲更见桃花 ， 主配偶易受异性垂青 ， 以经营多 接触异性的行业为宜 。 
-太阴与火铃 、 空劫同度 ， 亦主夫妻生离 。 
 男命夫妻宫太阴 ， 会天同 ； 或与煞 曜同度 ， 均主貌 美 。 与昌曲同度相会 ， 则美 
 而带薄 。 太阴落陷 ， 夜生人主妻美 。 
-太阴守夫妻宫 ， 见吉化则吉 。 见化忌 ， 女命主丈夫 多疑 ， 男命主妻多病 。 日生 
-人尤甚 。 
-太阴守夫妻宫 ， 不宜见火铃 ， 主生离 ； 见羊陀 、 空 劫 、 刑耗则主配偶灾难 、 病 
-患 ； 其甚者 ， 主无闺房之乐 。 觅化忌者程度更深 。 若于大限流年逢太阳化忌 ， 冲起 
-太阴化忌 ， 则程度最重 。 唯仍需用视有无刑煞交并而定 。 太阴化忌原不主克 ， 但若 
-刑煞交并 ， 阴阳均化为忌星 ， 福德宫又 不吉者 ， 则可见删宛 。 
+太阴守夫妻宫 ， 见吉化则吉 。 
+大限流年太阴化忌原不主克 ， 但若 刑煞交并 ， 阴阳均化为忌星 ， 福德宫又 不吉者 ， 则可见删宛 。 
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
+        if (len(zuoyaoList) > 0):
+            for smallStar in zuoyaoList:
+                if (smallStar == "禄存"):
+                    tmp = """  有禄同度者 ， 主因妻得财 。  """
+                    tmp.replace(" ", ""); print(tmp) 
+        if (len(huayaoList) > 0):
+            for smallStar in huayaoList:
+                if (smallStar[2:] == "化禄"):
+                    tmp = """  有禄同度者 ， 主因妻得财 。  """
+                    tmp.replace(" ", ""); print(tmp)  
+                if (smallStar[2:] == "化忌"):
+                    tmp = """  见化忌 ， 女命主丈夫 多疑 ， 男命主妻多病 。 日生 人尤甚 。   """
+                    tmp.replace(" ", ""); print(tmp)  
+                if (smallStar == "太阴化忌"):
+                    tmp = """  太阴守夫妻宫 ， 见煞忌 ， 女命日生人 ， 而太阴又化 忌星者 ， 始主夫婿灾病 。 男 
+命则主与妻子不同心 ， 或为妻室所累 。   """
+                    tmp.replace(" ", ""); print(tmp)  
+        if (len(shayaoList) > 0):
+            for smallStar in shayaoList:
+                if (smallStar == "火星" or smallStar == "铃星"):
+                    tmp = """ 太阴与火铃 、 空劫同度 ， 亦主夫妻生离 。太阴守夫妻宫 ， 不宜见火铃 ， 主生离 ；   """
+                    tmp.replace(" ", ""); print(tmp)
+                elif (smallStar == "地空" or smallStar == "地劫"):
+                    tmp = """ 太阴与火铃 、 空劫同度 ， 亦主夫妻生离 。 见羊陀 、 空 劫 、 刑耗则主配偶灾难 、 病 
+患 ； 其甚者 ， 主无闺房之乐 。化忌者程度更深 。 若于大限流年逢太阳化忌 ， 冲起 
+太阴化忌 ， 则程度最重 。 唯仍需用视有无刑煞交并而定 。  """
+                    tmp.replace(" ", ""); print(tmp)
+                elif (smallStar == "擎羊" or smallStar == "陀罗"):
+                    tmp = """ 见羊陀 、 空 劫 、 刑耗则主配偶灾难 、 病 
+患 ； 其甚者 ， 主无闺房之乐 。化忌者程度更深 。 若于大限流年逢太阳化忌 ， 冲起 
+太阴化忌 ， 则程度最重 。 唯仍需用视有无刑煞交并而定 。   """
+                    tmp.replace(" ", ""); print(tmp)
         if(dizhi == "亥"):
-            tmp = """ 巳亥太阴与天机相对 ， 巳宫不如亥宫远甚 。 在巳宫 者 ， 常主配偶不顾家庭 ， 但 
-却乐于帮助别人 。 
-太阴化忌 ， 见煞 ， 又见桃花 ， 则主配偶因帮助 别人而致引狼入室 ， 或因此 
-而招财帛耗损 。 亥宫太阴一般主配偶富裕 。 唯女命于丈夫发迹谢 后 ， 丈夫常 招感情困扰 ， 但不 
-言离 。 
-亥宫太阴化忌 ， 反主配偶能协助自己事业 ， 而配偶 自身亦有事业 。 亦主于 [ 武曲 
-天相 ] 或破军坐守宫垣之时 ， 夫妻合作创业 。巳亥太阴 、 以 [ 天同巨门 ] 、 『 太阳天梁 ] 两宫垣为运 限之枢纽 。 """
+            tmp = """ 巳亥太阴与天机相对 ， 巳宫不如亥宫远甚 。亥宫太阴一般主配偶富裕 。 唯女命于丈夫发迹谢 后 ， 丈夫常 招感情困扰 ， 但不 
+言离 。 巳亥宫太阴 ， 男命皆宜配年少之妻 ， 以六年以上为 度 ； 女命主配年长之夫 ， 亦 
+以六年以上为度 ， 则夫妻自首 。 
+巳亥太阴 、 以 [ 天同巨门 ] 、 『 太阳天梁 ] 两宫垣为运 限之枢纽 。
+ """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        elif(dizhi == "酉"):
-            tmp = """酉宫太阴会天同化忌 ， 见桃花及阴煞 ， 孤辰寡 宿 ， 又躔辅佐单星 ， 女命亦主有 
+            if (len(huayaoList) > 0):
+                for smallStar in huayaoList:
+                    if (smallStar == "太阴化忌"):
+                        tmp = """  亥宫太阴化忌 ， 反主配偶能协助自己事业 ， 而配偶 自身亦有事业 。 亦主于 [ 武曲 
+天相 ] 或破军坐守宫垣之时 ， 夫妻合作创业 。巳亥太阴 、 以 [ 天同巨门 ] 、 『 太阳天梁 ] 两宫垣为运 限之枢纽 。  """
+                        tmp.replace(" ", ""); print(tmp) 
+        if(dizhi == "巳"):
+            tmp = """ 巳亥太阴与天机相对 ， 巳宫不如亥宫远甚 。 在巳宫 者 ， 常主配偶不顾家庭 ， 但 
+却乐于帮助别人 。 巳亥宫太阴 ， 男命皆宜配年少之妻 ， 以六年以上为 度 ； 女命主配年长之夫 ， 亦 
+以六年以上为度 ， 则夫妻自首 。 
+巳亥太阴 、 以 [ 天同巨门 ] 、 『 太阳天梁 ] 两宫垣为运 限之枢纽 。巳宫太阴不宜躔昌曲 ， 主配偶有外遇 。 亥宫则无妨 。 
+ """
+            tmp.replace(" ", ""); print(tmp)
+            print("\n")
+            if (len(huayaoList) > 0):
+                for smallStar in huayaoList:
+                    if (smallStar == "太阴化忌"):
+                        tmp = """  太阴化忌 ， 见煞 ， 又见桃花 ， 则主配偶因帮助 别人而致引狼入室 ， 或因此 
+而招财帛耗损 。 巳亥太阴 、 以 [ 天同巨门 ] 、 『 太阳天梁 ] 两宫垣为运 限之枢纽 。  """
+                        tmp.replace(" ", ""); print(tmp) 
+        if(dizhi == "酉"):
+            tmp = """酉宫音主配偶事业较佳 ， 见辅佐占曜及吉化 ， 亦 
+可 以兴创事业 。 酉宫太阴会天同化忌 ， 见桃花及阴煞 ， 孤辰寡 宿 ， 又躔辅佐单星 ， 女命亦主有 
 同性恋倾向 。 以大限命宫行至太阴宫垣 ， 为克应之期 。卯酉太阴 ， 以 『 廉相 』 、 破军 、 巨门诸垣为吉凶之枢 纽 。 """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        elif(dizhi == "卯"):
-            tmp = """ 卯宫太阴对天同 ， 不如西宫 。 酉宫音主配偶事业较佳 ， 见辅佐占曜及吉化 ， 亦 
-可 以兴创事业 。 卯宫者 ， 一般仅宜服务他人 。 
+        if(dizhi == "卯"):
+            tmp = """ 卯宫太阴对天同 ， 卯宫者 ， 一般仅宜服务他人 。 
 卯宫太阴与酉宫比较 ， 较易生离 ， 或会少离多 。 以 太阳 、 天梁两垣为克应之期 。  
 卯酉太阴 ， 以 『 廉相 』 、 破军 、 巨门诸垣为吉凶之枢 纽 。 """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        elif(dizhi == "辰" or dizhi == "戌"):
+        if(dizhi == "辰" or dizhi == "戌"):
             tmp = """辰戌太阴与太阳相对 ， 一般情况下均主白发齐眉 ， 唯戌宫优于辰宫 。 
-辰宫太阴 ， 化禄 、 权 、 科 ， 女命主夫婿中年发足迹 。 男命亦喜得内助 。 
-助力 而事业创兴 。 
 辰戌太阴见煞忌刑空耗诸曜 ， 亦主夫妻生离 ， 或一 生多挫败 。 尤以辰宫为甚 。 
-辰戌太阴见太阳化忌 ， 女命不宜早婚 。 否则于大限 命宫珩至太阴宫垣 ， 主易结 
-成怨偶 ， 以致离异 。 
 辰戌太阴 ， 以 『 天同犬梁 』 、 巨 l 门 、 太 阳 、 太 阴 各宫 垣 ， 为吉凶克应之期 。 """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        elif(dizhi == "巳" ):
-            tmp = """巳亥太阴与天机相对 ， 巳宫不如亥宫远甚 。 在巳宫 者 ， 常主配偶不顾家庭 ， 但 
-却乐于帮助别人 。 
-太阴化忌 ， 见煞 ， 又见桃花 ， 则主配偶因帮助 别人而致引狼入室 ， 或因此 
-而招财帛耗损 。 
- 
-巳宫太阴不宜躔昌曲 ， 主配偶有外遇 。 亥宫则无妨 。 
-巳亥宫太阴 ， 男命皆宜配年少之妻 ， 以六年以上为 度 ； 女命主配年长之夫 ， 亦 
-以六年以上为度 ， 则夫妻自首 。 
-巳亥太阴 、 以 [ 天同巨门 ] 、 『 太阳天梁 ] 两宫垣为运 限之枢纽 。  """
-            tmp.replace(" ", ""); print(tmp)
-            print("\n")
-    elif(star[:2] == "贪狼"):
+            if (len(huayaoList) > 0):
+                for smallStar in huayaoList:
+                    if (smallStar[2:] == "化禄" or smallStar[2:] == "化权" or smallStar[2:] == "化科"):
+                        tmp = """ 辰宫太阴 ， 化禄 、 权 、 科 ， 女命主夫婿中年发足迹 。 男命亦喜得内助 。 
+助力 而事业创兴 。  """
+                        tmp.replace(" ", ""); print(tmp) 
+                    if (smallStar == "太阳化忌"):
+                        tmp = """ 辰戌太阴见太阳化忌 ， 女命不宜早婚 。 否则于大限 命宫珩至太阴宫垣 ， 主易结 
+成怨偶 ， 以致离异 。"""
+                        tmp.replace(" ", ""); print(tmp) 
         
-        print("\n")
+    elif(star[:2] == "贪狼"):
         tmp = """贪狼守夫妻宫 ， 见煞 ， 一般主刑克 ， 或离婚 ， 或配 偶死亡 。 必须迟婚 ， 且婚前 
 曾经波折 ， 然后可免 。 
-『 火贪 』 、 『 铃贪 』 守夫妻 宫 ， 主初时热恋 ， 婚后不久即 同冰炭 。 
-贪狼与擎羊 、 火星同度或一陀罗 ， 铃星同度 ， 主 配偶有灾病死亡等事 。 以更见 
-虚耗刑劫为确 ， 且以之嫠定其严重程度 。 
-贪狼化忌于夫妻宫 ， 主为人夺爱 ， 所以婚前多波折 ， 则婚后反佳 ； 若恋爱婚姻 
-顺利 ， 则婚后反易滋生事端 。 
+ 
 贪狼躔桃花诸曜 ， 更见辅佐 『 单星 』 ， 主桃色纠纷 、 多角恋爱 。 与廉贞对拱音更 
 甚 。 若见空曜 ， 天刑 ， 则程度反而减轻 ， 主能克制 。 
 贪狼守夫妻宫 ， 古代以为男命优于女命 ， 因为男命 若纳妾 ， 即可避免其缺憾 ； 
 而女命则非作偏房不可 ， 或配年长之夫 ， 作继室 ， 而且以迟婚为 宜 。 在现代 ， 上述 
 观点应略作修正 。 现代无纳妾 ， 故主有外遇 ， 唯外遇是否专一 
-应视夫妻宫有无煞忌桃花而定 ， 否则仍不主古 ； 现代妇女开放 ， 故往往主离而再嫁 。 
-贪狼与昌曲化忌同寓 ， 主婚姻无一正式婚礼 ， 或婚礼 有阻滞 。 
-女命贪狼在夫妻宫 ， 见铃星同度 ， 又见辅佐诸曜 ， 及桃花诸曜 ， 主自身作人外 
-遇 。 
+应视夫妻宫有无煞忌桃花而定 ， 否则仍不主古 ； 现代妇女开放 ， 故往往主离而再嫁 。   
 女命贪狼守夫妻宫 ， 除 『 紫微贪狼 』 在卯酉宫及辰戌 宫独坐之外 ， 均易为有妇 
-之夫追求 。 是否因此引 起婚姻波 折 ， 须视所踺星暇而定 。 本质情欲霞者 ， 必起风波 。
-夫妻寓星 性质变化甚大 ， 应参考 『 六十星系 』 所述加 以推断 。 
-子午 宫贪狼 ， 与紫微相对 ， 最喜天刑 、 空曜同度 ， 否则婚姻必有波澜 。 见辅佐 
-『 单星 』 ， 主第三者侵入 。 
+之夫追求 。 是否因此引 起婚姻波 折 ， 须视所踺星暇而定 。 本质情欲霞者 ， 必起风波 。 
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
+        if (len(shayaoList) > 0):
+            for smallStar in shayaoList:
+                if (smallStar == "火星" or smallStar == "铃星"):
+                    tmp = """ 『 火贪 』 、 『 铃贪 』 守夫妻 宫 ， 主初时热恋 ， 婚后不久即 同冰炭 。贪狼与擎羊 、 火星同度或一陀罗 ， 铃星同度 ， 主 配偶有灾病死亡等事 。 以更见 
+虚耗刑劫为确 ， 且以之嫠定其严重程度 。 女命贪狼在夫妻宫 ， 见铃星同度 ， 又见辅佐诸曜 ， 及桃花诸曜 ， 主自身作人外 
+遇 。    """
+                    tmp.replace(" ", ""); print(tmp)
+                elif (smallStar == "地空" or smallStar == "地劫"):
+                    tmp = """ """
+                    tmp.replace(" ", ""); print(tmp)
+                elif (smallStar == "擎羊" or smallStar == "陀罗"):
+                    tmp = """ 贪狼与擎羊 、 火星同度或一陀罗 ， 铃星同度 ， 主 配偶有灾病死亡等事 。 以更见 
+虚耗刑劫为确 ， 且以之嫠定其严重程度 。   """
+                    tmp.replace(" ", ""); print(tmp)
+        if (len(huayaoList) > 0):
+            for smallStar in huayaoList:
+                if (smallStar == "贪狼化忌"):
+                    tmp = """ 贪狼化忌于夫妻宫 ， 主为人夺爱 ， 所以婚前多波折 ， 则婚后反佳 ； 若恋爱婚姻 
+顺利 ， 则婚后反易滋生事端 。"""
+                    tmp.replace(" ", ""); print(tmp) 
+        if (len(zuoyaoList) > 0):
+            for smallStar in zuoyaoList:
+                if (smallStar == "文昌" or smallStar == "文曲"):
+                    tmp = """  贪狼与昌曲化忌同宫 ， 主婚姻无一正式婚礼 ， 或婚礼 有阻滞 。 """
+                    tmp.replace(" ", ""); print(tmp) 
         if(dizhi == "子" or dizhi == "午"):
-            tmp = """子宫贪狼成 『 泛水桃花 』 格局者 ， 变爱固多姿多彩 ， 婚后亦多纷扰 。 男命以配 
-年长之妻为宜 ， 女命则必须年龄登对 ， 然后始可避免不良 1 生质 。 无论男女 ， 若离 
-婚 ， 再婚 更不利 。 
-午宫贪狼 ， 见桃花诸曜 ， 亦主易与有家室者恋爱 。 在现代 ， 往往因此耽误婚姻 。 
-子午贪狼与火铃同度 ， 更见阴煞 、 天虚 、 孤辰 、 寡 宿 、 年解 、 月解 、 破碎者 ， 
-主受配偶遗弃 ， 或自身有灾病 ， 致婚姻中断 。 
+            tmp = """子午 宫贪狼 ， 与紫微相对 ， 最喜天刑 、 空曜同度 ， 否则婚姻必有波澜 。
 子 午贪狼 ， 以 『 廉府 』 、 『 武相 』 、 『 同巨 』 、 『 阳梁 』 备垣 ， 为吉凶克应的枢纽 。  """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-       
+            if (len(fuyaoList) > 0 or len(zuoyaoList) > 0):
+                tmp = """ 见辅佐 
+『 单星 』 ， 主第三者侵入 。"""
+                tmp.replace(" ", ""); print(tmp)
+            if (dizhi == "午"):
+                tmp = """ 午宫贪狼 ， 见桃花诸曜 ， 亦主易与有家室者恋爱 。 在现代 ， 往往因此耽误婚姻 。 """
+                tmp.replace(" ", ""); print(tmp)
+            if (dizhi == "子"):
+                tmp = """ 子宫贪狼成 『 泛水桃花 』 格局者 ， 变爱固多姿多彩 ， 婚后亦多纷扰 。 男命以配 
+年长之妻为宜 ， 女命则必须年龄登对 ， 然后始可避免不良性质 。 无论男女 ， 若离 
+婚 ， 再婚 更不利 。 """
+                tmp.replace(" ", ""); print(tmp)
+            if (len(shayaoList) > 0):
+                for smallStar in shayaoList:
+                    if (smallStar == "火星" or smallStar == "铃星"):
+                        tmp = """ 『子午贪狼与火铃同度 ， 更见阴煞 、 天虚 、 孤辰 、 寡 宿 、 年解 、 月解 、 破碎者 ， 
+主受配偶遗弃 ， 或自身有灾病 ， 致婚姻中断 。  """
+                        tmp.replace(" ", ""); print(tmp)
         elif(dizhi == "寅" or dizhi == "申"):
-            tmp = """ 寅申寓贪狼 ， 最易为有家室的人追求 ， 尤其是当福 德宫七 杀躔桃花诸曜时 ， 此 
+            tmp = """ 寅申宫贪狼 ， 最易为有家室的人追求 ， 尤其是当福 德宫七 杀躔桃花诸曜时 ， 此 
 推断为准确 。 
 寅申贪狼 ， 最嫌对宫廉贞化忌 ， 更见煞曜虚耗 ， 主离而再婚 ， 婚后仍不美满 。 
-箬更桃仡渚曜 ， 则情况更加复杂 ， 往往发展为多角恋爱 。 
-寅申贪狼与火铃同度 ， 而对宫廉贞化忌 ， 更见空劫刑耗诸曜 ， 主配偶有灾病意 
-外 。 
+更桃花渚曜 ， 则情况更加复杂 ， 往往发展为多角恋爱 。 
 寅申贪狼守夫妻宫 ， 而命宫有煞忌刑耗诸曜 ， 贪狼 又见煞及辅佐 『 单星 』 ， 则主 
 自身有病患 。 
 寅申贪狼 ， 以 『 武府 』 。 『 紫相 』 、 廉贞诸垣 ， 为克应 之期 。 """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        
+            if (len(shayaoList) > 0):
+                for smallStar in shayaoList:
+                    if (smallStar == "火星" or smallStar == "铃星"):
+                        tmp = """ 寅申贪狼与火铃同度 ， 而对宫廉贞化忌 ， 更见空劫刑耗诸曜 ， 主配偶有灾病意外 。  """
+                        tmp.replace(" ", ""); print(tmp)
         elif(dizhi == "辰" or dizhi == "戌"):
             tmp = """辰戌贪狼为天罗地网 ， 桃 花的意味减轻 ， 故性质较 佳 。 若见吉化 、 吉曜 ， 则夫 
 妻和美 。 即使见煞曜 ， 若非甚重 ， 仅主婚前恋爱多波折 。 
@@ -2897,28 +3335,23 @@ def GongXia3rd(star, dizhi,
 易参商 。 
 古 人论斗数 ， 不喜巨门入夫妻宫 。 他们的说法是 ： 『 在夫妻主于隔角 ， 生离死别 。 
 纵夫妻有对 ， 不免污名失节 。 』 这是认为当男命夫妻宫躔巨门之时 ， 或生离 、 或死别 、 
-或妻子因客观环境影响 ( 如战祸 ) 以致失节 ， 这即是考虑 
-及命宫天梁 。 以及夫妻宫巨门二电信局皆 不吉之故 。 其实 不可一概而论 。 必须天梁 
+或妻子因客观环境影响 ( 如战祸 ) 以致失节 ， 这即是考虑命宫天梁 。 以及夫妻宫巨门皆 不吉之故 。  必须天梁 
 带孤克之性 ， 而巨门又与煞忌刑曜同会 ， 且见桃 花及辅佐 『 单星 』 ， 然后始可认定古
 人的说法 。 
 天梁需用太阳解其孤克 ， 巨门需太阳解其刑忌之性 ， 所以当巨门守夫妻宫时 ， 
 必须太旧庙旺 ， 且躔吉曜 ， 然后天粱 、 巨门的性 ： 质才能同时改善 ， 这是推断的重 
 点 。 
-巨门最不喜与陀罗同躔 ， 主夫妻自找麻烦 ， 往往小事化为大事 。 亦不喜铃星 ． 主 
-夫妻关系有彼此前列的性质 。 
+ 
 巨门躔擎羊 、 天刑 ； 火星 、 擎羊 ， 皆主生离 。 更见 化忌 ， 而大限夫妻宫又何化 
 忌叠冲 ， 然后始主死别 。 
 巨门有 『 交人始善终恶 』 的本质 ， 夫妻关系亦往往如 此 。 凡巨门守夫妻宫 ， 如 在 
 第二个大限的夫妻宫见贪狼 ( 或 贪狼 守垣 ， 或与贪狼相对 ) ， 倘贪狼与桃花诸曜同躔 ， 
 则无 论男女均主早恋 。 但在此期间内的恋爱 ， 亦必终归失败 。 
-巨门与庙旺的太阳相会 ， 见吉化 ， 如巨门化禄 、 太 是化权 ； 或太阳太禄 ； 或巨 
-门化权 ， 往往主与异族成婚 。 或嫁往外国 。 如巨门太阳无吉化 ， 见魁钺亦是 。 
-巨门如无吉化曜相照 ， 则主奔波 。 故往往夫妻会少 离多 。 若火铃 、 空劫同度 ， 
-或对宫曜 ， 则主配偶逃亡 。 
+巨门与庙旺的太阳相会 ， 见吉化 ， 如巨门化禄 、 太阳化权 ； 或太阳太禄 ； 或巨门化权 ， 往往主与异族成婚 。 或嫁往外国 。 如巨门太阳无吉化 ， 见魁钺亦是 。 
+巨门如无吉化曜相照 ， 则主奔波 。 故往往夫妻会少 离多 。 若火铃 、 空劫同度 ， 或对宫曜 ， 则主配偶逃亡 。 
 巨门入庙 ， 见吉化吉曜 ， 所会太阳又庙旺 ， 则夫妻 和美白头 ， 能互为助力 。 然 
 若太阳落陷 ， 则虽吉化 ， 亦主半路分张 。 
-巨门会居于闲陷宫位的太阳 ， 婚前易与已婚者恋 爱 。 尤以 『 天同巨门 』 的组合 
-为确 。 
+巨门会居于闲陷宫位的太阳 ， 婚前易与已婚者恋 爱 。 尤以 『 天同巨门 』 的组合 为确 。 
 巨门守夫妻宫 ， 女命以配年长之夫为宜 ， 男命亦宜与 比自己大一两年之妻 。 则 
 夫妻易于彼此迁就 。 此为趋避之道 。 
 巨门守夫妻宫 ， 虽吉 ， 亦多无谓争吵 。 若巨门与忌 星同躔 ( 如昌曲化忌 ) ， 则主 
@@ -2927,19 +3360,41 @@ def GongXia3rd(star, dizhi,
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
+        if (len(shayaoList) > 0):
+            for smallStar in shayaoList:
+                if (smallStar == "铃星"):
+                    tmp = """ 亦不喜铃星 ． 主夫妻关系有彼此前列的性质 。   """
+                    tmp.replace(" ", ""); print(tmp)
+                if (smallStar == "陀罗"):
+                    tmp = """ 巨门最不喜与陀罗同躔 ， 主夫妻自找麻烦 ， 往往小事化为大事 。  """
+                    tmp.replace(" ", ""); print(tmp)
         if(dizhi == "子" or dizhi == "午"):
             tmp = """ 子 午巨门 ， 若 左 辅 、 右弼一入命宫 ， 一入夫妻寓 ， 主生离 ， 会吉曜吉化 ， 仍主 
 分居异地 。 昌曲分入二宫 ， 其中有一化忌者 ， 亦然 。 
-子午巨门见吉化吉曜 ， 如化禄 、 权 、 科 、 禄存 、 魁 钺 、 辅弼者 ， 男主配聪慧貌 
-美 之妻 ， 女主配事业良好之夫 。 
 子午巨门 ， 以 『 武杀 』 、 『 紫破 』 、 太阳宫垣 ， 为吉凶 克应的枢纽 。"""
             tmp.replace(" ", ""); print(tmp)
             print("\n")
+            if (len(huayaoList) > 0):
+                for smallStar in huayaoList:
+                    if (smallStar[2:] != "化忌"):
+                        tmp = """子午巨门见吉化吉曜 ， 如化禄 、 权 、 科 、 禄存 、 魁 钺 、 辅弼者 ， 男主配聪慧貌 
+美 之妻 ， 女主配事业良好之夫 。  """
+                        tmp.replace(" ", ""); print(tmp) 
+            if (len(zuoyaoList) > 0):
+                for smallStar in zuoyaoList:
+                    if (smallStar == "禄存"):
+                        tmp = """ 子午巨门见吉化吉曜 ， 如化禄 、 权 、 科 、 禄存 、 魁 钺 、 辅弼者 ， 男主配聪慧貌 
+美 之妻 ， 女主配事业良好之夫 。   """
+                        tmp.replace(" ", ""); print(tmp) 
+            if (len(fuyaoList) > 0):
+                tmp = """  子午巨门见吉化吉曜 ， 如化禄 、 权 、 科 、 禄存 、 魁 钺 、 辅弼者 ， 男主配聪慧貌 
+美 之妻 ， 女主配事业良好之夫 。  """
+                tmp.replace(" ", ""); print(tmp) 
         elif(dizhi == "辰" or dizhi == "戌"):
-            tmp = """ 辰戌巨门 ， 见昌曲 、 辅弼皆不佳 。 会禄权科而少煞 曜者 ， 主配偶可以任劳任怨 。 
+            tmp = """ 辰戌巨门 ， 会禄权科而少煞 曜者 ， 主配偶可以任劳任怨 。 
 辰戌巨门为陷地 ， 见煞忌 ， 主夫妻分离 ， 或主重大 口舌 ， 而夫妻又不登对 。 又 
 主与配偶的兄弟姊妹不和 。 
-辰成巨门 ， 以太阳 、 天梁 、。 天同诸垣为吉凶克应的 枢纽 。"""
+辰戌巨门 ， 以太阳 、 天梁 。 天同诸垣为吉凶克应的 枢纽 。"""
             tmp.replace(" ", ""); print(tmp)
             print("\n")
         elif(dizhi == "巳" or dizhi == "亥"):
@@ -2950,8 +3405,6 @@ def GongXia3rd(star, dizhi,
             tmp.replace(" ", ""); print(tmp)
             print("\n")
     elif(star[:2] == "天相"):
-        
-        print("\n")
         tmp = """天相坐夫妻宫 ， 古人有 『 亲上加亲 』 的说法 。 在现代 ， 则为由同学 、 同事 、 街 
 坊关系变成夫妇 。 又或为旧相识 ， 未有感情 ， 经一段时期疏远 ， 重逢后再发生感情 。 
 天相坐夫妻宫 ， 又为 『 夫唱妇随 』 ， 宜夫妻合作共事 。 
@@ -2959,8 +3412,8 @@ def GongXia3rd(star, dizhi,
 兴家 ； 为 【 刑忌夹印 】 者 ， 主因妻破败 。 女命则以此视丈夫 。 
 天相坐夫妻宫 ， 刑忌夹 ， 又见空曜 ， 且躔陀罗 ， 婚姻机会甚微 。 
 天相坐夫妻宫 ． 女命须视太阳 ， 男命须视太阴 ， 必 须庙旺 ， 见吉 ， 然后婚姻始美 
-满 ； 叵落陷 、 化忌 、 见煞 ， 则婚姻不如意 ， 或主感情破裂 。 女命以偏房继室为宜 。 
-． 天相坐夫妻宫与其他星曜坐夫妻宫不同 ， 其他星曜 ， 见辅佐 『 对星 』， 便不主有 
+满 ； 落陷 、 化忌 、 见煞 ， 则婚姻不如意 ， 或主感情破裂 。 女命以偏房继室为宜 。 
+天相坐夫妻宫与其他星曜坐夫妻宫不同 ， 其他星曜 ， 见辅佐 『 对星 』， 便不主有 
 两度婚姻 ( 再见煞忌刑曜者 则 为例外 ) ， 而天相 『 对星 』 或为 『 对星 』 所夹 ， 再会另 
 一 『 对星 』 ， 则反为两次婚姻的徵验 。 
 女命天相坐夫妻宫 ， 最喜廉贞化禄同度 ， 或会禄存 ， 然后始为 『 财印交叠 』 ， 古 
@@ -2968,7 +3421,6 @@ def GongXia3rd(star, dizhi,
 的事业 。 
 古 人论女命 ， 日 『 天相右弼福来临 』 ， 又说 ， 『 昌曲冲 破 ， 侍妾 』 。 这都是 说命宫 ， 
 但在夫妻宫时 ， 每亦有同样的 徵验 。 唯 『 天相右弼 』 ， 仍有偏房的性质 。 
-天相在夫妻宫 ， 最忌火铃同度 ， 丰孤独 。 或为夫妻 情缘不投 ， 或主离异 。 
 男命夫妻宫天相 ， 若廉贞化禄 同 度 ， 或见 禄 存 ， 主得妻财 ， 但现代却往往主得 
 妻子匡扶事业 ， 甚至主理自己的事业 。 
 天相在夫妻宫 ， 若得化禄 、 化权 、 化科会照 。 则配 偶宜从政 ， 或宜在企业任职 ， 
@@ -2976,19 +3428,27 @@ def GongXia3rd(star, dizhi,
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
-        
+        if (len(shayaoList) > 0):
+            for smallStar in shayaoList:
+                if (smallStar == "铃星" or smallStar == "火星"):
+                    tmp = """ 天相在夫妻宫 ， 最忌火铃同度 ， 丰孤独 。 或为夫妻 情缘不投 ， 或主离异 。   """
+                    tmp.replace(" ", ""); print(tmp)
         if(dizhi == "丑" or dizhi == "未"):
-            tmp = """ 丑未天相 ， 最嫌火铃羊陀同度 ， 火铃尤劣 。 每主干大限夫妻宫见巨门或 『 同梁 』 
-守垣时 ， 恋爱屡遭挫折 ． 
+            tmp = """ 
 丑未天相坐夫妻宫 ， 对宫 『 紫微破军 』 为左右夹 ， 则主第二度婚姻优于第一度 ， 
 能得配偶帮助 。 除非曾与人有婚姻解约 、 同居分居 、 或婚姻曾经挫折 ， 否则每主二 
 度姻 缘 。 
 丑未天相 ， 以天机 、 巨门 、 太阳 、 [ 同梁 l 诸宫垣 ， 为 运限年限吉凶克应的枢纽 。 """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        
+            if (len(shayaoList) > 0):
+                for smallStar in shayaoList:
+                    if (smallStar == "铃星" or smallStar == "火星" or smallStar == "擎羊" or smallStar == "陀罗"):
+                        tmp = """ 丑未天相 ， 最嫌火铃羊陀同度 ， 火铃尤劣 。 每主干大限夫妻宫见巨门或 『 同梁 』 
+守垣时 ， 恋爱屡遭挫折 ．    """
+                        tmp.replace(" ", ""); print(tmp)
         elif(dizhi == "卯" or dizhi == "酉"):
-            tmp = """卯酉天相 ， 不但不喜廉贞 ，、 贪狼化忌 ， 且最嫌武曲 化忌 ， 主配偶穷困或灾病 ， 
+            tmp = """卯酉天相 ， 不但不喜廉贞 ，贪狼化忌 ， 且最嫌武曲 化忌 ， 主配偶穷困或灾病 ， 
 视所会天府有禄无禄 ， 及煞曜会合情形而定 。 
 卯酉天相 ， 若见煞忌 ， 往往主夫妻中道分离 。 
 卯酉天相为 『 太阳巨门 』 及 [ 天机天梁 ] 所夹 ， 情形较 其他宫垣为复杂 ， 亦不喜 
@@ -3013,20 +3473,12 @@ def GongXia3rd(star, dizhi,
         tmp = """天梁在夫妻宫 ， 每每主婚姻带有 『 灾难 』 的性质 。 指 『 灾难 』 的程度 ， 视实际 
 的星曜会合性质而定 。 
 一般来说 ， 天梁在夫妻宫 ， 多主初恋失败 ； 更见煞 ， 则终身对此未能忘情 ， 以 
-致痛苦 ； 若见辅佐 『 单星 』 ， 则主 恋爱时有第三者介入 。 无煞而见吉 ， 则主 热恋时受 
+致痛苦 ；  无煞而见吉 ， 则主 热恋时受 
 到挫 折 、 阻力 ， 或因客观环境而致中道分张 ， 唯以后尚有复合的机会 。 叵所会合的 
 星曜吉凶交集 ， 则可能有解除婚约 、 婚姻受到压力 、 婚礼被逼延期 、 男女情投意合 
 而碍于 客观环 境不能结合 、 或在结婚前一方突然要往外地 ， 种种情形 ， 亦可视为 『 灾 
 难 』 。 
 由于婚姻曾经波折 。 所以天梁坐夫妻宫的 人 ， 往往婚后情缘更高笃 。 
-天梁与天马同躔 ， 主夫妻因环境所逼而致分散 。 行 至夫妻宫入吉限 ， 则破镜重圆 。 
-叵除天马外更躔煞忌刑耗诸曜 ， 则为夫妻中道决裂之兆 。 
-女命天梁天马 ， 见昌曲 ， 主夫婿风流 ? 虽有家庭责 任心 ， 但却多出外应酬 ， 以致 
-夫妻形同会少离多 。 若见煞 ， 尤其是火铃 ， 则主夫妻同床异梦 。 
-天梁最忌羊陀 ， 主谗言是非 ， 以致夫妻受压力 。 
-天梁与铃星同躔 ， 于夫妻宫行至武曲化忌的火运 ， 常主婚姻生活中断 。 究竟因 
-何致此 ， 须视实际星曜组而定 。 
-夫妻宫住西 ，【 太阳天梁 】 同度 ， 夫妻最易分离 。 
 天梁须藉太阳解其孤克 ， 故天梁在夫妻宫时 ， 须兼视太阳是否在庙旺之宫 ， 庙旺 
 则吉 ， 陷地则 凶 。 
 天梁在夫妻宫 ， 主夫妻年龄有差距 。 男命 ， 宜妻长 三年 ， 或比自己年少八岁以 
@@ -3037,6 +3489,33 @@ def GongXia3rd(star, dizhi,
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
+        if (len(fuyaoList) > 0 or len(zuoyaoList) > 0):
+            tmp = """若见辅佐 『 单星 』 ， 则主 恋爱时有第三者介入 。"""
+            tmp.replace(" ", ""); print(tmp)
+        if (len(zuoyaoList) > 0):
+            for smallStar in zuoyaoList:
+                if (smallStar == "天马"):
+                    tmp = """ 天梁与天马同躔 ， 主夫妻因环境所逼而致分散 。 行 至夫妻宫入吉限 ， 则破镜重圆 。 
+叵除天马外更躔煞忌刑耗诸曜 ， 则为夫妻中道决裂之兆 。 
+女命天梁天马 ， 见昌曲 ， 主夫婿风流 ? 虽有家庭责 任心 ， 但却多出外应酬 ， 以致 
+夫妻形同会少离多 。   """
+                    tmp.replace(" ", ""); print(tmp) 
+                    
+        if (len(shayaoList) > 0):
+            for smallStar in shayaoList:
+                if (smallStar == "铃星"):
+                    tmp = """ 女命若见煞 ， 尤其是火铃 ， 则主夫妻同床异梦 。天梁与铃星同躔 ， 于夫妻宫行至武曲化忌的火运 ， 常主婚姻生活中断 。 究竟因 
+何致此 ， 须视实际星曜组而定 。   """
+                    tmp.replace(" ", ""); print(tmp)
+                if (smallStar == "火星"):
+                    tmp = """ 女命若见煞 ， 尤其是火铃 ， 则主夫妻同床异梦 。  """
+                    tmp.replace(" ", ""); print(tmp)
+                if (smallStar == "擎羊" or smallStar == "陀罗"):
+                    tmp = """ 天梁最忌羊陀 ， 主谗言是非 ， 以致夫妻受压力 。  """
+                    tmp.replace(" ", ""); print(tmp)
+        if (dizhi == "酉"):
+            tmp = """夫妻宫住西 ，【 太阳天梁 】 同度 ， 夫妻最易分离 。"""
+            tmp.replace(" ", ""); print(tmp)
         if(dizhi == "子" or dizhi == "午"):
             tmp = """子午天梁 ， 以子宫为佳 。 午宫者 ， 主配偶多挑剔 。 
 子午天梁而对宫太阳化忌 ， 主受配偶拖累 。 铃星同 度者 ， 拖累的程度更大 。 若 
@@ -3046,21 +3525,24 @@ def GongXia3rd(star, dizhi,
 子午天梁 ， 以巨门 、 天同 、 『 机月 』 诸垣为吉凶的枢 纽 。 """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        elif(dizhi == "丑" or dizhi == "未"):
-            tmp = """ 丑未天梁以丑宫为佳 。 在未宫 ， 则所会的阴阳皆落 陷 ， 婚姻必有挫折是非 。 若 
-更化忌 ， 则配偶多灾病 ， 自身亦受拖累 。 见煞则 主离异 。 则辅弼 『 单星 』 则主第三者介入 。 
+        elif(dizhi == "丑"):
+            tmp = """ 丑未天梁以丑宫为佳 。  
 丑宫天梁见阴阳在旺宫交集 ， 主婚姻和美 ， 纵见煞 忌 ， 程度亦不如在未宫之甚 ； 
 若见吉曜交集 ， 则更主配偶事业光昌 ， 唯仍 难免因工作关系会少离多 。 
 丑未天梁 ， 以武曲 、 天同 ． 巨门诸宫垣为吉凶克应 之枢纽 。  """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
+        elif(dizhi == "未"):
+            tmp = """ 在未宫 ， 则所会的阴阳皆落 陷 ， 婚姻必有挫折是非 。 若 
+更化忌 ， 则配偶多灾病 ， 自身亦受拖累 。 见煞则 主离异 。 则辅弼 『 单星 』 则主第三者介入 。  
+丑未天梁 ， 以武曲 、 天同 ． 巨门诸宫垣为吉凶克应 之枢纽 。  """
+            tmp.replace(" ", ""); print(tmp)
+            print("\n")
         elif(dizhi == "巳" or dizhi == "亥"):
-            tmp = """ 巳亥天梁主男得美妻 ， 但见禄马 、 煞忌皆主易离散 。 对宫天同化忌者尤美 ， 亦 
-更易离散 。 
-巳亥天梁 ， 对宫天同化忌 ， 更呢煞曜会照 ， 尤其是 火铃同度 ， 则主离后再克 ， 
-克后再离 。 
+            tmp = """ 巳亥天梁主男得美妻 ， 但见禄马 、 煞忌皆主易离散 。 对宫天同化忌者尤美 ， 亦更易离散 。 
+巳亥天梁 ， 对宫天同化忌 ， 更呢煞曜会照 ， 尤其是 火铃同度 ， 则主离后再克 ， 克后再离 。 
 巳亥天梁 ， 对宫天同化禄 ， 又有吉会 ， 则主夫妻 白 手兴家 。 
-巳亥天梁 ， 巳不如亥 。 在巳宫者 ， 主配偶多眺剔 婚姻多风波 。 唯始终有责任心 。 
+巳亥天梁 ， 在巳宫者 ， 主配偶多眺剔 婚姻多风波 。 唯始终有责任心 。 
 巳亥天梁以 【 天机巨门 】 一太阴太阳 ] 、 [ 武曲天府 ] 诸 垣为六运流年吉凶克应的 
 枢纽 。 
 """
@@ -3073,12 +3555,8 @@ def GongXia3rd(star, dizhi,
 男命主妻夺夫权 。 
 七 杀临夫妻宫 ， 一般以迟婚为宜 。 见火铃照会 ， 或 羊陀照会者 ， 则不但早婚不 
 利 ， 而且早年恋爱亦多波折 ， 终于草率成婚 ， 而夫妻感情多隔膜 。 
-七 杀夫妻宫见禄马 ， 更见吉化吉曜 ， 主配偶发财于 远地 ； 但见禄马而又见煞忌 ， 
-则主夫妻中道分张 。 
 七 杀会贪狼化忌 ， 又见火铃 、 空劫 ， 主为人夺爱 。 
 七 杀阴煞同度 ， 更会煞曜 ， 主配偶多病 ， 且属神经 性疾病 。 
-七杀在夫妻宫 ， 擎羊同度 ， 见天刑 、 天月 、 病符 、 天虚 ， 又见 廉贞化忌 ， 主配 
-偶多灾病 。 若又同时见吉曜 ， 则主夫妻有名无实 。 
 七 杀会 破军化禄 ， 又见辅佐 『 单星 』 ， 主两度婚姻 。 
 七 杀对宫必为天府 ， 若府库空露者 ， 则主婚后贫困 ， 如自身命宫好 ， 则主配偶 
 出身贫困 ， 门户不相当 。 锘更见煞忌 ， 则主受配偶拖累以致财帛损失 、 事业倾败 。 
@@ -3090,9 +3568,19 @@ def GongXia3rd(star, dizhi,
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
+        if (len(zuoyaoList) > 0):
+            for smallStar in zuoyaoList:
+                if (smallStar == "天马" or smallStar == "禄存"):
+                    tmp = """ 七 杀夫妻宫见禄马 ， 更见吉化吉曜 ， 主配偶发财于 远地 ； 但见禄马而又见煞忌 ， 则主夫妻中道分张 。 """
+                    tmp.replace(" ", ""); print(tmp) 
+        if (len(shayaoList) > 0):
+            for smallStar in shayaoList:
+                if (smallStar == "擎羊"):
+                    tmp = """ 七杀在夫妻宫 ， 擎羊同度 ， 见天刑 、 天月 、 病符 、 天虚 ， 又见 廉贞化忌 ， 主配 
+偶多灾病 。 若又同时见吉曜 ， 则主夫妻有名无实 。 """
+                    tmp.replace(" ", ""); print(tmp)
         if(dizhi == "子" or dizhi == "午"):
-            tmp = """子午宫 七 杀有辅佐诸曜同度 ， 而对宫 【 武曲天府 】 亦 有辅佐诸曜同度 ， 则主与 
-已婚的人恋爱 。 
+            tmp = """
 子午宫 七 杀 ， 会武曲化忌 ， 更见煞曜者 ， 主配偶灾 病或贫困 ； 更见吉曜者 ， 主 
 苦恋 。 或婚后仍有刻骨铭心的感情困扰 。 
 子午宫 七 杀见吉化 ， 主配偶有管理才能 。 所以男命 亦主妇夺夫权 ， 宜夫妇各自发 
@@ -3100,6 +3588,9 @@ def GongXia3rd(star, dizhi,
 子午 七 杀以 [ 紫微天相 ] 、 [ 天机巨门 ] 、 天同各垣 ， 为吉凶克应的枢纽 。"""
             tmp.replace(" ", ""); print(tmp)
             print("\n")
+            if (len(fuyaoList) > 0 or len(zuoyaoList) > 0):
+                tmp = """子午宫 七 杀有辅佐诸曜同度 ， 而对宫 【 武曲天府 】 亦 有辅佐诸曜同度 ， 则主与已婚的人恋爱 。 """
+                tmp.replace(" ", ""); print(tmp)
         elif(dizhi == "寅" or dizhi == "申"):
             tmp = """寅申宫 七 杀 ， 亦主 妇夺夫权 。 
 寅申 七 杀会破军化禄 ， 而有火铃照会 ， 或见辅佐 [ 单 星 ] 亦主两度婚姻 。 
@@ -3108,48 +3599,45 @@ def GongXia3rd(star, dizhi,
             tmp.replace(" ", ""); print(tmp)
             print("\n")
         elif(dizhi == "辰" or dizhi == "戌"):
-            tmp = """ 辰戌宫七杀 ， 见煞或辅佐 [ 单星 ] ， 多主有情无缘 ， 有缘无情 。 或主婚后仍有感 
-情困扰 。 
-辰戌宫 七 杀会对宫廉贞化禄 ， 则夫妻和美 。 若廉贞 化忌 ， 则主生离死别 。 煞霞 
+            tmp = """ 辰戌宫七杀 ， 见煞或辅佐 [ 单星 ] ， 多主有情无缘 ， 有缘无情 。 或主婚后仍有感情困扰 。 
+辰戌宫 七 杀会对宫廉贞化禄 ， 则夫妻和美 。 若廉贞 化忌 ， 则主生离死别 。 煞曜
 者 ， 离后再克 ， 或克后再离 ， 以迟婚为宜 ， 女命且以偏房继室为宜 。 
-辰成寓 七 杀踺昌曲 、 桃花 ， 对宫廉贞又化忌者 ， 主 感情痛苦 。 女命则主因玩弄 
+辰戌宫七 杀见昌曲 、 桃花 ， 对宫廉贞又化忌者 ， 主 感情痛苦 。 女命则主因玩弄 
 感情而生是非 。 
 辰戌七杀见吉化吉曜 ， 主终能获得理想的配偶 ， 而 婚前则有恋爱波折 。 
 辰戌 七 杀 ， 以 [ 太阳天梁 ] 、 『 天同巨门 』 、 紫微诸垣 为吉凶克应的枢纽 。 """
             tmp.replace(" ", ""); print(tmp)
             print("\n")
-        
+            
     elif(star[:2] == "破军"):
-        
-        print("\n")
         tmp = """破军在夫妻宫并非善曜 ， 即使破军化禄 ， 亦主婚前 多波折 ， 引起争夺 。 
 破军见火铃 ， 或为火铃所夹 ， 主婚姻受破坏 ， 或受 压力 ， 不宜早婚 。 若早婚 ， 
 或婚前顺利者 ， 则婚后反主不和 ， 或竟至夫妻冰炭 。 
 破军为羊陀会照 ， 主婚前或婚后 ， 双方曾一度分离 。 
 破军见空劫 ， 或为空劫所夹 ， 亦主夫 妻有缘无情 。 
-破军见辅佐诸曜 『 单星 』 ， 主二度婚姻 ； 或婚后有第 三者介入 ， 或恋爱时多三角 
-关系 。 
-破军与禄存同度 ， 主配偶自私 。 更见煞曜 ， 则主婚 姻受家庭阻力 ， 或配偶与家 
-庭不和 。 
 破军受羊陀夹 ， 又为火铃夹 ， 则主配偶不和及亲家 不和 。 
- 
 凡破军在夫妻宫 ， 男女皆有驾御配偶的倾向 ， 所以 见煞即易分离 。 
-破军会武曲化忌 ， 更见羊陀 ， 主无 闺房之乐 ， 在现 代每因此弄成婚变 。 若更火 
-铃同度 ， 则主配偶灾病 ， 或至刑克 。 
+破军会武曲化忌 ， 更见羊陀 ， 主无 闺房之乐 ， 在现 代每因此弄成婚变 。 若更火铃同度 ， 则主配偶灾病 ， 或至刑克 。 
 破军 、 廉贞 、 天相的组合 ， 若廉贞化忌 ， 主与配偶 的兄弟姊妹不和 。 若廉贞化 
 禄 ， 则主婚姻和美 ， 唯若更躔桃花 ， 便主有外遇 ； 若破军化禄 ， 男命主妻夺夫权 ， 
 女命反主丈夫发达 。 
-
 """
         tmp.replace(" ", ""); print(tmp)
         print("\n")
+        if (len(fuyaoList) > 0 or len(zuoyaoList) > 0):
+            tmp = """破军见辅佐诸曜 『 单星 』 ， 主二度婚姻 ； 或婚后有第 三者介入 ， 或恋爱时多三角关系 。  """
+            tmp.replace(" ", ""); print(tmp)
+        if (len(zuoyaoList) > 0):
+            for smallStar in zuoyaoList:
+                if (smallStar == "禄存"):
+                    tmp = """破军与禄存同度 ， 主配偶自私 。 更见煞曜 ， 则主婚 姻受家庭阻力 ， 或配偶与家 庭不和 。 """
+                    tmp.replace(" ", ""); print(tmp) 
         if(star == "破军紫微"):
             tmp = """『 紫微破军 ] 以年龄有差距的婚姻为佳 ， 亦主妇夺夫 权 ；"""
             tmp.replace(" ", ""); print(tmp)
             print("\n")
         elif(star == "破军廉贞"):
-            tmp = """【 廉贞破军 】 见辅佐 [ 单 
-星 ] 或煞曜 ， 主不和 ； 更见桃花 ， 则必多外遇 ；"""
+            tmp = """【 廉贞破军 】 见辅佐 [ 单 星 ] 或煞曜 ， 主不和 ； 更见桃花 ， 则必多外遇 ；"""
             tmp.replace(" ", ""); print(tmp)
             print("\n")
         elif(star == "破军武曲"):
@@ -3159,8 +3647,7 @@ def GongXia3rd(star, dizhi,
         if(dizhi == "子" or dizhi == "午"):
             if(star == "破军"):
                 tmp = """子午破军 ， 对 【 廉贞天相 】， 可参考上段所述 。 
-子午破军会贪狼化禄 ， 更见昌曲 [ 单星 ] ， 或踺桃花 诸曜 ， 均主自身有外遇 。 若 
-贪狼化忌 ， 则主配偶有外向之 
+子午破军会贪狼化禄 ， 更见昌曲 [ 单星 ] ， 或踺桃花 诸曜 ， 均主自身有外遇 。 
 子午破军所对的 [ 廉相 ] ， 若为刑忌夹 ， 则须视破军 是否与煞曜同度而定其不良 
 性质 。 躔空劫者 ， 主夫妻分离 ； 踺羊陀 ， 则主夫妻口舌不和 ； 踺火铃 ， 则主夫妻刑
 克或灾病 。 
@@ -3184,13 +3671,20 @@ def GongXia3rd(star, dizhi,
 有隔膜 。 
 辰戌破军 对财荫夹的 [ 紫相 1 ， 主夫妻年龄差距更 大 。 女命宜配年长十二年以上 
 之夫 ， 则可受配偶呵护 。 
-若刑忌夹 ， 可参考前述 。 会贪狼化禄 ， 化忌 ， 亦参 考前述 。 
-辰戌破军化权 ， 不见昌曲桃花则吉 ； 若见 ， 主自身 有外遇 。 
-辰戌破军与陀罗同度 ， 则易与有家室的人恋爱 ， 因 此发生困扰 。 
+若刑忌夹 ， 可参考前述 。 会贪狼化禄 ， 化忌 ， 亦参 考前述 。  
 辰戌破军 [ 武府 ] 、 [ 阴阳 ] 、 天同各宫垣为大运流年 吉凶克应之枢纽 。"""
                 tmp.replace(" ", ""); print(tmp)
                 print("\n")
-        
+                if (len(huayaoList) > 0):
+                    for smallStar in huayaoList:
+                        if (smallStar == "破军化权"):
+                            tmp = """辰戌破军化权 ， 不见昌曲桃花则吉 ； 若见 ， 主自身 有外遇 。 """
+                            tmp.replace(" ", ""); print(tmp)
+                if (len(shayaoList) > 0):
+                    for smallStar in shayaoList:
+                        if (smallStar == "陀罗"):
+                            tmp = """ 辰戌破军与陀罗同度 ， 则易与有家室的人恋爱 ， 因 此发生困扰 。 """
+                            tmp.replace(" ", ""); print(tmp)
 def GongXia4th(star, dizhi,
                    fuyaoList,zuoyaoList,
                    shayaoList,huayaoList):
